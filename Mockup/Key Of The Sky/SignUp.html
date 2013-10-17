@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-									<style type="text/css">
-										#control3 tbody tr td, #control3 tbody tr th {
-											height:0px;
-										}
-									.auto-style1 {
-										direction: rtl;
-									}
-									.auto-style2 {
-										padding: 9px 15px;
-										border-top: 1px solid #e5e5e5;
-										direction: rtl;
-									}
-									</style>
+	<style type="text/css">
+		#control3 tbody tr td, #control3 tbody tr th {
+			height:0px;
+		}
+		.auto-style1 {
+			direction: rtl;
+		}
+		.auto-style2 {
+			padding: 9px 15px;
+			border-top: 1px solid #e5e5e5;
+			direction: rtl;
+		}
+	</style>
+		<!--		
+		.text {
+			font-family: Tahoma;
+			font-size: 9pt; color:#000000
+		}
+		.form {
+			font-family: Tahoma;
+			font-size: 9pt;
+			color: #333333;
+			border: 1px solid #808080; ; background-color:#FFFFFF
+		}
+		.button {
+			font-family: Tahoma;
+			font-size: xx-small;
+			color: #000000;
+			font-weight: bold;
+			border: 1px solid #808080; ; background-color:#EEEEEE
+		}
+	</style>-->
     <meta charset="utf-8" />
     <title></title>
     <meta name="description" content="" />
@@ -34,7 +53,7 @@
     <script type="text/javascript" src="Scripts/bootstrap/bootstrap-tooltip.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap/bootstrap-popover.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap/bootstrap-dropdown.js"></script>
-    
+    <script type="text/javascript" src="Scripts/signup.js"></script>
 </head>
 
 <body>
@@ -81,62 +100,64 @@
 							<div class="row-fluid">
 								<div class="span11">
 									<div align="right">
-										<form name="Contactform" method="post" target=_self action="SignUp1.php" > <!--onSubmit="return CheckFormParstools();"-->
+										<form name="Contactform" method="post" target=_self action="SignUp1.php" onSubmit="return CheckFormParstools();">
 											<table border="0" class="text" cellpadding="3" style="border-collapse: collapse" width="450" id="1" dir="rtl">
 												<tr>
 													<td align=right>
 													<span lang="en-us">* نام 
 													کاربری : </span></td>
 													<td align=right>
-														<INPUT size=25 type="text" name="user" class="form" >
-													</td>
+														<INPUT size=25 type="text" name="User" class="form" maxlength="50">													</td>
 												</tr>
 												<tr>
 													<td align=right>
 													<span lang="en-us">* رمز عبور</span> :</td>
 													<td align=right>
-														<INPUT size=40 type="password" name="password" class="form" maxlength="100" dir="ltr"></td>
+														<INPUT size=25 type="password" name="Password" class="form" maxlength="100">
+													</td>
 												</tr>
 												<tr>
 													<td align=right>
 													<span lang="en-us">* تکرار رمز عبور</span> :</td>
 													<td align=right>
-														<INPUT size=40 type="password" name="RetypePassword" class="form" maxlength="100" dir="ltr"></td>
+														<INPUT size=25 type="password" name="RetypePassword" class="form" maxlength="100">
+													</td>
 												</tr>
 												<tr>
 													<td align=right>* نام و نام خانوادگي :</td>
 													<td align=right>
-														<INPUT size=25 name=Name class="form" maxlength="100">
+														<INPUT size=25 type="text" name="Name" class="form" maxlength="100">	
 													</td>
 												</tr>
 												<tr>
 													<td align=right>آدرس وب سايت :</td>
 													<td align=right>
-														<INPUT size=40 name=Website class="form" maxlength="100" dir="ltr"></td>
+														<INPUT size=40 type="text" name="Website" class="form" maxlength="100" dir="ltr">
+													</td>
 												</tr>
 												<tr>
 													<td align=right>* آدرس ايميل:</td>
 													<td align=right>
-														<INPUT size=30 name=Email class="form" maxlength="60" dir="ltr">
+														<INPUT size=30 type="text" name="Email" class="form" maxlength="60" dir="ltr">
 													</td>
 												</tr>
 												<tr>
 													<td align=right><span lang="fa">سن :</span></td>
 													<td align=right>
-														<INPUT size=10 name=Age class="form" maxlength="60" dir="ltr">
+														<INPUT size=10 type="text" name="Age" class="form" maxlength="60" dir="ltr">
 													</td>
 												</tr>
 												<tr>
 													<td align=right>شهر :</td>
 													<td align=right>
-														<INPUT size=25 name=City class="form" maxlength="60">
+														<INPUT size=25 type="text" name="City" class="form" maxlength="60" dir="ltr">
 													</td>
 												</tr>
 												<tr>
 													<td align=right>
 													<span lang="en-us">* </span>تلفن :</td>
 													<td align=right>
-														<INPUT size=25 name=Tel class="form" maxlength="12" dir="ltr">
+														<INPUT size=25 type="text" name="Tel" class="form" maxlength="12" dir="ltr">
 													</td>
 												</tr>
 												<tr>
@@ -167,13 +188,13 @@
 												<tr>
 													<td align=right>موضوع پيام:</td>
 													<td align=right>
-														<INPUT size=25 name=Subject class="form" maxlength="50" dir="rtl">
+														<INPUT size=25 type="text" name="Subject" class="form" maxlength="50" dir="rtl">
 													</td>
 												</tr>
 												<tr>
 													<td valign=top align=right>*پيام:</td>
 													<td align=right>
-														<TEXTAREA name=Message rows="15" cols="50" class="form" ></TEXTAREA>
+														<TEXTAREA name=Message rows="15" cols="50" class="form" maxlength="1000" ></TEXTAREA>
 														<br>
 														<script>displaylimit("document.Contactform.Message","",1000)</script>
 													</td>
@@ -184,8 +205,6 @@
 														<INPUT type="reset" value="پاک کردن فرم" name="Reset" class="button"> 
 														<INPUT type=submit value="ارسال" name="Submit" class="button">
 														<INPUT type="hidden" name="PB_SENDFORM" value="SEND">
-														<INPUT type="hidden" name="User" value="mojtaba20">
-														<INPUT type="hidden" name="To" value="YOUREMAIL">
 														<p align="center">
 													</td>
 												</tr>
