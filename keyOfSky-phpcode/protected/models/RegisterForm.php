@@ -19,6 +19,7 @@ class RegisterForm extends CFormModel
 	public $mobile;
 	public $mosqueAddress;
 	public $image;
+	public $verifyCode;
 
 	/**
 	 * Declares the validation rules.
