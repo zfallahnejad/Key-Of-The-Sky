@@ -7,29 +7,43 @@
  */
 class UserIdentity extends CUserIdentity
 {
-	/**
-	 * Authenticates a user.
-	 * The example implementation makes sure if the username and password
-	 * are both 'demo'.
-	 * In practical applications, this should be changed to authenticate
-	 * against some persistent user identity storage (e.g. database).
-	 * @return boolean whether authentication succeeds.
-	 */
+	
 	public function authenticate()
 	{
 		
-		$users=array(
-			/*username => password,*/
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->password]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					$connect = mysql_connect("localhost","root","") or die("not connecting");
+					mysql_select_db("skykeey",$connect) or die("no db :'(");
+					$sql ="SELECT * FROM `mosqueculturalliablee` WHERE `email` ='$this->username'";
+
+					$query = mysql_query($sql,$connect);
+					 if ($query === FALSE) {
+        				trigger_error(mysql_error());
+    				}
+					//echo  mysql_num_rows($query);
+					$numrows = mysql_num_rows($query);
+					if ($numrows!=0)
+					{
+					//while loop
+					  while ($row = mysql_fetch_assoc($query))
+					  {
+					   $email = $row["email"];
+					   $pasword = $row["pasword"];
+					  }
+					 $bad = '=?UTF-8?B?'.base64_encode($this->password).'?=';
+					 echo $bad." ";
+					 echo $pasword;
+					  if($pasword === $bad)
+					  	{$this->errorCode=self::ERROR_NONE;}
+					  else
+					      {$this->errorCode=self::ERROR_PASSWORD_INVALID;}
+					}
+					else
+					  {$this->errorCode=self::ERROR_USERNAME_INVALID;}
+					  
+					return !$this->errorCode;
+					mysql_close($connect);
 		
 		
 	}

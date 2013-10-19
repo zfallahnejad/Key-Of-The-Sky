@@ -53,10 +53,10 @@ return array(
 		),
 */
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=skyKeey',
+			'connectionString' => 'mysql:host=localhost;dbname=skykeey',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'MYSQL',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		// uncomment the following to use a MySQL database

@@ -85,14 +85,16 @@ class SiteController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-
+		
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
+					
 			if($model->validate() && $model->login())
 			{
+					
 					$this->redirect(Yii::app()->user->returnUrl);
 					
 			}
@@ -131,31 +133,53 @@ class SiteController extends Controller
 				$mosqueAddress=($model->mosqueAddress);
 				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
 				
-				
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, confirmPassword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :confirmPassword, :tel, :mobile, :mosqueAddress, :image)";
-				$command=$connection->createCommand($sql);
-				
-				$command->bindParam(":name",$name,PDO::PARAM_STR);
-				$command->bindParam(":family",$family,PDO::PARAM_STR);
-				$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
-				$command->bindParam(":email",$email,PDO::PARAM_STR);
-				$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
-				$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
-				$command->bindParam(":tel",$tel,PDO::PARAM_STR);
-				$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
-				$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
-				$command->bindParam(":image",$image,PDO::PARAM_STR);
-				
-				$command->execute();
+				if($pasword == $confirmPassword)
+				{
+						
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, confirmPassword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :confirmPassword, :tel, :mobile, :mosqueAddress, :image)";
+					$command=$connection->createCommand($sql);
+					
+					$command->bindParam(":name",$name,PDO::PARAM_STR);
+					$command->bindParam(":family",$family,PDO::PARAM_STR);
+					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
+					$command->bindParam(":email",$email,PDO::PARAM_STR);
+					$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
+					$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
+					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
+					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
+					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
+					$command->bindParam(":image",$image,PDO::PARAM_STR);
+					
+					$command->execute();
 
+					
+					$connection->active=false;
+					Yii::app()->user->setFlash('register','success => Thank you for registering.');
+					
 				
-				$connection->active=false;
+				}
+				else 
+				{
+						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
+				}
+				
+				
+				
+				$name = ":name";
+				$family= ":family";
+				$mosqueName = ":mosque";
+				$email = ":email";
+				$pasword = ":password";
+				$confirmPassword = ":confirm";
+				$tel = ":tel";
+				$mobile = ":mobile";
+				$mosqueAddress = ":mosque";
+				$image = ":image";
 
-
-				Yii::app()->user->setFlash('register','Thank you for registering.');
 				$this->refresh();
+				
 			}
 		}
 		$this->render('register',array('model'=>$model));

@@ -7,6 +7,7 @@
  */
 class LoginForm extends CFormModel
 {
+	
 	public $username;
 	public $password;
 	public $rememberMe;
@@ -59,7 +60,7 @@ class LoginForm extends CFormModel
 	 */
 	public function login()
 	{
-		if($this->_identity===null)
+		if($this->_identity === null)
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			$this->_identity->authenticate();
