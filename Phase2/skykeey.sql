@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2013 at 07:51 PM
+-- Generation Time: Oct 28, 2013 at 08:11 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -48,7 +48,6 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mosqueName` tinytext NOT NULL,
   `email` tinytext NOT NULL,
   `pasword` tinytext NOT NULL,
-  `confirmPassword` tinytext NOT NULL,
   `tel` int(11) NOT NULL,
   `mobile` int(11) DEFAULT NULL,
   `mosqueAddress` text NOT NULL,
