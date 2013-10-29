@@ -31,7 +31,7 @@ class UserIdentity extends CUserIdentity
 					   $email = $row["email"];
 					   $pasword = $row["pasword"];
 					  }
-					 $bad = '=?UTF-8?B?'.base64_encode($this->password).'?=';
+					 $bad = sha1($this->password);
 					 
 					  if($pasword === $bad)
 					  	{$this->errorCode=self::ERROR_NONE;}
