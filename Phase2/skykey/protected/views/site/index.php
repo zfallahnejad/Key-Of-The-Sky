@@ -4,9 +4,9 @@
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
             <div id="slider-nivo" class="nivoSlider">
-                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" alt="" title="text" />
-                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" alt="" title="" />
-                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" alt="" title="" />
+                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" alt="" title="" data-transition="slideInLeft" />
+                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" alt="" title="" data-transition="slideInLeft" />
+                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" alt="" title="" data-transition="slideInLeft" />
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" alt="" data-transition="slideInLeft"  />
             </div>
         </div>

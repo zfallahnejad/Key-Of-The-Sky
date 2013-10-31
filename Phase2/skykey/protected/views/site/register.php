@@ -100,8 +100,9 @@ $this->breadcrumbs=array(
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-		<br/>Letters are not case-sensitive.</div>
+		<div class="hint">لطفا عبارت مشاهده شده در بالا را وارد نمایید
+		<br/>
+		عبارت به حروف بزرگ و کوچک حساس نمیباشد</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
