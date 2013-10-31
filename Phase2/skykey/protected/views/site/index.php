@@ -15,50 +15,50 @@
     
     <div class="shout-box" >
         <div class="shout-text" >
-          <h1>Greatest website ever</h1>
-          <p>We work very hard to bring you the best website</p>
+          <h1>سامانه کلید آسمان</h1>
+          <p>راهی نوین برای  گسترش مکتب اسلام</p>
         </div>
     </div>
     <div class="row-fluid">
             <ul class="thumbnails center">
               <li class="span3">
                 <div class="thumbnail">
-                <h3>Text</h3>
+                <h3>پشتیبانی 24 ساعته</h3>
                   
                   	<div class="round_background r-grey-light">
-                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/30px-01.png" alt="" class="">
-                     </div>
+                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/01.jpg" alt="" class="">
+                  </div>
                   
-                  <p>Text.</p>
+                  <p>.</p>
                 </div>
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                	 <h3>Text</h3>
+                	 <h3>طراحی زیبا</h3>
                 
                      <div class="round_background r-yellow">
-                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/30px-41.png" alt="" class="">
+                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/02.png" alt="" class="">
                      </div>
                  
-                  <p>Text.</p>
+                  <p>.</p>
                 </div>
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                	<h3>Text</h3>
+                	<h3>امنیت اطلاعات</h3>
                   	<div class="round_background r-grey-light">
-                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/30px-37.png" alt="" class="">
-                     </div>
-                  <p>Text.</p>
+                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/03.jpg" alt="" class="">
+                  </div>
+                  <p>.</p>
                 </div>
               </li>
               <li class="span3">
                 <div class="thumbnail">
-                  <h3>Text</h3>
+                  <h3>کارایی بالا</h3>
                   <div class="round_background r-yellow">
-                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/30px-17.png" alt="" class="">
-                     </div>
-                  <p>Text.</p>
+                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/04.jpg" alt="" class="">
+                  </div>
+                  <p>.</p>
                 </div>
               </li>
 
@@ -73,11 +73,9 @@
         <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/team-member.png" width="260" height="180" alt="Me" />
-            <h3>
-            Name1
-            </h3>
-            <p>description</p>
+            <img src="<?php echo $baseUrl;?>/img/1.jpg" width="260" height="180" alt="Me" />
+            <h3>کلاه قرمزی</h3>
+            <p>فوتبال دستی</p>
             
             </div>
            
@@ -86,11 +84,11 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/team-member.png" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/2.jpg" width="260" height="180" />
             <h3>
-            Name2
+            فامیل دور
             </h3>
-            <p>description</p>
+            <p>توپ</p>
 
             </div>
           </div>
@@ -98,11 +96,11 @@
           <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/team-member.png" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/3.jpg" width="260" height="180" />
             <h3>
-            Name3
+            پسرعمه زا
             </h3>
-            <p>description</p>
+            <p>پلاک طلا</p>
             
             </div>
            
@@ -111,12 +109,12 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/team-member.png" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/4.jpg" width="260" height="180" />
             <h3>
-            Name4
+            پسرخاله
             </h3>
             
-			<p>description</p>
+			<p>مدادرنگی</p>
             
             </div>
           </div>

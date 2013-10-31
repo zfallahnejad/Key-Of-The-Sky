@@ -8,7 +8,7 @@
   
   <div class="span6">
     <div class="social-icons pull-left clearfix">
-        <div class="header-text">راه‌های ارتباط با ما</div>
+        <div class="header-text" style="font-family:Tahoma, Geneva, sans-serif ;font-size:14px "; >راه‌های ارتباط با ما</div>
         <div class="" style="text-align:left;">
 			<a href="http://facebook.com"><img src="<?php echo $baseUrl;?>/img/icons/social/facebook.png"  alt="Facebook"/></a>
 			<a href="http://twitter.com"><img src="<?php echo $baseUrl;?>/img/icons/social/twitter.png"  alt="Twitter" /> </a>

@@ -43,7 +43,7 @@
 <body style="direction:rtl;">
 <section id="header">
 <!-- Include the header bar -->
-    <?php include_once('header.php');?>
+<?php include_once('header.php');?>
 <!-- /.container -->  
 </section><!-- /#header -->
 
@@ -102,80 +102,55 @@
             
             
             <div class="span3">
-            	<h5>Contact us</h5>
+            	<h5>ارتباط با ما</h5>
                 <p>
-                    795 Folsom Ave, Suite 600<br/>
-                    Address<br/>
-                    P: (123) 456-7890<br/>
-                    E: mail@mail.com<br/>
-                
-                </p>
-                <br>
-                <h5>Follow us</h5>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Themeforest</a></li>
-                
-                </ul>
+                آدرس :</p>
+                <p>تهران - دانشگاه علم و صنعت ایران</p>
+<p>                    تلفن : 48-77240540-021</p>
+<p>                پست الکترونیکی:</p>
+              <p>iust@comp.iust.ac.ir</p>
             </div><!-- /span3-->
 			
 			<div class="span3">
-            	<h5>Twitter feed</h5>
-            	<p>
-                    Cool CSS tutorial
+           	  <h5>کلید آسمان در شبکه های اجتماعی</h5>
+            	<p align="left">Facebook<br/>
+                    <a href="http://www.facebook.com">http://www.facebook.com</a></p>
+                <p align="left">Twitter<br/>
+              <a href="http://www.twitter.com">http://www.twitter.com</a></p>
+                <p align="left">Google Plus<br/>
+                  <a href="https://plus.google.com">https://plus.google.com</a>
                     <br/>
-                    <a href="#">http://t.co/Xdert</a>
-                    <br/>
-                    <span>about 1 hour ago</span>
-                </p>
-                <p>
-                    Everything to know about HTML5
-                    <br/>
-                    <a href="#">http://t.co/Xdert</a>
-                    <br/>
-                    <span>about 7 hours ago</span>
-                </p>
-                <p>
-                    Learn PHP in 3 days
-                    <br/>
-                    <a href="#">http://t.co/Xdert</a>
-                    <br/>
-                    <span>about 9 hours ago</span>
-                </p>
+              </p>
             </div><!-- /span3-->
 			
 			<div class="span3">
-            	<h5>Blog roll</h5>
+           	  <h5>لینک های مفید</h5>
             	<ul class="list-blog-roll">
                     <li>
-                    	<a href="#" title="Example blog article">t1</a>	
+                    	<a href="http://www.jamkaran.info" title="jamkaran">وب سایت رسمی مسجد مقدس جمکران</a>	
                     </li>
                     <li>
-                    	<a href="#" title="Example blog article">t2</a>	
+                    	<a href="http://www.bachehayemasjed.ir" title="Example blog article">بچه های مسجد</a>	
                     </li>
                     <li>
-                    	<a href="#" title="Example blog article">t3</a>	
+                    	<a href="http://masjedblog.com" title="Example blog article">مسجد بلاگ</a>	
                     </li>
                     <li>
-                    	<a href="#" title="Example blog article">t4</a>	
-                    </li>
-                    <li>
-                    	<a href="#" title="Example blog article">t5</a>	
-                    </li>
-                    <li>
-                    	<a href="#" title="Example blog article">t6</a>	
-                    </li>
-                    <li>
-                    	<a href="#" title="Example blog article">t7</a>	
-                    </li>
+                   	<a href="http://www.masjed-alkufa.net" title="Example blog article">سایت رسمی مسجد کوفه</a></li>
                 </ul>
             	
             </div><!-- /span3-->
 			
 			<div class="span3">
-            	<h5>About us</h5>
-                <p>Text</p>
+            	<h5>درباره ما</h5>
+                <p>اعضای تیم طراحی سامانه کلید آسمان</p>
+                <p>سید محمد پورباقری</p>
+                <p>علی جعفری</p>
+                <p>امیر سجادی</p>
+                <p>سیده کوثر سجادی</p>
+                <p>نجمه زارغ</p>
+                <p>زهره فلاح نژاد</p>
+                <p>فائزه موحدی</p>
             </div><!-- /span3-->
         </div><!-- /row-fluid -->
         </div><!-- /container-->
