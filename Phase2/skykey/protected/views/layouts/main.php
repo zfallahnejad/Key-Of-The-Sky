@@ -184,7 +184,7 @@
 <footer>
     <div class="footer">
         <div class="container" style="text-align:center;">
-        	Copyright &copy; 2012. Designed by webapplicationthemes.com - High quality HTML Theme
+        	Copyright &copy; 2013. Designed by Key-Of-The-Sky Team - All Rights Reserved
         </div>
 	</div>
 </footer>

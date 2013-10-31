@@ -66,7 +66,7 @@
         </div>
         
         <hr>
-		<h3 class="header">Winners
+		<h3 class="header">برندگان دوره قبل
         	<span class="header-line"></span> 
         </h3>       
      <div class="row-fluid">        
