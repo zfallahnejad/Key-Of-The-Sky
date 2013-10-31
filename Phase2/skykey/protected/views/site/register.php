@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	'Register', );
 ?>
 
-<h1>Register a Liable</h1>
+<h1 align="right"><font size = 5><b>ثبت نام مسئول مسجد</b></font></h1>
 
 <?php if(Yii::app()->user->hasFlash('register')): ?>
 
@@ -18,9 +18,7 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 
-<p>
-please fill the boxes correctly.
-</p>
+<p align="right">لطفا فرم زیر را با اطلاعات مناسب پر  کنید</p>
 
 <div class="form">
 
@@ -31,8 +29,7 @@ please fill the boxes correctly.
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p align="right" class="note"> فیلد های دارای<span class="required">*</span> لازم هستند.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 

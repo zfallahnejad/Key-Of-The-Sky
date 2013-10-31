@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1 align="right">ورود</h1>
+<h1 align="right"><font size = 5><b>ورود</b></font></h1>
 
 <p align="right">لطفا فرم زیر را با اطلاعات مناسب پر کنید</p>
 

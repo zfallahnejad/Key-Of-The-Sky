@@ -1,4 +1,4 @@
-/* CSS Document */
+﻿/* CSS Document */
 body,.blog-title a,.blog-title a:hover,.dropdown-menu a{color:#717171;}
 
 .logo
@@ -14,7 +14,7 @@ body,.blog-title a,.blog-title a:hover,.dropdown-menu a{color:#717171;}
 }
 
 h1,h2,h3,h4,h5,.navbar .nav, .shout-box, .price-table dt, .price-table .price,.table thead{
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Tahoma';
 }
 h3{
 	font-size:18px;
@@ -349,33 +349,20 @@ a .colored_banner{
   color: #333333;
   background-color: #ededed;
   *background-color: #d0d0d0;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ededed), to(#d0d0d0));
-  background-image: -webkit-linear-gradient(top, #ededed, #d0d0d0);
-  background-image: -o-linear-gradient(top, #ededed, #d0d0d0);
-  background-image: linear-gradient(to bottom, #ededed, #d0d0d0);
-  background-image: -moz-linear-gradient(top, #ededed, #d0d0d0);
   background-repeat: repeat-x;
   border-color: #d0d0d0 #d0d0d0 #ededed;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffededed', endColorstr='#ffd0d0d0', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    background-image: -moz-linear-gradient(top, #ededed, #d0d0d0);
 }
 
 .thumb-content-dark {
   color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #333333;
   *background-color: #6a6a6a;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#6a6a6a));
-  background-image: -webkit-linear-gradient(top, #333333, #6a6a6a);
-  background-image: -o-linear-gradient(top, #333333, #6a6a6a);
-  background-image: linear-gradient(to bottom, #333333, #6a6a6a);
   background-image: -moz-linear-gradient(top, #333333, #6a6a6a);
   background-repeat: repeat-x;
   border-color: #6a6a6a #6a6a6a #333333;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff6a6a6a', GradientType=0);
-  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    background-image: -moz-linear-gradient(top, #333333, #6a6a6a);
 }
 
 .showcase-small{
@@ -532,39 +519,25 @@ span.header-line {
 
 .price-table dt {
 	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #363636;
 	*background-color: #222222;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
-	background-image: -webkit-linear-gradient(top, #444444, #222222);
-	background-image: -o-linear-gradient(top, #444444, #222222);
-	background-image: linear-gradient(to bottom, #444444, #222222);
 	background-image: -moz-linear-gradient(top, #444444, #222222);
 	background-repeat: repeat-x;
 	border-color: #222222 #222222 #000000;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
-	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
-	font-size:30px;
-	font-weight:500;
-	line-height:65px;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 65px;
+	background-image: -moz-linear-gradient(top, #444444, #222222);
 }
 
 .price-table .blue dt {
 	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	background-color: #363636;
 	*background-color: #222222;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
-	background-image: -webkit-linear-gradient(top, #444444, #222222);
-	background-image: -o-linear-gradient(top, #444444, #222222);
-	background-image: linear-gradient(to bottom, #444444, #222222);
 	background-image: -moz-linear-gradient(top, #444444, #222222);
 	background-repeat: repeat-x;
 	border-color: #222222 #222222 #000000;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
-	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+	background-image: -moz-linear-gradient(top, #444444, #222222);
 }
 
 .price-table dt, .price-table dl.extra dt {

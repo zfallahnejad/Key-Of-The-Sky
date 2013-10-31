@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <title>Welcome!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,20 +67,20 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
-						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"member area")),
-						array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"member area")),
-                    	array('label'=>'LiableRegister', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>"Register Liable"),),
-                        array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"what we are about"),),
-                        array('label'=>'Styles <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>"6 styles"), 
+						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
+                    	array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
+                        array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانید"),),
+                        array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
-                            array('label'=>'<span class="style" style="background-color:#0088CC;"></span> Style 1', 'url'=>"javascript:chooseStyle('none', 60)"),
-							array('label'=>'<span class="style" style="background-color:#e42e5d;"></span> Style 2', 'url'=>"javascript:chooseStyle('style2', 60)"),
-							array('label'=>'<span class="style" style="background-color:#c80681;"></span> Style 3', 'url'=>"javascript:chooseStyle('style3', 60)"),
-							array('label'=>'<span class="style" style="background-color:#51a351;"></span> Style 4', 'url'=>"javascript:chooseStyle('style4', 60)"),
-							array('label'=>'<span class="style" style="background-color:#b88006;"></span> Style 5', 'url'=>"javascript:chooseStyle('style5', 60)"),
-							array('label'=>'<span class="style" style="background-color:#f9630f;"></span> Style 6', 'url'=>"javascript:chooseStyle('style6', 60)"),
+                            array('label'=>'<span class="style" style="background-color:#0088CC;"></span> سبک 1', 'url'=>"javascript:chooseStyle('none', 60)"),
+							array('label'=>'<span class="style" style="background-color:#e42e5d;"></span> سبک 2', 'url'=>"javascript:chooseStyle('style2', 60)"),
+							array('label'=>'<span class="style" style="background-color:#c80681;"></span> سبک 3', 'url'=>"javascript:chooseStyle('style3', 60)"),
+							array('label'=>'<span class="style" style="background-color:#51a351;"></span> سبک 4', 'url'=>"javascript:chooseStyle('style4', 60)"),
+							array('label'=>'<span class="style" style="background-color:#b88006;"></span> سبک 5', 'url'=>"javascript:chooseStyle('style5', 60)"),
+							array('label'=>'<span class="style" style="background-color:#f9630f;"></span> سبک 6', 'url'=>"javascript:chooseStyle('style6', 60)"),
                         )),
-						array('label'=>'Home', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"our home page"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"صفحه اصلی سایت"),),	
    					),
                 )); 
 			?>
