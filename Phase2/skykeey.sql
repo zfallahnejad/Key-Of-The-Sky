@@ -129,8 +129,11 @@ CREATE TABLE IF NOT EXISTS `school` (
   `teacherName` varchar(32) NOT NULL,
   `teacherFamily` varchar(32) NOT NULL,
   `teacherPhone` int(11) NOT NULL,
+  `username` tinytext NOT NULL,
+  `password` tinytext NOT NULL,
+  `email` tinytext NOT NULL,
   PRIMARY KEY (`schoolId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 

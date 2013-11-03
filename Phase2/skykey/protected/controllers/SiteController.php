@@ -176,5 +176,65 @@ class SiteController extends Controller
 			}
 		}
 		$this->render('register',array('model'=>$model));
-	}	 
-}
+	}
+	public function actionschool()
+	{
+		$model =new SchoolForm;
+		if(isset($_POST['SchoolForm']))
+		{
+			$model->attributes=$_POST['SchoolForm'];
+			if($model->validate())
+			{
+				$schoolname=($model->schoolname);
+				$schoolphone=($model->schoolphone);
+				$schooladdress =($model->schooladdress);
+				$teachername=($model->teachername);
+				$teacherfamily=($model->teacherfamily);
+				$teacherphone=($model->teacherphone);
+				$username=($model->username);
+				$password=sha1($model->password);
+				$email=($model->email);
+						
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, username, password, email) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :username, :password, :email)";
+				$command=$connection->createCommand($sql);
+				
+				$command->bindParam(":schoolName",$schoolname,PDO::PARAM_STR);
+				$command->bindParam(":schoolPhone",$schoolphone,PDO::PARAM_STR);
+				$command->bindParam(":schoolAddress",$schooladdress,PDO::PARAM_STR);
+				$command->bindParam(":teacherName",$teachername,PDO::PARAM_STR);
+				$command->bindParam(":teacherFamily",$teacherfamily,PDO::PARAM_STR);
+				$command->bindParam(":teacherPhone",$teacherphone,PDO::PARAM_STR);
+				$command->bindParam(":username",$username,PDO::PARAM_STR);
+				$command->bindParam(":password",$password,PDO::PARAM_STR);
+				$command->bindParam(":email",$email,PDO::PARAM_STR);
+				
+				$command->execute();
+
+				
+				$connection->active=false;
+				Yii::app()->user->setFlash('school','success => user for school is registered');
+				
+				}
+				
+				
+				
+				$schoolname = ":schoolName";
+				$schoolphone= ":schoolPhone";
+				$schooladdress = ":schoolAddress";
+				$teachername = ":teacherName";
+				$teacherfamily = ":teacherFamily";
+				$teacherphone = ":teacherPhone";
+				$username = ":username";
+				$password = ":password";
+				$email = ":email";
+
+				$this->refresh();
+				
+			}
+				$this->render('school',array('model'=>$model));
+		}
+		
+		
+}	 

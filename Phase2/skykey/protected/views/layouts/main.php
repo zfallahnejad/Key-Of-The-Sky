@@ -67,10 +67,11 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
+                    	array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
-                        array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانید"),),
+                        array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<span class="style" style="background-color:#0088CC;"></span> سبک 1', 'url'=>"javascript:chooseStyle('none', 60)"),
@@ -80,7 +81,7 @@
 							array('label'=>'<span class="style" style="background-color:#b88006;"></span> سبک 5', 'url'=>"javascript:chooseStyle('style5', 60)"),
 							array('label'=>'<span class="style" style="background-color:#f9630f;"></span> سبک 6', 'url'=>"javascript:chooseStyle('style6', 60)"),
                         )),
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"صفحه اصلی سایت"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
    					),
                 )); 
 			?>
@@ -105,14 +106,14 @@
             	<h5>ارتباط با ما</h5>
                 <p>
                 آدرس :</p>
-                <p>تهران - دانشگاه علم و صنعت ایران</p>
+                <p>تهران - دانشگاه علم و صنعت ايران</p>
 <p>                    تلفن : 48-77240540-021</p>
-<p>                پست الکترونیکی:</p>
+<p>                پست الکترونيکي:</p>
               <p>iust@comp.iust.ac.ir</p>
             </div><!-- /span3-->
 			
 			<div class="span3">
-           	  <h5>کلید آسمان در شبکه های اجتماعی</h5>
+           	  <h5>کليد آسمان در شبکه هاي اجتماعي</h5>
             	<p align="left">Facebook<br/>
                     <a href="http://www.facebook.com">http://www.facebook.com</a></p>
                 <p align="left">Twitter<br/>
@@ -124,33 +125,33 @@
             </div><!-- /span3-->
 			
 			<div class="span3">
-           	  <h5>لینک های مفید</h5>
+           	  <h5>لينک هاي مفيد</h5>
             	<ul class="list-blog-roll">
                     <li>
-                    	<a href="http://www.jamkaran.info" title="jamkaran">وب سایت رسمی مسجد مقدس جمکران</a>	
+                    	<a href="http://www.jamkaran.info" title="jamkaran">وب سايت رسمي مسجد مقدس جمکران</a>	
                     </li>
                     <li>
-                    	<a href="http://www.bachehayemasjed.ir" title="Example blog article">بچه های مسجد</a>	
+                    	<a href="http://www.bachehayemasjed.ir" title="Example blog article">بچه هاي مسجد</a>	
                     </li>
                     <li>
                     	<a href="http://masjedblog.com" title="Example blog article">مسجد بلاگ</a>	
                     </li>
                     <li>
-                   	<a href="http://www.masjed-alkufa.net" title="Example blog article">سایت رسمی مسجد کوفه</a></li>
+                   	<a href="http://www.masjed-alkufa.net" title="Example blog article">سايت رسمي مسجد کوفه</a></li>
                 </ul>
             	
             </div><!-- /span3-->
 			
 			<div class="span3">
             	<h5>درباره ما</h5>
-                <p>اعضای تیم طراحی سامانه کلید آسمان</p>
-                <p>سید محمد پورباقری</p>
-                <p>علی جعفری</p>
-                <p>امیر سجادی</p>
-                <p>سیده کوثر سجادی</p>
+                <p>اعضاي تيم طراحي سامانه کليد آسمان</p>
+                <p>سيد محمد پورباقري</p>
+                <p>علي جعفري</p>
+                <p>امير سجادي</p>
+                <p>سيده کوثر سجادي</p>
                 <p>نجمه زارغ</p>
                 <p>زهره فلاح نژاد</p>
-                <p>فائزه موحدی</p>
+                <p>فائزه موحدي</p>
             </div><!-- /span3-->
         </div><!-- /row-fluid -->
         </div><!-- /container-->
