@@ -29,9 +29,7 @@ $this->breadcrumbs=array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-	<p align="right" class="note"> فیلد های دارای<span class="required">*</span> لازم هستند.</p>
-
-	<?php echo $form->errorSummary($model); ?>
+	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
@@ -58,9 +56,9 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pasword'); ?>
-		<?php echo $form->passwordField($model,'pasword'); ?>
-		<?php echo $form->error($model,'pasword'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row">
@@ -109,7 +107,7 @@ $this->breadcrumbs=array(
 	
 	
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('ثبت'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

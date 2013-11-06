@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2013 at 07:01 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.1
+-- Generation Time: Nov 07, 2013 at 12:39 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `skykeey`
 --
-CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET utf8 COLLATE utf8_persian_ci;
+CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `skykeey`;
 
 -- --------------------------------------------------------
@@ -48,13 +48,20 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `family` varchar(255) NOT NULL,
   `mosqueName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `pasword` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `tel` int(11) NOT NULL,
   `mobile` int(11) DEFAULT NULL,
   `mosqueAddress` text NOT NULL,
   `image` text,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `mosqueculturalliablee`
+--
+
+INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
+(1, 'ahmad', 'ahmadi', 'Haghani', 'ahmad@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 'tehran', '=?UTF-8?B??=');
 
 -- --------------------------------------------------------
 
@@ -131,10 +138,10 @@ CREATE TABLE IF NOT EXISTS `school` (
   `teacherName` varchar(255) NOT NULL,
   `teacherFamily` varchar(255) NOT NULL,
   `teacherPhone` int(11) NOT NULL,
-  `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   PRIMARY KEY (`schoolId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 

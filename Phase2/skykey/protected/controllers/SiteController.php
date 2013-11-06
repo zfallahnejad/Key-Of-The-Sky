@@ -7,6 +7,13 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
+		$session = Yii::app()->session;
+        $prefixLen = strlen(CCaptchaAction::SESSION_VAR_PREFIX);
+        foreach($session->keys as $key)
+        {
+			if(strncmp(CCaptchaAction::SESSION_VAR_PREFIX, $key, $prefixLen) == 1)
+				$session->remove($key);
+        }
 		return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
@@ -119,27 +126,26 @@ class SiteController extends Controller
 				$family=($model->family);
 				$mosqueName =($model->mosqueName);
 				$email=($model->email);
-				$pasword=sha1($model->pasword);
+				$password=sha1($model->password);
 				$confirmPassword= sha1($model->confirmPassword);
 				$tel=($model->tel);
 		 		$mobile=($model->mobile);
 				$mosqueAddress=($model->mosqueAddress);
 				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
 				
-				if($pasword == $confirmPassword)
+				if($password == $confirmPassword)
 				{
 						
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, confirmPassword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :confirmPassword, :tel, :mobile, :mosqueAddress, :image)";
+					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
 					$command=$connection->createCommand($sql);
 					
 					$command->bindParam(":name",$name,PDO::PARAM_STR);
 					$command->bindParam(":family",$family,PDO::PARAM_STR);
 					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
 					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
-					$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
+					$command->bindParam(":password",$password,PDO::PARAM_STR);
 					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
 					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
 					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
@@ -159,12 +165,11 @@ class SiteController extends Controller
 				}
 				
 				
-				
 				$name = ":name";
 				$family= ":family";
 				$mosqueName = ":mosque";
 				$email = ":email";
-				$pasword = ":password";
+				$password = ":password";
 				$confirmPassword = ":confirm";
 				$tel = ":tel";
 				$mobile = ":mobile";
@@ -191,34 +196,36 @@ class SiteController extends Controller
 				$teachername=($model->teachername);
 				$teacherfamily=($model->teacherfamily);
 				$teacherphone=($model->teacherphone);
-				$username=($model->username);
-				$password=sha1($model->password);
 				$email=($model->email);
-						
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, username, password, email) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :username, :password, :email)";
-				$command=$connection->createCommand($sql);
+				$password=sha1($model->password);
+				$confirmPassword= sha1($model->confirmPassword);
+				if($password == $confirmPassword)
+				{
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
+					$command=$connection->createCommand($sql);
 				
-				$command->bindParam(":schoolName",$schoolname,PDO::PARAM_STR);
-				$command->bindParam(":schoolPhone",$schoolphone,PDO::PARAM_STR);
-				$command->bindParam(":schoolAddress",$schooladdress,PDO::PARAM_STR);
-				$command->bindParam(":teacherName",$teachername,PDO::PARAM_STR);
-				$command->bindParam(":teacherFamily",$teacherfamily,PDO::PARAM_STR);
-				$command->bindParam(":teacherPhone",$teacherphone,PDO::PARAM_STR);
-				$command->bindParam(":username",$username,PDO::PARAM_STR);
-				$command->bindParam(":password",$password,PDO::PARAM_STR);
-				$command->bindParam(":email",$email,PDO::PARAM_STR);
+					$command->bindParam(":schoolName",$schoolname,PDO::PARAM_STR);
+					$command->bindParam(":schoolPhone",$schoolphone,PDO::PARAM_STR);
+					$command->bindParam(":schoolAddress",$schooladdress,PDO::PARAM_STR);
+					$command->bindParam(":teacherName",$teachername,PDO::PARAM_STR);
+					$command->bindParam(":teacherFamily",$teacherfamily,PDO::PARAM_STR);
+					$command->bindParam(":teacherPhone",$teacherphone,PDO::PARAM_STR);
+					$command->bindParam(":email",$email,PDO::PARAM_STR);
+					$command->bindParam(":password",$password,PDO::PARAM_STR);
 				
-				$command->execute();
+					$command->execute();
 
 				
-				$connection->active=false;
-				Yii::app()->user->setFlash('school','success => user for school is registered');
+					$connection->active=false;
+					Yii::app()->user->setFlash('school','success => User for school is registered');
 				
 				}
-				
-				
+				else 
+				{
+						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
+				}
 				
 				$schoolname = ":schoolName";
 				$schoolphone= ":schoolPhone";
@@ -226,15 +233,15 @@ class SiteController extends Controller
 				$teachername = ":teacherName";
 				$teacherfamily = ":teacherFamily";
 				$teacherphone = ":teacherPhone";
-				$username = ":username";
-				$password = ":password";
 				$email = ":email";
-
-				$this->refresh();
+				$password = ":password";
+				$confirmPassword = ":confirm";
 				
+				$this->refresh();
 			}
-				$this->render('school',array('model'=>$model));
 		}
+		$this->render('school',array('model'=>$model));
+	}
 		
 		
 }	 

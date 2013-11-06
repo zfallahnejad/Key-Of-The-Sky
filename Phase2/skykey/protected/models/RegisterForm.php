@@ -13,7 +13,7 @@ class RegisterForm extends CFormModel
 	public $family;
 	public $mosqueName;
 	public $email;
-	public $pasword;
+	public $password;
 	public $confirmPassword;
 	public $tel;
 	public $mobile;
@@ -28,11 +28,13 @@ class RegisterForm extends CFormModel
 	{
 		return array(
 			// name, email, subject and body are required
-			array('name, family, mosqueName, email, pasword, confirmPassword, tel, mosqueAddress', 'required'),
+			array('name, family, mosqueName, email, password, confirmPassword, tel, mosqueAddress', 'required'),
 			// email has to be a valid email address
 			array('email', 'email'),
+			// when in register scenario, password must match confirmPassword
+			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
 			// verifyCode needs to be entered correctly
-			//array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 

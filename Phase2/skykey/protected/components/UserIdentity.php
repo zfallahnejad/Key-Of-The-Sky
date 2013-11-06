@@ -26,11 +26,11 @@ class UserIdentity extends CUserIdentity
 			while ($row = mysql_fetch_assoc($query))
 			{
 				$email = $row["email"];
-				$pasword = $row["pasword"];
+				$password = $row["password"];
 			}
 			$bad = sha1($this->password);
 				 
-			if($pasword === $bad)
+			if($password === $bad)
 			{$this->errorCode=self::ERROR_NONE;}
 			else
 			{$this->errorCode=self::ERROR_PASSWORD_INVALID;}

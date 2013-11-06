@@ -67,7 +67,7 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
-                    	array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
+                    	array('label'=>'<b>ثبت مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
@@ -149,7 +149,7 @@
                 <p>علي جعفري</p>
                 <p>امير سجادي</p>
                 <p>سيده کوثر سجادي</p>
-                <p>نجمه زارغ</p>
+                <p>نجمه زارع</p>
                 <p>زهره فلاح نژاد</p>
                 <p>فائزه موحدي</p>
             </div><!-- /span3-->

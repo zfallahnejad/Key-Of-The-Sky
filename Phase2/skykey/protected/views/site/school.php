@@ -10,6 +10,14 @@ $this->breadcrumbs=array(
 
 <h1 align="right"><font size = 5><b>ثبت نام مسئول مدرسه</b></font></h1>
 
+<?php if(Yii::app()->user->hasFlash('register')): ?>
+
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('register'); ?>
+</div>
+
+<?php else: ?>
+
 <p align="right">لطفا فرم زیر را با اطلاعات مناسب پر کنید</p>
 
 <div class="form">
@@ -58,13 +66,13 @@ $this->breadcrumbs=array(
 		<?php echo $form->textField($model,'teacherphone'); ?>
 		<?php echo $form->error($model,'teacherphone'); ?>
 	</div>
-	
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
 
+	<div align="right" class="row">
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->error($model,'email'); ?>
+	</div>
+	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
@@ -72,15 +80,31 @@ $this->breadcrumbs=array(
 		
 	</div>
 
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email'); ?>
-		<?php echo $form->error($model,'email'); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'confirmPassword'); ?>
+		<?php echo $form->passwordField($model,'confirmPassword'); ?>
+		<?php echo $form->error($model,'confirmPassword'); ?>
 	</div>
 
+	<!--captcha-->	
+	<?php if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?>
+		<?php echo $form->textField($model,'verifyCode'); ?>
+		</div>
+		<div class="hint">لطفا عبارت مشاهده شده در بالا را وارد نمایید
+		<br/>
+		عبارت به حروف بزرگ و کوچک حساس نمیباشد</div>
+		<?php echo $form->error($model,'verifyCode'); ?>
+	</div>
+	<?php endif; ?>
+	
 	<div align="right" class="row buttons">
 		<?php echo CHtml::submitButton('ثبت'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+<?php endif; ?>
