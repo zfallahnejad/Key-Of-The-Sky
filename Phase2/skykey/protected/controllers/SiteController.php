@@ -127,17 +127,23 @@ class SiteController extends Controller
 				$mosqueName =($model->mosqueName);
 				$email=($model->email);
 				$password=sha1($model->password);
-				$confirmPassword= sha1($model->confirmPassword);
 				$tel=($model->tel);
 		 		$mobile=($model->mobile);
 				$mosqueAddress=($model->mosqueAddress);
 				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
 				
-				if($password == $confirmPassword)
-				{
-						
-					$connection=Yii::app()->db;
-					$connection->active=TRUE;
+					
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$connect = mysql_connect("localhost","root","") or die("not connecting");
+				mysql_select_db("skykeey",$connect) or die("no db :'(");
+				$find1 =mysql_query("SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$email'",$connect);
+				$count1=mysql_fetch_row($find1);
+				
+				if($count1[0]!=0){
+					Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
+				}
+				else{
 					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
 					$command=$connection->createCommand($sql);
 					
@@ -150,21 +156,12 @@ class SiteController extends Controller
 					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
 					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
 					$command->bindParam(":image",$image,PDO::PARAM_STR);
-					
 					$command->execute();
 
-					
 					$connection->active=false;
-					Yii::app()->user->setFlash('register','success => Thank you for registering.');
-					
-				
+					Yii::app()->user->setFlash('register','ثبت نام با موفقیت انجام شد');
 				}
-				else 
-				{
-						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
-				}
-				
-				
+								
 				$name = ":name";
 				$family= ":family";
 				$mosqueName = ":mosque";
@@ -175,9 +172,7 @@ class SiteController extends Controller
 				$mobile = ":mobile";
 				$mosqueAddress = ":mosque";
 				$image = ":image";
-
 				$this->refresh();
-				
 			}
 		}
 		$this->render('register',array('model'=>$model));
@@ -199,10 +194,18 @@ class SiteController extends Controller
 				$email=($model->email);
 				$password=sha1($model->password);
 				$confirmPassword= sha1($model->confirmPassword);
-				if($password == $confirmPassword)
-				{
-					$connection=Yii::app()->db;
-					$connection->active=TRUE;
+				
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$connect = mysql_connect("localhost","root","") or die("not connecting");
+				mysql_select_db("skykeey",$connect) or die("no db :'(");
+				$find1 =mysql_query("SELECT Count(*) FROM `school` WHERE `email` ='$email'",$connect);
+				$count1=mysql_fetch_row($find1);
+				
+				if($count1[0]!=0){
+					Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
+				}
+				else{
 					$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
 					$command=$connection->createCommand($sql);
 				
@@ -217,14 +220,8 @@ class SiteController extends Controller
 				
 					$command->execute();
 
-				
 					$connection->active=false;
-					Yii::app()->user->setFlash('school','success => User for school is registered');
-				
-				}
-				else 
-				{
-						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
+					Yii::app()->user->setFlash('school','ثبت نام با موفقیت انجام شد.');
 				}
 				
 				$schoolname = ":schoolName";

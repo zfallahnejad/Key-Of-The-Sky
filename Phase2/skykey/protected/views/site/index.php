@@ -16,7 +16,8 @@
     <div class="shout-box" >
         <div class="shout-text" >
           <h1>سامانه کلید آسمان</h1>
-          <p>راهی نوین برای  گسترش مکتب اسلام</p>
+          <h1><?php echo Yii::app()->user->returnUrl;?></h1>
+		  <p>راهی نوین برای  گسترش مکتب اسلام</p>
         </div>
     </div>
     <div class="row-fluid">
