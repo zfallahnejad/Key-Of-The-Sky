@@ -1274,3 +1274,49 @@ Stack trace:
 REQUEST_URI=/skykey/index.php?r=site/login
 HTTP_REFERER=http://localhost/skykey/index.php?r=site/login
 ---
+2013/11/07 23:03:59 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (122)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/07 23:03:59 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (122)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/07 23:05:38 [error] [php] Undefined variable: model (C:\xampp\htdocs\skykey\protected\views\site\pages\school.php:35)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CViewAction.php(140): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CViewAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/page&view=school
+in C:\xampp\htdocs\skykey\protected\views\site\pages\school.php (35)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/07 23:34:13 [error] [exception.CException] exception 'CException' with message 'ParentForm has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(304): CModel->getValidators('parentCode')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('parentCode')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(ParentForm), 'parentCode', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\Parent.php(35): CActiveForm->labelEx(Object(ParentForm), 'parentCode')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('parent', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(299): CController->render('parent', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionparent()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('parent')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/parent')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/parent
+HTTP_REFERER=http://localhost/skykey/index.php
+---

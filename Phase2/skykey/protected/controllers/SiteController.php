@@ -203,7 +203,7 @@ class SiteController extends Controller
 				$count1=mysql_fetch_row($find1);
 				
 				if($count1[0]!=0){
-					Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
+					Yii::app()->user->setFlash('school','ایمیل وارد شده در پایگاه داده موجود می باشد');
 				}
 				else{
 					$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
@@ -240,5 +240,62 @@ class SiteController extends Controller
 		$this->render('school',array('model'=>$model));
 	}
 		
-		
+	public function actionparent()
+	{
+		$model =new ParentForm;
+		if(isset($_POST['ParentForm']))
+		{
+			$model->attributes=$_POST['ParentForm'];
+			if($model->validate())
+			{
+				$parentCode=($model->parentCode);
+				$parentName=($model->parentName);
+				$parentFamily=($model->parentFamily);
+				$homePhone=($model->homePhone);
+				$mobileNum=($model->mobileNum);
+				$email=($model->email);
+				$password=sha1($model->password);
+				$confirmPassword= sha1($model->confirmPassword);
+				
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$connect = mysql_connect("localhost","root","") or die("not connecting");
+				mysql_select_db("skykeey",$connect) or die("no db :'(");
+				$find1 =mysql_query("SELECT Count(*) FROM `parent` WHERE `email` ='$email'",$connect);
+				$count1=mysql_fetch_row($find1);
+				
+				if($count1[0]!=0){
+					Yii::app()->user->setFlash('parent','ایمیل وارد شده در پایگاه داده موجود می باشد');
+				}
+				else{
+					$sql="INSERT INTO parent (parentCode,parentName,parentFamily, homePhone, mobileNum, email, password) VALUES(:parentCode,:parentName,:parentFamily, :homePhone, :mobileNum, :email, :password)";
+					$command=$connection->createCommand($sql);
+				
+					$command->bindParam(":parentCode",$parentCode,PDO::PARAM_STR);
+					$command->bindParam(":parentName",$parentName,PDO::PARAM_STR);
+					$command->bindParam(":parentFamily",$parentFamily,PDO::PARAM_STR);
+					$command->bindParam(":homePhone",$homePhone,PDO::PARAM_STR);
+					$command->bindParam(":mobileNum",$mobileNum,PDO::PARAM_STR);
+					$command->bindParam(":email",$email,PDO::PARAM_STR);
+					$command->bindParam(":password",$password,PDO::PARAM_STR);
+				
+					$command->execute();
+
+					$connection->active=false;
+					Yii::app()->user->setFlash('parent','ثبت نام با موفقیت انجام شد.');
+				}
+				$parentCode=":parentCode";
+				$parentName=":parentName";
+				$parentFamily=":parentFamily";
+				$homePhone=":homePhone";
+				$mobileNum=":mobileNum";
+				$email = ":email";
+				$password = ":password";
+				$confirmPassword = ":confirm";
+				
+				$this->refresh();
+			}
+		}
+		$this->render('parent',array('model'=>$model));
+	}	
 }	 

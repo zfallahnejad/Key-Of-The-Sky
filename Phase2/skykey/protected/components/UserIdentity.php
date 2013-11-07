@@ -17,6 +17,8 @@ class UserIdentity extends CUserIdentity
 		$count1=mysql_fetch_row($find1);
 		$find2 =mysql_query("SELECT Count(*) FROM `school` WHERE `email` ='$this->username'",$connect);
 		$count2=mysql_fetch_row($find2);
+		$find3 =mysql_query("SELECT Count(*) FROM `parent` WHERE `email` ='$this->username'",$connect);
+		$count3=mysql_fetch_row($find3);
 		if ($count1[0]==1){
 			$sql ="SELECT * FROM `mosqueculturalliablee` WHERE `email` ='$this->username'";
 			echo "hello";
@@ -82,8 +84,38 @@ class UserIdentity extends CUserIdentity
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
 			}
 		}
-		else{
-			$this->_id =0 ;
+		elseif($count3[0]==1)
+		{	
+			$sql ="SELECT * FROM `parent` WHERE `email` ='$this->username'";
+		
+			$query = mysql_query($sql,$connect);
+			if ($query === FALSE) {
+        		trigger_error(mysql_error());
+    		}
+			//echo  mysql_num_rows($query);
+			$numrows = mysql_num_rows($query);
+			if ($numrows!=0)
+			{
+				//while loop
+				while ($row = mysql_fetch_assoc($query)){
+					$email = $row["email"];
+					$password = $row["password"];
+				}
+				$TempP = sha1($this->password);
+				 
+				if($password === $TempP){
+					$this->errorCode=self::ERROR_NONE;
+					// Store the role in a session:
+		    		$this->setState('role', 'parent');
+					$this->_id = 3;
+				}
+				else{
+					$this->errorCode=self::ERROR_PASSWORD_INVALID;
+				}
+			}
+			else{
+				$this->errorCode=self::ERROR_USERNAME_INVALID;
+			}
 		}
 		mysql_close($connect);			  
 		return !$this->errorCode;			
