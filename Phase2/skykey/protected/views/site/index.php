@@ -4,9 +4,9 @@
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
             <div id="slider-nivo" class="nivoSlider">
-                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" alt="" title="" data-transition="" />
+                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s10.jpg" alt="" title="" data-transition="fade" />
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" alt="" title="" data-transition="fade" />
-                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" alt="" title="" data-transition="" />
+                <img src="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" alt="" title="" data-transition="fade" />
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" alt="" data-transition="fade"  />
             </div>
         </div>
@@ -16,8 +16,7 @@
     <div class="shout-box" >
         <div class="shout-text" >
           <h1>سامانه کلید آسمان</h1>
-          <h1><?php echo Yii::app()->user->returnUrl;?></h1>
-		  <p>راهی نوین برای  گسترش مکتب اسلام</p>
+          <p>راهی نوین برای  گسترش مکتب اسلام</p>
         </div>
     </div>
     <div class="row-fluid">

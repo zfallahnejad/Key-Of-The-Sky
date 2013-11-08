@@ -7,13 +7,6 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		$session = Yii::app()->session;
-        $prefixLen = strlen(CCaptchaAction::SESSION_VAR_PREFIX);
-        foreach($session->keys as $key)
-        {
-			if(strncmp(CCaptchaAction::SESSION_VAR_PREFIX, $key, $prefixLen) == 1)
-				$session->remove($key);
-        }
 		return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
@@ -126,53 +119,60 @@ class SiteController extends Controller
 				$family=($model->family);
 				$mosqueName =($model->mosqueName);
 				$email=($model->email);
-				$password=sha1($model->password);
+				$pasword=sha1($model->pasword);
+				$confirmPassword= sha1($model->confirmPassword);
 				$tel=($model->tel);
 		 		$mobile=($model->mobile);
 				$mosqueAddress=($model->mosqueAddress);
 				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
 				
-					
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				$connect = mysql_connect("localhost","root","") or die("not connecting");
-				mysql_select_db("skykeey",$connect) or die("no db :'(");
-				$find1 =mysql_query("SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$email'",$connect);
-				$count1=mysql_fetch_row($find1);
-				
-				if($count1[0]!=0){
-					Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
-				}
-				else{
-					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
+				if($pasword == $confirmPassword)
+				{
+						
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :tel, :mobile, :mosqueAddress, :image)";
 					$command=$connection->createCommand($sql);
 					
 					$command->bindParam(":name",$name,PDO::PARAM_STR);
 					$command->bindParam(":family",$family,PDO::PARAM_STR);
 					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
 					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":password",$password,PDO::PARAM_STR);
+					$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
+					$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
 					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
 					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
 					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
 					$command->bindParam(":image",$image,PDO::PARAM_STR);
+					
 					$command->execute();
 
+					
 					$connection->active=false;
-					Yii::app()->user->setFlash('register','ثبت نام با موفقیت انجام شد');
+					Yii::app()->user->setFlash('register','success => Thank you for registering.');
+					
+				
 				}
-								
+				else 
+				{
+						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
+				}
+				
+				
+				
 				$name = ":name";
 				$family= ":family";
 				$mosqueName = ":mosque";
 				$email = ":email";
-				$password = ":password";
+				$pasword = ":password";
 				$confirmPassword = ":confirm";
 				$tel = ":tel";
 				$mobile = ":mobile";
 				$mosqueAddress = ":mosque";
 				$image = ":image";
+
 				$this->refresh();
+				
 			}
 		}
 		$this->render('register',array('model'=>$model));
@@ -193,36 +193,37 @@ class SiteController extends Controller
 				$teacherphone=($model->teacherphone);
 				$email=($model->email);
 				$password=sha1($model->password);
-				$confirmPassword= sha1($model->confirmPassword);
-				
+				$password2=($model->password);
+						
 				$connection=Yii::app()->db;
 				$connection->active=TRUE;
-				$connect = mysql_connect("localhost","root","") or die("not connecting");
-				mysql_select_db("skykeey",$connect) or die("no db :'(");
-				$find1 =mysql_query("SELECT Count(*) FROM `school` WHERE `email` ='$email'",$connect);
-				$count1=mysql_fetch_row($find1);
+				$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
+				$command=$connection->createCommand($sql);
 				
-				if($count1[0]!=0){
-					Yii::app()->user->setFlash('school','ایمیل وارد شده در پایگاه داده موجود می باشد');
+				$command->bindParam(":schoolName",$schoolname,PDO::PARAM_STR);
+				$command->bindParam(":schoolPhone",$schoolphone,PDO::PARAM_STR);
+				$command->bindParam(":schoolAddress",$schooladdress,PDO::PARAM_STR);
+				$command->bindParam(":teacherName",$teachername,PDO::PARAM_STR);
+				$command->bindParam(":teacherFamily",$teacherfamily,PDO::PARAM_STR);
+				$command->bindParam(":teacherPhone",$teacherphone,PDO::PARAM_STR);
+				$command->bindParam(":email",$email,PDO::PARAM_STR);
+				$command->bindParam(":password",$password,PDO::PARAM_STR);
+				
+				
+				$command->execute();
+				
+				$to=$email;
+				$subject="Account Information in Key-Of-The-Sky";
+				$message="Your User Name is $email \n Your Password is $password2";
+				$headers = "From: admin@keyofthesky.ir";
+				$result=mail($to,$subject,$message,$headers);
+				
+				$connection->active=false;
+				Yii::app()->user->setFlash('school','success => user for school is registered');
+				
 				}
-				else{
-					$sql="INSERT INTO school (schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
-					$command=$connection->createCommand($sql);
 				
-					$command->bindParam(":schoolName",$schoolname,PDO::PARAM_STR);
-					$command->bindParam(":schoolPhone",$schoolphone,PDO::PARAM_STR);
-					$command->bindParam(":schoolAddress",$schooladdress,PDO::PARAM_STR);
-					$command->bindParam(":teacherName",$teachername,PDO::PARAM_STR);
-					$command->bindParam(":teacherFamily",$teacherfamily,PDO::PARAM_STR);
-					$command->bindParam(":teacherPhone",$teacherphone,PDO::PARAM_STR);
-					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":password",$password,PDO::PARAM_STR);
 				
-					$command->execute();
-
-					$connection->active=false;
-					Yii::app()->user->setFlash('school','ثبت نام با موفقیت انجام شد.');
-				}
 				
 				$schoolname = ":schoolName";
 				$schoolphone= ":schoolPhone";
@@ -232,70 +233,145 @@ class SiteController extends Controller
 				$teacherphone = ":teacherPhone";
 				$email = ":email";
 				$password = ":password";
-				$confirmPassword = ":confirm";
 				
+
 				$this->refresh();
+				
 			}
+				$this->render('school',array('model'=>$model));
 		}
-		$this->render('school',array('model'=>$model));
-	}
-		
-	public function actionparent()
-	{
+		public function actionparent()
+		{
 		$model =new ParentForm;
+		
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='parent-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+		
+		
 		if(isset($_POST['ParentForm']))
 		{
 			$model->attributes=$_POST['ParentForm'];
 			if($model->validate())
 			{
-				$parentCode=($model->parentCode);
-				$parentName=($model->parentName);
-				$parentFamily=($model->parentFamily);
-				$homePhone=($model->homePhone);
-				$mobileNum=($model->mobileNum);
+				$parentname=($model->parentname);
+				$parentfamily=($model->parentfamily);
+				$parentcode =($model->parentcode);
+				$homephone=($model->homephone);
+				$mobilenum=($model->mobilenum);
 				$email=($model->email);
 				$password=sha1($model->password);
-				$confirmPassword= sha1($model->confirmPassword);
-				
+				$password2=($model->password);
+						
 				$connection=Yii::app()->db;
 				$connection->active=TRUE;
-				$connect = mysql_connect("localhost","root","") or die("not connecting");
-				mysql_select_db("skykeey",$connect) or die("no db :'(");
-				$find1 =mysql_query("SELECT Count(*) FROM `parent` WHERE `email` ='$email'",$connect);
-				$count1=mysql_fetch_row($find1);
+				$sql="INSERT INTO parent (parentName,parentFamily,parentCode, homePhone, mobileNum, email, password) VALUES(:parentName,:parentFamily, :parentCode, :homePhone, :mobileNum, :email, :password)";
+				$command=$connection->createCommand($sql);
 				
-				if($count1[0]!=0){
-					Yii::app()->user->setFlash('parent','ایمیل وارد شده در پایگاه داده موجود می باشد');
+				$command->bindParam(":parentName",$parentname,PDO::PARAM_STR);
+				$command->bindParam(":parentFamily",$parentfamily,PDO::PARAM_STR);
+				$command->bindParam(":parentCode",$parentcode,PDO::PARAM_STR);
+				$command->bindParam(":homePhone",$homephone,PDO::PARAM_STR);
+				$command->bindParam(":mobileNum",$mobilenum,PDO::PARAM_STR);
+				$command->bindParam(":email",$email,PDO::PARAM_STR);
+				$command->bindParam(":password",$password,PDO::PARAM_STR);
+				
+				
+				$command->execute();
+				
+				$to=$email;
+				$subject="Account Information in Key-Of-The-Sky";
+				$message="Your User Name is $email \n Your Password is $password2";
+				$headers = "From: admin@keyofthesky.ir";
+				$result=mail($to,$subject,$message,$headers);
+				
+				$connection->active=false;
+				Yii::app()->user->setFlash('parent','success => user for parent is registered');
+				
 				}
-				else{
-					$sql="INSERT INTO parent (parentCode,parentName,parentFamily, homePhone, mobileNum, email, password) VALUES(:parentCode,:parentName,:parentFamily, :homePhone, :mobileNum, :email, :password)";
-					$command=$connection->createCommand($sql);
 				
-					$command->bindParam(":parentCode",$parentCode,PDO::PARAM_STR);
-					$command->bindParam(":parentName",$parentName,PDO::PARAM_STR);
-					$command->bindParam(":parentFamily",$parentFamily,PDO::PARAM_STR);
-					$command->bindParam(":homePhone",$homePhone,PDO::PARAM_STR);
-					$command->bindParam(":mobileNum",$mobileNum,PDO::PARAM_STR);
-					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":password",$password,PDO::PARAM_STR);
 				
-					$command->execute();
-
-					$connection->active=false;
-					Yii::app()->user->setFlash('parent','ثبت نام با موفقیت انجام شد.');
-				}
-				$parentCode=":parentCode";
-				$parentName=":parentName";
-				$parentFamily=":parentFamily";
-				$homePhone=":homePhone";
-				$mobileNum=":mobileNum";
+				
+				$parentname = ":parentName";
+				$parentfamily= ":parentFamily";
+				$parentcode = ":parentCode";
+				$homephone = ":homePhone";
+				$mobilenum = ":mobileNum";
 				$email = ":email";
 				$password = ":password";
-				$confirmPassword = ":confirm";
 				
+
 				$this->refresh();
+				
 			}
+				$this->render('parent',array('model'=>$model));
 		}
-		$this->render('parent',array('model'=>$model));
-	}	
+		public function actionstudent()
+		{
+		$model =new StudentForm;
+		if(isset($_POST['StudentForm']))
+		{
+			$model->attributes=$_POST['StudentForm'];
+			if($model->validate())
+			{
+				$stname=($model->stname);
+				$stfamily=($model->stfamily);
+				$birthdate =($model->birthdate);
+				$fathername=($model->fathername);
+				$parentcode=($model->parentcode);
+				$mosque=($model->mosque);
+				$school=($model->school);
+				$schoolid=($model->schoolid);
+				$stcode=($model->stcode);
+				$address=($model->address);
+				$picture=($model->picture);
+						
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$sql="INSERT INTO school (stName, stFamily, birthdate, fatherName, parentCode, mosque, school, schoolId, stCode, address, picture) VALUES(:stName, :stFamily, :birthdate, :fatherName, :parentCode, :mosque, :school, :schoolId, :stCode, :address, :picture)";
+				$command=$connection->createCommand($sql);
+				
+				$command->bindParam(":stName",$stname,PDO::PARAM_STR);
+				$command->bindParam(":stFamily",$stfamily,PDO::PARAM_STR);
+				$command->bindParam(":birthdate",$birthdate,PDO::PARAM_STR);
+				$command->bindParam(":fatherName",$fathername,PDO::PARAM_STR);
+				$command->bindParam(":parentCode",$parentcode,PDO::PARAM_STR);
+				$command->bindParam(":mosque",$mosque,PDO::PARAM_STR);
+				$command->bindParam(":school",$school,PDO::PARAM_STR);
+				$command->bindParam(":schoolId",$schoolid,PDO::PARAM_STR);
+				$command->bindParam(":stCode",$stcode,PDO::PARAM_STR);
+				$command->bindParam(":address",$address,PDO::PARAM_STR);
+				$command->bindParam(":picture",$picture,PDO::PARAM_STR);
+				
+				
+				$command->execute();
+				
+				$connection->active=false;
+				Yii::app()->user->setFlash('student','success => student is registered');
+				
+				}
+				
+				
+				
+				$stname = ":stName";
+				$stfamily= ":stFamily";
+				$birthdate = ":birthdate";
+				$fathername = ":fatherName";
+				$parentcode = ":parentCode";
+				$mosque = ":mosque";
+				$school = ":school";
+				$schoolid = ":schoolId";
+				$stcode = ":stCode";
+				$address = ":address";
+				$picture = ":picture";
+				
+
+				$this->refresh();
+				
+			}
+				$this->render('student',array('model'=>$model));
+		}
 }	 
