@@ -22,13 +22,13 @@ $this->breadcrumbs=array(
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
 	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<h1><?php echo $form->labelEx($model,'email'); ?></h1>
+		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
+		<h1><?php echo $form->labelEx($model,'password'); ?></h1>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 		

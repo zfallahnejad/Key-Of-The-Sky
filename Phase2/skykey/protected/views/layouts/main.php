@@ -67,13 +67,17 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
-						array('label'=>'<b>مشخصات والدین</b>', 'url'=>array('/site/parent'),'linkOptions'=>array("data-description"=>""),),
-						array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
-                    	array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
-                    	array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
-                        array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
+                    	array('label'=>'<b>درج مشخصات</b> <span class="caret"></span>', 'url'=>'#','visible'=>(Yii::app()->user->getId()==1),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>مشخصات والدین</b>', 'url'=>array('/site/parent'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
+                        )),
+						array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
+                        array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
+						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<span class="style" style="background-color:#0088CC;"></span> سبک 1', 'url'=>"javascript:chooseStyle('none', 60)"),

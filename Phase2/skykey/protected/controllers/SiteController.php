@@ -119,52 +119,42 @@ class SiteController extends Controller
 				$family=($model->family);
 				$mosqueName =($model->mosqueName);
 				$email=($model->email);
-				$pasword=sha1($model->pasword);
+				$password=sha1($model->password);
 				$confirmPassword= sha1($model->confirmPassword);
 				$tel=($model->tel);
 		 		$mobile=($model->mobile);
 				$mosqueAddress=($model->mosqueAddress);
 				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
 				
-				if($pasword == $confirmPassword)
-				{
+				
 						
-					$connection=Yii::app()->db;
-					$connection->active=TRUE;
-					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :tel, :mobile, :mosqueAddress, :image)";
-					$command=$connection->createCommand($sql);
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
+				$command=$connection->createCommand($sql);
 					
-					$command->bindParam(":name",$name,PDO::PARAM_STR);
-					$command->bindParam(":family",$family,PDO::PARAM_STR);
-					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
-					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
-					$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
-					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
-					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
-					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
-					$command->bindParam(":image",$image,PDO::PARAM_STR);
-					
-					$command->execute();
+				$command->bindParam(":name",$name,PDO::PARAM_STR);
+				$command->bindParam(":family",$family,PDO::PARAM_STR);
+				$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
+				$command->bindParam(":email",$email,PDO::PARAM_STR);
+				$command->bindParam(":password",$password,PDO::PARAM_STR);
+				$command->bindParam(":tel",$tel,PDO::PARAM_STR);
+				$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
+				$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
+				$command->bindParam(":image",$image,PDO::PARAM_STR);
+				
+				$command->execute();
 
 					
-					$connection->active=false;
-					Yii::app()->user->setFlash('register','success => Thank you for registering.');
+				$connection->active=false;
+				Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
 					
-				
-				}
-				else 
-				{
-						Yii::app()->user->setFlash('register','error => password & confirm Password are not same!');
-				}
-				
-				
 				
 				$name = ":name";
 				$family= ":family";
 				$mosqueName = ":mosque";
 				$email = ":email";
-				$pasword = ":password";
+				$password = ":password";
 				$confirmPassword = ":confirm";
 				$tel = ":tel";
 				$mobile = ":mobile";

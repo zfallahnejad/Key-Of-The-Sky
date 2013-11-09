@@ -7,6 +7,15 @@ $this->breadcrumbs=array(
 
 <h1 align="right"><font size = 5><b>ثبت نام دانش‌آموز</b></font></h1>
 
+
+<?php if(Yii::app()->user->hasFlash('parent')): ?>
+
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('parent'); ?>
+</div>
+
+<?php else: ?>
+
 <p align="right">لطفا فرم زیر را با اطلاعات مناسب پر کنید</p>
 
 <div class="form">
@@ -35,7 +44,7 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->textField($model,'birthdate'); ?>
+		<?php echo $form->dateField($model,'birthdate'); ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -93,3 +102,4 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+<?php endif; ?>

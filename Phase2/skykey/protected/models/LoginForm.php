@@ -7,13 +7,12 @@
  */
 class LoginForm extends CFormModel
 {
-	
 	public $username;
 	public $password;
 	public $rememberMe;
 	private $_identity;
 	public $email;
-
+	
 	/**
 	 * Declares the validation rules.
 	 * The rules state that username and password are required,
@@ -22,8 +21,8 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// username and password are required
-			array('username, password', 'required'),
+			// email and password are required
+			array('email, password', 'required'),
 			array('email', 'email'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
@@ -38,6 +37,8 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
+			'email'=>'ایمیل',
+			'password'=>'رمز عبور',
 			'rememberMe'=>'مرا به یاد داشته باش',
 		);
 	}
@@ -50,12 +51,12 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->email,$this->password);
 			if(!$this->_identity->authenticate())
 				$this->addError('password','Incorrect username or password.');
 		}
 	}
-
+	
 	/**
 	 * Logs in the user using the given username and password in the model.
 	 * @return boolean whether login is successful
@@ -64,7 +65,7 @@ class LoginForm extends CFormModel
 	{
 		if($this->_identity === null)
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->email,$this->password);
 			$this->_identity->authenticate();
 		}
 		if($this->_identity->errorCode===UserIdentity::ERROR_NONE)
