@@ -43,7 +43,7 @@ $this->breadcrumbs=array(
 
 	<div class="row">
 		<h1><?php echo $form->labelEx($model,'email'); ?></h1>
-		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->emailField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
@@ -64,7 +64,10 @@ $this->breadcrumbs=array(
 	<div class="row">
 		<h1><?php echo $form->labelEx($model,'verifyCode'); ?></h1>
 		<div>
-		<?php $this->widget('CCaptcha'); ?>
+		<?php $this->widget('Captcha',array(
+						    'buttonLabel' => "کد جدید",
+						    'clickableImage' => true,
+						    'refresh' => $refreshCaptcha));?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
 		<div class="hint">لطفا عبارت مشاهده شده در بالا را وارد نمایید

@@ -4,7 +4,9 @@ $this->pageTitle=Yii::app()->name . ' - Parent';
 $this->breadcrumbs=array(
 	'Parent',);
 ?>
-
+<?php
+	$baseUrl = Yii::app()->request->baseUrl;
+?>
 <h1 align="right"><font size = 5><b>ثبت نام والدین</b></font></h1>
 
 <?php if(Yii::app()->user->hasFlash('parent')): ?>
@@ -60,7 +62,7 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<h1><?php echo $form->labelEx($model,'email'); ?></h1>
-		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->emailField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
@@ -75,7 +77,7 @@ $this->breadcrumbs=array(
 		<?php echo $form->passwordField($model,'confirmPassword'); ?>
 		<?php echo $form->error($model,'confirmPassword'); ?>
 	</div>
-
+	
 	<div align="right" class="row buttons">
 		<?php echo CHtml::submitButton('ثبت'); ?>
 	</div>

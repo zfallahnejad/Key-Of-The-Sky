@@ -8,10 +8,10 @@ $this->breadcrumbs=array(
 <h1 align="right"><font size = 5><b>ثبت نام دانش‌آموز</b></font></h1>
 
 
-<?php if(Yii::app()->user->hasFlash('parent')): ?>
+<?php if(Yii::app()->user->hasFlash('student')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('parent'); ?>
+	<?php echo Yii::app()->user->getFlash('student'); ?>
 </div>
 
 <?php else: ?>
@@ -21,7 +21,6 @@ $this->breadcrumbs=array(
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'student-form',
-	'enableAjaxValidation'=>true,
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -44,7 +43,7 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->dateField($model,'birthdate'); ?>
+		<?php echo $form->numberField($model,'birthdate'); ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -56,14 +55,8 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'parentcode'); ?>
-		<?php echo $form->textField($model,'parentcode'); ?>
+		<?php echo $form->numberField($model,'parentcode'); ?>
 		<?php echo $form->error($model,'parentcode'); ?>
-	</div>
-	
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'mosque'); ?>
-		<?php echo $form->textField($model,'mosque'); ?>
-		<?php echo $form->error($model,'mosque'); ?>
 	</div>
 	
 	<div align="right" class="row">
@@ -74,13 +67,13 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'schoolid'); ?>
-		<?php echo $form->textField($model,'schoolid'); ?>
+		<?php echo $form->numberField($model,'schoolid'); ?>
 		<?php echo $form->error($model,'schoolid'); ?>
 	</div>
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'stcode'); ?>
-		<?php echo $form->textField($model,'stcode'); ?>
+		<?php echo $form->numberField($model,'stcode'); ?>
 		<?php echo $form->error($model,'stcode'); ?>
 	</div>	
 

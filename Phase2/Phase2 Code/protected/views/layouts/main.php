@@ -189,6 +189,5 @@
     <script src="<?php echo $baseUrl;?>/js/bootstrap-typeahead.js"></script>   
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 
-
   </body>
 </html>	

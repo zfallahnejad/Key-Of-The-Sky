@@ -23,7 +23,7 @@ $this->breadcrumbs=array(
 
 	<div align="right" class="row">
 		<h1><?php echo $form->labelEx($model,'email'); ?></h1>
-		<?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->emailField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 

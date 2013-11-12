@@ -2,7 +2,6 @@
 
 class SchoolForm extends CFormModel
 {
-	//public $id;
 	public $schoolname;
 	public $schoolphone;
 	public $schooladdress;
@@ -12,11 +11,12 @@ class SchoolForm extends CFormModel
 	public $email;
 	public $password;
 	public $confirmPassword;
+	public $schoolid;
 	
 	public function rules()
 	{
 		return array(
-			array('schoolname, schoolphone, schooladdress, teachername, teacherfamily, teacherphone, email, password, confirmPassword', 'required'),
+			array('schoolname, schoolphone, schooladdress, teachername, teacherfamily, teacherphone, email, password, confirmPassword, schoolid', 'required'),
 			// email has to be a valid email address
 			array('email','email'),
 			// when in register scenario, password must match confirmPassword
@@ -32,6 +32,7 @@ class SchoolForm extends CFormModel
 	 public function attributeLabels()
 	 {
 		return array(
+			//'schoolid'=>'شماره مدرسه',
 			'schoolname'=>'نام مدرسه',
 			'schoolphone'=>'شماره تلفن مدرسه',
 			'schooladdress'=>'آدرس مدرسه',
@@ -41,6 +42,7 @@ class SchoolForm extends CFormModel
 			'email'=>'ایمیل',
 			'password'=>'رمز عبور',
 			'confirmPassword'=>'تکرار رمز عبور',
+			'schoolid'=>'کد مدرسه',
 		);
 	}
 
