@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2013 at 12:59 AM
+-- Generation Time: Nov 17, 2013 at 11:43 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
 --
 
 INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
-(3, 'ahmad', 'ahmadi', 'Haghani', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 't', '=?UTF-8?B??=');
+(3, 'ali', 'جعفری', 'dfg', 'ali@ali.com', '8cb2237d0679ca88db6464eac60da96345513964', 12345, NULL, '12345', '=?UTF-8?B??=');
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `parent` (
 --
 
 INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `mobileNum`, `password`, `email`) VALUES
-(2147483647, 'reza', 'rahmati', 987, NULL, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
+(1234567890, 'qwe', 'qwe', 12345, NULL, '8cb2237d0679ca88db6464eac60da96345513964', 'asd@asd.com');
 
 -- --------------------------------------------------------
 
@@ -150,6 +150,14 @@ CREATE TABLE IF NOT EXISTS `school` (
   PRIMARY KEY (`schoolId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `school`
+--
+
+INSERT INTO `school` (`schoolId`, `schoolName`, `schoolPhone`, `schoolAddress`, `teacherName`, `teacherFamily`, `teacherPhone`, `email`, `password`) VALUES
+(1234, 'beheshti', 12345, 'teh', '12345', '12345', 12345, 'qwe@qwe.com', '8cb2237d0679ca88db6464eac60da96345513964'),
+(1234512345, 'beheshti', 12345, 'qwe', 'qwe', 'qwe', 12345, 'qwe@asd.com', '8cb2237d0679ca88db6464eac60da96345513964');
+
 -- --------------------------------------------------------
 
 --
@@ -162,23 +170,23 @@ CREATE TABLE IF NOT EXISTS `student` (
   `fatherName` varchar(255) NOT NULL,
   `stCode` int(11) NOT NULL,
   `school` varchar(255) NOT NULL,
+  `mosque` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `birthdate` int(4) DEFAULT NULL,
   `picture` blob,
   `parentCode` int(10) NOT NULL,
-  `Id` int(11) NOT NULL,
   `schoolId` int(11) DEFAULT NULL,
   PRIMARY KEY (`stCode`),
   KEY `student_ibfk_1` (`parentCode`),
-  KEY `Id` (`Id`)
+  KEY `schoolId` (`schoolId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
-('ahmad', 'rahmati', 'reza', 12345, 'amirkabir', 't', NULL, NULL, 2147483647, 3, 123);
+INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `mosque`, `address`, `birthdate`, `picture`, `parentCode`, `schoolId`) VALUES
+('علی', 'asd', 'zxc', 12345, 'qwe', 'qwe', 'jj', NULL, NULL, 1234567890, 1234512345);
 
 --
 -- Constraints for dumped tables
@@ -202,7 +210,7 @@ ALTER TABLE `reward`
 --
 ALTER TABLE `student`
   ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`parentCode`) REFERENCES `parent` (`parentCode`),
-  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`);
+  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`schoolId`) REFERENCES `school` (`schoolId`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
