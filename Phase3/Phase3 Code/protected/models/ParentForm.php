@@ -15,12 +15,13 @@ class ParentForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('parentname, parentfamily, parentcode,homephone, email, password, confirmPassword', 'required','message'=>'فیلد {attribute} نمی تواند خالی باشد.'),
+			array('parentname, parentfamily, parentcode,homephone, email, password, confirmPassword', 'required'),
 			// parentcode must be 10 characters
-			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد بایستی 10 باشد.'),
-			array('email','email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
+			array('parentcode', 'length', 'is'=>10),
+			array('email','email'),
 			// when in register scenario, password must match confirmPassword
-			array('password', 'compare', 'compareAttribute'=>'confirmPassword','message'=>'کلمه عبور وارد شده و تکرار آن مطابقت ندارند'),
+			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
+			array('mobilenum', 'safe')
 		);
 	}
 	/**

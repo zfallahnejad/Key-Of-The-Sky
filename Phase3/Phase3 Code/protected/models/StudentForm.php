@@ -17,9 +17,11 @@ class StudentForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('stname, stfamily, fathername, parentcode, school, schoolid, stcode, address', 'required','message'=>'فیلد {attribute} نمی تواند خالی باشد.'),
+			array('stname, stfamily, fathername, parentcode, school, schoolid, stcode, address', 'required'),
 			// parentcode must be 10 characters
-			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد بایستی 10 باشد.'),
+			array('parentcode', 'length', 'is'=>10),
+			array('birthdate', 'safe'),
+			array('picture','safe')
 		);
 	}
 	/**
