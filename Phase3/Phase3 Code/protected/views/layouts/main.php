@@ -75,7 +75,7 @@
 							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
-						array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'),'linkOptions'=>array("data-description"=>""),),
+						array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>""),),
                         array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
