@@ -31,24 +31,6 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
-	public function actionMosqueHome()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('MosqueHome');
-	}
-	public function actionParentHome()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('ParentHome');
-	}
-	public function actionSchoolHome()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('SchoolHome');
-	}
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -106,32 +88,17 @@ class SiteController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-			{
-				if (Yii::app()->user->getId()==1)
-				{
-					$this->redirect(array('/site/MosqueHome'));
-				}
-				elseif (Yii::app()->user->getId()==2)
-				{
-					$this->redirect(array('/site/SchoolHome'));
-				}
-				elseif (Yii::app()->user->getId()==3)
-				{
-					$this->redirect(array('/site/ParentHome'));
-				}
-				
-			}
-				
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
-	
 	}
 
 	/**
