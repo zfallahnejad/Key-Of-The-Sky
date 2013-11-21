@@ -29,61 +29,61 @@ $this->breadcrumbs=array(
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'schoolname'); ?></h1>
+		<?php echo $form->labelEx($model,'schoolname'); ?>
 		<?php echo $form->textField($model,'schoolname'); ?>
 		<?php echo $form->error($model,'schoolname'); ?>
 	</div>
     
     <div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'schoolid'); ?></h1>
+		<?php echo $form->labelEx($model,'schoolid'); ?>
 		<?php echo $form->numberField($model,'schoolid'); ?>
 		<?php echo $form->error($model,'schoolid'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'schoolphone'); ?></h1>
+		<?php echo $form->labelEx($model,'schoolphone'); ?>
 		<?php echo $form->textField($model,'schoolphone'); ?>
 		<?php echo $form->error($model,'schoolphone'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'schooladdress'); ?></h1>
+		<?php echo $form->labelEx($model,'schooladdress'); ?>
 		<?php echo $form->textField($model,'schooladdress'); ?>
 		<?php echo $form->error($model,'schooladdress'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'teachername'); ?></h1>
+		<?php echo $form->labelEx($model,'teachername'); ?>
 		<?php echo $form->textField($model,'teachername'); ?>
 		<?php echo $form->error($model,'teachername'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'teacherfamily'); ?></h1>
+		<?php echo $form->labelEx($model,'teacherfamily'); ?>
 		<?php echo $form->textField($model,'teacherfamily'); ?>
 		<?php echo $form->error($model,'teacherfamily'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'teacherphone'); ?></h1>
+		<?php echo $form->labelEx($model,'teacherphone'); ?>
 		<?php echo $form->textField($model,'teacherphone'); ?>
 		<?php echo $form->error($model,'teacherphone'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'email'); ?></h1>
+		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->emailField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 	
 	<div align="right" class="row">
-		<h1><?php echo $form->labelEx($model,'password'); ?></h1>
+		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row">
-		<h1><?php echo $form->labelEx($model,'confirmPassword'); ?></h1>
+		<?php echo $form->labelEx($model,'confirmPassword'); ?>
 		<?php echo $form->passwordField($model,'confirmPassword'); ?>
 		<?php echo $form->error($model,'confirmPassword'); ?>
 	</div>

@@ -2238,3 +2238,1052 @@ Stack trace:
 REQUEST_URI=/skykey/index.php?r=site/parent
 HTTP_REFERER=http://localhost/skykey/index.php?r=site/parent
 ---
+2013/11/20 16:39:33 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\skykey\protected\views\layouts\main.php(100): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<section class=...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<section class=...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\skykey\protected\views\layouts\column1.php(10): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/skykey/index.php
+---
+2013/11/20 17:20:35 [error] [php] Undefined variable: refreshCaptcha (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:447)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (447)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:39:57 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:21 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:21 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:44:54 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:46:08 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:53:09 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 19:57:37 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:37 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:12:38 [error] [php] Use of undefined constant Sname - assumed 'Sname' (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:446)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (446)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:11 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `name`=:name WHERE email=:email.
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (446)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:13:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `name`=:name WHERE email=:email' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1285): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(446): CDbCommand->update('mosqueculturall...', Array, 'email=:email', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:15:38 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:16:57 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:06 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:18:56 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:19:39 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:20:30 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:21 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:23:57 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:30:11 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:31:35 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:32:32 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:50 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (421)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (450)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:34:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(450): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:39:10 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:41:14 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:41:16 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:41:16 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:41:17 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 20:41:24 [error] [exception.CException] exception 'CException' with message 'Property "ChangeMosqueForm.mosqueName" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('mosqueName')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(ChangeMosqueForm), 'mosqueName')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(ChangeMosqueForm), 'mosqueName', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(ChangeMosqueForm), 'mosqueName', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\register.php(47): CActiveForm->textField(Object(ChangeMosqueForm), 'mosqueName')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(458): CController->render('register', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php
+---
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "name" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "family" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "tel" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:13 [warning] [application] Failed to set unsafe attribute "image" of "ChangeMosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (442)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 20:42:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(442): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "name" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "family" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "tel" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:53 [warning] [application] Failed to set unsafe attribute "image" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (442)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:11:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(442): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ChangeMosque')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ChangeMosq...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/ChangeMosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/ChangeMosque
+---
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "name" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "family" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "tel" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "mobile" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:27 [warning] [application] Failed to set unsafe attribute "image" of "ChangemosqueForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (442)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:13:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(442): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchangemosque()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('changemosque')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changemosq...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/changemosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/changemosque
+---
+2013/11/20 21:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changemosque".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('changemosque')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('changemosque')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changemosq...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php?r=site/changemosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/index
+---
+2013/11/20 21:25:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "changemosque".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('changemosque')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('changemosque')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/changemosq...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php?r=site/changemosque
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/index
+---
+2013/11/20 21:30:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "change".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('change')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('change')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/change')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php?r=site/change
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/index
+---
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "name" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:42 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (441)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:39:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name,family, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :tel, :mobile, :mosqueAddress, :image)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(441): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditliable()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editliable')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editliable')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/editliable
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editliable
+---
+2013/11/20 21:41:47 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:41:47 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "name" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:44:59 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:45:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (436)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:45:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(436): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditliable()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editliable')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editliable')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/editliable
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editliable
+---
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "name" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:58 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (436)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 21:47:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO mosqueculturalliablee (name) VALUES(:name)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(436): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditliable()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editliable')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editliable')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/editliable
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editliable
+---
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "name" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:13:35 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "name" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:20:04 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:23:52 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:23:52 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:33:10 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:33:10 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:33:10 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:33:10 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:33:10 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:07 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:07 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:07 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:07 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:07 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (418)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:08 [error] [php] Undefined variable: mail (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:441)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (441)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:52 [warning] [application] Failed to set unsafe attribute "family" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:52 [warning] [application] Failed to set unsafe attribute "tel" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:52 [warning] [application] Failed to set unsafe attribute "mobile" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:52 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:52 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:35:53 [error] [php] Creating default object from empty value (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:447)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (447)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/20 22:42:06 [warning] [application] Failed to set unsafe attribute "mosqueAddress" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:08:11 [warning] [application] Failed to set unsafe attribute "birthdate" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:08:11 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:08:59 [warning] [application] Failed to set unsafe attribute "birthdate" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:08:59 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:09:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, mosque, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (388)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 10:09:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '12345' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, mosque, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(388): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudent()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('student')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/student')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/student
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
+---
+2013/11/21 13:40:16 [warning] [application] Failed to set unsafe attribute "birthdate" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 13:40:16 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:04:30 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:04:30 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:04:52 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:04:52 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:15 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:15 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:31 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:31 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:48 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:06:48 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:07:01 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:07:01 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:14:16 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:14:16 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:22:41 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:22:41 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 14:24:17 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 15:00:00 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 15:00:00 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 15:15:42 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 15:17:24 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 15:17:24 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)

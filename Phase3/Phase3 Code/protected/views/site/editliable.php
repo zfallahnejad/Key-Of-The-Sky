@@ -1,19 +1,19 @@
 <?php
 /* @var $this SiteController */
-/* @var $model RegisterForm */
+/* @var $model EditliableForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Register Liable';
+$this->pageTitle=Yii::app()->name . ' - Edit Liable';
 $this->breadcrumbs=array(
-	'Register', );
+	'Editliable', );
 ?>
 
-<h1 align="right"><font size = 5><b>ثبت نام مسئول مسجد</b></font></h1>
+<h1 align="right"><font size = 5><b>تغییر مشخصات</b></font></h1>
 
-<?php if(Yii::app()->user->hasFlash('register')): ?>
+<?php if(Yii::app()->user->hasFlash('editliable')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('register'); ?>
+	<?php echo Yii::app()->user->getFlash('editliable'); ?>
 </div>
 
 <?php else: ?>
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'register-form',
+	'id'=>'editliable-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -42,29 +42,6 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'family'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'mosqueName'); ?>
-		<?php echo $form->textField($model,'mosqueName'); ?>
-		<?php echo $form->error($model,'mosqueName'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->emailField($model,'email'); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'confirmPassword'); ?>
-		<?php echo $form->passwordField($model,'confirmPassword'); ?>
-		<?php echo $form->error($model,'confirmPassword'); ?>
-	</div>
 	<div class="row">
 		<?php echo $form->labelEx($model,'tel'); ?>
 		<?php echo $form->textField($model,'tel',array('size'=>7,'maxlength'=>9)); ?>
@@ -104,7 +81,6 @@ $this->breadcrumbs=array(
 		<br/>
 		عبارت به حروف بزرگ و کوچک حساس نمیباشد</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
-		
 	</div>
 	<?php endif; ?>
 	

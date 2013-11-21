@@ -1,5 +1,3 @@
-<!-- Require the header -->
-<!-- tpl_header.php -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +6,6 @@
     <title>Welcome!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">	
-    <!--<meta name="author" content="Simpson Moyo - Webapplicationthemes.com">-->
 
 	<?php
 		$baseUrl = Yii::app()->request->baseUrl;
@@ -36,6 +33,11 @@
     <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
     
+	<!--<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bappify.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/main.css" />-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/form.css" />
+	
     <!-- The fav icon -->
     <link rel="shortcut icon" href="<?php echo $baseUrl;?>/img/ico/favicon.ico">
 </head>
@@ -48,19 +50,18 @@
 </section><!-- /#header -->
 
 <!-- Require the navigation -->
-<!-- tpl_navigation.php-->
 <section id="navigation-main">  	
 <div class="navbar" >
 	<div class="navbar-inner" >
 		<div class="container">
 			<!-- NOTE: Do not remove this. It is the navigation dropdown for mobile devices. It only shows on small screens-->
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<a class="btn btn-navbar " data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a><!--/.btn-navbar -->
 
-		<div class="nav-collapse pull-right" >
+		<div class="nav-collapse pull-right " >
 			<?php $this->widget('zii.widgets.CMenu',array(
                     'htmlOptions'=>array('class'=>'nav'),
                     'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
@@ -76,7 +77,12 @@
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
 						array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>""),),
-                        array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
+                        array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>ویرایش کلمه عبور</b>', 'url'=>'#'/*array('/site/student')*/,'linkOptions'=>array("data-description"=>""),),
+                        )),
+						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
@@ -101,7 +107,6 @@
 <?php echo $content; ?>
 
 <!-- Require the footer -->
-<!-- tpl_footer.php -->    
 <section id="bottom" class="">
     <div class="container bottom"> 
     	<div class="row-fluid">

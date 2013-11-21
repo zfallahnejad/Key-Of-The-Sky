@@ -1,13 +1,7 @@
 <?php
 
-/**
- * Contact class.
- * ContactForm is the data structure for keeping
- * contact form data. It is used by the 'contact' action of 'SiteController'.
- */
 class RegisterForm extends CFormModel
 {
-	//
 	public $Id;
 	public $name;
 	public $family;
@@ -28,11 +22,11 @@ class RegisterForm extends CFormModel
 	{
 		return array(
 			// name, email,... are required
-			array('name, family, mosqueName, email, password, confirmPassword, tel, mosqueAddress, verifyCode', 'required'),
+			array('name, family, mosqueName, email, password, confirmPassword, tel, mosqueAddress, verifyCode', 'required','message'=>'فیلد {attribute} نمی تواند خالی باشد.'),
 			// email has to be a valid email address
-			array('email', 'email'),
+			array('email', 'email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
-			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
+			array('password', 'compare', 'compareAttribute'=>'confirmPassword','message'=>'کلمه عبور وارد شده و تکرار آن مطابقت ندارند'),
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);

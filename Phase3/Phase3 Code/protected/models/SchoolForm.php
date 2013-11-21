@@ -16,12 +16,11 @@ class SchoolForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('schoolname, schoolphone, schooladdress, teachername, teacherfamily, teacherphone, email, password, confirmPassword, schoolid', 'required'),
+			array('schoolname, schoolphone, schooladdress, teachername, teacherfamily, teacherphone, email, password, confirmPassword, schoolid', 'required','message'=>'فیلد {attribute} نمی تواند خالی باشد.'),
 			// email has to be a valid email address
-			array('email','email'),
+			array('email','email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
-			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
-		);
+			array('password', 'compare', 'compareAttribute'=>'confirmPassword','message'=>'کلمه عبور وارد شده و تکرار آن مطابقت ندارند'));
 	}
 	
 	/**

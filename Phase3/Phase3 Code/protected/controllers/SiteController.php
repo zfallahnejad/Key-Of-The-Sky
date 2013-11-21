@@ -366,7 +366,10 @@ class SiteController extends Controller
 					$sql1="SELECT Id FROM `mosqueculturalliablee` WHERE `email` ='$temp'";
 					$Id=$connection->createCommand($sql1)->queryScalar();
 					
-					$sql="INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id, :school, :schoolId, :stCode, :address, :picture,:birthdate)";
+					$sql2="SELECT mosqueName FROM `mosqueculturalliablee` WHERE `email` ='$temp'";
+					$mosqueName=$connection->createCommand($sql2)->queryScalar();
+					
+					$sql="INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, mosque, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate)";
 					$command=$connection->createCommand($sql);
 				
 					$command->bindParam(":stName",$stname,PDO::PARAM_STR);
@@ -374,6 +377,7 @@ class SiteController extends Controller
 					$command->bindParam(":fatherName",$fathername,PDO::PARAM_STR);
 					$command->bindParam(":parentCode",$parentcode,PDO::PARAM_STR);
 					$command->bindParam(":Id",$Id,PDO::PARAM_STR);
+					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
 					$command->bindParam(":school",$school,PDO::PARAM_STR);
 					$command->bindParam(":schoolId",$schoolid,PDO::PARAM_STR);
 					$command->bindParam(":stCode",$stcode,PDO::PARAM_STR);
@@ -403,5 +407,44 @@ class SiteController extends Controller
 			}
 		}
 		$this->render('student',array('model'=>$model));
+	}	
+	public function actionEditliable()
+	{
+		$model=new EditliableForm;
+		$mail=Yii::app()->user->name;
+		$refreshCaptcha = true;
+		if(isset($_POST['EditliableForm']))
+		{
+			$refreshCaptcha = false;
+			$model->attributes=$_POST['EditliableForm'];
+			if($model->validate())
+			{
+				$name=($model->name);
+				$family=($model->family);
+				$tel=($model->tel);
+		 		$mobile=($model->mobile);
+				$mosqueAddress=($model->mosqueAddress);
+				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
+				
+				$command = Yii::app()->db->createCommand();
+				//build and execute the following SQL:
+				//UPDATE `mosqueculturalliablee` SET `name`=:t WHERE email=:mail
+				$command->update('mosqueculturalliablee', array('name'=>$name,'family'=>$family,'tel'=>$tel,'mobile'=>$mobile,'mosqueAddress'=>$mosqueAddress,'image'=>$image,), 'email=:email', array(':email'=>$mail));
+				$command->execute();
+				
+				Yii::app()->user->setFlash('editliable','تغییرات با موفقیت در پایگاه داده ثبت گردید.');
+				
+				$name = ":name";
+				$family= ":family";
+				$tel = ":tel";
+				$mobile = ":mobile";
+				$mosqueAddress = ":mosque";
+				$image = ":image";
+
+				$this->refresh();
+			}
+		}
+		$this->render('editliable',array('model'=>$model,
+		'refreshCaptcha' => $refreshCaptcha));
 	}
 }	 

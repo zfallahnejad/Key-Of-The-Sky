@@ -162,7 +162,6 @@ CREATE TABLE IF NOT EXISTS `student` (
   `fatherName` varchar(255) NOT NULL,
   `stCode` int(11) NOT NULL,
   `school` varchar(255) NOT NULL,
-  `mosque` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `birthdate` int(4) DEFAULT NULL,
   `picture` blob,
@@ -177,8 +176,8 @@ CREATE TABLE IF NOT EXISTS `student` (
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `mosque`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
-('ahmad', 'rahmati', 'reza', 12345, 'amirkabir', '', 't', NULL, NULL, 2147483647, 3, 123);
+INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
+('ahmad', 'rahmati', 'reza', 12345, 'amirkabir', 't', NULL, NULL, 2147483647, 3, 123);
 
 --
 -- Constraints for dumped tables
