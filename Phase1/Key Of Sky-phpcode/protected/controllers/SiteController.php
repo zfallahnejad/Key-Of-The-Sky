@@ -138,7 +138,7 @@ class SiteController extends Controller
 						
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, confirmPassword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :confirmPassword, :tel, :mobile, :mosqueAddress, :image)";
+					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, pasword, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :pasword, :tel, :mobile, :mosqueAddress, :image)";
 					$command=$connection->createCommand($sql);
 					
 					$command->bindParam(":name",$name,PDO::PARAM_STR);
@@ -146,7 +146,6 @@ class SiteController extends Controller
 					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
 					$command->bindParam(":email",$email,PDO::PARAM_STR);
 					$command->bindParam(":pasword",$pasword,PDO::PARAM_STR);
-					$command->bindParam(":confirmPassword",$confirmPassword,PDO::PARAM_STR);
 					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
 					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
 					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
