@@ -13,23 +13,50 @@ class UserIdentity extends CUserIdentity
 		$connection->active=TRUE;
 		$connect = mysql_connect("localhost","root","") or die("not connecting");
 		mysql_select_db("skykeey",$connect) or die("no db :'(");
-		$find1 =mysql_query("SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$this->username'",$connect);
-		$count1=mysql_fetch_row($find1);
-		$find2 =mysql_query("SELECT Count(*) FROM `school` WHERE `email` ='$this->username'",$connect);
-		$count2=mysql_fetch_row($find2);
-		$find3 =mysql_query("SELECT Count(*) FROM `parent` WHERE `email` ='$this->username'",$connect);
-		$count3=mysql_fetch_row($find3);
-		if ($count1[0]==1){
-			$sql ="SELECT * FROM `mosqueculturalliablee` WHERE `email` ='$this->username'";
-			$query = mysql_query($sql,$connect);
+		
+		$find1 =Yii::app()->db->createCommand()
+		->select ('count(*)')
+		->from('mosqueculturalliablee')
+		->where("email=:email")
+        ->queryScalar(array(':email'=>$this->username));
+		//$find1 =mysql_query("SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$this->username'",$connect);
+		//$count1=mysql_fetch_row($find1);
+		
+		
+		$find2 =Yii::app()->db->createCommand()
+		->select ('count(*)')
+		->from('school')
+		->where("email=:email")
+        ->queryScalar(array(':email'=>$this->username));
+		//$find2 =mysql_query("SELECT Count(*) FROM `school` WHERE `email` ='$this->username'",$connect);
+		//$count2=mysql_fetch_row($find2);
+		
+		$find3 =Yii::app()->db->createCommand()
+		->select ('count(*)')
+		->from('parent')
+		->where("email=:email")
+        ->queryScalar(array(':email'=>$this->username));
+		//$find3 =mysql_query("SELECT Count(*) FROM `parent` WHERE `email` ='$this->username'",$connect);
+		//$count3=mysql_fetch_row($find3);
+		
+		if ($find1==1){
+			
+						
+			$query =Yii::app()->db->createCommand()
+		    ->select ()
+		    ->from('mosqueculturalliablee')
+		    ->where("email='" . $this->username."'")
+            ->queryAll(); 
+			//$sql ="SELECT * FROM `mosqueculturalliablee` WHERE `email` ='$this->username'";
+			//$query = mysql_query($sql,$connect);
 			if ($query === FALSE) {
         		trigger_error(mysql_error());
     		}
-			$numrows = mysql_num_rows($query);
+			$numrows = count($query);
 			if ($numrows!=0)
 			{
 				//while loop
-				while ($row = mysql_fetch_assoc($query)){
+				foreach($query as $row){
 					$email = $row["email"];
 					$password = $row["password"];
 				}
@@ -49,19 +76,24 @@ class UserIdentity extends CUserIdentity
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
 			}
 		}
-		elseif($count2[0]==1)
+		elseif($find2==1)
 		{	
-			$sql ="SELECT * FROM `school` WHERE `email` ='$this->username'";
+		    $query =Yii::app()->db->createCommand()
+		    ->select ()
+		    ->from('school')
+		    ->where("email='" . $this->username."'")
+            ->queryAll(); 
 		
-			$query = mysql_query($sql,$connect);
+			//$sql ="SELECT * FROM `school` WHERE `email` ='$this->username'";
+			//$query = mysql_query($sql,$connect);
 			if ($query === FALSE) {
         		trigger_error(mysql_error());
     		}
-			$numrows = mysql_num_rows($query);
+			$numrows = count($query);
 			if ($numrows!=0)
 			{
 				//while loop
-				while ($row = mysql_fetch_assoc($query)){
+				foreach($query as $row){
 					$email = $row["email"];
 					$password = $row["password"];
 				}
@@ -81,19 +113,25 @@ class UserIdentity extends CUserIdentity
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
 			}
 		}
-		elseif($count3[0]==1)
+		elseif($find3==1)
 		{	
-			$sql ="SELECT * FROM `parent` WHERE `email` ='$this->username'";
 		
-			$query = mysql_query($sql,$connect);
+	        $query =Yii::app()->db->createCommand()
+		    ->select ()
+		    ->from('parent')
+		    ->where("email='" . $this->username."'")
+            ->queryAll(); 
+		
+			//$sql ="SELECT * FROM `parent` WHERE `email` ='$this->username'";
+			//$query = mysql_query($sql,$connect);
 			if ($query === FALSE) {
         		trigger_error(mysql_error());
     		}
-			$numrows = mysql_num_rows($query);
+			$numrows = count($query);
 			if ($numrows!=0)
 			{
 				//while loop
-				while ($row = mysql_fetch_assoc($query)){
+				foreach($query as $row){
 					$email = $row["email"];
 					$password = $row["password"];
 				}
