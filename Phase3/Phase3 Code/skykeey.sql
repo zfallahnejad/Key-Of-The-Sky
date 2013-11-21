@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `tel` int(11) NOT NULL,
   `mobile` int(11) DEFAULT NULL,
   `mosqueAddress` text NOT NULL,
-  `image` text,
+  `image` blob,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -162,7 +162,6 @@ CREATE TABLE IF NOT EXISTS `student` (
   `fatherName` varchar(255) NOT NULL,
   `stCode` int(11) NOT NULL,
   `school` varchar(255) NOT NULL,
-  `mosque` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `birthdate` int(4) DEFAULT NULL,
   `picture` blob,

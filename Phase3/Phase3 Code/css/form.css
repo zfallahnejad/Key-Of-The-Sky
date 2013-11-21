@@ -36,7 +36,6 @@
 
 div.form
 {
-	font:"B Nazanin";
 	font-family:"B Nazanin";
 }
 
@@ -57,8 +56,6 @@ div.form fieldset
 
 div.form label
 {
-	font:"B Nazanin";
-	font-family:"B Nazanin";
 	font-weight: bold;
 	font-size: 0.9em;
 	display: block;
@@ -83,8 +80,6 @@ div.form .note
 
 div.form span.required
 {
-	font:"B Nazanin";
-	font-family:"B Nazanin";
 	color: red;
 }
 
