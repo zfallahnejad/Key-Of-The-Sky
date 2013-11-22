@@ -43,7 +43,7 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->numberField($model,'birthdate'); ?>
+		<?php echo $form->dateField($model,'birthdate'); ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	

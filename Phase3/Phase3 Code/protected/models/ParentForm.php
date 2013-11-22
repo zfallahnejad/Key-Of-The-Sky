@@ -2,7 +2,6 @@
 
 class ParentForm extends CFormModel
 {
-	public $id;
 	public $parentcode;
 	public $parentname;
 	public $parentfamily;
@@ -17,11 +16,11 @@ class ParentForm extends CFormModel
 		return array(
 			array('parentname, parentfamily, parentcode,homephone, email, password, confirmPassword', 'required'),
 			// parentcode must be 10 characters
-			array('parentcode', 'length', 'is'=>10),
-			array('email','email'),
+			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد ملی بایستی 10 باشد.'),
+			array('email','email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
 			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
-			array('mobilenum', 'safe')
+			array('mobilenum','safe'),
 		);
 	}
 	/**

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2013 at 09:28 AM
+-- Generation Time: Nov 22, 2013 at 11:40 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -54,14 +54,16 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mosqueAddress` text NOT NULL,
   `image` blob,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`
 --
 
 INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
-(3, 'ahmad', 'ahmadi', 'Haghani', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 't', '=?UTF-8?B??=');
+(3, 'ahmad', 'ahmadi', 'Haghani', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 't', 0x3d3f5554462d383f423f3f3d),
+(9, 'a', 'b', 'a', 'a@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, NULL, 't', 0x3d3f5554462d383f423f3f3d),
+(10, 'er', '', 't', 'test@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 0, 0, '', 0x3d3f5554462d383f423f3f3d);
 
 -- --------------------------------------------------------
 
@@ -85,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `parent` (
 --
 
 INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `mobileNum`, `password`, `email`) VALUES
-(2147483647, 'reza', 'rahmati', 987, NULL, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
+(2147483647, 'reza', 'rahmati', 987, 12, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
 
 -- --------------------------------------------------------
 
@@ -150,6 +152,13 @@ CREATE TABLE IF NOT EXISTS `school` (
   PRIMARY KEY (`schoolId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `school`
+--
+
+INSERT INTO `school` (`schoolId`, `schoolName`, `schoolPhone`, `schoolAddress`, `teacherName`, `teacherFamily`, `teacherPhone`, `email`, `password`) VALUES
+(12356, 'tn', 1567, 'aaa', 'te', 'tf', 12569, 'jalali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+
 -- --------------------------------------------------------
 
 --
@@ -163,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `stCode` int(11) NOT NULL,
   `school` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `birthdate` int(4) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
   `picture` blob,
   `parentCode` int(10) NOT NULL,
   `Id` int(11) NOT NULL,
@@ -171,13 +180,6 @@ CREATE TABLE IF NOT EXISTS `student` (
   PRIMARY KEY (`stCode`),
   KEY `student_ibfk_1` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `mosque`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
-('ahmad', 'rahmati', 'reza', 12345, 'amirkabir', '', 't', NULL, NULL, 2147483647, 3, 123);
 
 --
 -- Constraints for dumped tables

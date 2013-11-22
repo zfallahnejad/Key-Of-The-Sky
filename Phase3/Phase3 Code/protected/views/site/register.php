@@ -30,6 +30,8 @@ $this->breadcrumbs=array(
 )); ?>
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
+	<!--<?php echo $form->errorSummary($model); ?>-->
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name'); ?>

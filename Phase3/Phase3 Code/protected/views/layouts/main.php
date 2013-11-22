@@ -32,6 +32,9 @@
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/lightbox/js/lightbox.js"></script>
     <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
+	
+	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/search.js"></script>
+
     
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bappify.css" />
@@ -80,6 +83,8 @@
                         array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editschool'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editparent'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش کلمه عبور</b>', 'url'=>'#'/*array('/site/student')*/,'linkOptions'=>array("data-description"=>""),),
                         )),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
@@ -93,7 +98,10 @@
 							array('label'=>'<span class="style" style="background-color:#b88006;"></span> سبک 5', 'url'=>"javascript:chooseStyle('style5', 60)"),
 							array('label'=>'<span class="style" style="background-color:#f9630f;"></span> سبک 6', 'url'=>"javascript:chooseStyle('style6', 60)"),
                         )),
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/ParentHome'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/SchoolHome'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/MosqueHome'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
    					),
                 )); 
 			?>

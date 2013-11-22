@@ -3,17 +3,17 @@
 /* @var $model EditliableForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Edit Liable';
+$this->pageTitle=Yii::app()->name . ' - Edit Parent';
 $this->breadcrumbs=array(
-	'Editliable', );
+	'Editparent', );
 ?>
 
 <h1 align="right"><font size = 5><b>تغییر مشخصات</b></font></h1>
 
-<?php if(Yii::app()->user->hasFlash('editliable')): ?>
+<?php if(Yii::app()->user->hasFlash('editparent')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('editliable'); ?>
+	<?php echo Yii::app()->user->getFlash('editparent'); ?>
 </div>
 
 <?php else: ?>
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'editliable-form',
+	'id'=>'editparent-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -31,40 +31,28 @@ $this->breadcrumbs=array(
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 	<p align="right" class="note">پر ننمودن هر فیلد و فشردن دکمه ثبت، به منزله تایید اطلاعات قبلی است و آن فیلد در پایگاه داده تغییری تخواهد کرد.</p>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name'); ?>
-		<?php echo $form->error($model,'name'); ?>
+	<div align="right" class="row">
+		<?php echo $form->labelEx($model,'parentname'); ?>
+		<?php echo $form->textField($model,'parentname'); ?>
+		<?php echo $form->error($model,'parentname'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'family'); ?>
-		<?php echo $form->textField($model,'family'); ?>
-		<?php echo $form->error($model,'family'); ?>
+	<div align="right" class="row">
+		<?php echo $form->labelEx($model,'parentfamily'); ?>
+		<?php echo $form->textField($model,'parentfamily'); ?>
+		<?php echo $form->error($model,'parentfamily'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'tel'); ?>
-		<?php echo $form->textField($model,'tel',array('size'=>7,'maxlength'=>9)); ?>
-		<?php echo $form->error($model,'tel'); ?>
+	<div align="right" class="row">
+		<?php echo $form->labelEx($model,'homephone'); ?>
+		<?php echo $form->textField($model,'homephone'); ?>
+		<?php echo $form->error($model,'homephone'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'mobile'); ?>
-		<?php echo $form->textField($model,'mobile',array('size'=>11,'maxlength'=>14)); ?>
-		<?php echo $form->error($model,'mobile'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'mosqueAddress'); ?>
-		<?php echo $form->textArea($model,'mosqueAddress',array('rows'=>6,'cols'=>50)); ?>
-		<?php echo $form->error($model,'mosqueAddress'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->fileField($model,'image',array('file' ,'type'=>'jpg, png','maxSize'=>1024*60)); ?>
-		<?php echo $form->error($model,'image'); ?>
+	
+	<div align="right" class="row">
+		<?php echo $form->labelEx($model,'mobilenum'); ?>
+		<?php echo $form->textField($model,'mobilenum'); ?>
+		<?php echo $form->error($model,'mobilenum'); ?>
 	</div>
 
 	<!--captcha-->	

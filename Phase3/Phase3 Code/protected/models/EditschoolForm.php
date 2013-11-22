@@ -1,13 +1,13 @@
 <?php
 
-class EditliableForm extends CFormModel
+class EditschoolForm extends CFormModel
 {
-	public $name;
-	public $family;
-	public $tel;
-	public $mobile;
-	public $mosqueAddress;
-	public $image;
+	public $schoolName;
+	public $schoolPhone;
+	public $schoolAddress;
+	public $teacherName;
+	public $teacherFamily;
+	public $teacherPhone;
 	public $verifyCode;
 
 	/**
@@ -20,7 +20,7 @@ class EditliableForm extends CFormModel
 			array('verifyCode', 'required'),
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-			array('name,family,tel,mobile,mosqueAddress,image','safe'),
+			array('schoolName, schoolPhone, schoolAddress, teacherName, teacherFamily, teacherPhone','safe'),
 		);
 	}
 
@@ -32,12 +32,12 @@ class EditliableForm extends CFormModel
 	 public function attributeLabels()
 	 {
 		return array(
-			'name'=>'نام',
-			'family'=>'نام خانوادگی',
-			'tel'=>'تلفن',
-			'mobile'=>'تلفن همراه',
-			'mosqueAddress'=>'آدرس مسجد',
-			'image'=>'تصویر',
+			'schoolname'=>'نام مدرسه',
+			'schoolphone'=>'شماره تلفن مدرسه',
+			'schooladdress'=>'آدرس مدرسه',
+			'teachername'=>'نام معلم',
+			'teacherfamily'=>'نام خانوادگی معلم',
+			'teacherphone'=>'شماره تلفن معلم',
 			'verifyCode'=>'کد تایید',
 		);
 	}

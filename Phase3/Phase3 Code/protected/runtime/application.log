@@ -3287,3 +3287,288 @@ in C:\xampp\htdocs\skykey\index.php (13)
 2013/11/21 15:17:24 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
 in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 16:00:47 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:01:19 [error] [php] Undefined variable: baseUrl (C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(38): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionMosqueHome()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/MosqueHome
+in C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php (14)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (38)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:16:21 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:16:21 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:19:31 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:19:31 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:21:43 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:21:43 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:24:10 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:24:10 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:24:29 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:24:29 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:26:50 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:26:50 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:49:32 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:49:32 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:49:45 [warning] [application] Failed to set unsafe attribute "mobile" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:49:45 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:56:09 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:56:15 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 17:56:40 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 19:00:11 [warning] [application] Failed to set unsafe attribute "mobilenum" of "ParentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (281)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/21 23:44:44 [error] [php] Undefined offset: 3 (C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php:56)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(38): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionMosqueHome()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/MosqueHome
+in C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php (56)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (38)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:17:28 [warning] [application] Failed to set unsafe attribute "image" of "EditliableForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (419)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:24:00 [error] [php] Undefined variable: name (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:436)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (436)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:25:28 [error] [php] Undefined variable: family (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:436)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (436)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:35:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mosque' in 'field list'. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, mosque, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (388)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:35:34 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mosque' in 'field list'. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, mosque, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(388): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudent()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('student')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/student')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/student
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
+---
+2013/11/22 09:36:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (384)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:36:42 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(384): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudent()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('student')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/student')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/student
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
+---
+2013/11/22 09:37:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (384)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 09:37:34 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id,:mosqueName , :school, :schoolId, :stCode, :address, :picture,:birthdate)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(384): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudent()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('student')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/student')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php?r=site/student
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
+---
+2013/11/22 10:08:06 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (415)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 10:08:26 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (415)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 10:08:46 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:415)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/editliable
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (415)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 11:07:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolname' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolname`=:schoolname, `schoolphone`=:schoolphone, `schooladdress`=:schooladdress, `teachername`=:teachername, `teacherfamily`=:teacherfamily, `teacherphone`=:teacherphone WHERE email=:email.
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (525)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 11:07:43 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolname' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolname`=:schoolname, `schoolphone`=:schoolphone, `schooladdress`=:schooladdress, `teachername`=:teachername, `teacherfamily`=:teacherfamily, `teacherphone`=:teacherphone WHERE email=:email' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1285): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(525): CDbCommand->update('mosqueculturall...', Array, 'email=:email', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditschool()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editschool')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editschool')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/skykey/index.php?r=site/editschool
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editschool
+---
+2013/11/22 11:10:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email.
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (525)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 11:10:18 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1285): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(525): CDbCommand->update('mosqueculturall...', Array, 'email=:email', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditschool()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editschool')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editschool')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/skykey/index.php?r=site/editschool
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editschool
+---
+2013/11/22 11:15:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email.
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (525)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 11:15:26 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1285): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(525): CDbCommand->update('mosqueculturall...', Array, 'email=:email', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditschool()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editschool')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editschool')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/skykey/index.php?r=site/editschool
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editschool
+---
+2013/11/22 11:16:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email.
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (525)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 11:16:38 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'schoolName' in 'field list'. The SQL statement executed was: UPDATE `mosqueculturalliablee` SET `schoolName`=:schoolName, `schoolPhone`=:schoolPhone, `schoolAddress`=:schoolAddress, `teacherName`=:teacherName, `teacherFamily`=:teacherFamily, `teacherPhone`=:teacherPhone WHERE email=:email' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1285): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(525): CDbCommand->update('mosqueculturall...', Array, 'email=:email', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditschool()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('editschool')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/editschool')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/skykey/index.php?r=site/editschool
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/editschool
+---

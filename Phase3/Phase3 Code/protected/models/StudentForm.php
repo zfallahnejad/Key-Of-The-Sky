@@ -19,9 +19,8 @@ class StudentForm extends CFormModel
 		return array(
 			array('stname, stfamily, fathername, parentcode, school, schoolid, stcode, address', 'required'),
 			// parentcode must be 10 characters
-			array('parentcode', 'length', 'is'=>10),
-			array('birthdate', 'safe'),
-			array('picture','safe')
+			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد ملی بایستی 10 باشد.'),
+			array('picture,birthdate', 'safe'),
 		);
 	}
 	/**

@@ -22,7 +22,7 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			// email and password are required
-			array('email, password', 'required','message'=>'فیلد {attribute} نمی تواند خالی باشد.'),
+			array('email, password', 'required'),
 			array('email', 'email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
