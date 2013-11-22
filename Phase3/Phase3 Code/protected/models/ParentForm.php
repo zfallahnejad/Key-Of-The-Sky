@@ -21,6 +21,7 @@ class ParentForm extends CFormModel
 			// when in register scenario, password must match confirmPassword
 			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
 			array('mobilenum','safe'),
+			array('homephone,mobilenum,parentcode','numerical','integerOnly'=>true),
 		);
 	}
 	/**

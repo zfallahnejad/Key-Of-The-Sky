@@ -21,6 +21,8 @@ class EditliableForm extends CFormModel
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			array('name,family,tel,mobile,mosqueAddress,image','safe'),
+			array('tel,mobile','numerical','integerOnly'=>true),
+			array('image','file','types'=>array('jpg','png'),'allowEmpty'=>TRUE,'message'=>'فرمت تصویر باید jpg یا png باشد),'),
 		);
 	}
 

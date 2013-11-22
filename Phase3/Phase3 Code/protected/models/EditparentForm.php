@@ -19,6 +19,7 @@ class EditparentForm extends CFormModel
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			array('parentname,parentfamily,homephone,mobilenum','safe'),
+			array('homephone,mobilenum','numerical','integerOnly'=>true),
 		);
 	}
 

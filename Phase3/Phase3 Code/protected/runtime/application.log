@@ -3572,3 +3572,104 @@ Stack trace:
 REQUEST_URI=/skykey/index.php?r=site/editschool
 HTTP_REFERER=http://localhost/skykey/index.php?r=site/editschool
 ---
+2013/11/22 14:02:48 [error] [exception.CException] exception 'CException' with message 'RegisterForm has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\xampp\htdocs\yii\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(547): CModel->getValidators()
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(564): CModel->getSafeAttributeNames()
+#3 C:\xampp\htdocs\skykey\protected\views\site\register.php(33): CActiveForm->errorSummary(Object(RegisterForm))
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#8 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(206): CController->render('register', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/skykey/index.php?r=site/register
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/register
+---
+2013/11/22 14:03:53 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:04:11 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:04:18 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:04:28 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:05:20 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "CFileValidator.allowempty" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(189): CComponent->__set('allowempty', true)
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(287): CValidator::createValidator('file', Object(RegisterForm), 'image', Array)
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(547): CModel->getValidators()
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(564): CModel->getSafeAttributeNames()
+#5 C:\xampp\htdocs\skykey\protected\views\site\register.php(33): CActiveForm->errorSummary(Object(RegisterForm))
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#10 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(206): CController->render('register', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/skykey/index.php?r=site/register
+---
+2013/11/22 14:07:00 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:07:14 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:09:26 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:11:39 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:11:54 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:24:44 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:24:59 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (150)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/22 14:29:54 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "StudentForm.image" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CFileValidator.php(166): CComponent->__get('image')
+#1 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(StudentForm), 'image')
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(StudentForm), NULL)
+#3 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(343): CModel->validate()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudent()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('student')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/student')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/skykey/index.php?r=site/student
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
+---
+2013/11/22 14:31:43 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)

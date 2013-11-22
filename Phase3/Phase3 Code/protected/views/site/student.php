@@ -55,7 +55,7 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'parentcode'); ?>
-		<?php echo $form->numberField($model,'parentcode'); ?>
+		<?php echo $form->textField($model,'parentcode'); ?>
 		<?php echo $form->error($model,'parentcode'); ?>
 	</div>
 	
@@ -67,13 +67,13 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'schoolid'); ?>
-		<?php echo $form->numberField($model,'schoolid'); ?>
+		<?php echo $form->textField($model,'schoolid'); ?>
 		<?php echo $form->error($model,'schoolid'); ?>
 	</div>
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'stcode'); ?>
-		<?php echo $form->numberField($model,'stcode'); ?>
+		<?php echo $form->textField($model,'stcode'); ?>
 		<?php echo $form->error($model,'stcode'); ?>
 	</div>	
 

@@ -21,6 +21,7 @@ class EditschoolForm extends CFormModel
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			array('schoolName, schoolPhone, schoolAddress, teacherName, teacherFamily, teacherPhone','safe'),
+			array('schoolPhone,teacherPhone','numerical','integerOnly'=>true),
 		);
 	}
 

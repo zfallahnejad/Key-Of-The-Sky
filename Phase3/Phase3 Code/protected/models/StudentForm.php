@@ -21,6 +21,8 @@ class StudentForm extends CFormModel
 			// parentcode must be 10 characters
 			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد ملی بایستی 10 باشد.'),
 			array('picture,birthdate', 'safe'),
+			array('stcode,parentcode,schoolid','numerical','integerOnly'=>true),
+			array('picture','file','types'=>array('jpg','png'),'allowEmpty'=>TRUE,'message'=>'فرمت تصویر باید jpg یا png باشد),'),
 		);
 	}
 	/**

@@ -31,6 +31,8 @@ class RegisterForm extends CFormModel
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			// not required fields should define as safe attribute
 			array('mobile,image', 'safe'), 
+			array('tel,mobile','numerical','integerOnly'=>true),
+			array('image','file','types'=>array('jpg','png'),'allowEmpty'=>TRUE,'message'=>'فرمت تصویر باید jpg یا png باشد),'),
 
 		);
 	}

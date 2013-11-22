@@ -21,6 +21,7 @@ class SchoolForm extends CFormModel
 			array('email','email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
 			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
+			array('schoolid,schoolphone,teacherphone','numerical','integerOnly'=>true),
 		);
 	}
 	
