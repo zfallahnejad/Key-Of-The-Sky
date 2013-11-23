@@ -3673,3 +3673,84 @@ HTTP_REFERER=http://localhost/skykey/index.php?r=site/student
 2013/11/22 14:31:43 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
 in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 19:22:20 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 19:22:57 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (342)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 20:01:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'. The SQL statement executed was: SELECT `stName`, `stFamily`, `stCode`
+FROM `student`
+WHERE email=:mail.
+in C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php (10)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (38)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 20:01:13 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'where clause'. The SQL statement executed was: SELECT `stName`, `stFamily`, `stCode`
+FROM `student`
+WHERE email=:mail' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php(10): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('MosqueHome', NULL, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(38): CController->render('MosqueHome')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionMosqueHome()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('MosqueHome')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/MosqueHome')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php?r=site/MosqueHome
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/MosqueHome
+---
+2013/11/23 20:07:40 [error] [php] Undefined variable: dataReader (C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(38): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionMosqueHome()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php?r=site/MosqueHome
+in C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php (36)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (38)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 21:43:57 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `stName`, `stFamily`, `stCode`
+FROM `student`
+WHERE schoolId=:schoolId.
+in C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php (15)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (50)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/23 21:43:57 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT `stName`, `stFamily`, `stCode`
+FROM `student`
+WHERE schoolId=:schoolId' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php(15): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('SchoolHome', NULL, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(50): CController->render('SchoolHome')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSchoolHome()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('SchoolHome')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/SchoolHome')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php?r=site/SchoolHome
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/login
+---

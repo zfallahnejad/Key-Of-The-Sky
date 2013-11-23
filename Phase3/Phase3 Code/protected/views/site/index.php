@@ -1,6 +1,9 @@
     <?php
 		$baseUrl = Yii::app()->request->baseUrl;
 	?>
+<script type='text/javascript'>
+	$().ready(function(){$('#q').focus()});// focus search area
+</script>
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
             <div id="slider-nivo" class="nivoSlider">
@@ -66,6 +69,30 @@
         </div>
         
         <hr>
+		
+		<h3 class="header">لیست مساجد شرکت کننده
+        			<span class="header-line"></span> 
+        </h3>
+		<form action='javascript:void(0);'>
+      	<h3>
+        	<input id='q' name='q' type='text' autocomplete="off"/>
+        </h3>
+      	</form>
+		<?php
+		$mosques = Yii::app()->db->createCommand()
+				->select('Id,mosqueName')
+				->from('mosqueculturalliablee')
+				->query();
+		foreach($mosques as $row)
+		{
+			?>
+			<div class='volcano search_item'>
+            	<h4 class='search_text'><a href="http://localhost/skykey/protected/views/site/point.php?Id=<?php echo $row['Id'];?>" ><?php echo $row['mosqueName'];?></a>
+					</h4>
+        	</div>
+			<?php
+		}
+		?>
 		<h3 class="header">برندگان دوره قبل
         	<span class="header-line"></span> 
         </h3>       

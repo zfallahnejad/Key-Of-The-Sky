@@ -537,7 +537,7 @@ class SiteController extends Controller
 		$model=new EditparentForm;
 		$mail=Yii::app()->user->name;
 		$refreshCaptcha = true;
-		$liables = Yii::app()->db->createCommand()->select('parentname,parentfamily,homephone,mobilenum')->from('parent')->where('email=:mail', array(':mail'=>$mail))->queryRow();
+		$parent = Yii::app()->db->createCommand()->select('parentname,parentfamily,homephone,mobilenum')->from('parent')->where('email=:mail', array(':mail'=>$mail))->queryRow();
 		if(isset($_POST['EditparentForm']))
 		{
 			$refreshCaptcha = false;
@@ -548,25 +548,25 @@ class SiteController extends Controller
 					$parentname=($model->parentname);
 				}		
 				else{
-					$parentname=$liables['parentname'];
+					$parentname=$parent['parentname'];
 				}
 				if(!empty($model->parentfamily)){
 					$parentfamily=($model->parentfamily);
 				}		
 				else{
-					$parentfamily=$liables['parentfamily'];
+					$parentfamily=$parent['parentfamily'];
 				}
 				if(!empty($model->homephone)){
 					$homephone=($model->homephone);
 				}		
 				else{
-					$homephone=$liables['homephone'];
+					$homephone=$parent['homephone'];
 				}
 		 		if(!empty($model->mobilenum)){
 					$mobilenum=($model->mobilenum);
 				}		
 				else{
-					$mobilenum=$liables['mobilenum'];
+					$mobilenum=$parent['mobilenum'];
 				}
 								
 				$command = Yii::app()->db->createCommand();
