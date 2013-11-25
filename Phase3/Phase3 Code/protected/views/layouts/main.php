@@ -34,7 +34,7 @@
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
 	
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/search.js"></script>
-
+	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/searchmosque.js"></script>
     
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bappify.css" />
@@ -166,7 +166,7 @@
 			<div class="span3">
             	<h5>درباره ما</h5>
                 <p>اعضاي تيم طراحي سامانه کليد آسمان</p>
-                <p>سيد محمد پورباقري</p>
+                <p>محسن ابراهیمی</p>
                 <p>علي جعفري</p>
                 <p>امير سجادي</p>
                 <p>سيده کوثر سجادي</p>

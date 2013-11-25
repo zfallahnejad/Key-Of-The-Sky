@@ -100,7 +100,7 @@
         <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/1.jpg" width="260" height="180" alt="Me" />
+            <img src="<?php echo $baseUrl;?>/img/1.jpg" width="260" height="180" alt="Me" class="nicepic"/>
             <h3>کلاه قرمزی</h3>
             <p>فوتبال دستی</p>
             
@@ -111,7 +111,7 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/2.jpg" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/2.jpg" width="260" height="180" class="nicepic"/>
             <h3>
             فامیل دور
             </h3>
@@ -123,7 +123,7 @@
           <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/3.jpg" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/3.jpg" width="260" height="180" class="nicepic"/>
             <h3>
             پسرعمه زا
             </h3>
@@ -136,7 +136,7 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/4.jpg" width="260" height="180" />
+            <img src="<?php echo $baseUrl;?>/img/4.jpg" width="260" height="180" class="nicepic"/>
             <h3>
             پسرخاله
             </h3>

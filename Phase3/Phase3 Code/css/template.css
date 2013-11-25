@@ -15,6 +15,7 @@ body,.blog-title a,.blog-title a:hover,.dropdown-menu a{color:#717171;}
 	width:98px;
 	height:55px;
 	z-index:999;
+	background-size: 100%;
 }
 
 h1,h2,h3,h4,h5,.navbar .nav, .shout-box, .price-table dt, .price-table .price,.table thead{
@@ -631,4 +632,19 @@ dd {
 
 form .row{
 	margin-left:0px;
+}
+
+.nicepic
+{
+	opacity:0.5;
+	transition:ease-in;
+	transition-delay:200ms;
+	transition-duration:1000ms;
+}
+.nicepic:hover
+{
+	transition:ease-out;
+	transition-delay:200ms;
+	transition-duration:1000ms;
+	opacity:1
 }
