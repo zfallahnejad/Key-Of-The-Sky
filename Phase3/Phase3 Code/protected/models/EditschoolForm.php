@@ -33,12 +33,12 @@ class EditschoolForm extends CFormModel
 	 public function attributeLabels()
 	 {
 		return array(
-			'schoolname'=>'نام مدرسه',
-			'schoolphone'=>'شماره تلفن مدرسه',
-			'schooladdress'=>'آدرس مدرسه',
-			'teachername'=>'نام معلم',
-			'teacherfamily'=>'نام خانوادگی معلم',
-			'teacherphone'=>'شماره تلفن معلم',
+			'schoolName'=>'نام مدرسه',
+			'schoolPhone'=>'شماره تلفن مدرسه',
+			'schoolAddress'=>'آدرس مدرسه',
+			'teacherName'=>'نام معلم',
+			'teacherFamily'=>'نام خانوادگی معلم',
+			'teacherPhone'=>'شماره تلفن معلم',
 			'verifyCode'=>'کد تایید',
 		);
 	}

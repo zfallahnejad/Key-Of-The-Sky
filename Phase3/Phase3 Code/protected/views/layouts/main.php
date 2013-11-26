@@ -87,7 +87,7 @@
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editschool'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editparent'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>""),),
-							array('label'=>'<b>ویرایش کلمه عبور</b>', 'url'=>'#'/*array('/site/student')*/,'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>ویرایش کلمه عبور</b>', 'url'=>array('/site/editpassword'),'linkOptions'=>array("data-description"=>""),),
                         )),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),

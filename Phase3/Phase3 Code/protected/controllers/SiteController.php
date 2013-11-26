@@ -406,55 +406,34 @@ class SiteController extends Controller
 	}	
 	public function actionEditliable()
 	{
-		$model=new EditliableForm;
 		$mail=Yii::app()->user->name;
 		$refreshCaptcha = true;
+		$model=new EditliableForm;
 		$liables = Yii::app()->db->createCommand()->select('name,family,tel,mobile,mosqueAddress,image')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryRow();
+		$model->name=$liables['name'];
+		$model->family=$liables['family'];
+		$model->tel=$liables['tel'];
+		$model->mobile=$liables['mobile'];
+		$model->mosqueAddress=$liables['mosqueAddress'];
+		$model->image=$liables['image'];
+		
 		if(isset($_POST['EditliableForm']))
 		{
 			$refreshCaptcha = false;
 			$model->attributes=$_POST['EditliableForm'];
+			
+			$name=($model->name);
+			$family=($model->family);
+			$tel=($model->tel);
+		 	$mobile=($model->mobile);
+			$mosqueAddress=($model->mosqueAddress);
+			$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
+				
 			if($model->validate())
 			{
-				if(!empty($model->name)){
-					$name=($model->name);
-				}		
-				else{
-					$name=$liables['name'];
-				}
-				if(!empty($model->family)){
-					$family=($model->family);
-				}		
-				else{
-					$family=$liables['family'];
-				}
-				if(!empty($model->tel)){
-					$tel=($model->tel);
-				}		
-				else{
-					$tel=$liables['tel'];
-				}
-		 		if(!empty($model->mobile)){
-					$mobile=($model->mobile);
-				}		
-				else{
-					$mobile=$liables['mobile'];
-				}
-				if(!empty($model->mosqueAddress)){
-					$mosqueAddress=($model->mosqueAddress);
-				}		
-				else{
-					$mosqueAddress=$liables['mosqueAddress'];
-				}if(!empty($model->image)){
-					$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
-				}		
-				else{
-					$image=$liables['image'];
-				}
-								
 				$command = Yii::app()->db->createCommand();
 				//build and execute the following SQL:
-				//UPDATE `mosqueculturalliablee` SET `name`=:t WHERE email=:mail
+				//UPDATE `mosqueculturalliablee`
 				$command->update('mosqueculturalliablee', array('name'=>$name,'family'=>$family,'tel'=>$tel,'mobile'=>$mobile,'mosqueAddress'=>$mosqueAddress,'image'=>$image,), 'email=:email', array(':email'=>$mail));
 				$command->execute();
 				
@@ -475,52 +454,31 @@ class SiteController extends Controller
 	}
 	public function actionEditschool()
 	{
-		$model=new EditschoolForm;
 		$mail=Yii::app()->user->name;
 		$refreshCaptcha = true;
+		$model=new EditschoolForm;
 		$liables = Yii::app()->db->createCommand()->select('schoolName,schoolPhone,schoolAddress,teacherName,teacherFamily,teacherPhone')->from('school')->where('email=:mail', array(':mail'=>$mail))->queryRow();
+		$model->schoolName=$liables['schoolName'];
+		$model->schoolPhone=$liables['schoolPhone'];
+		$model->schoolAddress=$liables['schoolAddress'];
+		$model->teacherName=$liables['teacherName'];
+		$model->teacherFamily=$liables['teacherFamily'];
+		$model->teacherPhone=$liables['teacherPhone'];
+		
 		if(isset($_POST['EditschoolForm']))
 		{
 			$refreshCaptcha = false;
 			$model->attributes=$_POST['EditschoolForm'];
+			
+			$schoolName=($model->schoolName);
+			$schoolPhone=($model->schoolPhone);
+			$schoolAddress =($model->schoolAddress);
+			$teacherName=($model->teacherName);
+			$teacherFamily=($model->teacherFamily);
+			$teacherPhone=($model->teacherPhone);
+				
 			if($model->validate())
 			{
-				if(!empty($model->schoolName)){
-					$schoolName=($model->schoolName);
-				}		
-				else{
-					$schoolName=$liables['schoolName'];
-				}
-				if(!empty($model->schoolPhone)){
-					$schoolPhone=($model->schoolPhone);
-				}		
-				else{
-					$schoolPhone=$liables['schoolPhone'];
-				}
-				if(!empty($model->schoolAddress)){
-					$schoolAddress=($model->schoolAddress);
-				}		
-				else{
-					$schoolAddress=$liables['schoolAddress'];
-				}
-		 		if(!empty($model->teachername)){
-					$teacherName=($model->teacherName);
-				}		
-				else{
-					$teacherName=$liables['teacherName'];
-				}
-				if(!empty($model->teacherfamily)){
-					$teacherFamily=($model->teacherFamily);
-				}		
-				else{
-					$teacherFamily=$liables['teacherFamily'];
-				}if(!empty($model->teacherPhone)){
-					$teacherPhone=($model->teacherPhone);
-				}		
-				else{
-					$teacherPhone=$liables['teacherPhone'];
-				}
-								
 				$command = Yii::app()->db->createCommand();
 				$command->update('school', array('schoolName'=>$schoolName,'schoolPhone'=>$schoolPhone,'schoolAddress'=>$schoolAddress,'teacherName'=>$teacherName,'teacherFamily'=>$teacherFamily,'teacherPhone'=>$teacherPhone,), 'email=:email', array(':email'=>$mail));
 				$command->execute();
@@ -534,41 +492,27 @@ class SiteController extends Controller
 	}
 	public function actionEditparent()
 	{
-		$model=new EditparentForm;
 		$mail=Yii::app()->user->name;
 		$refreshCaptcha = true;
+		$model=new EditparentForm;
 		$parent = Yii::app()->db->createCommand()->select('parentname,parentfamily,homephone,mobilenum')->from('parent')->where('email=:mail', array(':mail'=>$mail))->queryRow();
+		$model->parentname=$parent['parentname'];
+		$model->parentfamily=$parent['parentfamily'];
+		$model->homephone=$parent['homephone'];
+		$model->mobilenum=$parent['mobilenum'];
+		
 		if(isset($_POST['EditparentForm']))
 		{
 			$refreshCaptcha = false;
 			$model->attributes=$_POST['EditparentForm'];
+			
+			$parentname=($model->parentname);
+			$parentfamily=($model->parentfamily);
+			$homephone=($model->homephone);
+			$mobilenum=($model->mobilenum);
+			
 			if($model->validate())
-			{
-				if(!empty($model->parentname)){
-					$parentname=($model->parentname);
-				}		
-				else{
-					$parentname=$parent['parentname'];
-				}
-				if(!empty($model->parentfamily)){
-					$parentfamily=($model->parentfamily);
-				}		
-				else{
-					$parentfamily=$parent['parentfamily'];
-				}
-				if(!empty($model->homephone)){
-					$homephone=($model->homephone);
-				}		
-				else{
-					$homephone=$parent['homephone'];
-				}
-		 		if(!empty($model->mobilenum)){
-					$mobilenum=($model->mobilenum);
-				}		
-				else{
-					$mobilenum=$parent['mobilenum'];
-				}
-								
+			{				
 				$command = Yii::app()->db->createCommand();
 				$command->update('parent', array('parentname'=>$parentname,'parentfamily'=>$parentfamily,'homephone'=>$homephone,'mobilenum'=>$mobilenum,), 'email=:email', array(':email'=>$mail));
 				$command->execute();
@@ -581,7 +525,7 @@ class SiteController extends Controller
 		$this->render('editparent',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
 	}
 	
-		public function actionrefrencePoint()
+	public function actionrefrencePoint()
 	{		
 		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
 		$actTopic=$points['actTopic'];
@@ -640,5 +584,65 @@ class SiteController extends Controller
 		}
 						
 		$this->render('editreward',array('model'=>$model));
+	}
+	public function actionEditpassword()
+	{
+		$mail=Yii::app()->user->name;
+		$refreshCaptcha = true;
+		$model=new EditpasswordForm;
+		if(isset($_POST['EditpasswordForm']))
+		{
+			$refreshCaptcha = false;
+			$model->attributes=$_POST['EditpasswordForm'];
+			$currentpassword=($model->currentpassword);
+			$newpassword=sha1($model->newpassword);
+			
+			if($model->validate())
+			{				
+				if (Yii::app()->user->getId()==1)
+				{
+					$password = Yii::app()->db->createCommand()->select('password')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+					if($password==sha1($currentpassword)){
+						$command = Yii::app()->db->createCommand();
+						$command->update('mosqueculturalliablee', array('password'=>$newpassword), 'email=:email', array(':email'=>$mail));
+						$command->execute();
+						Yii::app()->user->setFlash('editpassword','رمز عبور تغییر یافت.');
+						$this->refresh();
+					}
+					else{
+						Yii::app()->user->setFlash('editpassword','رمز عبور معتبر نمی باشد');
+					}
+				}
+				elseif (Yii::app()->user->getId()==2)
+				{
+					$password = Yii::app()->db->createCommand()->select('password')->from('school')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+					if($password==sha1($currentpassword)){
+						$command = Yii::app()->db->createCommand();
+						$command->update('school', array('password'=>$newpassword), 'email=:email', array(':email'=>$mail));
+						$command->execute();
+						Yii::app()->user->setFlash('editpassword','رمز عبور تغییر یافت.');
+						$this->refresh();
+					}
+					else{
+						Yii::app()->user->setFlash('editpassword','رمز عبور معتبر نمی باشد');
+					}
+				}
+				elseif (Yii::app()->user->getId()==3)
+				{
+					$password = Yii::app()->db->createCommand()->select('password')->from('parent')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+					if($password==sha1($currentpassword)){
+						$command = Yii::app()->db->createCommand();
+						$command->update('parent', array('password'=>$newpassword), 'email=:email', array(':email'=>$mail));
+						$command->execute();
+						Yii::app()->user->setFlash('editpassword','رمز عبور تغییر یافت.');
+						$this->refresh();
+					}
+					else{
+						Yii::app()->user->setFlash('editpassword','رمز عبور معتبر نمی باشد');
+					}
+				}
+			}
+		}
+		$this->render('editpassword',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
 	}
 }	 

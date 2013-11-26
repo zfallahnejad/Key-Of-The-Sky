@@ -29,8 +29,7 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
-	<p align="right" class="note">پر ننمودن هر فیلد و فشردن دکمه ثبت، به منزله تایید اطلاعات قبلی است و آن فیلد در پایگاه داده تغییری تخواهد کرد.</p>
-
+	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'parentname'); ?>
 		<?php echo $form->textField($model,'parentname'); ?>

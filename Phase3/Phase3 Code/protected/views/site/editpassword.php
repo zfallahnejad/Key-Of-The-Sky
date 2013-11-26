@@ -1,19 +1,19 @@
 <?php
 /* @var $this SiteController */
-/* @var $model EditliableForm */
+/* @var $model EditpasswordForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Edit School';
+$this->pageTitle=Yii::app()->name . ' - Edit Password';
 $this->breadcrumbs=array(
-	'Editschool', );
+	'Editpassword', );
 ?>
 
 <h1 align="right"><font size = 5><b>تغییر مشخصات</b></font></h1>
 
-<?php if(Yii::app()->user->hasFlash('editschool')): ?>
+<?php if(Yii::app()->user->hasFlash('editpassword')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('editschool'); ?>
+	<?php echo Yii::app()->user->getFlash('editpassword'); ?>
 </div>
 
 <?php else: ?>
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'editschool-form',
+	'id'=>'editpassword-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -31,39 +31,21 @@ $this->breadcrumbs=array(
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'schoolName'); ?>
-		<?php echo $form->textField($model,'schoolName'); ?>
-		<?php echo $form->error($model,'schoolName'); ?>
+		<?php echo $form->labelEx($model,'currentpassword'); ?>
+		<?php echo $form->passwordField($model,'currentpassword'); ?>
+		<?php echo $form->error($model,'currentpassword'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'schoolPhone'); ?>
-		<?php echo $form->textField($model,'schoolPhone'); ?>
-		<?php echo $form->error($model,'schoolPhone'); ?>
+		<?php echo $form->labelEx($model,'newpassword'); ?>
+		<?php echo $form->passwordField($model,'newpassword'); ?>
+		<?php echo $form->error($model,'newpassword'); ?>
 	</div>
 
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'schoolAddress'); ?>
-		<?php echo $form->textField($model,'schoolAddress'); ?>
-		<?php echo $form->error($model,'schoolAddress'); ?>
-	</div>
-
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'teacherName'); ?>
-		<?php echo $form->textField($model,'teacherName'); ?>
-		<?php echo $form->error($model,'teacherName'); ?>
-	</div>
-
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'teacherFamily'); ?>
-		<?php echo $form->textField($model,'teacherFamily'); ?>
-		<?php echo $form->error($model,'teacherFamily'); ?>
-	</div>
-
-	<div align="right" class="row">
-		<?php echo $form->labelEx($model,'teacherPhone'); ?>
-		<?php echo $form->textField($model,'teacherPhone'); ?>
-		<?php echo $form->error($model,'teacherPhone'); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'confirmPassword'); ?>
+		<?php echo $form->passwordField($model,'confirmPassword'); ?>
+		<?php echo $form->error($model,'confirmPassword'); ?>
 	</div>
 
 	<!--captcha-->	
