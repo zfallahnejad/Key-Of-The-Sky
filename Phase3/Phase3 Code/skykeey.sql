@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2013 at 11:40 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Nov 27, 2013 at 07:50 PM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -115,8 +115,25 @@ CREATE TABLE IF NOT EXISTS `refrencepoint` (
   `actId` int(11) NOT NULL AUTO_INCREMENT,
   `actPoint` int(11) NOT NULL,
   `actTopic` varchar(255) NOT NULL,
+  `userID` int(11) NOT NULL,
   PRIMARY KEY (`actId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `refrencepoint`
+--
+
+INSERT INTO `refrencepoint` (`actId`, `actPoint`, `actTopic`, `userID`) VALUES
+(1, 10, 'نماز جماعت ظهر و عصر', 1),
+(2, 10, 'نماز جماعت مغرب و عشا', 1),
+(3, 5, 'شرکت در جلسه هفتگی قرآن', 1),
+(4, 10, 'تکبیر گفتن', 1),
+(5, 5, 'کمک در حفظ نظافت مسجد', 1),
+(6, 5, 'رعایت انضباط در مدرسه', 2),
+(7, 10, 'کمک به همکلاسی ها در دروس', 2),
+(8, 10, 'کمک در انجام کارهای منزل', 3),
+(9, 5, 'تمیز و مرتب بودن', 3),
+(10, 5, 'انجام به موقع تکالیف', 3);
 
 -- --------------------------------------------------------
 
@@ -125,13 +142,12 @@ CREATE TABLE IF NOT EXISTS `refrencepoint` (
 --
 
 CREATE TABLE IF NOT EXISTS `reward` (
-  `rewardId` int(11) NOT NULL AUTO_INCREMENT,
   `rewardTopic` varchar(255) NOT NULL,
   `neededPoint` int(11) NOT NULL,
   `Id` int(11) NOT NULL,
-  PRIMARY KEY (`rewardId`),
+  PRIMARY KEY (`rewardTopic`),
   KEY `Id` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -180,6 +196,14 @@ CREATE TABLE IF NOT EXISTS `student` (
   PRIMARY KEY (`stCode`),
   KEY `student_ibfk_1` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
+('مرتضی', 'مرتضوی', 'مصطفی', 10020020, 'رضوی', 'تهران', '0000-00-00', NULL, 10010010, 3, 2),
+('اسد', 'اسدی', 'اسدالله', 20003004, 'tn', 'اسدآباد', '0000-00-00', NULL, 30030030, 3, 12356);
 
 --
 -- Constraints for dumped tables

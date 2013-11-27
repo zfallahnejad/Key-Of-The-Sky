@@ -7,33 +7,36 @@
 				->from('refrencepoint')
 				->query();
 ?>
-<div id='container'>
-  	  <h2 class="header">لیست امتیازات<span class="header-line"></span></h2>
+<div id='container' >
+  	  <h2 class="header">امتیازدهی<span class="header-line"></span></h2>
       
       
-      <div id="object-browser">
-		<div id="items">
-			<table class="table table-striped">
-				<thead>
-            		<tr>
-                		<th><font size="3">عنوان فعالیت</font></th>
+      <div id="object-browser" align="right">
+		<div id="items" align="right">
+			<table class="table table-striped" align="right">
+				<thead align="right">
+            		<tr align="right">
+                		<th><font size="3">عنوان فعالیت ها</font></th>
                     	<th><font size="3">امتیاز</font></th>
 						                    	
 						
                 	</tr>
             	</thead>
-				<tbody>
+				<tbody align="right">
 				
 					<form  method="POST" action="point.php">
 						<?php
 							foreach($act as $row)
 							{
 								?>
-								<tr>
+								<tr align="right">
 									
-									
+									 
 									<td><font size="4"><?php echo $row['actTopic'];?></font></td>
                     				<td><font size="4"><?php echo $row['actPoint'];?></font></td>
+									<td><input type="checkbox" name="فعالیت ها" ></td>
+									
+								    <tr></tr>
 				               	</tr>
 								<?php
 							}
@@ -43,4 +46,8 @@
 			</table>
 		</div>
 	</div>
+	<div align="right" class="row buttons">
+		<?php echo CHtml::submitButton('ثبت'); ?>
+	</div>
+
 </div>

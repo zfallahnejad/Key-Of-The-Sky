@@ -525,66 +525,8 @@ class SiteController extends Controller
 		$this->render('editparent',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
 	}
 	
-	public function actionrefrencePoint()
-	{		
-		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
-		$actTopic=$points['actTopic'];
-		$actPoint=$points['actPoint'];
-						
-		$this->render('refrencePoint');
-	}
+		
 	
-	public function actionEditreward()
-	{	
-		$model=new EditrewardForm;
-		$email=Yii::app()->user->name;
-		
-		
-				
-		$reward = Yii::app()->db->createCommand()->select('rewardTopic,neededPoint')->from('reward ,mosqueculturalliablee ')->where('email = :email',array(':email'=>$email))->queryRow();
-		$rewardTopic=$reward['rewardTopic'];
-		$rewardPoint=$reward['rewardPoint'];
-		if(isset($_POST['EditrewardForm']))
-		{
-			
-			$model->attributes=$_POST['EditrewardForm'];
-			if($model->validate())
-			{
-				if(!empty($model->rewardTopic)){
-					$rewardTopic=($model->rewardTopic);
-				}		
-				else{
-					$rewardTopic=$reward['rewardTopic'];
-				}
-				if(!empty($model->rewardPoint)){
-					$rewardPoint=($model->rewardPoint);
-				}		
-				else{
-					$rewardPoint=$liables['rewardPoint'];
-				}
-				
-								
-				$command = Yii::app()->db->createCommand();
-				//build and execute the following SQL:
-				
-				$command->update('reward', array('rewardTopic'=>$rewardTopic,'rewardPoint'=>$rewardPoint,), 'Id=:Id', array(':Id'=>$Id));
-				$command->execute();
-				
-				Yii::app()->user->setFlash('editreward','تغییرات با موفقیت در پایگاه داده ثبت گردید.');
-				
-				$name = ":name";
-				$family= ":family";
-				$tel = ":tel";
-				$mobile = ":mobile";
-				$mosqueAddress = ":mosque";
-				$image = ":image";
-
-				$this->refresh();
-			}
-		}
-						
-		$this->render('editreward',array('model'=>$model));
-	}
 	public function actionEditpassword()
 	{
 		$mail=Yii::app()->user->name;
@@ -644,5 +586,88 @@ class SiteController extends Controller
 			}
 		}
 		$this->render('editpassword',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
+		
 	}
+	
+	
+		public function actionrefrencePoint()
+	{		
+		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
+		$actTopic=$points['actTopic'];
+		$actPoint=$points['actPoint'];
+						
+		$this->render('refrencePoint');
+	}
+		public function actiongivePoint()
+	{		
+		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
+		$actTopic=$points['actTopic'];
+		$actPoint=$points['actPoint'];
+						
+		$this->render('givePoint');
+	}
+	public function actionReward()
+	{	
+		$model=new RewardForm;
+		$email=Yii::app()->user->name;
+		
+		
+				
+		if(isset($_POST['RewardForm']))
+		{
+			
+			$model->attributes=$_POST['RewardForm'];
+			if($model->validate())
+			{
+				$rewardTopic=($model->rewardTopic);
+	        	$neededPoint=($model->neededPoint);
+				
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				
+				$dataReader =Yii::app()->db->createCommand()
+				->select ('count(*)')
+				->from('reward')
+				->where("rewardTopic=:rewardTopic")
+        		->queryScalar(array(':rewardTopic'=>$rewardTopic));
+				if($dataReader !=0){
+					Yii::app()->user->setFlash('reward','فعالیتی با این عنوان قبلا به ثبت رسیده است.');			
+					}	
+				else{
+					$temp=Yii::app()->user->name;
+					$Id =Yii::app()->db->createCommand()
+					->select ('Id')
+					->from('mosqueculturalliablee')
+					->where("email=:email")
+        			->queryScalar(array(':email'=>$temp));
+					
+					
+					$sql="INSERT INTO reward (rewardTopic, neededPoint,Id) VALUES(:rewardTopic, :neededPoint, :Id)";
+					$command=$connection->createCommand($sql);
+				
+					$command->bindParam(":rewardTopic",$rewardTopic,PDO::PARAM_STR);
+					$command->bindParam(":neededPoint",$neededPoint,PDO::PARAM_STR);
+					$command->bindParam(":Id",$Id,PDO::PARAM_STR);
+				
+					$command->execute();
+				
+					Yii::app()->user->setFlash('reward','فعالیت جدید با موفقیت ثبت گردید.');
+				}
+				
+				
+				
+				
+				
+				
+
+				$this->refresh();
+			}
+		}
+						
+		$this->render('reward',array('model'=>$model));
+	}
+	
+	
+
+	
 }	 
