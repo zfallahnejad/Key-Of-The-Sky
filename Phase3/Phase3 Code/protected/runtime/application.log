@@ -4012,3 +4012,111 @@ Stack trace:
 REQUEST_URI=/key-5zohreh/index.php?r=site/editreward
 HTTP_REFERER=http://localhost/key-5zohreh/index.php?r=site/refrencePoint
 ---
+2013/11/28 11:18:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "gii" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/skykey/index.php?r=gii
+---
+2013/11/28 11:18:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "gii" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/skykey/index.php?r=gii
+---
+2013/11/28 11:18:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "yii" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('yii')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/skykey/index.php?r=yii
+---
+2013/11/28 11:18:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "mosquehome" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('mosquehome')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/skykey/index.php?r=mosquehome
+---
+2013/11/28 11:19:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "login" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/skykey/index.php?r=login
+---
+2013/11/28 15:32:53 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (413)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/28 15:33:10 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (413)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/28 15:35:55 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (413)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/11/28 16:32:59 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "CMenu.0" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\skykey\protected\views\layouts\main.php(136): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<section class=...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<section class=...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\skykey\protected\views\layouts\column1.php(10): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/skykey/index.php
+---
+2013/11/28 16:33:03 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "CMenu.0" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\skykey\protected\views\layouts\main.php(136): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<section class=...')
+#8 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<section class=...')
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\skykey\protected\views\layouts\column1.php(10): CBaseController->endContent()
+#12 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/skykey/index.php?r=site/index
+HTTP_REFERER=http://localhost/skykey/index.php?r=site/MosqueHome
+---

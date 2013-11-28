@@ -71,8 +71,6 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
-						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
-						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>تعیین جوایز</b>', 'url'=>array('/site/reward'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>امتیازدهی</b>', 'url'=>array('/site/givePoint'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
@@ -82,7 +80,6 @@
 							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
-						array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>""),),
                         array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
@@ -100,18 +97,48 @@
 							array('label'=>'<span class="style" style="background-color:#51a351;"></span> سبک 4', 'url'=>"javascript:chooseStyle('style4', 60)"),
 							array('label'=>'<span class="style" style="background-color:#b88006;"></span> سبک 5', 'url'=>"javascript:chooseStyle('style5', 60)"),
 							array('label'=>'<span class="style" style="background-color:#f9630f;"></span> سبک 6', 'url'=>"javascript:chooseStyle('style6', 60)"),
-                        )),
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/ParentHome'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/SchoolHome'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/MosqueHome'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
-						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
+                        )),	
+						array('label'=>'<b>خانه</b>', 'url'=>array('/site/index'),'linkOptions'=>array("data-description"=>"صفحه اصلي سايت"),),	
    					),
                 )); 
 			?>
     	</div>
+	</div>	
     </div>
 	</div>
-</div>
+</section><!-- /#navigation-main -->
+
+<section id="navigation-main">  	
+<div class="navbar" >
+	<div class="navbar-inner" >
+		<div class="container">
+			<!-- NOTE: Do not remove this. It is the navigation dropdown for mobile devices. It only shows on small screens-->
+			<a class="btn btn-navbar " data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a><!--/.btn-navbar -->
+
+		<div class="nav-collapse pull-right " >
+			<?php $this->widget('zii.widgets.CMenu',array(
+                    'htmlOptions'=>array('class'=>'nav'),
+                    'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
+					'itemCssClass'=>'item-test',
+                    'encodeLabel'=>false,
+					'items'=>array(	
+					array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>""),),
+						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/ParentHome'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"والد"),),	
+						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/SchoolHome'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>"مسئول مدرسه"),),	
+						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/MosqueHome'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"مسئول مسجد"),),
+   					),
+                )); 
+			?>
+    	</div>
+	</div>	
+    </div>
+	</div>
 </section><!-- /#navigation-main -->
 
 <!-- Include content pages -->

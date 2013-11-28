@@ -75,10 +75,12 @@
         </h3>
 		<form action='javascript:void(0);'>
       	<h3>
-        	<input id='q' name='q' type='text' autocomplete="off"/>
-        </h3>
+       	  عبارت مورد جستجو
+   	      <input id='q' name='q' type='text' autocomplete="off"/>
+      	</h3>
       	</form>
-		<?php
+		<p>
+		  <?php
 		$mosques = Yii::app()->db->createCommand()
 				->select('Id,mosqueName')
 				->from('mosqueculturalliablee')
@@ -86,10 +88,12 @@
 		foreach($mosques as $row)
 		{
 			?>
-			<div class='volcano search_item'>
-            	<h4 class='search_text'><a href="http://localhost/skykey/protected/views/site/point.php?Id=<?php echo $row['Id'];?>" ><?php echo $row['mosqueName'];?></a>
-					</h4>
-        	</div>
+</p>
+
+		<div class='volcano search_item'>
+           	<h4 class='search_text'><a href="http://localhost/skykey/protected/views/site/point.php?Id=<?php echo $row['Id'];?>" ><?php echo $row['mosqueName'];?></a>
+		  </h4>
+</div>
 			<?php
 		}
 		?>

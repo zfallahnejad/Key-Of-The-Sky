@@ -16,8 +16,8 @@
 			<table class="table table-striped">
 				<thead>
             		<tr>
-                		<th><font size="3">عنوان فعالیت</font></th>
-                    	<th><font size="3">امتیاز</font></th>
+                		<th><div align="right"><font size="3">عنوان فعالیت</font></div></th>
+                    	<th><div align="left"><font size="3">امتیاز</font></div></th>
 						                    	
 						
                 	</tr>
@@ -32,8 +32,8 @@
 								<tr>
 									
 									
-									<td><font size="4"><?php echo $row['actTopic'];?></font></td>
-                    				<td><font size="4"><?php echo $row['actPoint'];?></font></td>
+									<td><div align="right"><font size="4"><?php echo $row['actTopic'];?></font></div></td>
+                    				<td><div align="left"><font size="4"><?php echo $row['actPoint'];?></font></div></td>
 				               	</tr>
 								<?php
 							}
