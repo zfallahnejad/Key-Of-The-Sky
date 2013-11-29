@@ -16,7 +16,7 @@
 			<table class="table table-striped">
 				<thead>
             		<tr>
-                		<th><div align="right"><font size="3">عنوان فعالیت</font></div></th>
+                		<th><div align="right"<font size="3">عنوان فعالیت</font></div></th>
                     	<th><div align="left"><font size="3">امتیاز</font></div></th>
 						                    	
 						
