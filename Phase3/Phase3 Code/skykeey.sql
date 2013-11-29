@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2013 at 07:50 PM
+-- Generation Time: Nov 27, 2013 at 11:57 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mosqueAddress` text NOT NULL,
   `image` blob,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`
@@ -63,7 +63,8 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
 INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
 (3, 'ahmad', 'ahmadi', 'Haghani', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 't', 0x3d3f5554462d383f423f3f3d),
 (9, 'a', 'b', 'a', 'a@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, NULL, 't', 0x3d3f5554462d383f423f3f3d),
-(10, 'er', '', 't', 'test@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 0, 0, '', 0x3d3f5554462d383f423f3f3d);
+(10, 'er', '', 't', 'test@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 0, 0, '', 0x3d3f5554462d383f423f3f3d),
+(11, '???', '????', '???? ???', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 222, '??????? ???? ???', 0x3d3f5554462d383f423f3f3d);
 
 -- --------------------------------------------------------
 
@@ -87,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `parent` (
 --
 
 INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `mobileNum`, `password`, `email`) VALUES
+(1000100010, '????', '?????', 222, 0, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'akbari@yahoo.com'),
 (2147483647, 'reza', 'rahmati', 987, 12, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
 
 -- --------------------------------------------------------
@@ -124,16 +126,16 @@ CREATE TABLE IF NOT EXISTS `refrencepoint` (
 --
 
 INSERT INTO `refrencepoint` (`actId`, `actPoint`, `actTopic`, `userID`) VALUES
-(1, 10, 'نماز جماعت ظهر و عصر', 1),
-(2, 10, 'نماز جماعت مغرب و عشا', 1),
-(3, 5, 'شرکت در جلسه هفتگی قرآن', 1),
-(4, 10, 'تکبیر گفتن', 1),
-(5, 5, 'کمک در حفظ نظافت مسجد', 1),
-(6, 5, 'رعایت انضباط در مدرسه', 2),
-(7, 10, 'کمک به همکلاسی ها در دروس', 2),
-(8, 10, 'کمک در انجام کارهای منزل', 3),
-(9, 5, 'تمیز و مرتب بودن', 3),
-(10, 5, 'انجام به موقع تکالیف', 3);
+(1, 10, '???? ????? ??? ? ???', 1),
+(2, 10, '???? ????? ???? ? ???', 1),
+(3, 5, '???? ?? ???? ????? ????', 1),
+(4, 10, '????? ????', 1),
+(5, 5, '??? ?? ??? ????? ????', 1),
+(6, 5, '????? ?????? ?? ?????', 2),
+(7, 10, '??? ?? ??????? ?? ?? ????', 2),
+(8, 10, '??? ?? ????? ?????? ????', 3),
+(9, 5, '???? ? ???? ????', 3),
+(10, 5, '????? ?? ???? ??????', 3);
 
 -- --------------------------------------------------------
 
@@ -148,6 +150,16 @@ CREATE TABLE IF NOT EXISTS `reward` (
   PRIMARY KEY (`rewardTopic`),
   KEY `Id` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `reward`
+--
+
+INSERT INTO `reward` (`rewardTopic`, `neededPoint`, `Id`) VALUES
+('????? ???????', 100, 11),
+('?????????', 1000, 11),
+('??? ????? ?????', 500, 11),
+('???? ??????', 250, 11);
 
 -- --------------------------------------------------------
 
@@ -173,6 +185,7 @@ CREATE TABLE IF NOT EXISTS `school` (
 --
 
 INSERT INTO `school` (`schoolId`, `schoolName`, `schoolPhone`, `schoolAddress`, `teacherName`, `teacherFamily`, `teacherPhone`, `email`, `password`) VALUES
+(777, '????', 123, '????????', '?????', '??????', 4544, 'masoudi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (12356, 'tn', 1567, 'aaa', 'te', 'tf', 12569, 'jalali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
@@ -202,8 +215,9 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
-('مرتضی', 'مرتضوی', 'مصطفی', 10020020, 'رضوی', 'تهران', '0000-00-00', NULL, 10010010, 3, 2),
-('اسد', 'اسدی', 'اسدالله', 20003004, 'tn', 'اسدآباد', '0000-00-00', NULL, 30030030, 3, 12356);
+('?????', '?????', '????', 7563892, '????', '??????', '0000-00-00', NULL, 1000100010, 11, 777),
+('?????', '??????', '?????', 10020020, '????', '?????', '0000-00-00', NULL, 10010010, 3, 2),
+('???', '????', '???????', 20003004, 'tn', '???????', '0000-00-00', NULL, 30030030, 3, 12356);
 
 --
 -- Constraints for dumped tables
