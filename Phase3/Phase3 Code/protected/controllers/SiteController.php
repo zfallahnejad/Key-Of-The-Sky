@@ -683,7 +683,7 @@ class SiteController extends Controller
 	}
 	
 	
-	public function actionrefrencePoint()
+			public function actionrefrencePoint()
 	{		
 		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
 		$actTopic=$points['actTopic'];
@@ -691,14 +691,63 @@ class SiteController extends Controller
 						
 		$this->render('refrencePoint');
 	}
+	
+	
 	public function actiongivePoint()
 	{		
-		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
-		$actTopic=$points['actTopic'];
-		$actPoint=$points['actPoint'];
-						
-		$this->render('givePoint');
+		$model=new GivePointForm;
+		
+		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryAll();
+		
+		if(isset($_POST['GivePointForm'])){
+			
+			$model->attributes=$_POST['GivePointForm'];
+			if($model->validate()){
+				$actTopic=($model->actTopic);
+				$actPoint=($model->actPoint);
+				$actId=($model->actId);
+				$stCode = (int) $_GET['stCode'];
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				
+				$actIdReader =Yii::app()->db->createCommand()
+				->select ('actId')
+				->from('refrencepoint')
+				->where("actTopic=:actTopic")
+        		->queryScalar(array(':actTopic'=>$actTopic));
+				
+				$search	=Yii::app()->db->createCommand()
+				->select ('count(*)')
+				->from('point')
+				->where(array('and', 'actId=:actID', 'stCode=:stCode')  )
+        		->queryScalar(array(':actId'=>$actId,':stCode'=>$stCode));			
+				if($search !=0){
+					$month=CDateFormatter::formatMonth(now());
+					$year=CDateFormatter::formatMonth(now());
+					$command =$command->update('point', array(
+					'year'=>$year,'month'=>$month,
+					'pcounter'=>new CDbExpression('pcounter + 1'),),
+					(array('and','actId'=>$actId, 'stCode'=>$stCode))) ;
+					
+					Yii::app()->user->setFlash('point','امتیاز این فعالیت با موفقیت به مجموع امتیازات دانش آموز اضافه شد.');			
+					}	
+				else{
+					$month=CDateFormatter::formatMonth(now());
+					$year=CDateFormatter::formatMonth(now());
+					
+					$command->insert('point', array('actId'=>$actId,
+					'stCode'=>$stCode,'year'=>$year,'month'=>$month,
+					'pcounter'=>new CDbExpression('pcounter + 1')));
+					
+					Yii::app()->user->setFlash('point','امتیاز این فعالیت با موفقیت به مجموع امتیازات دانش آموز اضافه شد.');			
+		}
+			$this->refresh();
 	}
+	}							
+		$this->render('givePoint',array('model'=>$model));
+	
+	}
+	
 	public function actionReward()
 	{	
 		$model=new RewardForm;
@@ -724,7 +773,7 @@ class SiteController extends Controller
 				->where("rewardTopic=:rewardTopic")
         		->queryScalar(array(':rewardTopic'=>$rewardTopic));
 				if($dataReader !=0){
-					Yii::app()->user->setFlash('reward','فعالیتی با این عنوان قبلا به ثبت رسیده است.');			
+					Yii::app()->user->setFlash('reward','جایزه ای با این عنوان قبلا به ثبت رسیده است.');			
 					}	
 				else{
 					$temp=Yii::app()->user->name;
@@ -744,20 +793,27 @@ class SiteController extends Controller
 				
 					$command->execute();
 				
-					Yii::app()->user->setFlash('reward','فعالیت جدید با موفقیت ثبت گردید.');
+					Yii::app()->user->setFlash('reward','جایزه جدید با موفقیت ثبت گردید.');
 				}
-				
-				
-				
-				
-				
-				
-
 				$this->refresh();
 			}
 		}
 						
 		$this->render('reward',array('model'=>$model));
+	}
+	
+	
+	public function actionmosqueReward()
+	{		
+		$points = Yii::app()->db->createCommand()->select('neededPoint,rewardTopic,Id')->from('reward')->queryRow();
+		$actTopic=$points['neededPoint'];
+		$actPoint=$points['rewardTopic'];
+		
+		
+		$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
+		
+	
+		$this->render('mosqueReward');
 	}
 	
 	
