@@ -72,7 +72,7 @@
 													
 										  </div></td>
 											<td><div class='search_child3'>
-            										<h4 class='Child3'><a href="http://localhost/skykey/protected/views/site/point1.php?StCode=<?php echo $row['stCode'];?>" >امتيازدهي</a></h4>
+            										<h4 class='Child3'><a <?php echo CHtml::link('امتیازدهی',array('site/givePoint','stCode'=>$row['stCode']));	?></a></h4>
 													
 											</div></td>
 											

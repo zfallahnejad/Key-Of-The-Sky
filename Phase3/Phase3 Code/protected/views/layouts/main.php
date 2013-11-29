@@ -73,7 +73,7 @@
 					'items'=>array(
                     	array('label'=>'<b>تعیین جوایز</b>', 'url'=>array('/site/reward'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
-						array('label'=>'<b>امتیازدهی</b>', 'url'=>array('/site/givePoint'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
+						
 						array('label'=>'<b>درج مشخصات</b> <span class="caret"></span>', 'url'=>'#','visible'=>(Yii::app()->user->getId()==1),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>مشخصات والدین</b>', 'url'=>array('/site/parent'),'linkOptions'=>array("data-description"=>""),),

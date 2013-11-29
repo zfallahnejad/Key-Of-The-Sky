@@ -91,7 +91,7 @@
 </p>
 
 		<div class='volcano search_item'>
-           	<h4 class='search_text'><a href="http://localhost/skykey/protected/views/site/point.php?Id=<?php echo $row['Id'];?>" ><?php echo $row['mosqueName'];?></a>
+           	<h4 class='search_text'><a <?php echo CHtml::link($row['mosqueName'] ,array('site/mosqueReward','Id'=>$row['Id']));	?></a>
 		  </h4>
 </div>
 			<?php

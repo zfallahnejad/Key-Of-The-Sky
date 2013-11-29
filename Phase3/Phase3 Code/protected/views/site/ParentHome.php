@@ -39,7 +39,8 @@
 									<td><?php echo $row['stName'];?></td>
 									<td><?php echo $row['stFamily'];?></td>
 									<td><?php echo $row['stCode']; ?></td>
-                    				<td><a href="http://localhost/skykey/protected/views/site/point2.php?StCode=<?php echo $row['stCode'];?>" >امتیازدهی</a></td>
+                    				<td><a <?php echo CHtml::link('امتیازدهی',array('site/givePoint',
+									'stCode'=>$row['stCode']));		?></a></td>
 				               	</tr>
 								<?php
 							}

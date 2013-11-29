@@ -4120,3 +4120,311 @@ Stack trace:
 REQUEST_URI=/skykey/index.php?r=site/index
 HTTP_REFERER=http://localhost/skykey/index.php?r=site/MosqueHome
 ---
+2013/11/27 23:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/refrencePoint
+---
+2013/11/27 23:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/refrencePoint
+---
+2013/11/27 23:21:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:21:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:25:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:32:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/27 23:32:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/27 23:32:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:38:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:38:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/SchoolHome
+---
+2013/11/27 23:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:42:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/27 23:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/27 23:42:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/MosqueHome
+---
+2013/11/27 23:42:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/MosqueHome
+---
+2013/11/27 23:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/27 23:42:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/index
+---
+2013/11/28 00:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/28 00:09:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/login
+---
+2013/11/28 00:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/MosqueHome
+---
+2013/11/28 00:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\key-5combined\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key-5combined/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key-5combined/index.php/site/MosqueHome
+---
