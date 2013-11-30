@@ -399,7 +399,7 @@
 					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\skykey\protected\controllers\SiteController.php;f3;530;8;530;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="actionEditstudent;PHP:Function Name;C:\xampp\htdocs\skykey\protected\controllers\SiteController.php;f8;696;2;738;;;;vpos;;v;;r;;d1,681;;b1,0;;m">
+				<treenode node="actionEditstudent;PHP:Function Name;C:\xampp\htdocs\skykey\protected\controllers\SiteController.php;f8;696;2;738;;;;vpos;;v;;r;;d1,697;;b1,0;;m">
 					<treenode node="_GET;PHP:Var Name;C:\xampp\htdocs\skykey\protected\controllers\SiteController.php;f19;704;24;704;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 					<treenode node="_POST;PHP:Var Name;C:\xampp\htdocs\skykey\protected\controllers\SiteController.php;f12;714;18;714;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -726,10 +726,10 @@
 				<treenode node="testLoginLogout;PHP:Function Name;C:\xampp\htdocs\skykey\protected\tests\functional\SiteTest.php;f8;23;2;45;;;;vpos;;v;;r;;d1,24;;b1,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="StudentForm;PHP:Class Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f0;2;1;47;;;;vpos;;vCFormModel;;c;;r;;d0,3;;b0,0;;m">
-				<treenode node="attributeLabels;PHP:Function Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f9;32;2;46;;;;vpos;;v;;r;;d2,33;;b1,0;;m">
+			<treenode node="StudentForm;PHP:Class Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f0;2;1;48;;;;vpos;;vCFormModel;;c;;r;;d0,3;;b0,0;;m">
+				<treenode node="attributeLabels;PHP:Function Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f9;33;2;47;;;;vpos;;v;;r;;d2,34;;b1,0;;m">
 				</treenode>
-				<treenode node="rules;PHP:Function Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f8;16;2;26;;;;vpos;;v;;r;;d1,17;;b1,0;;m">
+				<treenode node="rules;PHP:Function Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f8;16;2;27;;;;vpos;;v;;r;;d1,17;;b1,0;;m">
 				</treenode>
 				<treenode node="address;PHP:Var Name;C:\xampp\htdocs\skykey\protected\models\StudentForm.php;f8;12;16;12;;;;vpos;;v;;r;;d-1,-1;;b1,0;;m">
 				</treenode>
@@ -770,7 +770,7 @@
 			</treenode>
 			<treenode node="act;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\refrencePoint.php;f1;4;5;4;;C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php;f1;7;5;7;;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;5;5;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="baseUrl;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\parent.php;f1;7;9;7;;C:\xampp\htdocs\skykey\protected\views\layouts\header.php;f2;1;10;1;;C:\xampp\htdocs\skykey\protected\views\layouts\main.php;f2;10;10;10;;C:\xampp\htdocs\skykey\protected\views\site\index.php;f2;1;10;1;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="baseUrl;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\parent.php;f1;7;9;7;;C:\xampp\htdocs\skykey\protected\views\layouts\header.php;f2;1;10;1;;C:\xampp\htdocs\skykey\protected\views\site\index.php;f2;1;10;1;;C:\xampp\htdocs\skykey\protected\views\layouts\main.php;f2;10;10;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="category;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;12;10;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -790,7 +790,7 @@
 			</treenode>
 			<treenode node="list;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;18;6;18;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="mail;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f1;4;6;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="mail;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f1;4;6;4;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f1;4;6;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="message;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\error.php;f25;13;33;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -812,7 +812,7 @@
 			</treenode>
 			<treenode node="refreshCaptcha;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\Codelobster0.php;f23;58;38;58;;C:\xampp\htdocs\skykey\protected\views\site\register.php;f23;101;38;101;;C:\xampp\htdocs\skykey\protected\views\site\editschool.php;f23;76;38;76;;C:\xampp\htdocs\skykey\protected\views\site\editpassword.php;f23;58;38;58;;C:\xampp\htdocs\skykey\protected\views\site\editparent.php;f23;64;38;64;;C:\xampp\htdocs\skykey\protected\views\site\editliable.php;f23;76;38;76;;C:\xampp\htdocs\skykey\protected\views\site\contact.php;f23;69;38;69;;C:\xampp\htdocs\skykey\protected\views\site\editstudent.php;f23;69;38;69;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="row;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f30;49;34;49;;C:\xampp\htdocs\skykey\protected\views\site\refrencePoint.php;f23;28;27;28;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f28;34;32;34;;C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php;f23;45;27;45;;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f23;69;27;69;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f30;49;34;49;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f27;39;31;39;;C:\xampp\htdocs\skykey\protected\views\site\index.php;f28;108;32;108;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="row;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f30;49;34;49;;C:\xampp\htdocs\skykey\protected\views\site\refrencePoint.php;f23;28;27;28;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f28;34;32;34;;C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php;f23;45;27;45;;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f23;69;27;69;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f27;39;31;39;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f30;49;34;49;;C:\xampp\htdocs\skykey\protected\views\site\index.php;f28;108;32;108;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="schoolId;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;5;10;5;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -820,7 +820,7 @@
 			</treenode>
 			<treenode node="students;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;10;10;10;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f1;10;10;10;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f1;10;10;10;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="this;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\Codelobster0.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\pages\about.php;f0;3;5;3;;C:\xampp\htdocs\skykey\protected\views\site\student.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\school.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\reward.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\register.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\refrencePoint.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\parent.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php;f1;3;6;3;;C:\xampp\htdocs\skykey\protected\views\site\login.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\error.php;f0;4;5;4;;C:\xampp\htdocs\skykey\protected\views\site\editschool.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editreward.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editpassword.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editparent.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editliable.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\contact.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\layouts\column1.php;f6;1;11;1;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\editstudent.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\layouts\main.php;f9;66;14;66;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="this;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\Codelobster0.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\pages\about.php;f0;3;5;3;;C:\xampp\htdocs\skykey\protected\views\site\student.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\SchoolHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\school.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\reward.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\register.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\refrencePoint.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\ParentHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\parent.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php;f1;3;6;3;;C:\xampp\htdocs\skykey\protected\views\site\login.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\error.php;f0;4;5;4;;C:\xampp\htdocs\skykey\protected\views\site\editschool.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editreward.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editpassword.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editparent.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\editliable.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\site\contact.php;f0;5;5;5;;C:\xampp\htdocs\skykey\protected\views\layouts\column1.php;f6;1;11;1;;C:\xampp\htdocs\skykey\protected\views\site\editstudent.php;f0;2;5;2;;C:\xampp\htdocs\skykey\protected\views\site\editChildrenInf.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\site\MosqueHome.php;f1;1;6;1;;C:\xampp\htdocs\skykey\protected\views\layouts\main.php;f9;66;14;66;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="userId;PHP:Var Name;C:\xampp\htdocs\skykey\protected\views\site\givePoint.php;f1;4;8;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -15571,7 +15571,7 @@
 		<file name="C:\xampp\htdocs\skykey\protected\tests\WebTestCase.php" crc="-1828421593"/>
 		<file name="C:\xampp\htdocs\skykey\protected\tests\phpunit.xml" crc="375679539"/>
 		<file name="C:\xampp\htdocs\skykey\protected\tests\bootstrap.php" crc="-828102573"/>
-		<file name="C:\xampp\htdocs\skykey\protected\models\StudentForm.php" crc="-2117590477"/>
+		<file name="C:\xampp\htdocs\skykey\protected\models\StudentForm.php" crc="1781321336"/>
 		<file name="C:\xampp\htdocs\skykey\protected\models\SchoolForm.php" crc="692018221"/>
 		<file name="C:\xampp\htdocs\skykey\protected\models\RewardForm.php" crc="-606117365"/>
 		<file name="C:\xampp\htdocs\skykey\protected\models\RegisterForm.php" crc="1981014748"/>
