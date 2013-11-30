@@ -33,7 +33,6 @@
     <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
 	
-	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/search.js"></script>
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/searchmosque.js"></script>
     
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bootstrap.css" />
@@ -129,6 +128,7 @@
 					array('label'=>'<b>ثبت نام مسئول مسجد</b>', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>خروج</b> ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ورود</b>', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>ویرایش مشخصات فرزندان</b>', 'url'=>array('/site/editChildrenInf'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"والد"),),	
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/ParentHome'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"والد"),),	
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/SchoolHome'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>"مسئول مدرسه"),),	
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/MosqueHome'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"مسئول مسجد"),),

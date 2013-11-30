@@ -681,9 +681,63 @@ class SiteController extends Controller
 		}
 		
 	}
-	
-	
-			public function actionrefrencePoint()
+	public function actionEditChildrenInf()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		else
+		{
+			// renders the view file 'protected/views/site/index.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('EditChildrenInf');
+		}
+	}
+	public function actionEditstudent()
+	{
+		if (Yii::app()->user->isGuest)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		else
+		{
+			$stCode = (int) $_GET['stCode'];
+			$refreshCaptcha = true;
+			$model=new EditstudentForm;
+			$student = Yii::app()->db->createCommand()->select('stname, stfamily, address, picture,birthdate')->from('student')->where('stCode=:stCode', array(':stCode'=>$stCode))->queryRow();
+			$model->stname=$student['stname'];
+			$model->stfamily=$student['stfamily'];
+			$model->address=$student['address'];
+			$model->picture=$student['picture'];
+			$model->birthdate=$student['birthdate'];
+			
+			if(isset($_POST['EditstudentForm']))
+			{
+				$refreshCaptcha = false;
+				$model->attributes=$_POST['EditstudentForm'];
+				
+				$stname=($model->stname);
+				$stfamily=($model->stfamily);
+				$address=($model->address);
+				$picture=($model->picture);
+				$birthdate=$model->birthdate;
+				
+				if($model->validate())
+				{				
+					$command = Yii::app()->db->createCommand();
+					$command->update('student', array('stname'=>$stname,'stfamily'=>$stfamily,'address'=>$address,'picture'=>$picture,'birthdate'=>$birthdate), 'stCode=:stCode', array(':stCode'=>$stCode));
+					$command->execute();
+					
+					Yii::app()->user->setFlash('editstudent','تغییرات با موفقیت در پایگاه داده ثبت گردید.');
+					
+					$this->refresh();
+				}
+			}
+			$this->render('editstudent',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));	
+		}
+	}
+	public function actionrefrencePoint()
 	{		
 		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
 		$actTopic=$points['actTopic'];
