@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2013 at 10:04 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Nov 30, 2013 at 06:24 PM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -54,16 +54,17 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mosqueAddress` text NOT NULL,
   `image` blob,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`
 --
 
 INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
-(3, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f3f3d),
-(9, 'جعفر', 'مجیدی', 'شفا', 'majidi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, 63542, 'ولیعصر', 0x3d3f5554462d383f423f3f3d),
-(10, 'حسین', 'حسینی', 'قائم آل محمد', 'hoseini@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 756, 2587, 'میدان شهداء', 0x3d3f5554462d383f423f3f3d);
+(3, 'ahmad', 'ahmadi', 'Haghani', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 't', 0x3d3f5554462d383f423f3f3d),
+(9, 'a', 'b', 'a', 'a@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, NULL, 't', 0x3d3f5554462d383f423f3f3d),
+(10, 'er', '', 't', 'test@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 0, 0, '', 0x3d3f5554462d383f423f3f3d),
+(11, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 222, 'بزرگراه امام علی', 0x3d3f5554462d383f423f3f3d);
 
 -- --------------------------------------------------------
 
@@ -87,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `parent` (
 --
 
 INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `mobileNum`, `password`, `email`) VALUES
+(1000100010, 'اکبر', 'اکبری', 222, 0, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'akbari@yahoo.com'),
 (2147483647, 'reza', 'rahmati', 987, 12, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
 
 -- --------------------------------------------------------
@@ -149,6 +151,16 @@ CREATE TABLE IF NOT EXISTS `reward` (
   KEY `Id` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `reward`
+--
+
+INSERT INTO `reward` (`rewardTopic`, `neededPoint`, `Id`) VALUES
+('لوازم التحریر', 100, 11),
+('میکروسکوپ', 1000, 11),
+('نرم افزار قرآنی', 500, 11),
+('کتاب داستان', 250, 11);
+
 -- --------------------------------------------------------
 
 --
@@ -173,6 +185,7 @@ CREATE TABLE IF NOT EXISTS `school` (
 --
 
 INSERT INTO `school` (`schoolId`, `schoolName`, `schoolPhone`, `schoolAddress`, `teacherName`, `teacherFamily`, `teacherPhone`, `email`, `password`) VALUES
+(777, 'پویا', 123, 'پاسداران', 'مسعود', 'مسعودی', 4544, 'masoudi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (12356, 'tn', 1567, 'aaa', 'te', 'tf', 12569, 'jalali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
@@ -202,9 +215,9 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
-('احمد', 'رحمتی', 'رضا', 1236547896, 'امیرکبیر', 'مطهری', '2013-11-13', NULL, 2147483647, 3, 123),
-('مرتضی', 'رحمتی', 'مصطفی', 1594826378, 'رضوی', 'تهران', '0000-00-00', NULL, 2147483647, 3, 2),
-('اسد', 'اسدی', 'اسدالله', 2147483647, 'tn', 'اسدآباد', '0000-00-00', NULL, 2147256647, 3, 12356);
+('احسان', 'اکبری', 'اکبر', 7563892, 'پویا', 'قیطریه', '0000-00-00', NULL, 1000100010, 11, 777),
+('مرتضی', 'مرتضوی', 'مصطفی', 10020020, 'رضوی', 'تهران', '0000-00-00', NULL, 10010010, 3, 2),
+('اسد', 'اسدی', 'اسدالله', 20003004, 'tn', 'اسدآباد', '0000-00-00', NULL, 30030030, 3, 12356);
 
 --
 -- Constraints for dumped tables
