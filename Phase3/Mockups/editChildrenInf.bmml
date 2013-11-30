@@ -1,0 +1,35 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="982" measuredH="413" mockupW="749" mockupH="308">
+  <controls>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="257" y="206" w="701" h="155" measuredW="245" measuredH="81" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <hLines>false</hLines>
+        <rowHeight>30</rowHeight>
+        <text>%20%2C%u06A9%u062F%u0645%u0644%u06CC%2C%u0646%u0627%u0645%20%u062E%u0627%u0646%u0648%u0627%u062F%u06AF%u06CC%2C%u0646%u0627%u0645%0A%20%20%20%20%20%20%20%20%2C%201236547896%2C%20%u0631%u062D%u0645%u062A%u06CC%2C%20%u0627%u062D%u0645%u062F%0A%2C%201594826378%2C%20%u0631%u062D%u0645%u062A%u06CC%2C%20%u0645%u0631%u062A%u0636%u06CC</text>
+        <vLines>true</vLines>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TitleWindow" x="233" y="105" w="749" h="308" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>22</bottomheight>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="276" y="232" w="-1" h="-1" measuredW="78" measuredH="18" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0648%u06CC%u0631%u0627%u06CC%u0634%20%u0645%u0634%u062E%u0635%u0627%u062A</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Link" x="276" y="258" w="-1" h="-1" measuredW="78" measuredH="18" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0648%u06CC%u0631%u0627%u06CC%u0634%20%u0645%u0634%u062E%u0635%u0627%u062A</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Title" x="625" y="148" w="-1" h="-1" measuredW="333" measuredH="33" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>%u0648%u06CC%u0631%u0627%u06CC%u0634%20%u0645%u0634%u062E%u0635%u0627%u062A%20%u0641%u0631%u0632%u0646%u062F%u0627%u0646%20%u0634%u0645%u0627</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
