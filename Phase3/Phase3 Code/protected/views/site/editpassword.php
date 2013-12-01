@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	'Editpassword', );
 ?>
 
-<h1 align="right"><font size = 5><b>تغییر مشخصات</b></font></h1>
+<h1 align="right"><font size = 5><b>تغییر رمز عبور</b></font></h1>
 
 <?php if(Yii::app()->user->hasFlash('editpassword')): ?>
 

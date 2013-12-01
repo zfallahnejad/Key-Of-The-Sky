@@ -6752,3 +6752,846 @@ Stack trace:
 REQUEST_URI=/skykey/index.php/site/img/close.png
 HTTP_REFERER=http://localhost/skykey/index.php/site/SchoolHome
 ---
+2013/12/01 22:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:47:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/login
+---
+2013/12/01 22:47:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/login
+---
+2013/12/01 22:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:47:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:50:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:50:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:51:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:52:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:52:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:53:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:53:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:54:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:54:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:54:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/refrencePoint
+---
+2013/12/01 22:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:54:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:55:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/reward
+---
+2013/12/01 22:55:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:55:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:55:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 22:56:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 22:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 22:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 22:57:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:04:24 [error] [php] Undefined index: rewardTopic (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(893): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (43)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (893)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/12/01 23:12:42 [error] [php] Undefined index: actId (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:76)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(893): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (76)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (893)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/12/01 23:16:39 [error] [php] Undefined variable: tcode (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:70)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(893): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (70)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (893)
+in C:\xampp\htdocs\skykey\index.php (13)
+2013/12/01 23:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:23:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:23:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/login
+---
+2013/12/01 23:24:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/login
+---
+2013/12/01 23:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:24:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:25:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2013/12/01 23:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:25:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2013/12/01 23:26:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---

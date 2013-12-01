@@ -5,113 +5,97 @@
 	$mosqueId = (int) $_GET['Id'];
 	$this->breadcrumbs=array(
 		'Point', );
-	$act = Yii::app()->db->createCommand()
-				->select('neededPoint,rewardTopic')
-				->from('reward')
-				->where('Id=:Id',array('Id'=>$mosqueId))
-				->queryAll();
-				
 	$mosqueName = Yii::app()->db->createCommand()
 				->select('mosqueName')
 				->from('mosqueculturalliablee')
 				->where('Id=:Id',array('Id'=>$mosqueId))
 				->queryScalar();
-                
-?>
-
-				
-
-				
-<div id='container'>
-  
-      <p><font size="3"><?php echo $mosqueName ;?></font></p>
-      
-      <div id="object-browser">
-		<div id="items">
-			<table class="table table-striped">
-				<thead>
-            		<tr>
-					
-						<th><font size="5">جایزه</font></th>
-                		<th><font size="5">امتیاز</font></th>
-                    	<th></th>				            	
-						
-                	</tr>
-					
-            	</thead>
-				<tbody>
-				
-					<form  method="POST" action="mosqueReward.php">
-						<?php
-							foreach($act as $row)
-							{
-								?>
-								<tr>
-									
-									<td><font size="4"><?php echo $row['neededPoint'];?></font></td>
-									<td><font size="4"><?php echo $row['rewardTopic'];?></font></td>
-									
-									
-									<td></td>
-								
-                    				
-				               	</tr>
-								<?php
-							}
-							?>
-					
-					</form>
-						
-				</tbody>
-			</table>
-		</div>
-		</div>
- 		
-<?php
-	$act = Yii::app()->db->createCommand()
-				->select('stName,stFamily')
-				->from('student')
+	$rewards = Yii::app()->db->createCommand()
+				->select('neededPoint,rewardTopic')
+				->from('reward')
 				->where('Id=:Id',array('Id'=>$mosqueId))
 				->queryAll();
-
-				
-?>	
-		<div id="object-browser">
+	$students = Yii::app()->db->createCommand()
+				->select('stName,stFamily,stCode')
+				->from('student')
+				->where('Id=:Id',array('Id'=>$mosqueId))
+				->queryAll();               
+?>
+<div id='container' style="direction:rtl" align="right">
+	<h2 class="header">مسجد <?php echo $mosqueName ;?><span class="header-line"></span></h2>
+	<br>
+	<h3 class="note">جدول جوایز<span class="header-line"></span></h3>
+    <div id="object-browser">
 		<div id="items">
 			<table class="table table-striped">
 				<thead>
             		<tr>
-					    
-                		<th><font size="5">نام دانش آموز</font></th>
-                    	<th><font size="5">نام خانوادگی دانش آموز</font></th>
-						<th></th>
-						                    	
-						
+						<th><div align="right">جایزه</div></th>
+                    	<th><div align="right">امتیاز</div></th>
                 	</tr>
-            	</thead>
+				</thead>
 				<tbody>
-				
-					<form  method="POST" action="point.php">
-						<?php
-							foreach($act as $row)
-							{
-								?>
-								<tr>
-								    
-									
-									<td><font size="4"><?php echo $row['stName'];?></font></td>
-									<td><font size="4"><?php echo $row['stFamily'];?></font></td>
-									
-                    				<td></td>
-				               	</tr>
-								<?php
-							}
-							?>
-					</form>	
+					<?php
+					foreach($rewards as $row)
+					{
+					?>
+						<tr>
+							<td><div align="right"><?php echo $row['rewardTopic'];?></div></td>
+							<td><div align="right"><?php echo $row['neededPoint'];?></div></td>
+						</tr>
+					<?php
+					}
+					?>	
 				</tbody>
 			</table>
 		</div>
-		</div>
-
-		
 	</div>
+ 	<br>
+	<h3 class="note">امتیازات کسب شده<span class="header-line"></span></h3>	
+	<div id="object-browser">
+		<div id="items">
+			<table class="table table-striped">
+				<thead>
+            		<tr>
+						<th><div align="right">نام</div></th>
+                    	<th><div align="right">نام خانوادگی</div></th>
+						<th><div align="right">امتیاز کسب شده</div></th>                   			
+                	</tr>
+            	</thead>
+				<tbody>
+					<?php
+					foreach($students as $row)
+					{
+						$stCode=$row['stCode'];
+						$points=0;
+						$studentPoints = Yii::app()->db->createCommand()
+										->select('actId,pcounter')
+										->from('point')
+										->where('stCode=:stCode',array(':stCode'=>$stCode))
+										->query();
+						foreach($studentPoints as $row1)
+						{
+							$actId=$row1['actId'];
+							$actPoint = Yii::app()->db->createCommand()
+										->select('actPoint')
+										->from('refrencepoint')
+										->where('actId=:actId',array(':actId'=>$actId))
+										->queryScalar();
+							$temp=$row1['pcounter'];
+							$temp=$temp*$actPoint;
+							$points=$points+$temp;
+						}
+						?>
+						<tr>
+							<td><div align="right"><?php echo $row['stName'];?></div></td>
+							<td><div align="right"><?php echo $row['stFamily'];?></div></td>
+							<td><div align="right"><?php echo $points;?></div></td>
+						</tr>
+					<?php
+					}
+					?>	
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
