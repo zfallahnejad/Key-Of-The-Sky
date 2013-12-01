@@ -3,29 +3,19 @@
 class GivePointForm extends CFormModel
 {
 	public $actTopic;
-	public $actPoint;
-	public $actId;
-	public $stCode;
-	
+	public $results; 
 	/**
 	 * Declares the validation rules.
 	 */
 	public function rules()
 	{
 		return array(
-			// verifyCode are required
-			//array('verifyCode', 'required'),
-			// verifyCode needs to be entered correctly
-			//array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-			array('actTopic','required'),
-			
+			//array('actTopic','required'),
+			//array('results', 'boolean'),
+			array('results', 'safe'),
 			
 		);
 	}
-	
-
-
-	
 	/**
 	 * Declares customized attribute labels.
 	 * If not declared here, an attribute would have a label that is
@@ -34,10 +24,7 @@ class GivePointForm extends CFormModel
 	 public function attributeLabels()
 	 {
 		return array(
-			'actTopic'=>'',
-			
-			
+			'actTopic'=>'عنوان فعالیت',
 		);
-	}
-	
+	 }
 }

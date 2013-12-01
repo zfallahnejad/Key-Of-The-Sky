@@ -750,56 +750,79 @@ class SiteController extends Controller
 	public function actiongivePoint()
 	{		
 		$model=new GivePointForm;
-		
-		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryAll();
-		
-		if(isset($_POST['GivePointForm'])){
-			
-			$model->attributes=$_POST['GivePointForm'];
-			if($model->validate()){
-				$actTopic=($model->actTopic);
-				$actPoint=($model->actPoint);
-				$actId=($model->actId);
-				$stCode = (int) $_GET['stCode'];
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				
-				$actIdReader =Yii::app()->db->createCommand()
-				->select ('actId')
+		$stCode = (int) $_GET['stCode'];
+		$userId = Yii::app()->user->getId();
+		$numOfActs = Yii::app()->db->createCommand()
+				->select('count(*)')
 				->from('refrencepoint')
-				->where("actTopic=:actTopic")
-        		->queryScalar(array(':actTopic'=>$actTopic));
+				->where('userId=:userId',array(':userId'=>$userId))
+				->order('actId')
+				->queryScalar();
+		$act = Yii::app()->db->createCommand()
+				->select('actId,actTopic,actPoint')
+				->from('refrencepoint')
+				->where('userId=:userId',array(':userId'=>$userId))
+				->order('actId')
+				->queryAll();
+		$numOfInsert=0;
+		$month=date('m');
+		$year=date('Y'); 
+		$connection=Yii::app()->db;
+		$connection->active=TRUE;
 				
-				$search	=Yii::app()->db->createCommand()
-				->select ('count(*)')
-				->from('point')
-				->where(array('and', 'actId=:actID', 'stCode=:stCode')  )
-        		->queryScalar(array(':actId'=>$actId,':stCode'=>$stCode));			
-				if($search !=0){
-					$month=CDateFormatter::formatMonth(now());
-					$year=CDateFormatter::formatMonth(now());
-					$command =$command->update('point', array(
-					'year'=>$year,'month'=>$month,
-					'pcounter'=>new CDbExpression('pcounter + 1'),),
-					(array('and','actId'=>$actId, 'stCode'=>$stCode))) ;
+		if(isset($_POST['GivePointForm']))
+		{
+			$model->attributes=$_POST['GivePointForm'];
+			if($model->validate())
+			{
+				for ($x=0; $x<$numOfActs; $x++)
+  				{
+					if($model->results[$x]==1)
+					{
+						$actId=$act[$x]['actId'];
+						$search = Yii::app()->db->createCommand()
+									->select('count(*)')
+									->from('point')
+									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->queryScalar();
+						if($search ==0)
+						{
+							$pcounter=1;
+							$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
+							$command=$connection->createCommand($sql);
 					
-					Yii::app()->user->setFlash('point','امتیاز این فعالیت با موفقیت به مجموع امتیازات دانش آموز اضافه شد.');			
-					}	
-				else{
-					$month=CDateFormatter::formatMonth(now());
-					$year=CDateFormatter::formatMonth(now());
-					
-					$command->insert('point', array('actId'=>$actId,
-					'stCode'=>$stCode,'year'=>$year,'month'=>$month,
-					'pcounter'=>new CDbExpression('pcounter + 1')));
-					
-					Yii::app()->user->setFlash('point','امتیاز این فعالیت با موفقیت به مجموع امتیازات دانش آموز اضافه شد.');			
-		}
-			$this->refresh();
-	}
-	}							
-		$this->render('givePoint',array('model'=>$model));
-	
+							$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+							$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
+							$command->bindParam(":year",$year,PDO::PARAM_STR);
+							$command->bindParam(":month",$month,PDO::PARAM_STR);
+							$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
+						
+							$command->execute();
+							$numOfInsert++;
+						}
+						else{
+							$pcounter = Yii::app()->db->createCommand()
+									->select('pcounter')
+									->from('point')
+									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->queryScalar();
+							$pcounter=$pcounter+1;
+							$command = Yii::app()->db->createCommand();
+							$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
+							$command->execute();
+							$numOfInsert++;
+						}
+  					}
+				}
+				if ($numOfInsert!=0)
+					{
+						Yii::app()->user->setFlash('givepoint','امتیازدهی با موفقیت انجام گرفت.');
+				}
+				$this->refresh();
+			}
+		}						
+		$this->render('givepoint',array('model'=>$model));
+
 	}
 	
 	public function actionReward()
