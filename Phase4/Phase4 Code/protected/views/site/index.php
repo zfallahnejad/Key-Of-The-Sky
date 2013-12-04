@@ -2,7 +2,7 @@
 		$baseUrl = Yii::app()->request->baseUrl;
 	?>
 <script type='text/javascript'>
-	$().ready(function(){$('#q').focus()});// focus search area
+	$().ready(function(){$('#q')});// focus search area
 </script>
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
@@ -70,7 +70,7 @@
         
 		<hr>
 		<script type='text/javascript'>
-			$().ready(function(){$('#i').focus()});// focus search area
+			$().ready(function(){$('#i')});// focus search area
 		</script>
 		<h2 class="header">لیست مساجد شرکت کننده<span class="header-line"></span></h2>
 	  	<h3 class="note">جستجوی مسجد بر اساس فیلد انتخاب شده <span class="header-line"></span></h3>

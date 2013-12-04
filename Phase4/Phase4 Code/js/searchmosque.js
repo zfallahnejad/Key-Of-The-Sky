@@ -1,8 +1,34 @@
 var i = new Array();
 var counter = 0;
 var first = true;
-$().ready(function(){
-  // Instant Search
+$().ready(function(){  // Instant Search
+$('html, body').animate({ scrollTop: 0 }, 0);
+  $('#i').keyup(function(){
+	  $('.search_item1').each(function(){
+		  $(this).parent().parent().show();
+	  });
+  });
+  $('#s1').click(function(){
+  $('.search_item1').each(function(){
+		  $(this).parent().parent().show();
+	  });
+  });
+  $('#s2').click(function(){
+  $('.search_item1').each(function(){
+		  $(this).parent().parent().show();
+	  });
+  });
+  $('#s3').click(function(){
+  $('.search_item1').each(function(){
+		  $(this).parent().parent().show();
+	  });
+  });
+  $('#s4').click(function(){
+  $('.search_item1').each(function(){
+		  $(this).parent().parent().show();
+	  });
+  });
+	  
   if (first)
   {
 	  first = false;
