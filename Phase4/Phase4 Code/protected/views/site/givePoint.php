@@ -19,10 +19,10 @@
 ?>
 <h2 align="right" class="header">امتیازدهی<span class="header-line"></span></h2>
 
-<?php if(Yii::app()->user->hasFlash('givepoint')): ?>
+<?php if(Yii::app()->user->hasFlash('givePoint')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('givepoint'); ?>
+	<?php echo Yii::app()->user->getFlash('givePoint'); ?>
 </div>
 
 <?php else: ?>

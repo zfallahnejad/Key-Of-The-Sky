@@ -279,8 +279,13 @@ class SiteController extends Controller
 					$connection->active=TRUE;
 					$sql0="SELECT Count(*) FROM `school` WHERE `email` ='$email'";
 					$dataReader=$connection->createCommand($sql0)->queryScalar();
+					$sql1="SELECT Count(*) FROM `school` WHERE `schoolId` ='$schoolid'";
+					$dataReader1=$connection->createCommand($sql1)->queryScalar();
 					if($dataReader !=0){
 						Yii::app()->user->setFlash('school','ایمیل وارد شده در پایگاه داده موجود می باشد');
+					}
+					elseif($dataReader1 !=0){
+						Yii::app()->user->setFlash('school','مدرسه ای با این آی دی در پایگاه داده موجود می باشد.');	
 					}
 					else{
 						$sql="INSERT INTO school (schoolId,schoolName,schoolPhone,schoolAddress, teacherName, teacherFamily, teacherPhone, email, password) VALUES(:schoolid,:schoolName,:schoolPhone,:schoolAddress, :teacherName, :teacherFamily, :teacherPhone, :email, :password)";
@@ -349,10 +354,15 @@ class SiteController extends Controller
 							
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-					$sql0="SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$email'";
+					$sql0="SELECT Count(*) FROM `parent` WHERE `email` ='$email'";
 					$dataReader=$connection->createCommand($sql0)->queryScalar();
+					$sql1="SELECT Count(*) FROM `parent` WHERE `parentCode` ='$parentcode'";
+					$dataReader1=$connection->createCommand($sql1)->queryScalar();
 					if($dataReader !=0){
-						Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
+						Yii::app()->user->setFlash('parent','ایمیل وارد شده در پایگاه داده موجود می باشد');
+					}
+					elseif($dataReader1 !=0){
+						Yii::app()->user->setFlash('parent','کد ملی موردنظر در پایگاه داده موجود می باشد.');
 					}
 					else{
 						$sql="INSERT INTO parent (parentName,parentFamily,parentCode, homePhone, mobileNum, email, password) VALUES(:parentName,:parentFamily, :parentCode, :homePhone, :mobileNum, :email, :password)";
@@ -423,7 +433,7 @@ class SiteController extends Controller
 					$sql0="SELECT Count(*) FROM `student` WHERE `stCode` ='stcode'";
 					$dataReader=$connection->createCommand($sql0)->queryScalar();
 					if($dataReader !=0){
-						Yii::app()->user->setFlash('student','کد دانش آموزی وارد شده در پایگاه داده موجود می باشد');
+						Yii::app()->user->setFlash('student','کد ملی دانش آموزی وارد شده در پایگاه داده موجود می باشد.');
 					}
 					else{
 						$temp=Yii::app()->user->name;
@@ -610,9 +620,6 @@ class SiteController extends Controller
 			$this->render('editparent',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));	
 		}
 	}
-	
-		
-	
 	public function actionEditpassword()
 	{
 		if (Yii::app()->user->isGuest)
@@ -739,161 +746,151 @@ class SiteController extends Controller
 	}
 	public function actionrefrencePoint()
 	{		
-		$points = Yii::app()->db->createCommand()->select('actTopic,actPoint')->from('refrencepoint')->queryRow();
-		$actTopic=$points['actTopic'];
-		$actPoint=$points['actPoint'];
-						
 		$this->render('refrencePoint');
 	}
-	
-	
 	public function actiongivePoint()
 	{		
-		$model=new GivePointForm;
-		$stCode = (int) $_GET['stCode'];
-		$userId = Yii::app()->user->getId();
-		$numOfActs = Yii::app()->db->createCommand()
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		else
+		{	
+			$model=new GivePointForm;
+			$stCode = (int) $_GET['stCode'];
+			$userId = Yii::app()->user->getId();
+			$numOfActs = Yii::app()->db->createCommand()
 				->select('count(*)')
 				->from('refrencepoint')
 				->where('userId=:userId',array(':userId'=>$userId))
 				->order('actId')
 				->queryScalar();
-		$act = Yii::app()->db->createCommand()
+			$act = Yii::app()->db->createCommand()
 				->select('actId,actTopic,actPoint')
 				->from('refrencepoint')
 				->where('userId=:userId',array(':userId'=>$userId))
 				->order('actId')
 				->queryAll();
-		$numOfInsert=0;
-		$month=date('m');
-		$year=date('Y'); 
-		$connection=Yii::app()->db;
-		$connection->active=TRUE;
+			$numOfInsert=0;
+			$month=date('m');
+			$year=date('Y'); 
+			$connection=Yii::app()->db;
+			$connection->active=TRUE;
 				
-		if(isset($_POST['GivePointForm']))
-		{
-			$model->attributes=$_POST['GivePointForm'];
-			if($model->validate())
+			if(isset($_POST['GivePointForm']))
 			{
-				for ($x=0; $x<$numOfActs; $x++)
-  				{
-					if($model->results[$x]==1)
-					{
-						$actId=$act[$x]['actId'];
-						$search = Yii::app()->db->createCommand()
+				$model->attributes=$_POST['GivePointForm'];
+				if($model->validate())
+				{
+					for ($x=0; $x<$numOfActs; $x++)
+  					{
+						if($model->results[$x]==1)
+						{
+							$actId=$act[$x]['actId'];
+							$search = Yii::app()->db->createCommand()
 									->select('count(*)')
 									->from('point')
 									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
 									->queryScalar();
-						if($search ==0)
-						{
-							$pcounter=1;
-							$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
-							$command=$connection->createCommand($sql);
-					
-							$command->bindParam(":actId",$actId,PDO::PARAM_STR);
-							$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
-							$command->bindParam(":year",$year,PDO::PARAM_STR);
-							$command->bindParam(":month",$month,PDO::PARAM_STR);
-							$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
+							if($search ==0)
+							{
+								$pcounter=1;
+								$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
+								$command=$connection->createCommand($sql);
+								
+								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+								$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
+								$command->bindParam(":year",$year,PDO::PARAM_STR);
+								$command->bindParam(":month",$month,PDO::PARAM_STR);
+								$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
 						
-							$command->execute();
-							$numOfInsert++;
-						}
-						else{
-							$pcounter = Yii::app()->db->createCommand()
+								$command->execute();
+								$numOfInsert++;
+							}
+							else{
+								$pcounter = Yii::app()->db->createCommand()
 									->select('pcounter')
 									->from('point')
 									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
 									->queryScalar();
-							$pcounter=$pcounter+1;
-							$command = Yii::app()->db->createCommand();
-							$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
-							$command->execute();
-							$numOfInsert++;
-						}
-  					}
-				}
-				if ($numOfInsert!=0)
+								$pcounter=$pcounter+1;
+								$command = Yii::app()->db->createCommand();
+								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
+								$command->execute();
+								$numOfInsert++;
+							}
+  						}
+					}
+					if ($numOfInsert!=0)
 					{
-						Yii::app()->user->setFlash('givepoint','امتیازدهی با موفقیت انجام گرفت.');
+						Yii::app()->user->setFlash('givePoint','امتیازدهی با موفقیت انجام گرفت.');
+					}
+					$this->refresh();
 				}
-				$this->refresh();
-			}
-		}						
-		$this->render('givePoint',array('model'=>$model));
-
+			}						
+			$this->render('givePoint',array('model'=>$model));
+		}
 	}
-	
 	public function actionReward()
 	{	
-		$model=new RewardForm;
-		$email=Yii::app()->user->name;
-		
-		
-				
-		if(isset($_POST['RewardForm']))
+		if (Yii::app()->user->isGuest == TRUE)
 		{
-			
-			$model->attributes=$_POST['RewardForm'];
-			if($model->validate())
-			{
-				$rewardTopic=($model->rewardTopic);
-	        	$neededPoint=($model->neededPoint);
-				
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				
-				$dataReader =Yii::app()->db->createCommand()
-				->select ('count(*)')
-				->from('reward')
-				->where("rewardTopic=:rewardTopic")
-        		->queryScalar(array(':rewardTopic'=>$rewardTopic));
-				if($dataReader !=0){
-					Yii::app()->user->setFlash('reward','جایزه ای با این عنوان قبلا به ثبت رسیده است.');			
-					}	
-				else{
-					$temp=Yii::app()->user->name;
-					$Id =Yii::app()->db->createCommand()
-					->select ('Id')
-					->from('mosqueculturalliablee')
-					->where("email=:email")
-        			->queryScalar(array(':email'=>$temp));
-					
-					
-					$sql="INSERT INTO reward (rewardTopic, neededPoint,Id) VALUES(:rewardTopic, :neededPoint, :Id)";
-					$command=$connection->createCommand($sql);
-				
-					$command->bindParam(":rewardTopic",$rewardTopic,PDO::PARAM_STR);
-					$command->bindParam(":neededPoint",$neededPoint,PDO::PARAM_STR);
-					$command->bindParam(":Id",$Id,PDO::PARAM_STR);
-				
-					$command->execute();
-				
-					Yii::app()->user->setFlash('reward','جایزه جدید با موفقیت ثبت گردید.');
-				}
-				$this->refresh();
-			}
+			$this->redirect(array('/site/login'));
 		}
-						
-		$this->render('reward',array('model'=>$model));
+		else
+		{
+			$model=new RewardForm;
+			$email=Yii::app()->user->name;
+		
+			if(isset($_POST['RewardForm']))
+			{
+			
+				$model->attributes=$_POST['RewardForm'];
+				if($model->validate())
+				{
+					$rewardTopic=($model->rewardTopic);
+	        		$neededPoint=($model->neededPoint);
+				
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+				
+					$dataReader =Yii::app()->db->createCommand()
+						->select ('count(*)')
+						->from('reward')
+						->where("rewardTopic=:rewardTopic")
+        				->queryScalar(array(':rewardTopic'=>$rewardTopic));
+					if($dataReader !=0){
+						Yii::app()->user->setFlash('reward','جایزه ای با این عنوان قبلا به ثبت رسیده است.');					}	
+					else{
+						$temp=Yii::app()->user->name;
+						$Id =Yii::app()->db->createCommand()
+							->select ('Id')
+							->from('mosqueculturalliablee')
+							->where("email=:email")
+        					->queryScalar(array(':email'=>$temp));
+						$sql="INSERT INTO reward (rewardTopic, neededPoint,Id) VALUES(:rewardTopic, :neededPoint, :Id)";
+						$command=$connection->createCommand($sql);
+				
+						$command->bindParam(":rewardTopic",$rewardTopic,PDO::PARAM_STR);
+						$command->bindParam(":neededPoint",$neededPoint,PDO::PARAM_STR);
+						$command->bindParam(":Id",$Id,PDO::PARAM_STR);
+				
+						$command->execute();
+				
+						Yii::app()->user->setFlash('reward','جایزه جدید با موفقیت ثبت گردید.');
+					}
+					$this->refresh();
+				}
+			}
+			$this->render('reward',array('model'=>$model));
+		}
 	}
-	
-	
 	public function actionmosqueReward()
 	{		
 		$points = Yii::app()->db->createCommand()->select('neededPoint,rewardTopic,Id')->from('reward')->queryRow();
 		$actTopic=$points['neededPoint'];
 		$actPoint=$points['rewardTopic'];
-		
-		
 		$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
-		
-	
 		$this->render('mosqueReward');
 	}
-	
-	
-
-	
 }	 
