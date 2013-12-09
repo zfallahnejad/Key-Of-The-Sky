@@ -50,6 +50,14 @@ return array(
 			),
 		),
 		*/
+		
+		'mailgun' => array(
+            'class' => 'application.extensions.php-mailgun.MailgunYii',
+            'domain' => 'keyofthesky.mailgun.org',
+            'key' => 'key-yourapikey',
+            'tags' => array('yii'), // You may also specify some Mailgun parameters
+            'enableTracking' => false,
+			),
 /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',

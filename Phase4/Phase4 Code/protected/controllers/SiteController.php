@@ -200,6 +200,7 @@ class SiteController extends Controller
 				$mosqueName =($model->mosqueName);
 				$email=($model->email);
 				$password=sha1($model->password);
+				$passwordsend = ($model->password);
 				$confirmPassword= sha1($model->confirmPassword);
 				$tel=($model->tel);
 		 		$mobile=($model->mobile);
@@ -231,6 +232,15 @@ class SiteController extends Controller
 					$command->execute();
 				
 					Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
+					
+					$message = Yii::app()->mailgun->newMessage();
+					$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
+					$message->addTo($email, 'My dear user');
+					$message->setSubject('اطلاعات حساب کاربری شما در کلید آسمان');
+					$body = 'نام کاربری شما :'.$email."\r\n".'رمز عبور شما :'.$passwordsend."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com ';
+					$message->setText($body);
+					$message->send();
+					
 				}	
 				$connection->active=false;
 				$name = ":name";
