@@ -86,7 +86,7 @@ if (Yii::app()->user->getId()==1)
 	$r=1;
 ?>
 <div id='container'>
-      <h2 class="header">ویرایش مشخصات فرزندان شما<span class="header-line"></span></h2>
+      <h2 class="header">ویرایش مشخصات دانش آموزان<span class="header-line"></span></h2>
       
       
       <div id="object-browser">

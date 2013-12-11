@@ -37,6 +37,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId()==1))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 			// renders the view file 'protected/views/site/index.php'
@@ -50,6 +54,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId()==3))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 			// renders the view file 'protected/views/site/index.php'
@@ -62,6 +70,10 @@ class SiteController extends Controller
 		if (Yii::app()->user->isGuest == TRUE)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId()==2))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -187,84 +199,95 @@ class SiteController extends Controller
 	}
 	public function actionRegister()
 	{
-		$model=new RegisterForm;
-		$refreshCaptcha = true;
-		if(isset($_POST['RegisterForm']))
+		if (!(Yii::app()->user->isGuest))
 		{
-			$refreshCaptcha = false;
-			$model->attributes=$_POST['RegisterForm'];
-			if($model->validate())
-			{
-				$name=($model->name);
-				$family=($model->family);
-				$mosqueName =($model->mosqueName);
-				$email=($model->email);
-				$password=sha1($model->password);
-				$passwordsend = ($model->password);
-				$confirmPassword= sha1($model->confirmPassword);
-				$tel=($model->tel);
-		 		$mobile=($model->mobile);
-				$mosqueAddress=($model->mosqueAddress);
-				$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
-				
-				$connection=Yii::app()->db;
-				$connection->active=TRUE;
-				
-				$sql0="SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$email'";
-				$dataReader=$connection->createCommand($sql0)->queryScalar();
-				if($dataReader !=0){
-					Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
-				}
-				else{				
-					$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
-					$command=$connection->createCommand($sql);
-					
-					$command->bindParam(":name",$name,PDO::PARAM_STR);
-					$command->bindParam(":family",$family,PDO::PARAM_STR);
-					$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
-					$command->bindParam(":email",$email,PDO::PARAM_STR);
-					$command->bindParam(":password",$password,PDO::PARAM_STR);
-					$command->bindParam(":tel",$tel,PDO::PARAM_STR);
-					$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
-					$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
-					$command->bindParam(":image",$image,PDO::PARAM_STR);
-				
-					$command->execute();
-				
-					Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
-					
-					$message = Yii::app()->mailgun->newMessage();
-					$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
-					$message->addTo($email, 'My dear user');
-					$message->setSubject('اطلاعات حساب کاربری شما در کلید آسمان');
-					$body = 'نام کاربری شما :'.$email."\r\n".'رمز عبور شما :'.$passwordsend."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com ';
-					$message->setText($body);
-					$message->send();
-					
-				}	
-				$connection->active=false;
-				$name = ":name";
-				$family= ":family";
-				$mosqueName = ":mosque";
-				$email = ":email";
-				$password = ":password";
-				$confirmPassword = ":confirm";
-				$tel = ":tel";
-				$mobile = ":mobile";
-				$mosqueAddress = ":mosque";
-				$image = ":image";
-
-				$this->refresh();
-			}
+			$this->redirect(array('/site/index'));
 		}
-		$this->render('register',array('model'=>$model,
-		'refreshCaptcha' => $refreshCaptcha));	
+		else
+		{
+			$model=new RegisterForm;
+			$refreshCaptcha = true;
+			if(isset($_POST['RegisterForm']))
+			{
+				$refreshCaptcha = false;
+				$model->attributes=$_POST['RegisterForm'];
+				if($model->validate())
+				{
+					$name=($model->name);
+					$family=($model->family);
+					$mosqueName =($model->mosqueName);
+					$email=($model->email);
+					$password=sha1($model->password);
+					$passwordsend = ($model->password);
+					$confirmPassword= sha1($model->confirmPassword);
+					$tel=($model->tel);
+			 		$mobile=($model->mobile);
+					$mosqueAddress=($model->mosqueAddress);
+					$image='=?UTF-8?B?'.base64_encode($model->image).'?=';
+					
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					
+					$sql0="SELECT Count(*) FROM `mosqueculturalliablee` WHERE `email` ='$email'";
+					$dataReader=$connection->createCommand($sql0)->queryScalar();
+					if($dataReader !=0){
+						Yii::app()->user->setFlash('register','ایمیل وارد شده در پایگاه داده موجود می باشد');
+					}
+					else{				
+						$sql="INSERT INTO mosqueculturalliablee (name,family,mosqueName, email, password, tel, mobile, mosqueAddress, image) VALUES(:name,:family, :mosqueName, :email, :password, :tel, :mobile, :mosqueAddress, :image)";
+						$command=$connection->createCommand($sql);
+						
+						$command->bindParam(":name",$name,PDO::PARAM_STR);
+						$command->bindParam(":family",$family,PDO::PARAM_STR);
+						$command->bindParam(":mosqueName",$mosqueName,PDO::PARAM_STR);
+						$command->bindParam(":email",$email,PDO::PARAM_STR);
+						$command->bindParam(":password",$password,PDO::PARAM_STR);
+						$command->bindParam(":tel",$tel,PDO::PARAM_STR);
+						$command->bindParam(":mobile",$mobile,PDO::PARAM_STR);
+						$command->bindParam(":mosqueAddress",$mosqueAddress,PDO::PARAM_STR);
+						$command->bindParam(":image",$image,PDO::PARAM_STR);
+					
+						$command->execute();
+					
+						Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
+						
+						$message = Yii::app()->mailgun->newMessage();
+						$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
+						$message->addTo($email, 'My dear user');
+						$message->setSubject('اطلاعات حساب کاربری شما در کلید آسمان');
+						$body = 'نام کاربری شما :'.$email."\r\n".'رمز عبور شما :'.$passwordsend."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com ';
+						$message->setText($body);
+						$message->send();
+						
+					}	
+					$connection->active=false;
+					$name = ":name";
+					$family= ":family";
+					$mosqueName = ":mosque";
+					$email = ":email";
+					$password = ":password";
+					$confirmPassword = ":confirm";
+					$tel = ":tel";
+					$mobile = ":mobile";
+					$mosqueAddress = ":mosque";
+					$image = ":image";
+
+					$this->refresh();
+				}
+			}
+			$this->render('register',array('model'=>$model,
+			'refreshCaptcha' => $refreshCaptcha));		
+		}
 	}
 	public function actionschool()
 	{
 		if (Yii::app()->user->isGuest)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId == 1))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -345,6 +368,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 			$model =new ParentForm;
@@ -417,6 +444,10 @@ class SiteController extends Controller
 		if (Yii::app()->user->isGuest)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId == 1))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -495,6 +526,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 			$mail=Yii::app()->user->name;
@@ -550,6 +585,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId == 2))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 					$mail=Yii::app()->user->name;
@@ -594,6 +633,10 @@ class SiteController extends Controller
 		if (Yii::app()->user->isGuest)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId == 3))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -704,6 +747,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (!(Yii::app()->user->getId == 1 || Yii::app()->user->getId == 3))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		else
 		{
 			// renders the view file 'protected/views/site/index.php'
@@ -716,6 +763,10 @@ class SiteController extends Controller
 		if (Yii::app()->user->isGuest)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId == 1 || Yii::app()->user->getId == 3))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -846,6 +897,10 @@ class SiteController extends Controller
 		if (Yii::app()->user->isGuest == TRUE)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId == 1))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
