@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.5
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.2.242.130:3306
--- Generation Time: Dec 04, 2013 at 07:47 AM
--- Server version: 5.1.71
--- PHP Version: 5.3.3
+-- Host: 127.0.0.1
+-- Generation Time: Dec 12, 2013 at 09:48 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -30,10 +30,13 @@ USE `skykeey`;
 
 CREATE TABLE IF NOT EXISTS `comment` (
   `commentId` int(11) NOT NULL AUTO_INCREMENT,
-  `text` text CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
-  `userId` int(11) NOT NULL,
-  PRIMARY KEY (`commentId`),
-  KEY `userId` (`userId`)
+  `SenderMail` varchar(255) NOT NULL,
+  `ReceiverMail` varchar(255) NOT NULL,
+  `UserID` int(11) NOT NULL,
+  `Category` varchar(255) NOT NULL,
+  `Subject` varchar(255) NOT NULL,
+  `Body` longtext CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  PRIMARY KEY (`commentId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -64,7 +67,7 @@ INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `emai
 (3, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f3f3d),
 (9, 'جعفر', 'مجیدی', 'شفا', 'majidi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, 63542, 'ولیعصر', 0x3d3f5554462d383f423f3f3d),
 (10, 'حسین', 'حسینی', 'قائم آل محمد', 'hoseini@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 756, 2587, 'میدان شهداء', 0x3d3f5554462d383f423f3f3d),
-(11, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 223, 'بزرگراه امام علی', 0x3d3f5554462d383f423f50543956564559744f443943507a38393f3d);
+(11, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 222, 'بزرگراه امام علی', 0x3d3f5554462d383f423f3f3d);
 
 -- --------------------------------------------------------
 
@@ -88,8 +91,7 @@ CREATE TABLE IF NOT EXISTS `parent` (
 --
 
 INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `mobileNum`, `password`, `email`) VALUES
-(10012345, 'مجید', 'مصطفوی', 222, 222, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'mostafavi@yahoo.com'),
-(1000100010, 'اکبر', 'اکبری', 222, 356, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'akbari@yahoo.com'),
+(1000100010, 'اکبر', 'اکبری', 222, 0, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'akbari@yahoo.com'),
 (2147483647, 'رضا', 'رحمتی', 987, 12, '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'rahmati@yahoo.com');
 
 -- --------------------------------------------------------
@@ -123,11 +125,10 @@ INSERT INTO `point` (`actId`, `stCode`, `year`, `month`, `pcounter`) VALUES
 (4, 1002002000, 2013, 12, 1),
 (5, 1002002000, 2013, 12, 1),
 (1, 1236547896, 2013, 12, 1),
-(1, 2147483647, 2013, 12, 3),
-(2, 2147483647, 2013, 12, 3),
-(3, 2147483647, 2013, 12, 2),
-(5, 2147483647, 2013, 12, 1),
-(9, 2147483647, 2013, 12, 1);
+(1, 2147483647, 2013, 12, 1),
+(2, 2147483647, 2013, 12, 2),
+(3, 2147483647, 2013, 12, 1),
+(5, 2147483647, 2013, 12, 1);
 
 -- --------------------------------------------------------
 
@@ -178,11 +179,8 @@ CREATE TABLE IF NOT EXISTS `reward` (
 --
 
 INSERT INTO `reward` (`rewardTopic`, `neededPoint`, `Id`) VALUES
-('بله', 12, 3),
 ('تی شرت', 400, 3),
 ('خودنویس', 300, 3),
-('دفتر', 50, 11),
-('دوچرخه', 1500, 11),
 ('فلش', 2000, 3),
 ('لوازم التحریر', 100, 11),
 ('ماشین حساب', 1000, 3),
@@ -214,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `school` (
 --
 
 INSERT INTO `school` (`schoolId`, `schoolName`, `schoolPhone`, `schoolAddress`, `teacherName`, `teacherFamily`, `teacherPhone`, `email`, `password`) VALUES
-(777, 'پویا', 2231, 'پاسداران', 'مسعود', 'مسعودی', 2222, 'masoudi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(777, 'پویا', 123, 'پاسداران', 'مسعود', 'مسعودی', 4544, 'masoudi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
 (12356, 'شهید بهشتی', 1567, 'شهید مدنی', 'فرهاد', 'جلالی', 12569, 'jalali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
@@ -245,12 +243,8 @@ CREATE TABLE IF NOT EXISTS `student` (
 
 INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `address`, `birthdate`, `picture`, `parentCode`, `Id`, `schoolId`) VALUES
 ('مرتضی', 'مرتضوی', 'مصطفی', 1002002000, 'رضوی', 'تهران', '0000-00-00', NULL, 1058963010, 3, 2),
-('محمد', 'اکبری', 'مرتضی', 1029384765, 'پویا', 'پاسداران', '1992-02-12', NULL, 2147483647, 11, 777),
-('صالح', 'صالحی', 'اصغر', 1112223334, 'بوستان دانش', 'تجریش', '1995-04-09', NULL, 2147483647, 11, 980385),
-('مصطفی', 'مصطفوی', 'مجید', 1234512345, 'عباسپور', 'رسالت', '1990-03-04', NULL, 10012345, 11, 67),
-('رضا', 'رضایی', 'همایون', 1234567890, 'پویا', 'خ هنگام', '1371-01-02', NULL, 14763978, 11, 777),
 ('اسد', 'اسدی', 'اسدالله', 1236547896, 'tn', 'اسدآباد', '0000-00-00', NULL, 1012500010, 3, 12356),
-('احسان', 'اکبری', 'اکبر', 2147483647, 'پویا', 'قیطریه', '2013-12-10', NULL, 1000100010, 11, 777);
+('احسان', 'اکبری', 'اکبر', 2147483647, 'پویا', 'قیطریه', '0000-00-00', NULL, 1000100010, 11, 777);
 
 --
 -- Constraints for dumped tables

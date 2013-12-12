@@ -285,7 +285,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1))
+		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -368,7 +368,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1))
+		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -445,7 +445,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1))
+		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -526,7 +526,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1))
+		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -585,7 +585,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 2))
+		elseif (!(Yii::app()->user->getId() == 2))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -634,7 +634,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 3))
+		elseif (!(Yii::app()->user->getId() == 3))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -747,7 +747,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1 || Yii::app()->user->getId == 3))
+		elseif (!(Yii::app()->user->getId() == 1 || Yii::app()->user->getId() == 3))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -764,7 +764,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1 || Yii::app()->user->getId == 3))
+		elseif (!(Yii::app()->user->getId() == 1 || Yii::app()->user->getId() == 3))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -898,7 +898,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId == 1))
+		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
 		}
