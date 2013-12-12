@@ -33,17 +33,23 @@ $this->breadcrumbs=array(
 
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
-	<?php echo $form->errorSummary($model); ?>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
+		<?php if(Yii::app()->user->isGuest): ?>
 		<?php echo $form->textField($model,'name'); ?>
+		<?php else: ?>
+		<?php echo $form->textField($model,'name',array('disabled'=>'true')); ?>
+		<?php endif; ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->emailField($model,'email'); ?>
+		<?php if(Yii::app()->user->isGuest): ?>
+		<?php echo $form->textField($model,'email'); ?>
+		<?php else: ?>
+		<?php echo $form->textField($model,'email',array('disabled'=>'true')); ?>
+		<?php endif; ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
@@ -54,8 +60,18 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'category'); ?>
+		<div class="compactRadioGroup">
+		 	<?php echo $form->radioButtonList($model, 'category',
+                    array(  0 => 'پیام',1 => 'انتقاد',2 => 'پیشنهاد',3 => 'سایر' ),
+                    array( 'separator' => "	" ) );?>
+		</div>
+		<?php echo $form->error($model,'category'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'body'); ?>
-		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'body',array('rows'=>10, 'cols'=>100,'style'=>'width: 60%')); ?>
 		<?php echo $form->error($model,'body'); ?>
 	</div>
 

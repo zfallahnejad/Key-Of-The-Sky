@@ -101,7 +101,35 @@ class SiteController extends Controller
 	 */
 	public function actionContact()
 	{
+		$mail=Yii::app()->user->name;
 		$model=new ContactForm;
+		if(!Yii::app()->user->isGuest){
+			$model->email=$mail;
+			if($UserID=Yii::app()->user->getId()==1){
+				$user =Yii::app()->db->createCommand()
+		    			->select ('name,family')
+		    			->from('mosqueculturalliablee')
+		    			->where('email=:email',array(':email'=>$mail))
+            			->queryRow(); 
+				$model->name=$user['name'].' '.$user['family'];
+			}
+			elseif($UserID=Yii::app()->user->getId()==2){
+				$user =Yii::app()->db->createCommand()
+		    				->select ('teacherName,teacherFamily')
+		    				->from('school')
+		    				->where('email=:email',array(':email'=>$mail))
+            				->queryRow();	
+				$model->name=$user['teacherName'].' '.$user['teacherFamily'];
+			}
+			elseif($UserID=Yii::app()->user->getId()==3){
+				$user =Yii::app()->db->createCommand()
+		    				->select ('parentName,parentFamily')
+		    				->from('parent')
+		    				->where('email=:email',array(':email'=>$mail))
+            				->queryRow();	
+				$model->name=$user['parentName'].' '.$user['parentFamily'];
+			}	
+		}
 		$refreshCaptcha = true;
 		if(isset($_POST['ContactForm']))
 		{
@@ -109,22 +137,54 @@ class SiteController extends Controller
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
-
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				$SenderName=($model->name);
+				$SenderMail=($model->email);
+				$ReceiverMail=Yii::app()->params['adminEmail'];
+				$category=($model->category);
+				$Subject=($model->subject);
+				$Body=($model->body);
+				
+				if($category==0){
+					$Category="پیام";
+				}
+				elseif($category==1){
+					$Category="انتقاد";
+				}
+				elseif($category==2){
+					$Category="پیشنهاد";
+				}
+				elseif($category==3){
+					$Category="سایر";
+				}
+				
+				$connection=Yii::app()->db;
+				$connection->active=TRUE;
+				$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body)";
+				$command=$connection->createCommand($sql);
+						
+				$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
+				$command->bindParam(":SenderMail",$SenderMail,PDO::PARAM_STR);
+				$command->bindParam(":ReceiverMail",$ReceiverMail,PDO::PARAM_STR);
+				$command->bindParam(":Category",$Category,PDO::PARAM_STR);
+				$command->bindParam(":Subject",$Subject,PDO::PARAM_STR);
+				$command->bindParam(":Body",$Body,PDO::PARAM_STR);
+					
+				$command->execute();
+					
+				/*$message = Yii::app()->mailgun->newMessage();
+				$message->setFrom($SenderMail, 'Guest');
+				$message->addTo($ReceiverMail, 'KeyOfTheSky');
+				$message->setSubject('پیام دذیافتی - ارتباط با ما');
+				$body = 'شما یک پیام از'.$SenderMail.'دریافت نموده اید'."\r\n".'عنوان پیام:'.$Subject."\r\n".'متن پیام:'.$Body."\r\n".'با تشکر'."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com';
+				$message->setText($body);
+				$message->send();*/
+						
+				Yii::app()->user->setFlash('contact','با تشکر، پیام شما ارسال گردید.');
 				$this->refresh();
 			}
 		}
-		$this->render('contact',array('model'=>$model,
-		'refreshCaptcha' => $refreshCaptcha));
+		$this->render('contact',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
 	}
-
 	/**
 	 * Displays the login page
 	 */
@@ -251,13 +311,13 @@ class SiteController extends Controller
 					
 						Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
 						
-						$message = Yii::app()->mailgun->newMessage();
+						/*$message = Yii::app()->mailgun->newMessage();
 						$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
 						$message->addTo($email, 'My dear user');
 						$message->setSubject('اطلاعات حساب کاربری شما در کلید آسمان');
 						$body = 'نام کاربری شما :'.$email."\r\n".'رمز عبور شما :'.$passwordsend."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com ';
 						$message->setText($body);
-						$message->send();
+						$message->send();*/
 						
 					}	
 					$connection->active=false;

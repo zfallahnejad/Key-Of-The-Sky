@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2013 at 09:48 AM
+-- Generation Time: Dec 12, 2013 at 03:22 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -30,9 +30,9 @@ USE `skykeey`;
 
 CREATE TABLE IF NOT EXISTS `comment` (
   `commentId` int(11) NOT NULL AUTO_INCREMENT,
+  `SenderName` varchar(255) DEFAULT NULL,
   `SenderMail` varchar(255) NOT NULL,
   `ReceiverMail` varchar(255) NOT NULL,
-  `UserID` int(11) NOT NULL,
   `Category` varchar(255) NOT NULL,
   `Subject` varchar(255) NOT NULL,
   `Body` longtext CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,

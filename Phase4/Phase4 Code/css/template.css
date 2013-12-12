@@ -648,3 +648,7 @@ form .row{
 	transition-duration:1000ms;
 	opacity:1
 }
+div#content .compactRadioGroup LABEL,
+div#content .compactRadioGroup INPUT {
+    display: inline;
+}
