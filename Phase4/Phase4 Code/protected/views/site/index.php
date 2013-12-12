@@ -4,6 +4,7 @@
 <script type='text/javascript'>
 	$().ready(function(){$('#q')});// focus search area
 </script>
+
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
             <div id="slider-nivo" class="nivoSlider">
@@ -100,6 +101,7 @@
                     	<th><div align="right">نام خانوداگي مسئول مسجد</div></th>
                     	<th><div align="right">آدرس</div></th>
 						<th><div align="right"></div></th>
+						<th><div align="right"></div></th>
                 	</tr>
             	</thead>
 				<tbody>
@@ -128,6 +130,13 @@
 											<div class='search_item3'>
             									<h4 align="right" class='search_text'>
 													<?php echo $row['mosqueAddress'];?>
+												</h4>
+											</div>
+										</td>
+										<td>
+											<div >
+            									<h4 >
+													<a <?php echo CHtml::link('نقشه',array('site/mosquemap','Id'=>$row['Id']));?></a>
 												</h4>
 											</div>
 										</td>

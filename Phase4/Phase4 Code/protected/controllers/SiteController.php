@@ -185,6 +185,7 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
 	}
+
 	/**
 	 * Displays the login page
 	 */
@@ -308,6 +309,17 @@ class SiteController extends Controller
 						$command->bindParam(":image",$image,PDO::PARAM_STR);
 					
 						$command->execute();
+						
+						$connection=Yii::app()->db;
+						$connection->active=TRUE;
+						$sql="INSERT INTO googlemap (Id) VALUES(:Id)";
+						$command=$connection->createCommand($sql);
+						$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$email))->queryScalar();
+						$command->bindParam(":Id",$mosqueId,PDO::PARAM_STR);
+						$command->execute();
+						$connection->active=FALSE;	
+						
+						
 					
 						Yii::app()->user->setFlash('register','اطلاعات شما با موفقیت ثبت و اکانت شما ایجاد گردید.');
 						
@@ -965,7 +977,8 @@ class SiteController extends Controller
 		else
 		{
 			$model=new RewardForm;
-			$email=Yii::app()->user->name;
+			$mail=Yii::app()->user->name;
+			$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
 		
 			if(isset($_POST['RewardForm']))
 			{
@@ -982,8 +995,8 @@ class SiteController extends Controller
 					$dataReader =Yii::app()->db->createCommand()
 						->select ('count(*)')
 						->from('reward')
-						->where("rewardTopic=:rewardTopic")
-        				->queryScalar(array(':rewardTopic'=>$rewardTopic));
+						->where("rewardTopic=:rewardTopic and Id=:id")
+        				->queryScalar(array(':rewardTopic'=>$rewardTopic , ':id'=>$mosqueId ));
 					if($dataReader !=0){
 						Yii::app()->user->setFlash('reward','جایزه ای با این عنوان قبلا به ثبت رسیده است.');					}	
 					else{
@@ -1018,4 +1031,121 @@ class SiteController extends Controller
 		$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
 		$this->render('mosqueReward');
 	}
-}	 
+	public function actiongooglemap()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('googlemap');
+	}
+	public function actionmosquemap()
+	{
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('mosquemap');
+	}
+	public function actionsetpos()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId() == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$mail=Yii::app()->user->name;
+			$model=new SetposForm;
+			$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+			$Pos = Yii::app()->db->createCommand()->select('lat,lng')->from('googlemap')->where('id=:id', array(':id'=>$mosqueId))->queryRow();
+
+			$model->lat=$Pos['lat'];
+			$model->lng=$Pos['lng'];
+			
+			if(isset($_POST['SetposForm']))
+			{
+				$model->attributes=$_POST['SetposForm'];
+				$lat = ($model->lat);
+				$lng = ($model->lng);
+					
+				if($model->validate())
+				{
+					$command = Yii::app()->db->createCommand();
+					$command->update('googlemap', array('lat'=>$lat,'lng'=>$lng), 'id=:id', array(':id'=>$mosqueId));
+					$command->execute();
+					
+					Yii::app()->user->setFlash('setpos','تغييرات با موفقيت در پايگاه داده ثبت گرديد.');
+					
+					$Id = ":id";
+					$lat= ":lat";
+					$lng = ":lng";
+
+					$this->refresh();
+				}
+			}
+			$this->render('setpos',array('model'=>$model));
+		}
+	}
+	public function actioneditreward()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId() == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$this->render('editreward');	
+		}
+		
+	}
+	public function actioneditprize()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId() == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$mail=Yii::app()->user->name;
+			$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+			$rewardTopic = (string) $_GET['rewardTopic'];
+			$refreshCaptcha = true;
+			$model=new EditprizeForm;
+			$prize = Yii::app()->db->createCommand()->select('Id,rewardTopic,neededPoint')->from('reward')->where('rewardTopic=:rewardTopic and Id=:Id', array(':rewardTopic'=>$rewardTopic , ':Id'=>$mosqueId))->queryRow();
+			$model->rewardTopic=$prize['rewardTopic'];
+			$model->neededPoint=$prize['neededPoint'];
+			
+			if(isset($_POST['EditprizeForm']))
+			{
+				$model->attributes=$_POST['EditprizeForm'];
+				$model->rewardTopic=$prize['rewardTopic'];
+				$model->neededPoint=$prize['neededPoint'];
+				
+				if($model->validate())
+				{	
+					$neededPoint = $model->neededPoint;			
+					$rewardTopic = $model->rewardTopic;
+					$command = Yii::app()->db->createCommand();
+					$command->update('reward', array('neededPoint'=>$neededPoint), 'rewardTopic=:rewardTopic and Id=:id', array(':rewardTopic'=>$rewardTopic,':id'=>$mosqueId));
+					
+					$command->execute();
+					
+					Yii::app()->user->setFlash('editprize','تغییرات با موفقیت در پایگاه داده ثبت گردید.');
+					
+					$this->refresh();
+				}
+			}
+			$this->render('editprize',array('model'=>$model));
+		}
+		
+	}
+}	 	 

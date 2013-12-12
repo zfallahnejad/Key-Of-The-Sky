@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2013 at 03:22 PM
+-- Generation Time: Dec 12, 2013 at 07:07 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -38,6 +38,30 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `Body` longtext CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`commentId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `googlemap`
+--
+
+CREATE TABLE IF NOT EXISTS `googlemap` (
+  `Id` int(11) NOT NULL,
+  `lat` decimal(18,15) NOT NULL DEFAULT '35.443140000000000',
+  `lng` decimal(18,15) NOT NULL DEFAULT '51.300844000000000',
+  UNIQUE KEY `id` (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `googlemap`
+--
+
+INSERT INTO `googlemap` (`Id`, `lat`, `lng`) VALUES
+(3, '35.443140000000000', '54.300844000000000'),
+(9, '35.443140000000000', '51.300844000000000'),
+(10, '35.443140000000000', '51.300844000000000'),
+(11, '35.443140000000000', '51.300844000000000'),
+(14, '35.543140000000000', '51.300844000000000');
 
 -- --------------------------------------------------------
 
@@ -106,6 +130,7 @@ CREATE TABLE IF NOT EXISTS `point` (
   `year` year(4) NOT NULL,
   `month` int(2) NOT NULL,
   `pcounter` int(11) NOT NULL,
+  PRIMARY KEY (`actId`,`stCode`,`year`,`month`),
   KEY `point_ibfk_1` (`actId`),
   KEY `stCode` (`stCode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -116,18 +141,18 @@ CREATE TABLE IF NOT EXISTS `point` (
 
 INSERT INTO `point` (`actId`, `stCode`, `year`, `month`, `pcounter`) VALUES
 (1, 1002002000, 2013, 12, 2),
-(2, 1002002000, 2013, 12, 2),
-(3, 1002002000, 2013, 12, 1),
-(2, 1236547896, 2013, 12, 2),
-(3, 1236547896, 2013, 12, 2),
-(4, 1236547896, 2013, 12, 2),
-(5, 1236547896, 2013, 12, 2),
-(4, 1002002000, 2013, 12, 1),
-(5, 1002002000, 2013, 12, 1),
 (1, 1236547896, 2013, 12, 1),
 (1, 2147483647, 2013, 12, 1),
+(2, 1002002000, 2013, 12, 2),
+(2, 1236547896, 2013, 12, 2),
 (2, 2147483647, 2013, 12, 2),
+(3, 1002002000, 2013, 12, 1),
+(3, 1236547896, 2013, 12, 2),
 (3, 2147483647, 2013, 12, 1),
+(4, 1002002000, 2013, 12, 1),
+(4, 1236547896, 2013, 12, 2),
+(5, 1002002000, 2013, 12, 1),
+(5, 1236547896, 2013, 12, 2),
 (5, 2147483647, 2013, 12, 1);
 
 -- --------------------------------------------------------
@@ -170,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `reward` (
   `rewardTopic` varchar(255) NOT NULL,
   `neededPoint` int(11) NOT NULL,
   `Id` int(11) NOT NULL,
-  PRIMARY KEY (`rewardTopic`),
+  PRIMARY KEY (`rewardTopic`,`Id`),
   KEY `Id` (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -267,7 +292,7 @@ ALTER TABLE `reward`
 -- Constraints for table `student`
 --
 ALTER TABLE `student`
-  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`);
+  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

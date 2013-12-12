@@ -1,9 +1,9 @@
 <?php
 
-class EditrewardForm extends CFormModel
+class RewardForm extends CFormModel
 {
 	public $rewardTopic;
-	public $rewardPoint;
+	public $neededPoint;
 	
 
 	/**
@@ -16,8 +16,8 @@ class EditrewardForm extends CFormModel
 			//array('verifyCode', 'required'),
 			// verifyCode needs to be entered correctly
 			//array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
-			array('rewardTopic, rewardPoint','safe'),
-			array('rewardPoint','numerical','integerOnly'=>true),
+			array('rewardTopic, neededPoint','required'),
+			array('neededPoint','numerical','integerOnly'=>true),
 			
 		);
 	}
@@ -30,8 +30,8 @@ class EditrewardForm extends CFormModel
 	 public function attributeLabels()
 	 {
 		return array(
-			'rewardTopic'=>'??? ??????',
-			'rewardPoint'=>'?????? ??????',
+			'rewardTopic'=>'عنوان جایزه',
+			'neededPoint'=>'امتیاز لازم',
 			
 		);
 	}
