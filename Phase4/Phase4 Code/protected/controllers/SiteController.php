@@ -310,13 +310,14 @@ class SiteController extends Controller
 					
 						$command->execute();
 						
-						$connection=Yii::app()->db;
+						/*$connection=Yii::app()->db;
 						$connection->active=TRUE;
 						$sql="INSERT INTO googlemap (Id) VALUES(:Id)";
 						$command=$connection->createCommand($sql);
 						$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$email))->queryScalar();
 						$command->bindParam(":Id",$mosqueId,PDO::PARAM_STR);
-						$command->execute();
+						$command->execute();*/
+						
 						$connection->active=FALSE;	
 						
 						
