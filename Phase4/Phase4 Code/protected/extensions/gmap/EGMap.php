@@ -1083,7 +1083,7 @@ class EGMap extends EGMapBase {
 	{
 		if (is_numeric($width))
 		{
-			$width = $width . 'px';
+			$width = $width . '%';
 		}
 		$this->setContainerStyle('width', $width);
 	}
@@ -1097,7 +1097,7 @@ class EGMap extends EGMapBase {
 	{
 		if (is_numeric($height))
 		{
-			$height = $height . 'px';
+			$height = $height . '%';
 		}
 		$this->setContainerStyle('height', $height);
 	}
