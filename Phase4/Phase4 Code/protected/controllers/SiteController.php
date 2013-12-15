@@ -316,9 +316,8 @@ class SiteController extends Controller
 						$command=$connection->createCommand($sql);
 						$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$email))->queryScalar();
 						$command->bindParam(":Id",$mosqueId,PDO::PARAM_STR);
-						$command->execute();*/
-						
-						$connection->active=FALSE;	
+						$command->execute();
+						$connection->active=FALSE;*/	
 						
 						
 					
@@ -1148,5 +1147,47 @@ class SiteController extends Controller
 			$this->render('editprize',array('model'=>$model));
 		}
 		
+	}
+	public function actionsetmap()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId() == 1))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			Yii::import('ext.gmap.*');
+			$Map = new EGMap();
+			$model = new SetmapForm;
+			$mail=Yii::app()->user->name;
+			$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+			
+			if(isset($_POST['SetmapForm']))
+			{
+				$model->attributes=$_POST['SetmapForm'];
+				$lat = ($model->lat);
+				$lng = ($model->lng);
+				
+				if($model->validate())
+				{
+					$command = Yii::app()->db->createCommand();
+					$command->update('googlemap', array('lat'=>$lat,'lng'=>$lng), 'id=:id', array(':id'=>$mosqueId));
+					$command->execute();
+					
+					Yii::app()->user->setFlash('setmap','تغييرات با موفقيت در پايگاه داده ثبت گرديد.');
+					
+					$Id = ":id";
+					$lat= ":lat";
+					$lng = ":lng";
+
+					$this->refresh();
+				}
+			}
+			$this->render('setmap',array('model'=>$model,'map'=>$Map));
+		}
 	}
 }	 	 

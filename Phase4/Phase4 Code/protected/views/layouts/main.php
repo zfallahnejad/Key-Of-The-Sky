@@ -119,7 +119,11 @@
                             array('label'=>'<b>تعیین جوایز</b>', 'url'=>array('/site/reward'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
 							array('label'=>'<b>حذف و تغییر جوایز</b>', 'url'=>array('/site/editreward'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
                         )),
-						array('label'=>'<b>تغییر مختصات مسجد</b>', 'url'=>array('/site/setpos'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>مختصات مسجد</b> <span class="caret"></span>', 'url'=>'#','visible'=>(Yii::app()->user->getId()==1),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>تعیین بر روی نقشه</b>', 'url'=>array('/site/setmap'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
+							array('label'=>'<b>تعیین توسط مختصات</b>', 'url'=>array('/site/setpos'), 'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"")),
+                        )),
 						array('label'=>'<b>ویرایش مشخصات فرزندان</b>', 'url'=>array('/site/editChildrenInf'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"والد"),),	
 						array('label'=>'<b>ویرایش مشخصات دانش آموزان</b>', 'url'=>array('/site/editChildrenInf'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"مسئول مسجد"),),	
 						array('label'=>'<b>درج مشخصات</b> <span class="caret"></span>', 'url'=>'#','visible'=>(Yii::app()->user->getId()==1),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
