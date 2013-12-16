@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2013 at 10:45 AM
+-- Generation Time: Dec 16, 2013 at 09:23 PM
 -- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -60,9 +60,7 @@ INSERT INTO `googlemap` (`Id`, `lat`, `lng`) VALUES
 (3, '35.443140000000000', '54.300844000000000'),
 (9, '35.443140000000000', '51.300844000000000'),
 (10, '35.443140000000000', '51.300844000000000'),
-(11, '35.443140000000000', '51.300844000000000'),
-(17, '35.443140000000000', '51.300844000000000'),
-(27, '22.333333333300000', '51.300844000000000');
+(11, '35.443140000000000', '51.300844000000000');
 
 -- --------------------------------------------------------
 
@@ -81,6 +79,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mobile` int(11) DEFAULT NULL,
   `mosqueAddress` text NOT NULL,
   `image` blob,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
@@ -88,12 +87,11 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
 -- Dumping data for table `mosqueculturalliablee`
 --
 
-INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`) VALUES
-(3, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f3f3d),
-(9, 'جعفر', 'مجیدی', 'شفا', 'majidi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, 63542, 'ولیعصر', 0x3d3f5554462d383f423f3f3d),
-(10, 'حسین', 'حسینی', 'قائم آل محمد', 'hoseini@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 756, 2587, 'میدان شهداء', 0x3d3f5554462d383f423f3f3d),
-(11, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 222, 'بزرگراه امام علی', 0x3d3f5554462d383f423f3f3d),
-(17, 'qw', 'qw', 'qw', 'qwe@qwe.qwe', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 123456, 0, 'wertyujk', 0x3d3f5554462d383f423f3f3d);
+INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`, `status`) VALUES
+(3, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 987, NULL, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f3f3d, 1),
+(9, 'جعفر', 'مجیدی', 'شفا', 'majidi@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 956, 63542, 'ولیعصر', 0x3d3f5554462d383f423f3f3d, 1),
+(10, 'حسین', 'حسینی', 'قائم آل محمد', 'hoseini@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 756, 2587, 'میدان شهداء', 0x3d3f5554462d383f423f3f3d, 1),
+(11, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 222, 222, 'بزرگراه امام علی', 0x3d3f5554462d383f423f3f3d, 0);
 
 --
 -- Triggers `mosqueculturalliablee`
@@ -290,6 +288,12 @@ INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `googlemap`
+--
+ALTER TABLE `googlemap`
+  ADD CONSTRAINT `googlemap_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `point`

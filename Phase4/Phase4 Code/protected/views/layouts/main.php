@@ -132,17 +132,24 @@
 							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
-                        array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!Yii::app()->user->isGuest ,'linkOptions'=>array("data-description"=>"")),
-						array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+						array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!Yii::app()->user->isGuest ,'linkOptions'=>array("data-description"=>"")),
+                        array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editschool'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editparent'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش کلمه عبور</b>', 'url'=>array('/site/editpassword'),'linkOptions'=>array("data-description"=>""),),
                         )),
+						array('label'=>'<b>مدیریت مساجد</b> <span class="caret"></span>', 'url'=>'#','visible'=>(Yii::app()->user->getId()==9) ,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>تایید مساجد</b>', 'url'=>array('/site/AcceptMosque'),'visible'=>(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>رد مساجد تایید شده</b>', 'url'=>array('/site/RejectMosque'),'visible'=>(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>""),),
+                        )),
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/ParentHome'),'visible'=>(Yii::app()->user->getId()==3),'linkOptions'=>array("data-description"=>"والد"),),	
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/SchoolHome'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>"مسئول مدرسه"),),	
 						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/MosqueHome'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>"مسئول مسجد"),),
+						array('label'=>'<b>پنل کاربری</b>', 'url'=>array('/site/AdminHome'),'visible'=>(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>"مدیر"),),
+						
    					),
                 )); 
 			?>

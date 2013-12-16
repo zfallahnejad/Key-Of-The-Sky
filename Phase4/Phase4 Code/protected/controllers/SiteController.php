@@ -82,6 +82,23 @@ class SiteController extends Controller
 			$this->render('SchoolHome');
 		}
 	}
+	public function actionAdminHome()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId()==9))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			// renders the view file 'protected/views/site/index.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('AdminHome');
+		}
+	}
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -101,6 +118,10 @@ class SiteController extends Controller
 	 */
 	public function actionContact()
 	{
+		if ((Yii::app()->user->getId()==9))
+		{
+			$this->redirect(array('/site/index'));
+		}
 		$mail=Yii::app()->user->name;
 		$model=new ContactForm;
 		if(!Yii::app()->user->isGuest){
@@ -203,6 +224,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/ParentHome'));
 		}
+		elseif (Yii::app()->user->getId()==9)
+		{
+			$this->redirect(array('/site/AdminHome'));
+		}
 		else
 		{
 			$model=new LoginForm;
@@ -232,6 +257,10 @@ class SiteController extends Controller
 					elseif (Yii::app()->user->getId()==3)
 					{
 						$this->redirect(array('/site/ParentHome'));
+					}
+					elseif (Yii::app()->user->getId()==9)
+					{
+						$this->redirect(array('/site/AdminHome'));
 					}
 					
 				}
@@ -751,6 +780,10 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
+		elseif (Yii::app()->user->getId() == 9)
+		{
+			$this->redirect(array('/site/AdminHome'));
+		}
 		else
 		{
 			$mail=Yii::app()->user->name;
@@ -1053,7 +1086,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/index'));
 		}
-		else
+			else
 		{
 			$mail=Yii::app()->user->name;
 			$model=new SetposForm;
@@ -1075,7 +1108,7 @@ class SiteController extends Controller
 					$command->update('googlemap', array('lat'=>$lat,'lng'=>$lng), 'id=:id', array(':id'=>$mosqueId));
 					$command->execute();
 					
-					Yii::app()->user->setFlash('setpos','تغييرات با موفقيت در پايگاه داده ثبت گرديد.');
+					Yii::app()->user->setFlash('setpos','مختصات با موفقیت در پایگاه داده ثبت گردید');
 					
 					$Id = ":id";
 					$lat= ":lat";
@@ -1160,34 +1193,38 @@ class SiteController extends Controller
 		}
 		else
 		{
-			Yii::import('ext.gmap.*');
-			$Map = new EGMap();
-			$model = new SetmapForm;
-			$mail=Yii::app()->user->name;
-			$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
-			
-			if(isset($_POST['SetmapForm']))
-			{
-				$model->attributes=$_POST['SetmapForm'];
-				$lat = ($model->lat);
-				$lng = ($model->lng);
-				
-				if($model->validate())
-				{
-					$command = Yii::app()->db->createCommand();
-					$command->update('googlemap', array('lat'=>$lat,'lng'=>$lng), 'id=:id', array(':id'=>$mosqueId));
-					$command->execute();
-					
-					Yii::app()->user->setFlash('setmap','تغييرات با موفقيت در پايگاه داده ثبت گرديد.');
-					
-					$Id = ":id";
-					$lat= ":lat";
-					$lng = ":lng";
-
-					$this->refresh();
-				}
-			}
-			$this->render('setmap',array('model'=>$model,'map'=>$Map));
+			$this->render('setmap');
+		}
+	}
+	public function actionacceptmosque()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId()==9))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$this->render('acceptmosque');	
+		}
+		
+	}
+	public function actionrejectmosque()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId()==9))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$this->render('rejectmosque');	
 		}
 	}
 	public function actionSendMessage()

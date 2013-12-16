@@ -1,9 +1,6 @@
     <?php
 		$baseUrl = Yii::app()->request->baseUrl;
 	?>
-<script type='text/javascript'>
-	$().ready(function(){$('#q')});// focus search area
-</script>
 
 	<div class="slider-bootstrap"><!-- start slider -->
     	<div class="slider-wrapper theme-default">
@@ -90,6 +87,7 @@
 		$mosques = Yii::app()->db->createCommand()
 				->select('Id,mosqueName,family,mosqueAddress')
 				->from('mosqueculturalliablee')
+				->where('status = 1')
 				->query();
 		?>
 	  	<div id="object-browser">

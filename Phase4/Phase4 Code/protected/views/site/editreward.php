@@ -75,7 +75,7 @@
 										<td>
 											<div >
             									<h4 align="left">
-													<a href="?delete&code=<?php print $row["rewardTopic"]; ?>" onclick="javascript: return confirm('Are You Sure?');"  >حذف</a>
+													<a href="?delete&code=<?php print $row["rewardTopic"]; ?>" onclick="javascript: return confirm('آیا مطمئن هستید؟');"  >حذف</a>
 												</h4>
 											</div>
 										</td>
