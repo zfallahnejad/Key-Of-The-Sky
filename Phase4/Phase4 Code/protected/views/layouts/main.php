@@ -132,7 +132,8 @@
 							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
-                        array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!Yii::app()->user->isGuest ,'linkOptions'=>array("data-description"=>"")),
+						array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!Yii::app()->user->isGuest,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editschool'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>""),),

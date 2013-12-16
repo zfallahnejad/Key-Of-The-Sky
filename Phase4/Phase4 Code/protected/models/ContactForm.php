@@ -21,7 +21,7 @@ class ContactForm extends CFormModel
 	{
 		return array(
 			// name, email, subject and body are required
-			array('name, email, subject,category, body', 'required'),
+			array('name, email, subject,category, body,verifyCode', 'required'),
 			// email has to be a valid email address
 			array('email', 'email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// verifyCode needs to be entered correctly

@@ -1190,4 +1190,113 @@ class SiteController extends Controller
 			$this->render('setmap',array('model'=>$model,'map'=>$Map));
 		}
 	}
+	public function actionSendMessage()
+	{
+		$model=new SendmessageForm;
+		
+		$refreshCaptcha = true;
+		
+		$this->render('sendMessage',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
+	}
+	public function actionType()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		else
+		{
+		$Type=$_POST["type"];
+		$mail=Yii::app()->user->name;
+		if(Yii::app()->user->getId()==1){
+			if($Type==1){
+				$contact=Yii::app()->db->createCommand()
+					->select('id,email')
+					->from('mosqueculturalliablee')
+					->where('email!=:mail', array(':mail'=>$mail))
+					->order('id')
+					->queryAll();	
+				$data=CHtml::listData($contact,'id','email');
+				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
+			}
+			elseif($Type==2){
+				$contact=Yii::app()->db->createCommand()
+					->select('school.schoolId,school.email')
+					->from('school,student,mosqueculturalliablee')
+					->where('mosqueculturalliablee.email=:mail AND school.schoolId=student.schoolId AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
+					->order('school.email')
+					->queryAll();
+				$data=CHtml::listData($contact,'schoolId','email');
+				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
+			}
+			elseif($Type==3){
+				$contact=Yii::app()->db->createCommand()
+					->select('parent.parentCode,parent.email')
+					->from('parent,student,mosqueculturalliablee')
+					->where('mosqueculturalliablee.email=:mail AND parent.parentCode=student.parentCode AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
+					->order('parent.email')
+					->queryAll();
+				$data=CHtml::listData($contact,'parentCode','email');
+				if (!empty($data)) { echo '<option value="">ایمیل والد مورد نظر را انتخاب نمایید</option>'; }
+    		
+			}
+			foreach($data as $value=>$name) {
+        	echo CHtml::tag('option',
+            		array('value'=>$value),CHtml::encode($name),true);
+    		}
+		}
+		if(Yii::app()->user->getId()==2){
+			if($Type==1){
+				$contact=Yii::app()->db->createCommand()
+					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
+					->from('school,student,mosqueculturalliablee')
+					->where('school.email=:mail AND school.schoolId=student.schoolId AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
+					->order('id')
+					->queryAll();	
+				$data=CHtml::listData($contact,'id','email');
+				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
+			}
+			elseif($Type==2){
+				$contact=Yii::app()->db->createCommand()
+					->select('parent.parentCode,parent.email')
+					->from('school,student,parent')
+					->where('school.email=:mail AND parent.parentCode=student.parentCode AND school.schoolId=student.schoolId', array(':mail'=>$mail))
+					->order('school.email')
+					->queryAll();
+				$data=CHtml::listData($contact,'parentCode','email');
+				if (!empty($data)) { echo '<option value="">ایمیل والد مورد نظر را انتخاب نمایید</option>'; }
+			}
+			foreach($data as $value=>$name) {
+        	echo CHtml::tag('option',
+            		array('value'=>$value),CHtml::encode($name),true);
+    		}
+		}
+		if(Yii::app()->user->getId()==3){
+			if($Type==1){
+				$contact=Yii::app()->db->createCommand()
+					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
+					->from('parent,student,mosqueculturalliablee')
+					->where('parent.email=:mail AND parent.parentCode=student.parentCode AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
+					->order('id')
+					->queryAll();	
+				$data=CHtml::listData($contact,'id','email');
+				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
+			}
+			elseif($Type==2){
+				$contact=Yii::app()->db->createCommand()
+					->select('school.schoolId,school.email')
+					->from('school,student,parent')
+					->where('parent.email=:mail AND parent.parentCode=student.parentCode AND school.schoolId=student.schoolId', array(':mail'=>$mail))
+					->order('school.email')
+					->queryAll();
+				$data=CHtml::listData($contact,'schoolId','email');
+				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
+			}
+			foreach($data as $value=>$name) {
+        	echo CHtml::tag('option',
+            		array('value'=>$value),CHtml::encode($name),true);
+    		}
+		}
+		}
+	}
 }	 	 
