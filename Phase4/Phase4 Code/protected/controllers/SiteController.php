@@ -1336,4 +1336,19 @@ class SiteController extends Controller
 		}
 		}
 	}
+	public function actionSaveCoords($id)
+	{
+		$model=$this->loadModel($id);
+		//$this->performAjaxValidation($model);
+		if(isset ($_GET['lat']) and isset ($_GET['lng']))
+		{
+			$model->lat = $_GET['lat'];
+			$model->lng = $_GET['lng'];	
+			$command = Yii::app()->db->createCommand();
+			$command->update('googlemap', array('lat'=>$model->lat,'lng'=>$model->lng), 'id=:id', array(':id'=>$id));
+			$command->execute();
+			echo 'Thank you for registring your place with '.Yii::app()->name;  
+		}	
+        $this->render('setmap',array('model'=>$model,));
+	}
 }	 	 

@@ -2,7 +2,7 @@
 
 class SetmapForm extends CFormModel
 {
-	public $Id;
+	public $id;
 	public $lat;
 	public $lng;
 	

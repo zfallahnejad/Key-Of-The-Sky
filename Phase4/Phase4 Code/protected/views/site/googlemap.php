@@ -6,10 +6,8 @@
 $Pos = Yii::app()->db->createCommand()
 		->select('googlemap.Id,lat,lng,mosqueAddress')
 		->from('mosqueculturalliablee,googlemap')
-		->where('status = 1')
+		->where('status = 1 and googlemap.Id = mosqueculturalliablee.Id')
 		->query();
-
-
 
 Yii::import('ext.gmap.*');
  
@@ -17,7 +15,7 @@ $gMap = new EGMap();
 $gMap->zoom = 10;
 $gMap->setWidth("100%");
 $gMap->setHeight("600px");
-$mapTypeControlOptions = array(
+$mapTypeControlOptions = array(	
   'position'=> EGMapControlPosition::LEFT_BOTTOM,
   'style'=>EGMap::MAPTYPECONTROL_STYLE_DROPDOWN_MENU
 );

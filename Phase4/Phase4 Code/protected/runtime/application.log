@@ -25361,3 +25361,2135 @@ Stack trace:
 REQUEST_URI=/key/index.php/site/img/loading.gif
 HTTP_REFERER=http://localhost/key/index.php/site/setmap
 ---
+2013/12/16 22:06:26 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'. The SQL statement executed was: SELECT `Id`, `mosqueName`, `family`, `mosqueAddress`
+FROM `mosqueculturalliablee`
+WHERE status = 1.
+in C:\xampp\htdocs\Key\protected\views\site\index.php (91)
+in C:\xampp\htdocs\Key\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\Key\index.php (13)
+2013/12/16 22:06:26 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'. The SQL statement executed was: SELECT `Id`, `mosqueName`, `family`, `mosqueAddress`
+FROM `mosqueculturalliablee`
+WHERE status = 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\Key\protected\views\site\index.php(91): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#6 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(32): CController->render('index')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/key/
+---
+2013/12/16 22:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 22:08:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 22:09:14 [error] [php] Undefined variable: data (C:\xampp\htdocs\Key\protected\controllers\SiteController.php:1280)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\Key\index.php(13): CWebApplication->run()
+REQUEST_URI=/key/index.php/site/type
+in C:\xampp\htdocs\Key\protected\controllers\SiteController.php (1280)
+in C:\xampp\htdocs\Key\index.php (13)
+2013/12/16 22:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:32:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:35:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:35:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:41:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/16 22:41:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/16 22:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/16 22:42:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/16 22:42:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 22:42:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 22:45:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:45:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 22:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:05:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:06:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:06:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:07:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:08:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:11:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:11:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:16:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:19:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:19:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:19:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:20:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/16 23:24:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/16 23:24:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/16 23:58:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 23:58:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 23:58:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/16 23:58:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/17 00:39:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/17 00:39:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/17 00:39:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/17 00:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/17 00:39:27 [error] [php] Undefined variable: model (C:\xampp\htdocs\Key\protected\views\site\setmap.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1196): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionsetmap()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Key\index.php(13): CWebApplication->run()
+REQUEST_URI=/key/index.php/site/setmap
+in C:\xampp\htdocs\Key\protected\views\site\setmap.php (53)
+in C:\xampp\htdocs\Key\protected\controllers\SiteController.php (1196)
+in C:\xampp\htdocs\Key\index.php (13)
+2013/12/17 00:40:30 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "SetmapForm.id" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\views\site\setmap.php(53): CComponent->__get('id')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('setmap', NULL, true)
+#5 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1196): CController->render('setmap')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionsetmap()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('setmap')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/setmap')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/key/index.php/site/setmap
+---
+2013/12/17 00:41:02 [error] [php] Undefined variable: icon (C:\xampp\htdocs\Key\protected\views\site\setmap.php:73)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1196): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionsetmap()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Key\index.php(13): CWebApplication->run()
+REQUEST_URI=/key/index.php/site/setmap
+in C:\xampp\htdocs\Key\protected\views\site\setmap.php (73)
+in C:\xampp\htdocs\Key\protected\controllers\SiteController.php (1196)
+in C:\xampp\htdocs\Key\index.php (13)
+2013/12/17 00:41:40 [error] [php] Undefined variable: icon (C:\xampp\htdocs\Key\protected\views\site\setmap.php:73)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1196): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionsetmap()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\Key\index.php(13): CWebApplication->run()
+REQUEST_URI=/key/index.php/site/setmap
+in C:\xampp\htdocs\Key\protected\views\site\setmap.php (73)
+in C:\xampp\htdocs\Key\protected\controllers\SiteController.php (1196)
+in C:\xampp\htdocs\Key\index.php (13)
+2013/12/17 00:42:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:42:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 00:43:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:10 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:10:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:11:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:11:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:11:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:11:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:13:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:13:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:13:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:13:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:14:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:14:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:14:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:16:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:17:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:19:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:20:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=34.52466147177172&lng=54.0087890625&_=1387239825831
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=35.38904996691167&lng=56.9970703125&_=1387239828918
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=37.43997405227057&lng=47.2412109375&_=1387239833097
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:23:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=38.479394673276445&lng=46.1865234375&_=1387239835452
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:24:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=62.71446210149774&lng=92.5927734375&_=1387239841839
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:24:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=34.52466147177172&lng=52.1630859375&_=1387239847733
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:26:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:26:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:26:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=35.94243575255426&lng=52.569580078125&_=1387240010875
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:26:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=35.55010533588551&lng=52.833251953125&_=1387240014276
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:26:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=38.08268954483802&lng=47.867431640625&_=1387240018091
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:27:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/key/index.php/site/savecoords/3?lat=34.470335121217495&lng=53.536376953125&_=1387240020113
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.505400093441324&lng=54.2669677734375&_=1387241072028
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.25459097465025&lng=53.0694580078125&_=1387241074988
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.94899072578227&lng=53.5858154296875&_=1387241077418
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.57895241036945&lng=54.0032958984375&_=1387241076723
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.42503613021332&lng=53.5748291015625&_=1387241078105
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.116352469972746&lng=53.4210205078125&_=1387241083015
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.06176136129718&lng=52.3333740234375&_=1387241086406
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.101934057246055&lng=53.3111572265625&_=1387241094224
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:44:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=33.970697997361626&lng=53.1463623046875&_=1387241095612
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:45:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.64836915737426&lng=51.4434814453125&_=1387241112644
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:45:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.831841149828655&lng=53.2232666015625&_=1387241114522
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:45:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.06176136129718&lng=53.6077880859375&_=1387241116499
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:45:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/editChildrenInf
+---
+2013/12/17 01:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/editChildrenInf
+---
+2013/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/17 01:45:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/sendMessage
+---
+2013/12/17 01:46:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:46:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.66622234103479&lng=54.7723388671875&_=1387241187518
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:46:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.79108281624993&lng=51.4324951171875&_=1387241195442
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.27085020723905&lng=54.0252685546875&_=1387241448820
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.19995805932895&lng=51.4984130859375&_=1387241452660
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.25313319699071&lng=50.5975341796875&_=1387241455849
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:50:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.53612263184688&lng=50.5316162109375&_=1387241455158
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.80048816579081&lng=50.3778076171875&_=1387241459545
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.05698043137265&lng=54.1571044921875&_=1387241460955
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.00467348670189&lng=51.4324951171875&_=1387241462873
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.217687122250595&lng=51.0150146484375&_=1387241464059
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.64836915737429&lng=55.2337646484375&_=1387241467971
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:51:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.05798104702501&lng=51.1907958984375&_=1387241470842
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 01:52:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 01:52:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/17 01:52:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/login
+---
+2013/12/17 01:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/17 01:52:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/MosqueHome
+---
+2013/12/17 01:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.70549341022544&lng=55.074462890625&_=1387241560537
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.3797125804622&lng=54.415283203125&_=1387241566341
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.35321610123821&lng=54.151611328125&_=1387241568383
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.74161249883172&lng=53.184814453125&_=1387241569644
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=34.994003757575776&lng=51.646728515625&_=1387241571408
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:52:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=77.79548410374639&lng=-46.087646484375&_=1387241578107
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:53:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=36.13787471840731&lng=51.646728515625&_=1387241580489
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:53:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'امکان پاسخ به درخواست "hotel/savecoords/id/3" وجود ندارد' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('hotel/savecoord...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/key/index.php/hotel/savecoords/id/3?lat=35.06597313798423&lng=53.624267578125&_=1387241582951
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:54:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:54:51 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=35.47409160773029&lng=54.07745361328125&_=1387241690743
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:54:57 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=35.964669147704086&lng=52.39654541015625&_=1387241696946
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:06 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=35.78662688467012&lng=50.81451416015625&_=1387241705714
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:10 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=35.250105158539355&lng=51.91314697265625&_=1387241709756
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:13 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=35.42934404410718&lng=52.17681884765625&_=1387241713004
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:13 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "loadModel".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): CComponent->__call('loadModel', Array)
+#1 C:\xampp\htdocs\Key\protected\controllers\SiteController.php(1341): SiteController->loadModel('3')
+#2 [internal function]: SiteController->actionSaveCoords('3')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('savecoords')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/savecoords...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/key/index.php/site/savecoords/id/3?lat=33.362649660256665&lng=56.65924072265625&_=1387241712089
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 01:55:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/setmap
+---
+2013/12/17 12:15:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 12:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 12:17:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 12:17:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 12:18:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/close....')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/close.png
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---
+2013/12/17 12:18:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "img" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('img')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('img')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/img/loadin...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\Key\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/key/index.php/site/img/loading.gif
+HTTP_REFERER=http://localhost/key/index.php/site/googlemap
+---

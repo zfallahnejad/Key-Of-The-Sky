@@ -100,7 +100,7 @@ DROP TRIGGER IF EXISTS `add`;
 DELIMITER //
 CREATE TRIGGER `add` AFTER INSERT ON `mosqueculturalliablee`
  FOR EACH ROW BEGIN	
-INSERT INTO googlemap SET Id = NEW.Id+10;
+INSERT INTO googlemap SET Id = NEW.Id;
 
 
 END

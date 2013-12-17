@@ -26,61 +26,69 @@ foreach ($Pos as $row)
 	$lng = $row['lng'];
 }
 
-
+$model = new SetmapForm;
+$model->id = $mosqueId;
 Yii::import('ext.gmap.*');
-$Map = new EGMap();
-$Map->zoom = 10;
-$Map->setWidth("100%");
-$Map->setHeight("600px");
+$gMap = new EGMap();
+$gMap->zoom = 10;
+$gMap->setWidth("100%");
+$gMap->setHeight("600px");
 $mapTypeControlOptions = array(
   'position'=> EGMapControlPosition::LEFT_BOTTOM,
   'style'=>EGMap::MAPTYPECONTROL_STYLE_DROPDOWN_MENU
 );
  
-$Map->mapTypeControlOptions= $mapTypeControlOptions;
+$gMap->mapTypeControlOptions= $mapTypeControlOptions;
 
  
-$Map->setCenter($lat, $lng); 
-$marker = new EGMapMarker($lat, $lng, array('title' => $mosqueAddress));
-$marker->draggable=TRUE;
-$marker->raiseOnDrag= TRUE; 
-$Map->addMarker($marker);
-//$Map->enableMarkerClusterer(new EGMapMarkerClusterer());?>
+$gMap->setCenter($lat, $lng); 
+//$marker = new EGMapMarker($lat, $lng, array('title' => $mosqueAddress));
+//$marker->draggable=TRUE;
+//$marker->raiseOnDrag= TRUE; 
+//$gMap->addMarker($marker);
+//$Map->enableMarkerClusterer(new EGMapMarkerClusterer());
+$info_window_a = new EGMapInfoWindow("<div class='gmaps-label' style='color: #000;'>Hi! I'm your marker!</div>");
 
-<script>
-	var latlng = new google.maps.LatLng(51.4975941, -0.0803232);
-var map = new google.maps.Map(document.getElementById('map'), {
-    center: latlng,
-    zoom: 11,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-});
-var marker = new google.maps.Marker({
-    position: latlng,
-    map: map,
-    title: 'Set lat/lon values for this property',
-    draggable: true
-});
-google.maps.event.addListener(marker, 'dragend', function(a) {
-    console.log(a);
-    // bingo!
-    // a.latLng contains the co-ordinates where the marker was dropped
-});
-</script>
+// Setting up an icon for marker.
+$icon = new EGMapMarkerImage("http://google-maps-icons.googlecode.com/files/car.png");
 
-<div id='container' style="direction:rtl" align="right">
-<h1 align="right"><font size = 5><b>تعیین مختصات مسجد</b></font></h1>
+$icon->setSize(32, 37);
+$icon->setAnchor(16, 16.5);
+$icon->setOrigin(0, 0);
 
-
-<p align="right" class="note">با Drag & Drop مارکر مختصات مسجد را تعیین نمایید و سپس بر روی لینک ثبت مختصات کلیک نمایید</p>
-	<div >
-            <h4 align="right">
-				<a href="?update&code=<?php print $row["Id"]; ?>" onclick="javascript: return confirm('آیا مطمئن هستید؟');"  >ثبت مختصات</a>
-			</h4>
-	</div>
-	
-</div>
+$dragevent = new EGMapEvent('dragend', 'function (event) { $.ajax({
+type:"GET",
+url:"'.CController::createUrl('site/savecoords', array('id'=>$model->id)).'",
+data:({lat: event.latLng.lat(), lng: event.latLng.lng()}),
+cache:false,
+});}', false, EGMapEvent::TYPE_EVENT_DEFAULT);
+if($model->lng)
+{
+// If we have already created marker - show it
+$marker = new EGMapMarker($model->lat, $model->lng, array('title' => $mosqueAddress,
+'icon'=>$icon, 'draggable'=>true), 'marker', array('dragevent'=>$dragevent));
+$marker->addHtmlInfoWindow($info_window_a);
+$gMap->addMarker($marker);
+$gMap->setCenter($model->lat, $model->lng);
+$gMap->zoom = 16;
+}
+else
+{
+// Setting up new event for user click on map, so marker will be created on place and respectful event added.
+$gMap->addEvent(new EGMapEvent('click',
+'function (event) {var marker = new google.maps.Marker({position: event.latLng, map: '.$gMap->getJsName().
+', draggable: true, icon: '.$icon->toJs().'}); '.$gMap->getJsName().
+'.setCenter(event.latLng); var dragevent = '.$dragevent->toJs('marker').
+'; $.ajax({'.
+'"type":"GET",'.
+'"url":"'.CController::createUrl('site/savecoords', array('id'=>$model->id)).'",'.
+'"data":({"lat": event.latLng.lat(), "lng": event.latLng.lng()}),'.
+'"cache":false,'.
+'}); }', false, EGMapEvent::TYPE_EVENT_DEFAULT_ONCE));
+}
+$gMap->renderMap(array());?>
 <?php
-$Map->renderMap();
+/*$Map->renderMap();
 if(isset($_GET["update"])){
 //$marker->setJsName('google')
 $New = $Map->getMarkersCenterCoord();
@@ -94,5 +102,5 @@ $command = Yii::app()->db->createCommand();
 					$command->update('googlemap', array('lat'=>$lat2,'lng'=>$lng2), 'id=:id', array(':id'=>$mosqueId));
 					$command->execute();
 		$this->redirect('setmap');
-		}
+		}*/
 ?>
