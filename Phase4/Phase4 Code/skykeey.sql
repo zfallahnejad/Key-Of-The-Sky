@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2013 at 09:23 PM
+-- Generation Time: Dec 18, 2013 at 07:36 PM
 -- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- PHP Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,6 +21,30 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `skykeey`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activities`
+--
+
+CREATE TABLE IF NOT EXISTS `activities` (
+  `mosqueId` int(11) NOT NULL,
+  `actId` int(11) NOT NULL,
+  `counter` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`mosqueId`,`actId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `activities`
+--
+
+INSERT INTO `activities` (`mosqueId`, `actId`, `counter`) VALUES
+(3, 1, 3),
+(3, 2, 1),
+(3, 3, 4),
+(3, 4, 2),
+(3, 5, 13);
 
 -- --------------------------------------------------------
 
@@ -81,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `image` blob,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`
@@ -101,6 +125,7 @@ DELIMITER //
 CREATE TRIGGER `add` AFTER INSERT ON `mosqueculturalliablee`
  FOR EACH ROW BEGIN	
 INSERT INTO googlemap SET Id = NEW.Id;
+INSERT INTO participantcounter SET Id = NEW.Id;
 
 
 END
@@ -135,6 +160,18 @@ INSERT INTO `parent` (`parentCode`, `parentName`, `parentFamily`, `homePhone`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `participantcounter`
+--
+
+CREATE TABLE IF NOT EXISTS `participantcounter` (
+  `Id` int(11) NOT NULL,
+  `counter` int(11) NOT NULL DEFAULT '0',
+  KEY `id` (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `point`
 --
 
@@ -155,19 +192,37 @@ CREATE TABLE IF NOT EXISTS `point` (
 
 INSERT INTO `point` (`actId`, `stCode`, `year`, `month`, `pcounter`) VALUES
 (1, 1002002000, 2013, 12, 2),
-(1, 1236547896, 2013, 12, 1),
-(1, 2147483647, 2013, 12, 1),
-(2, 1002002000, 2013, 12, 2),
 (2, 1236547896, 2013, 12, 2),
 (2, 2147483647, 2013, 12, 2),
-(3, 1002002000, 2013, 12, 1),
-(3, 1236547896, 2013, 12, 2),
+(3, 1002002000, 2013, 12, 2),
+(3, 1236547896, 2013, 12, 3),
 (3, 2147483647, 2013, 12, 1),
 (4, 1002002000, 2013, 12, 1),
-(4, 1236547896, 2013, 12, 2),
-(5, 1002002000, 2013, 12, 1),
-(5, 1236547896, 2013, 12, 2),
+(4, 1236547896, 2013, 12, 4),
+(5, 1236547896, 2013, 12, 6),
 (5, 2147483647, 2013, 12, 1);
+
+--
+-- Triggers `point`
+--
+DROP TRIGGER IF EXISTS `activity-inc`;
+DELIMITER //
+CREATE TRIGGER `activity-inc` AFTER INSERT ON `point`
+ FOR EACH ROW BEGIN
+INSERT IGNORE INTO activities VALUES((SELECT Id FROM student AS s1 WHERE(NEW.stCode=s1.stCode)),NEW.actId,0);
+UPDATE activities SET counter = counter + 1 WHERE ((mosqueId = (SELECT DISTINCT Id FROM student AS s1 WHERE(NEW.stCode=s1.stCode))) AND (actId=NEW.actId));
+END
+//
+DELIMITER ;
+DROP TRIGGER IF EXISTS `activity_inc`;
+DELIMITER //
+CREATE TRIGGER `activity_inc` AFTER UPDATE ON `point`
+ FOR EACH ROW BEGIN
+INSERT IGNORE INTO activities VALUES((SELECT Id FROM student AS s1 WHERE(NEW.stCode=s1.stCode)),NEW.actId,0);
+UPDATE activities SET counter = counter + 1 WHERE ((mosqueId = (SELECT DISTINCT Id FROM student AS s1 WHERE(NEW.stCode=s1.stCode))) AND (actId=NEW.actId));
+END
+//
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -286,6 +341,28 @@ INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `
 ('احسان', 'اکبری', 'اکبر', 2147483647, 'پویا', 'قیطریه', '0000-00-00', NULL, 1000100010, 11, 777);
 
 --
+-- Triggers `student`
+--
+DROP TRIGGER IF EXISTS `countstudent`;
+DELIMITER //
+CREATE TRIGGER `countstudent` AFTER INSERT ON `student`
+ FOR EACH ROW BEGIN	
+UPDATE participantcounter SET counter = counter + 1 WHERE Id = NEW.Id;
+
+END
+//
+DELIMITER ;
+DROP TRIGGER IF EXISTS `discountstudent`;
+DELIMITER //
+CREATE TRIGGER `discountstudent` AFTER DELETE ON `student`
+ FOR EACH ROW BEGIN	
+UPDATE participantcounter SET counter = counter - 1 WHERE Id = OLD.Id;
+
+END
+//
+DELIMITER ;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -294,6 +371,12 @@ INSERT INTO `student` (`stName`, `stFamily`, `fatherName`, `stCode`, `school`, `
 --
 ALTER TABLE `googlemap`
   ADD CONSTRAINT `googlemap_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `participantcounter`
+--
+ALTER TABLE `participantcounter`
+  ADD CONSTRAINT `participantcounter_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`);
 
 --
 -- Constraints for table `point`
