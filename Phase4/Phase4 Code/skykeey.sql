@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `Category` varchar(255) NOT NULL,
   `Subject` varchar(255) NOT NULL,
   `Body` longtext CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
+  `Status` tinyint(1) NOT NULL,
   PRIMARY KEY (`commentId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

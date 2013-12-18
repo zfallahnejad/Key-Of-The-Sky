@@ -24,7 +24,7 @@ $this->breadcrumbs=array(
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'contact-form',
+	'id'=>'Sendmessage-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -36,7 +36,7 @@ $this->breadcrumbs=array(
 	<div class="row">
         <?php echo $form->labelEx($model,'receiverType'); ?>
         <?php if(Yii::app()->user->getId()==1): ?>
-		<?php echo CHtml::dropDownList('receiverType',$model->receiverType,array(1 => 'مسئول مسجد',2 => 'مسئول مدرسه',3 => 'والدین'),
+		<?php echo $form->dropDownList($model,'receiverType',array(1 => 'مسئول مدرسه',2 => 'والدین'),
         array(
 			'empty'=>"",
             'value'=>'1',
@@ -47,8 +47,8 @@ $this->breadcrumbs=array(
                 'dataType'=>'html',
 				'update' => '#receiver',
             ))); ?>
-		<?php elseif(Yii::app()->user->getId()==3): ?>
-		<?php echo CHtml::dropDownList('receiverType',$model->receiverType,array(1 => 'مسئول مسجد',2 => 'مسئول مدرسه'),
+		<?php elseif(Yii::app()->user->getId()==2): ?>
+		<?php echo $form->dropDownList($model,'receiverType',array(1 => 'مسئول مسجد',2 => 'والد'),
         array(
 			'empty'=>"",
             'value'=>'1',
@@ -60,7 +60,7 @@ $this->breadcrumbs=array(
 				'update' => '#receiver',
             ))); ?>
 		<?php else: ?>
-		<?php echo CHtml::dropDownList('receiverType',$model->receiverType,array(1 => 'مسئول مسجد',2 => 'والد'),
+		<?php echo $form->dropDownList($model,'receiverType',array(1 => 'مسئول مسجد',2 => 'مسئول مدرسه'),
         array(
 			'empty'=>"",
             'value'=>'1',
@@ -72,13 +72,14 @@ $this->breadcrumbs=array(
 				'update' => '#receiver',
             ))); ?>
 		<?php endif; ?>
-		
+		<?php echo $form->error($model,'receiverType'); ?>
     </div>
 
     <div class="row">
 
         <?php echo $form->labelEx($model,'receiver'); ?>
         <?php echo CHtml::dropDownList('receiver',$model->receiver,array()); ?>
+		<?php //echo $form->dropDownList($model,'receiver',array()/*,array('empty'=>"ایمیل مسئول مورد نظر را انتخاب نمایید")*/); ?>
     </div>
 	
 	<div class="row">

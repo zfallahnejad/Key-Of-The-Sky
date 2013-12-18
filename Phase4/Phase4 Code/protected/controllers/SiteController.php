@@ -164,7 +164,7 @@ class SiteController extends Controller
 				$category=($model->category);
 				$Subject=($model->subject);
 				$Body=($model->body);
-				
+				$Status=0;	//0 means unread
 				if($category==0){
 					$Category="پیام";
 				}
@@ -180,7 +180,7 @@ class SiteController extends Controller
 				
 				$connection=Yii::app()->db;
 				$connection->active=TRUE;
-				$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body)";
+				$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
 				$command=$connection->createCommand($sql);
 						
 				$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
@@ -189,6 +189,7 @@ class SiteController extends Controller
 				$command->bindParam(":Category",$Category,PDO::PARAM_STR);
 				$command->bindParam(":Subject",$Subject,PDO::PARAM_STR);
 				$command->bindParam(":Body",$Body,PDO::PARAM_STR);
+				$command->bindParam(":Status",$Status,PDO::PARAM_STR);
 					
 				$command->execute();
 					
@@ -1229,34 +1230,36 @@ class SiteController extends Controller
 	}
 	public function actionSendMessage()
 	{
-		$model=new SendmessageForm;
-		
-		$refreshCaptcha = true;
-		
-		$this->render('sendMessage',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
-	}
-	public function actionType()
-	{
 		if (Yii::app()->user->isGuest == TRUE)
 		{
 			$this->redirect(array('/site/login'));
 		}
 		else
 		{
+			$model=new SendmessageForm;
+			$refreshCaptcha = true;
+			if(isset($_POST['SendmessageForm']))
+			{
+				$refreshCaptcha = false;
+				$model->attributes=$_POST['SendmessageForm'];
+				$receiverType = $model->receiverType;
+				$receiver = $model->receiver;
+				if($model->validate())
+				{
+					$receiver = $model->receiver;
+					//echo $receiver;			
+					$this->refresh();
+				}
+			}
+			$this->render('sendMessage',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha));
+		}
+	}
+	public function actionType()
+	{
 		$Type=$_POST["type"];
 		$mail=Yii::app()->user->name;
 		if(Yii::app()->user->getId()==1){
 			if($Type==1){
-				$contact=Yii::app()->db->createCommand()
-					->select('id,email')
-					->from('mosqueculturalliablee')
-					->where('email!=:mail', array(':mail'=>$mail))
-					->order('id')
-					->queryAll();	
-				$data=CHtml::listData($contact,'id','email');
-				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
-			}
-			elseif($Type==2){
 				$contact=Yii::app()->db->createCommand()
 					->select('school.schoolId,school.email')
 					->from('school,student,mosqueculturalliablee')
@@ -1266,7 +1269,7 @@ class SiteController extends Controller
 				$data=CHtml::listData($contact,'schoolId','email');
 				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
 			}
-			elseif($Type==3){
+			elseif($Type==2){
 				$contact=Yii::app()->db->createCommand()
 					->select('parent.parentCode,parent.email')
 					->from('parent,student,mosqueculturalliablee')
@@ -1288,7 +1291,7 @@ class SiteController extends Controller
 					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
 					->from('school,student,mosqueculturalliablee')
 					->where('school.email=:mail AND school.schoolId=student.schoolId AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
-					->order('id')
+					->order('mosqueculturalliablee.email')
 					->queryAll();	
 				$data=CHtml::listData($contact,'id','email');
 				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
@@ -1298,7 +1301,7 @@ class SiteController extends Controller
 					->select('parent.parentCode,parent.email')
 					->from('school,student,parent')
 					->where('school.email=:mail AND parent.parentCode=student.parentCode AND school.schoolId=student.schoolId', array(':mail'=>$mail))
-					->order('school.email')
+					->order('parent.email')
 					->queryAll();
 				$data=CHtml::listData($contact,'parentCode','email');
 				if (!empty($data)) { echo '<option value="">ایمیل والد مورد نظر را انتخاب نمایید</option>'; }
@@ -1314,7 +1317,7 @@ class SiteController extends Controller
 					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
 					->from('parent,student,mosqueculturalliablee')
 					->where('parent.email=:mail AND parent.parentCode=student.parentCode AND mosqueculturalliablee.Id=student.Id', array(':mail'=>$mail))
-					->order('id')
+					->order('mosqueculturalliablee.email')
 					->queryAll();	
 				$data=CHtml::listData($contact,'id','email');
 				if (!empty($data)) { echo '<option value="">ایمیل مسئول مورد نظر را انتخاب نمایید</option>'; }
@@ -1333,7 +1336,6 @@ class SiteController extends Controller
         	echo CHtml::tag('option',
             		array('value'=>$value),CHtml::encode($name),true);
     		}
-		}
 		}
 	}
 	public function actionSaveCoords($id)
