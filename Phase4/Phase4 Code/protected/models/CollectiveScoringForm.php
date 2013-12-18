@@ -1,8 +1,9 @@
 <?php
 
-class GivePointForm extends CFormModel
+class CollectiveScoringForm extends CFormModel
 {
-	public $results; 
+	public $results;
+	public $actId;
 	/**
 	 * Declares the validation rules.
 	 */
@@ -10,7 +11,6 @@ class GivePointForm extends CFormModel
 	{
 		return array(
 			array('results', 'safe'),
-			
 		);
 	}
 }

@@ -1353,4 +1353,113 @@ class SiteController extends Controller
 		}	
         $this->render('setmap',array('model'=>$model,));
 	}
+	public function actioncollectiveScoring()
+	{		
+		if ((Yii::app()->user->isGuest  || Yii::app()->user->getId()==3 || Yii::app()->user->getId()==9)  == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		else
+		{	
+			$model=new CollectiveScoringForm;
+			$actId = (int) $_GET['actId'];
+			$userId = Yii::app()->user->getId();
+			$mail=Yii::app()->user->name;
+			if ($userId==1){
+				$Id =Yii::app()->db->createCommand()
+		  			  ->select ('id')
+		  			  ->from('mosqueculturalliablee')
+		  			  ->where('email=:mail', array(':mail'=>$mail))
+       				  ->queryScalar();
+				$students = Yii::app()->db->createCommand()
+						->select('stName,stFamily,stCode')
+						->from('student')
+						->where('Id=:Id', array(':Id'=>$Id))
+						->order('stFamily')
+						->queryAll();
+				$numOfStus = Yii::app()->db->createCommand()
+						->select('count(*)')
+						->from('student')
+						->where('Id=:Id', array(':Id'=>$Id))
+						->queryScalar();
+			}
+			elseif($userId==2){
+				$schoolId =Yii::app()->db->createCommand()
+		 				   ->select ('schoolId')
+						   ->from('school')
+		   				   ->where('email=:mail', array(':mail'=>$mail))
+         				   ->queryScalar();
+				$students = Yii::app()->db->createCommand()
+							->select('stName,stFamily,stCode')
+							->from('student')
+							->where('schoolId=:schoolId', array(':schoolId'=>$schoolId))
+							->order('stFamily')
+							->queryAll();
+				$numOfStus = Yii::app()->db->createCommand()
+							->select('count(*)')
+							->from('student')
+							->where('schoolId=:schoolId', array(':schoolId'=>$schoolId))
+							->queryScalar();
+			}
+			$numOfInsert=0;
+			$month=date('m');
+			$year=date('Y'); 
+			$connection=Yii::app()->db;
+			$connection->active=TRUE;
+			
+			if(isset($_POST['CollectiveScoringForm']))
+			{
+				$model->attributes=$_POST['CollectiveScoringForm'];
+				if($model->validate())
+				{
+					$actId=$model->actId;
+					for ($x=0; $x<$numOfStus; $x++)
+  					{
+						if($model->results[$x]==1)
+						{
+							$stCode=$students[$x]['stCode'];
+							$search = Yii::app()->db->createCommand()
+									->select('count(*)')
+									->from('point')
+									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->queryScalar();
+							if($search ==0)
+							{
+								$pcounter=1;
+								$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
+								$command=$connection->createCommand($sql);
+								
+								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+								$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
+								$command->bindParam(":year",$year,PDO::PARAM_STR);
+								$command->bindParam(":month",$month,PDO::PARAM_STR);
+								$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
+						
+								$command->execute();
+								$numOfInsert++;
+							}
+							else{
+								$pcounter = Yii::app()->db->createCommand()
+									->select('pcounter')
+									->from('point')
+									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->queryScalar();
+								$pcounter=$pcounter+1;
+								$command = Yii::app()->db->createCommand();
+								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
+								$command->execute();
+								$numOfInsert++;
+							}
+  						}
+					}
+					if ($numOfInsert!=0)
+					{
+						Yii::app()->user->setFlash('CollectiveScoring','امتیازدهی با موفقیت انجام گرفت.');
+					}
+					$this->refresh();
+				}
+			}					
+			$this->render('CollectiveScoring',array('model'=>$model));
+		}
+	}
 }	 	 
