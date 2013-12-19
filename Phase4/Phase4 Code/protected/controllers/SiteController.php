@@ -152,6 +152,9 @@ class SiteController extends Controller
 			}	
 		}
 		$refreshCaptcha = true;
+		$timezone = "Asia/Tehran";
+		date_default_timezone_set($timezone);
+
 		if(isset($_POST['ContactForm']))
 		{
 			$refreshCaptcha = false;
@@ -161,7 +164,7 @@ class SiteController extends Controller
 				$SenderName=($model->name);
 				$SenderMail=($model->email);
 				$ReceiverMail=Yii::app()->params['adminEmail'];
-				$Category=($model->category);
+				$category=($model->category);
 				$Subject=($model->subject);
 				$Body=($model->body);
 				$Status=0;	//0 means unread
@@ -177,10 +180,11 @@ class SiteController extends Controller
 				elseif($category==3){
 					$Category="سایر";
 				}
-				
+				$SendDate=date("Y-m-d");
+				$SendTime=date("H:i:s");
 				$connection=Yii::app()->db;
 				$connection->active=TRUE;
-				$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
+				$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status,SendDate,SendTime) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status,:SendDate,:SendTime)";
 				$command=$connection->createCommand($sql);
 						
 				$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
@@ -190,6 +194,8 @@ class SiteController extends Controller
 				$command->bindParam(":Subject",$Subject,PDO::PARAM_STR);
 				$command->bindParam(":Body",$Body,PDO::PARAM_STR);
 				$command->bindParam(":Status",$Status,PDO::PARAM_STR);
+				$command->bindParam(":SendDate",$SendDate,PDO::PARAM_STR);
+				$command->bindParam(":SendTime",$SendTime,PDO::PARAM_STR);
 					
 				$command->execute();
 					
@@ -1272,7 +1278,19 @@ class SiteController extends Controller
 					$receiverType = $model->receiverType;
 					$receiver = $model->receiver;
 					$Subject=($model->subject);
-					$Category=($model->category);
+					$category=($model->category);
+					if($category==0){
+						$Category="پیام";
+					}
+					elseif($category==1){
+						$Category="انتقاد";
+					}
+					elseif($category==2){
+						$Category="پیشنهاد";
+					}
+					elseif($category==3){
+						$Category="سایر";
+					}
 					$Body=($model->body);
 					$Status=0;	//0 means unread
 					$SenderMail=$mail;
@@ -1342,10 +1360,14 @@ class SiteController extends Controller
 										->queryScalar();
 						}
 					}
-		
+					$timezone = "Asia/Tehran";
+					date_default_timezone_set($timezone);
+					$SendDate=date("Y-m-d");
+					$SendTime=date("H:i:s");
+				
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-					$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
+					$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status,SendDate,SendTime) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
 					$command=$connection->createCommand($sql);
 						
 					$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
@@ -1355,6 +1377,8 @@ class SiteController extends Controller
 					$command->bindParam(":Subject",$Subject,PDO::PARAM_STR);
 					$command->bindParam(":Body",$Body,PDO::PARAM_STR);
 					$command->bindParam(":Status",$Status,PDO::PARAM_STR);
+					$command->bindParam(":SendDate",$SendDate,PDO::PARAM_STR);
+					$command->bindParam(":SendTime",$SendTime,PDO::PARAM_STR);
 					
 					$command->execute();
 					

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2013 at 09:25 PM
+-- Generation Time: Dec 19, 2013 at 11:32 PM
 -- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `skykeey`
+-- Database: `keyofthesky`
 --
-CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `skykeey`;
+CREATE DATABASE IF NOT EXISTS `keyofthesky` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `keyofthesky`;
 
 -- --------------------------------------------------------
 
@@ -61,6 +61,8 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `Subject` varchar(255) NOT NULL,
   `Body` longtext CHARACTER SET utf8 COLLATE utf8_persian_ci NOT NULL,
   `Status` tinyint(1) NOT NULL,
+  `SendDate` date NOT NULL,
+  `SendTime` time NOT NULL,
   PRIMARY KEY (`commentId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -106,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `image` blob,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`
@@ -377,7 +379,7 @@ ALTER TABLE `googlemap`
 -- Constraints for table `participantcounter`
 --
 ALTER TABLE `participantcounter`
-  ADD CONSTRAINT `participantcounter_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `participantcounter_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;);
 
 --
 -- Constraints for table `point`
