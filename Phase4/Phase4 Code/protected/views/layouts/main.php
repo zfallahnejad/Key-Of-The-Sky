@@ -51,6 +51,30 @@
 <!-- /.container -->  
 </section><!-- /#header -->
 
+<!-- Alert -->
+	<?php
+		$userMail=Yii::app()->user->name;
+		$count =Yii::app()->db->createCommand()
+				->select ('count(*)')
+				->from('comment')
+				->where('ReceiverMail=:userMail and Status=0', array(':userMail'=>$userMail))
+				->queryScalar();
+		if ($count != 0):
+			?>
+			 <div class="row-fluid" align="right">
+          		 <div class="span6">
+				 	<div class="alert alert-info" >
+                  		<button type="button" class="close" data-dismiss="alert">×</button>
+                 		<strong>توجه!</strong> شما تعدادی پیغام خوانده نشده دارید.
+                	</div>
+				</div>
+			</div>
+	    <?php else:?>
+	
+	<?php endif;?>
+<!-- End Alert -->
+
+
 <!-- Require the navigation -->
 <section id="navigation-main">  	
 <div class="navbar" >
@@ -70,6 +94,13 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
+					
+						array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.$count, 'url'=>'#','visible'=>!(Yii::app()->user->isGuest),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>صندوق ورودی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>صندوق خروجی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
+						)),
+						
 						array('label'=>'<b>نقشه گوگل</b>', 'url'=>array('/site/googlemap'), 'visible','linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'linkOptions'=>array("data-description"=>""),),
