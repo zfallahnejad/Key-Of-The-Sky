@@ -1607,4 +1607,37 @@ class SiteController extends Controller
 			$this->render('CollectiveScoring',array('model'=>$model));
 		}
 	}
+	
+	public function actionShowMessage()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		
+		else
+		{
+			$userMail=Yii::app()->user->name;
+			$commentId=(int) $_GET['commentId'];
+			$status = Yii::app()->db->createCommand()
+				->select('Status')
+				->from('comment')
+				->where('commentId=:commentId', array(':commentId'=>$commentId))
+				->queryAll();
+			$Receivermail = Yii::app()->db->createCommand()
+				->select('ReceiverMail')
+				->from('comment')
+				->where('commentId=:commentId', array(':commentId'=>$commentId))
+				->queryAll();
+			
+				
+			if ($userMail = $Receivermail)
+			{$command=Yii::app()->db->createCommand()
+				 ->update('comment', array('Status'=>1), 'commentId=:commentId', array(':commentId'=>$commentId));}
+			else{}
+			// renders the view file 'protected/views/site/showMessage.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('showMessage');
+		}
+	}
 }	 	 
