@@ -38,7 +38,7 @@
                 	 <h3>طراحی زیبا</h3>
                 
                      <div class="round_background r-yellow">
-                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/02.png" alt="" class="">
+                		<img src="<?php echo $baseUrl;?>/img/icons/smashing/02.jpg" alt="" class="">
                      </div>
                  
                   <p>.</p>

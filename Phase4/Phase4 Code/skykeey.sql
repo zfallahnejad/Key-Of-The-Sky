@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2013 at 07:36 PM
+-- Generation Time: Dec 19, 2013 at 09:25 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `skykeey`
 --
-CREATE DATABASE IF NOT EXISTS `keyofthesky` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `keyofthesky`;
+CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `skykeey`;
 
 -- --------------------------------------------------------
 
@@ -377,7 +377,7 @@ ALTER TABLE `googlemap`
 -- Constraints for table `participantcounter`
 --
 ALTER TABLE `participantcounter`
-  ADD CONSTRAINT `participantcounter_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`);
+  ADD CONSTRAINT `participantcounter_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mosqueculturalliablee` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `point`
