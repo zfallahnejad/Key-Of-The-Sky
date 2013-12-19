@@ -24,18 +24,18 @@
 </script>
 <div id='container' style="direction:rtl" align="right">
       <h2 class="header">صندوق پیام های ارسالی<span class="header-line"></span></h2>
-	  <!-- <h3 class="note">جستجوی دانش آموز بر اساس فیلد انتخاب شده <span class="header-line"></span></h3>
-     <form action='javascript:void(0);'>
+	  <form action='javascript:void(0);'>
       	<h3>
         	<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
        	  جستجو بر اساس:
-          			همه موارد<input id='s4' name='select' type="radio" value="همه موارد" checked="checked"/>
-            نام
-            <input id='s1' name='select' type="radio" value="نام"  />
-            نام خانوداگي<input id='s2' name='select' type="radio" value="نام خانوداگي" />
-			کد ملي<input id='s3' name='select' type="radio" value="کد ملي" />
+          			همه موارد<input id='s7' name='select' type="radio" value="همه موارد" checked="checked"/>
+            موضوع
+            <input id='s1' name='select' type="radio" value="موضوع"  />
+            مخاطب<input id='s2' name='select' type="radio" value="مخاطب" />
+			
+			
         </h3>
-      </form> -->
+      </form>
 	  
 	  
       <div id="object-browser">
