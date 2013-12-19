@@ -9,8 +9,8 @@
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s11.jpg" alt="" title="" data-transition="fade" />
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s12.jpg" alt="" title="" data-transition="fade" />
                 <img src="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" alt="" data-transition="fade"  />
-				<img src="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s14.jpg" alt="" data-transition="fade"  />
-				<img src="<?php echo $baseUrl;?>/img/slider/flickr/s13.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s15.jpg" alt="" data-transition="fade"  />
+				<img src="<?php echo $baseUrl;?>/img/slider/flickr/s14.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s14.jpg" alt="" data-transition="fade"  />
+				<img src="<?php echo $baseUrl;?>/img/slider/flickr/s15.jpg" data-thumb="<?php echo $baseUrl;?>/img/slider/flickr/s15.jpg" alt="" data-transition="fade"  />
             </div>
         </div>
     </div> <!-- /slider -->

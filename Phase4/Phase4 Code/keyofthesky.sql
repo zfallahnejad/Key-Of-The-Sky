@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2013 at 11:32 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Dec 19, 2013 at 11:45 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -64,7 +64,18 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `SendDate` date NOT NULL,
   `SendTime` time NOT NULL,
   PRIMARY KEY (`commentId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`commentId`, `SenderName`, `SenderMail`, `ReceiverMail`, `Category`, `Subject`, `Body`, `Status`, `SendDate`, `SendTime`) VALUES
+(1, 'اکبر اکبری', 'akbari@yahoo.com', 'ali@yahoo.com', 'پیام', 'سلام', 'سلام \r\n\r\nسوالی درباره وضعیت فرزند خود دارم\r\nلطفا در اسرع وقت پاسخ دهید\r\n\r\nبا تشکر\r\n', 0, '2013-12-20', '20:20:00'),
+(2, 'علی علوی', 'ali@yahoo.com', 'akbari@yahoo.com', 'انتقاد', 'پاسخ', 'سلام\r\n\r\nپیام شما مشاهده گردید\r\nپاسخ شما ارسال شد\r\n\r\nبا تشکر', 0, '2013-12-27', '08:08:00'),
+(3, 'احمد احمدی', 'ahmadi@yahoo.com', 'ali@yahoo.com', 'پیشنهاد', 'یک پیشنهاد', 'با عرض سلام\r\n\r\nپیشنهادی درباره جوایز بچه ها دارم\r\n\r\nبا تشکر', 0, '2013-04-01', '06:09:00'),
+(4, 'مسعود مسعودی', 'masoudi@yahoo.com', 'ali@yahoo.com', 'پیام', 'وضعیت دانش آموز احسان اکبری', 'با سلام\r\n\r\nوضعیت دانش آموز احسان اکبری در مدرسه به شرح زیر است :\r\n....\r\n\r\nبا تشکر از زحمات شما', 0, '2013-12-23', '00:00:00'),
+(5, 'احمد احمدی', 'ahmadi@yahoo.com', 'ali@yahoo.com', 'انتقاد', 'یک انتقاد سازنده', 'با سلام\r\nاین یک انتقاد سازنده است\r\n\r\nبا تشکر', 0, '2013-04-01', '06:10:09');
 
 -- --------------------------------------------------------
 
@@ -108,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `image` blob,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `mosqueculturalliablee`

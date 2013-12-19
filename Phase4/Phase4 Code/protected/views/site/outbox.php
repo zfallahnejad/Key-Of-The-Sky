@@ -11,9 +11,10 @@
 			
 								
 	$comments = Yii::app()->db->createCommand()
-				->select('Subject,commentId,ReceiverMail,Category')
+				->select('Subject,commentId,ReceiverMail,Category,SendDate,SendTime')
 				->from('comment')
 				->where('SenderMail=:mail', array(':mail'=>$mail))
+				->order('SendDate desc,SendTime desc')
 				->query();
 	
 				
@@ -45,6 +46,8 @@
                 		<th><div align="right">موضوع</div></th>
                     	<th><div align="right">مخاطب</div></th>
                     	<th><div align="right">دسته بندی</div></th>
+						<th><div align="right">زمان ارسال</div></th>
+						<th><div align="right">تاریخ ارسال</div></th>
 						<th><div align="right"></div></th>
                 	</tr>
             	</thead>
@@ -80,6 +83,19 @@
                     						<td><div class='search_item3'>
             										<h4  align="right" class='search_text'>
 														<?php echo $row['Category'];?>
+													</h4>
+													
+										  </div></td>
+										  <td><div class='search_item4'>
+            										<h4 align="right" class='search_text'>
+														<?php echo $row['SendTime'];?>
+													</h4>
+													
+										  </div></td>
+										  
+										  <td><div class='search_item5'>
+            										<h4 align="right" class='search_text'>
+														<?php echo $row['SendDate'];?>
 													</h4>
 													
 										  </div></td>

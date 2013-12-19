@@ -49,7 +49,8 @@
 <!-- Include the header bar -->
 <?php include_once('header.php');?>
 <!-- /.container -->  
-</section><!-- /#header -->
+
+
 
 <!-- Alert -->
 	<?php
@@ -75,6 +76,13 @@
 <!-- End Alert -->
 
 
+
+
+</section><!-- /#header -->
+
+
+
+
 <!-- Require the navigation -->
 <section id="navigation-main">  	
 <div class="navbar" >
@@ -87,6 +95,9 @@
 				<span class="icon-bar"></span>
 			</a><!--/.btn-navbar -->
 
+
+
+
 		<div class="nav-collapse pull-right " >
 			<?php $this->widget('zii.widgets.CMenu',array(
                     'htmlOptions'=>array('class'=>'nav'),
@@ -95,7 +106,7 @@
                     'encodeLabel'=>false,
 					'items'=>array(
 					
-						array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.$count, 'url'=>'#','visible'=>!(Yii::app()->user->isGuest),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+						array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>صندوق ورودی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>صندوق خروجی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
