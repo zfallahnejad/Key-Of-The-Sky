@@ -1260,7 +1260,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (Yii::app()->user->getId()==9)
+		elseif (!(Yii::app()->user->getId()==9))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -1367,7 +1367,8 @@ class SiteController extends Controller
 				
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-					$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status,SendDate,SendTime) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
+					$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status,SendDate,SendTime) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status,:SendDate,:SendTime)";
+
 					$command=$connection->createCommand($sql);
 						
 					$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
