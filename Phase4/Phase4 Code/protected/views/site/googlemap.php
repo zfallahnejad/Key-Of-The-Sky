@@ -8,8 +8,6 @@ $Pos = Yii::app()->db->createCommand()
 		->from('mosqueculturalliablee,googlemap')
 		->where('status = 1 and googlemap.Id = mosqueculturalliablee.Id')
 		->query();
-
-Yii::import('ext.gmap.*');
  
 $gMap = new EGMap();
 $gMap->zoom = 10;

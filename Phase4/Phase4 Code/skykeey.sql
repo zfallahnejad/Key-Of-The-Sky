@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `skykeey`
 --
-CREATE DATABASE IF NOT EXISTS `skykeey` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `skykeey`;
+CREATE DATABASE IF NOT EXISTS `keyofthesky` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `keyofthesky`;
 
 -- --------------------------------------------------------
 

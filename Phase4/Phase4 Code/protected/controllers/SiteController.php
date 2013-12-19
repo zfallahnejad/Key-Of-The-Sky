@@ -194,10 +194,10 @@ class SiteController extends Controller
 				$command->execute();
 					
 				/*$message = Yii::app()->mailgun->newMessage();
-				$message->setFrom($SenderMail, 'Guest');
-				$message->addTo($ReceiverMail, 'KeyOfTheSky');
-				$message->setSubject('پیام دذیافتی - ارتباط با ما');
-				$body = 'شما یک پیام از'.$SenderMail.'دریافت نموده اید'."\r\n".'عنوان پیام:'.$Subject."\r\n".'متن پیام:'.$Body."\r\n".'با تشکر'."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com';
+				$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
+				$message->addTo($ReceiverMail, 'Admin');
+				$message->setSubject('پیام دریافتی - ارتباط با ما');
+				$body = 'شما یک پیام از '.$SenderName.' با ایمیل '.$SenderMail.'دریافت نموده اید'."\r\n".'عنوان پیام:'.$Subject."\r\n".'متن پیام:'.$Body."\r\n".'با تشکر'."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com';
 				$message->setText($body);
 				$message->send();*/
 						
@@ -1194,7 +1194,27 @@ class SiteController extends Controller
 		}
 		else
 		{
-			$this->render('setmap');
+			$model=new SetmapForm;
+			$mail=Yii::app()->user->name;
+			$mosque=Yii::app()->db->createCommand()
+					->select('Id,mosqueName,mosqueAddress')
+					->from('mosqueculturalliablee')
+					->where('email=:mail', array(':mail'=>$mail))
+					->queryRow();
+			$model->mosqueId = $mosque['Id'];
+			$model->mosqueName = $mosque['mosqueName'];
+			$model->mosqueAddress = $mosque['mosqueAddress'];
+
+			$Pos = Yii::app()->db->createCommand()
+ 					->select('Id,lat,lng')
+					->from('googlemap')
+					->where('Id=:id', array(':id'=>$model->mosqueId))
+					->queryRow();
+
+			$model->lat = $Pos['lat'];
+			$model->lng = $Pos['lng'];
+			
+			$this->render('setmap',array('model'=>$model));
 		}
 	}
 	public function actionacceptmosque()
@@ -1230,9 +1250,13 @@ class SiteController extends Controller
 	}
 	public function actionSendMessage()
 	{
-		if ((Yii::app()->user->isGuest  || Yii::app()->user->getId()==9)  == TRUE)
+		if (Yii::app()->user->isGuest == TRUE)
 		{
 			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId()==9))
+		{
+			$this->redirect(array('/site/index'));
 		}
 		else
 		{
@@ -1333,6 +1357,15 @@ class SiteController extends Controller
 					$command->bindParam(":Status",$Status,PDO::PARAM_STR);
 					
 					$command->execute();
+					
+					/*$message = Yii::app()->mailgun->newMessage();
+					$message->setFrom('Admin@keyofthesky.mailgun.org', 'KeyOfTheSky');
+					$message->addTo($ReceiverMail, 'Admin');
+					$message->setSubject('پیام دریافتی - ارتباط با ما');
+					$body = 'شما یک پیام از '.$SenderName.' با ایمیل '.$SenderMail.'دریافت نموده اید'."\r\n".'عنوان پیام:'.$Subject."\r\n".'متن پیام:'.$Body."\r\n".'با تشکر'."\r\n".'آدرس سایت : https://keyofthesky-se2.rhcloud.com';
+					$message->setText($body);
+					$message->send();*/
+				
 					Yii::app()->user->setFlash('sendMessage','با تشکر، پیام شما ارسال گردید.');
 					$this->refresh();
 				}
@@ -1423,20 +1456,23 @@ class SiteController extends Controller
     		}
 		}
 	}
-	public function actionSaveCoords($id)
+	public function actionSaveCoords()
 	{
-		$model=$this->loadModel($id);
+		//$model=$this->loadModel($mosqueId);
 		//$this->performAjaxValidation($model);
+		
 		if(isset ($_GET['lat']) and isset ($_GET['lng']))
 		{
-			$model->lat = $_GET['lat'];
-			$model->lng = $_GET['lng'];	
+			$lat = $_GET['lat'];
+			$lng = $_GET['lng'];	
+			$mosqueId = $_GET['id'];
 			$command = Yii::app()->db->createCommand();
-			$command->update('googlemap', array('lat'=>$model->lat,'lng'=>$model->lng), 'id=:id', array(':id'=>$id));
+			$command->update('googlemap', array('lat'=>$lat,'lng'=>$lng), 'Id=:id', array(':id'=>$mosqueId));
 			$command->execute();
-			echo 'Thank you for registring your place with '.Yii::app()->name;  
+			Yii::app()->user->setFlash('setmap','Thank you for registring your place with ');
+			 
 		}	
-        $this->render('setmap',array('model'=>$model,));
+        $this->redirect('site/setmap');
 	}
 	public function actioncollectiveScoring()
 	{		

@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.gmap.*',
 	),
 
 	'modules'=>array(
@@ -63,7 +64,7 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 */		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=skykeey',
+			'connectionString' => 'mysql:host=localhost;dbname=keyofthesky',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

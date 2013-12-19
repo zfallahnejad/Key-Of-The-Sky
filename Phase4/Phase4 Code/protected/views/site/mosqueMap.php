@@ -26,8 +26,7 @@
 // ext is your protected.extensions folder
 // gmaps means the subfolder name under your protected.extensions folder
 //  
-Yii::import('ext.gmap.*');
- 
+
 $gMap = new EGMap();
 $gMap->zoom = 10;
 $gMap->setWidth("100%");

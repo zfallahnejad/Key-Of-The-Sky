@@ -28,7 +28,7 @@ class UserIdentity extends CUserIdentity
 		$connection=Yii::app()->db;
 		$connection->active=TRUE;
 		$connect = mysql_connect("localhost","root","") or die("not connecting");
-		mysql_select_db("skykeey",$connect) or die("no db :'(");
+		mysql_select_db("keyofthesky",$connect) or die("no db :'(");
 		
 		$find1 =Yii::app()->db->createCommand()
 		->select ('count(*)')

@@ -2,7 +2,9 @@
 
 class SetmapForm extends CFormModel
 {
-	public $id;
+	public $mosqueId;
+	public $mosqueName;
+	public $mosqueAddress;
 	public $lat;
 	public $lng;
 	
@@ -13,11 +15,11 @@ class SetmapForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('Id', 'numerical', 'integerOnly'=>true),
-			array('lat, lng', 'length', 'max'=>33),
+			//array('Id', 'numerical', 'integerOnly'=>true),
+			//array('lat, lng', 'length', 'max'=>33),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, lat, lng', 'safe'),
+			//array('Id, lat, lng', 'safe'),
 			
 		);
 	}
