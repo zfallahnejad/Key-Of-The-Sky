@@ -3,7 +3,6 @@
 class CollectiveScoringForm extends CFormModel
 {
 	public $results;
-	public $actId;
 	/**
 	 * Declares the validation rules.
 	 */

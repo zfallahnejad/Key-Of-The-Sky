@@ -1412,7 +1412,6 @@ class SiteController extends Controller
 				$model->attributes=$_POST['CollectiveScoringForm'];
 				if($model->validate())
 				{
-					$actId=$model->actId;
 					for ($x=0; $x<$numOfStus; $x++)
   					{
 						if($model->results[$x]==1)
