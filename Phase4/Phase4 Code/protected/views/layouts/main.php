@@ -108,8 +108,8 @@
 					
 						array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
-                            array('label'=>'<b>صندوق ورودی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
-							array('label'=>'<b>صندوق خروجی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
+                            array('label'=>'<b>صندوق پیام های دریافتی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>صندوق پیام های ارسالی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
 						)),
 						
 						array('label'=>'<b>نقشه گوگل</b>', 'url'=>array('/site/googlemap'), 'visible','linkOptions'=>array("data-description"=>"")),
