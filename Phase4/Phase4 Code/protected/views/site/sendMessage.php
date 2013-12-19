@@ -10,10 +10,10 @@ $this->breadcrumbs=array(
 ?>
 <h1 align="right"><font size = 5><b>ثبت نظرات</b></font></h1>
 
-<?php if(Yii::app()->user->hasFlash('contact')): ?>
+<?php if(Yii::app()->user->hasFlash('sendMessage')): ?>
 
 <div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('contact'); ?>
+	<?php echo Yii::app()->user->getFlash('sendMessage'); ?>
 </div>
 
 <?php else: ?>
@@ -78,8 +78,8 @@ $this->breadcrumbs=array(
     <div class="row">
 
         <?php echo $form->labelEx($model,'receiver'); ?>
-        <?php echo CHtml::dropDownList('receiver',$model->receiver,array()); ?>
-		<?php //echo $form->dropDownList($model,'receiver',array()/*,array('empty'=>"ایمیل مسئول مورد نظر را انتخاب نمایید")*/); ?>
+        <?php echo $form->dropDownList($model,'receiver',array(),array('id' => 'receiver')); ?>
+		<?php echo $form->error($model,'receiver'); ?>
     </div>
 	
 	<div class="row">

@@ -161,7 +161,7 @@ class SiteController extends Controller
 				$SenderName=($model->name);
 				$SenderMail=($model->email);
 				$ReceiverMail=Yii::app()->params['adminEmail'];
-				$category=($model->category);
+				$Category=($model->category);
 				$Subject=($model->subject);
 				$Body=($model->body);
 				$Status=0;	//0 means unread
@@ -1230,7 +1230,7 @@ class SiteController extends Controller
 	}
 	public function actionSendMessage()
 	{
-		if (Yii::app()->user->isGuest == TRUE)
+		if ((Yii::app()->user->isGuest  || Yii::app()->user->getId()==9)  == TRUE)
 		{
 			$this->redirect(array('/site/login'));
 		}
@@ -1238,16 +1238,102 @@ class SiteController extends Controller
 		{
 			$model=new SendmessageForm;
 			$refreshCaptcha = true;
+			$mail=Yii::app()->user->name;
 			if(isset($_POST['SendmessageForm']))
 			{
 				$refreshCaptcha = false;
 				$model->attributes=$_POST['SendmessageForm'];
-				$receiverType = $model->receiverType;
-				$receiver = $model->receiver;
 				if($model->validate())
 				{
+					$receiverType = $model->receiverType;
 					$receiver = $model->receiver;
-					//echo $receiver;			
+					$Subject=($model->subject);
+					$Category=($model->category);
+					$Body=($model->body);
+					$Status=0;	//0 means unread
+					$SenderMail=$mail;
+					if(Yii::app()->user->getId()==1){
+						$user =Yii::app()->db->createCommand()
+		    					->select ('name,family')
+		    					->from('mosqueculturalliablee')
+		    					->where('email=:email',array(':email'=>$mail))
+            					->queryRow(); 
+						$SenderName = $user['name'].' '.$user['family'];
+						if($receiverType==1){
+							$ReceiverMail=Yii::app()->db->createCommand()
+									->select('email')
+									->from('school')
+									->where('schoolId=:schoolId', array(':schoolId'=>$receiver))
+									->queryScalar();
+						}
+						elseif($receiverType==2){
+							$ReceiverMail=Yii::app()->db->createCommand()
+										->select('email')
+										->from('parent')
+										->where('parentCode=:parentCode', array(':parentCode'=>$receiver))
+										->queryScalar();
+						}
+					}
+					elseif(Yii::app()->user->getId()==2){
+						$user =Yii::app()->db->createCommand()
+		    				->select ('teacherName,teacherFamily')
+		    				->from('school')
+		    				->where('email=:email',array(':email'=>$mail))
+            				->queryRow();	
+						$SenderName = $user['teacherName'].' '.$user['teacherFamily'];
+						if($receiverType==1){
+							$ReceiverMail=Yii::app()->db->createCommand()
+										->select('email')
+										->from('mosqueculturalliablee')
+										->where('id=:id', array(':id'=>$receiver))
+										->queryScalar();	
+						}
+						elseif($receiverType==2){
+							$ReceiverMail=Yii::app()->db->createCommand()
+										->select('email')
+										->from('parent')
+										->where('parentCode=:parentCode', array(':parentCode'=>$receiver))
+										->queryScalar();
+						}
+					}
+					elseif(Yii::app()->user->getId()==3){
+						$user =Yii::app()->db->createCommand()
+		    					->select ('parentName,parentFamily')
+		    					->from('parent')
+		    					->where('email=:email',array(':email'=>$mail))
+            					->queryRow();	
+						$SenderName = $user['parentName'].' '.$user['parentFamily'];
+						if($receiverType==1){
+							$ReceiverMail=Yii::app()->db->createCommand()
+										->select('email')
+										->from('mosqueculturalliablee')
+										->where('id=:id', array(':id'=>$receiver))
+										->queryScalar();	
+						}
+						elseif($receiverType==2){
+							$ReceiverMail=Yii::app()->db->createCommand()
+										->select('email')
+										->from('school')
+										->where('schoolId=:schoolId', array(':schoolId'=>$receiver))
+										->queryScalar();
+						}
+					}
+		
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+					$sql="INSERT INTO comment (SenderName,SenderMail,ReceiverMail, Category, Subject,Body,Status) VALUES(:SenderName,:SenderMail, :ReceiverMail, :Category, :Subject, :Body,:Status)";
+					$command=$connection->createCommand($sql);
+						
+					$command->bindParam(":SenderName",$SenderName,PDO::PARAM_STR);
+					$command->bindParam(":SenderMail",$SenderMail,PDO::PARAM_STR);
+					$command->bindParam(":ReceiverMail",$ReceiverMail,PDO::PARAM_STR);
+					$command->bindParam(":Category",$Category,PDO::PARAM_STR);
+					$command->bindParam(":Subject",$Subject,PDO::PARAM_STR);
+					$command->bindParam(":Body",$Body,PDO::PARAM_STR);
+					$command->bindParam(":Status",$Status,PDO::PARAM_STR);
+					
+					$command->execute();
+					Yii::app()->user->setFlash('sendMessage','با تشکر، پیام شما ارسال گردید.');
 					$this->refresh();
 				}
 			}
@@ -1278,14 +1364,13 @@ class SiteController extends Controller
 					->queryAll();
 				$data=CHtml::listData($contact,'parentCode','email');
 				if (!empty($data)) { echo '<option value="">ایمیل والد مورد نظر را انتخاب نمایید</option>'; }
-    		
 			}
 			foreach($data as $value=>$name) {
         	echo CHtml::tag('option',
             		array('value'=>$value),CHtml::encode($name),true);
     		}
 		}
-		if(Yii::app()->user->getId()==2){
+		elseif(Yii::app()->user->getId()==2){
 			if($Type==1){
 				$contact=Yii::app()->db->createCommand()
 					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
@@ -1311,7 +1396,7 @@ class SiteController extends Controller
             		array('value'=>$value),CHtml::encode($name),true);
     		}
 		}
-		if(Yii::app()->user->getId()==3){
+		elseif(Yii::app()->user->getId()==3){
 			if($Type==1){
 				$contact=Yii::app()->db->createCommand()
 					->select('mosqueculturalliablee.id,mosqueculturalliablee.email')
