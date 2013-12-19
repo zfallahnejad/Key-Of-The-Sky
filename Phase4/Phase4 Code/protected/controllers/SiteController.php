@@ -1623,6 +1623,21 @@ class SiteController extends Controller
 		}
 	}
 	
+	public function actionOutbox()
+	{
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		
+		else
+		{
+			// renders the view file 'protected/views/site/outbox.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('outbox');
+		}
+	}
+	
 	public function actionShowMessage()
 	{
 		if (Yii::app()->user->isGuest == TRUE)
