@@ -1245,7 +1245,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (Yii::app()->user->getId()==9)
+		elseif (!(Yii::app()->user->getId()==9))
 		{
 			$this->redirect(array('/site/index'));
 		}
@@ -1260,7 +1260,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (!(Yii::app()->user->getId()==9))
+		elseif (Yii::app()->user->getId()==9)
 		{
 			$this->redirect(array('/site/index'));
 		}
