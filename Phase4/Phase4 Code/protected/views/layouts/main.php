@@ -106,7 +106,13 @@
                     'encodeLabel'=>false,
 					'items'=>array(
 						array('label'=>'<b>نقشه گوگل</b>', 'url'=>array('/site/googlemap'), 'visible','linkOptions'=>array("data-description"=>"")),
-                    	array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
+                    	array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>صندوق پیام های دریافتی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>صندوق پیام های ارسالی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
+						)),
+						array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'linkOptions'=>array("data-description"=>"")),
+                        array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'visible'=>!(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
@@ -167,13 +173,7 @@
 							array('label'=>'<b>مشخصات دانش آموز</b>', 'url'=>array('/site/student'),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>مشخصات مسئول مدرسه</b>', 'url'=>array('/site/school'),'linkOptions'=>array("data-description"=>""),),
                         )),
-						array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
-                        'items'=>array(
-                            array('label'=>'<b>صندوق پیام های دریافتی</b>', 'url'=>array('/site/inbox'),'linkOptions'=>array("data-description"=>""),),
-							array('label'=>'<b>صندوق پیام های ارسالی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
-						)),
-						array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'linkOptions'=>array("data-description"=>"")),
-                        array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+						array('label'=>'<b>ویرایش تنظیمات</b> <span class="caret"></span>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editliable'),'visible'=>(Yii::app()->user->getId()==1),'linkOptions'=>array("data-description"=>""),),
 							array('label'=>'<b>ویرایش مشخصات</b>', 'url'=>array('/site/editschool'),'visible'=>(Yii::app()->user->getId()==2),'linkOptions'=>array("data-description"=>""),),
