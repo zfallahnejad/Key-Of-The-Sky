@@ -1,0 +1,57 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="982" measuredH="577" mockupW="749" mockupH="502">
+  <controls>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TitleWindow" x="233" y="75" w="749" h="502" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>22</bottomheight>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Title" x="688" y="135" w="-1" h="-1" measuredW="256" measuredH="33" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>%u0635%u0646%u062F%u0648%u0642%20%u067E%u06CC%u0627%u0645%20%u0647%u0627%u06CC%20%u0627%u0631%u0633%u0627%u0644%u06CC</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::TabBar" x="266" y="189" w="684" h="342" measuredW="210" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u067E%u06CC%u0634%u0646%u0647%u0627%u062F%u0627%u062A%2C%20%u0627%u0646%u062A%u0642%u0627%u062F%u0627%u062A%2C%20%u067E%u06CC%u0627%u0645%20%u0647%u0627%2C%20%u0647%u0645%u0647</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::DataGrid" x="281" y="315" w="641" h="194" measuredW="409" measuredH="81" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%2C%u062A%u0627%u0631%u06CC%u062E%20%u0627%u0631%u0633%u0627%u0644%2C%u0632%u0645%u0627%u0646%20%u0627%u0631%u0633%u0627%u0644%2C%u062F%u0633%u062A%u0647%20%u0628%u0646%u062F%u06CC%2C%u0645%u062E%u0627%u0637%u0628%2C%u0645%u0648%u0636%u0648%u0639%20%0A%20%20%20%20%20%20%20%20%20%2C%202013-12-20%2C12%3A31%3A36%2C%u067E%u06CC%u0627%u0645%2Cjalali@yahoo.com%2C%u062A%u0633%u062A%0A%20%20%20%20%20%20%20%20%20%2C%202013-12-22%2C11%3A27%3A36%2C%u0627%u0646%u062A%u0642%u0627%u062F%2Cjalali@yahoo.com%2C%u062A%u0633%u062A2</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Link" x="302" y="369" w="-1" h="-1" measuredW="26" measuredH="18" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0646%u0645%u0627%u06CC%u0634</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Link" x="302" y="336" w="-1" h="-1" measuredW="26" measuredH="18" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0646%u0645%u0627%u06CC%u0634</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::SearchBox" x="794" y="275" w="-1" h="-1" measuredW="120" measuredH="25" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="699" y="277" w="-1" h="-1" measuredW="79" measuredH="20" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u062C%u0633%u062A%u062C%u0648%u06CC%20%u0628%u0631%20%u0627%u0633%u0627%u0633</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::RadioButton" x="628" y="277" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0647%u0645%u0647%20%u0645%u0648%u0627%u0631%u062F</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::RadioButton" x="562" y="277" w="-1" h="-1" measuredW="52" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0645%u0648%u0636%u0648%u0639</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::RadioButton" x="494" y="277" w="-1" h="-1" measuredW="65" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u0627%u0631%u0633%u0627%u0644%20%u06A9%u0646%u0646%u062F%u0647</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
