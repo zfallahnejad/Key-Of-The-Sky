@@ -927,7 +927,7 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		else
+		elseif (isset($_GET['stCode']))
 		{	
 			$model=new GivePointForm;
 			$stCode = (int) $_GET['stCode'];
@@ -1003,6 +1003,9 @@ class SiteController extends Controller
 			}						
 			$this->render('givePoint',array('model'=>$model));
 		}
+		else{
+			
+		}
 	}
 	public function actionReward()
 	{	
@@ -1064,12 +1067,15 @@ class SiteController extends Controller
 		}
 	}
 	public function actionmosqueReward()
-	{		
-		$points = Yii::app()->db->createCommand()->select('neededPoint,rewardTopic,Id')->from('reward')->queryRow();
-		$actTopic=$points['neededPoint'];
-		$actPoint=$points['rewardTopic'];
-		$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
-		$this->render('mosqueReward');
+	{	
+		if (isset($_GET['Id'])){
+			$points = Yii::app()->db->createCommand()->select('neededPoint,rewardTopic,Id')->from('reward')->queryRow();
+			$actTopic=$points['neededPoint'];
+			$actPoint=$points['rewardTopic'];
+			$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
+			$this->render('mosqueReward');	
+		}	
+		
 	}
 	public function actiongooglemap()
 	{
@@ -1645,7 +1651,7 @@ class SiteController extends Controller
 			$this->redirect(array('/site/login'));
 		}
 		
-		else
+		elseif (isset($_GET['commentId']))
 		{
 			$userMail=Yii::app()->user->name;
 			$commentId=(int) $_GET['commentId'];
@@ -1661,20 +1667,26 @@ class SiteController extends Controller
 				->queryAll();
 			
 				
-			if ($userMail = $Receivermail)
-			{$command=Yii::app()->db->createCommand()
+			if ($userMail == $Receivermail)
+			{
+				$command=Yii::app()->db->createCommand()
 				 ->update('comment', array('Status'=>1), 'commentId=:commentId', array(':commentId'=>$commentId));}
 			else{}
 			// renders the view file 'protected/views/site/showMessage.php'
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('showMessage');
 		}
+		else{
+			
+		}
 	}
 	
 	public function actionschoolPage()
 	{
-		// renders the view file 'protected/views/site/schoolPage.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('schoolPage');
+		if (isset($_GET['schoolId'])){
+			// renders the view file 'protected/views/site/schoolPage.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('schoolPage');
+		}
 	}
 }	 	 
