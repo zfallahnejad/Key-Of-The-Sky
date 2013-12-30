@@ -1670,4 +1670,11 @@ class SiteController extends Controller
 			$this->render('showMessage');
 		}
 	}
+	
+	public function actionschoolPage()
+	{
+		// renders the view file 'protected/views/site/schoolPage.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('schoolPage');
+	}
 }	 	 

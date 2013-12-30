@@ -58,31 +58,56 @@
             </ul>
         </div>
         
+		
+		
 		<hr>
 		<script type='text/javascript'>
-			$().ready(function(){$('#i')});// focus search area
+		$().ready(function(){$('#i').focus()});// focus search area
 		</script>
-		<h2 class="header">لیست مساجد شرکت کننده<span class="header-line"></span></h2>
-	  	<h3 class="note">جستجوی مسجد بر اساس فیلد انتخاب شده <span class="header-line"></span></h3>
-		<div id='container' style="direction:rtl" align="right">
-		<form action='javascript:void(0);'>
-      	<h3>
-        	<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
+		
+		<h1 class="header">
+                     
+                </h1>
+				
+		<div class="row-fluid" style="direction:rtl" align="right">
+           		
+           		<ul class="nav nav-tabs pull-right" >
+				  <li><a href="#school" data-toggle="tab">لیست مدارس شرکت کننده</a></li>
+				  <li class="active" ><a href="#mosque" data-toggle="tab">لیست مساجد شرکت کننده</a></li>
+                  
+                </ul>
+				
+				<div class="tab-content">
+					<div class="tab-pane active" id="mosque">
+						<div id='container' style="direction:rtl" align="right">
+
+
+							<form action='javascript:void(0);'>
+      				<h3>
+        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
        	  جستجو بر اساس:
-          	همه موارد<input id='s4' name='select' type="radio" value="همه موارد" checked="checked"/>
-            نام مسجد<input id='s1' name='select' type="radio" value="نام مسجد"  />
-            نام خانوداگي مسئول مسجد<input id='s2' name='select' type="radio" value="نام خانوداگي مسئول مسجد" />
+          			همه موارد<input id='s4' name='select' type="radio" value="همه موارد" checked="checked"/>
+            نام مسجد
+           			 <input id='s1' name='select' type="radio" value="نام مسجد"  />
+            نام خانوادگی مسئول مسجد<input id='s2' name='select' type="radio" value="نام خانوادگی مسئول مسجد" />
 			آدرس<input id='s3' name='select' type="radio" value="آدرس" />
-        </h3>
-      	</form>
-		<?php
+			
+					
+     			   </h3>
+   			   </form>
+	  
+	  <?php
 		$mosques = Yii::app()->db->createCommand()
 				->select('Id,mosqueName,family,mosqueAddress')
 				->from('mosqueculturalliablee')
 				->where('status = 1')
 				->query();
 		?>
-	  	<div id="object-browser">
+	  
+	  
+	  
+	  
+      <div id="object-browser">
 		<div id="items" >
 			<table class="table table-striped">
 				<thead>
@@ -97,6 +122,7 @@
 				<tbody>
 					<div id='wrapper'>
         				<div id='content'>
+							<form  method="POST" action="point.php">
 							<?php
 								foreach($mosques as $row)
 								{
@@ -141,13 +167,122 @@
 									<?php
 								}
 							?>
+							</form>
 						</div>
 					</div>
 				</tbody>
 			</table>
 		</div>
 	</div>
+</div>
+</div>
+
+
+
+
+					<div class="tab-pane" id="school">
+	<div id='container' style="direction:rtl" align="right">
+						
+						<form action='javascript:void(0);'>
+      				<h3>
+        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
+       	  جستجو بر اساس:
+          			همه موارد<input id='s4' name='select' type="radio" value="همه موارد" checked="checked"/>
+            نام مدرسه
+           			 <input id='s1' name='select' type="radio" value="نام مدرسه"  />
+            نام خانوادگی مسئول مدرسه<input id='s2' name='select' type="radio" value="نام خانوادگی مسئول مدرسه" />
+			آدرس<input id='s3' name='select' type="radio" value="آدرس" />
+			
+					
+     			   </h3>
+   			   </form>
+
+
+							
+	  
+	  <?php
+		$schools = Yii::app()->db->createCommand()
+				->select('schoolId,schoolName,teacherFamily,schoolAddress')
+				->from('school')
+				->query();
+		?>
+	  
+	  
+	  
+	  
+      <div id="object-browser">
+		<div id="items" >
+			<table class="table table-striped">
+				<thead>
+            		<tr>
+                		<th><div align="right">نام مدرسه</div></th>
+                    	<th><div align="right">نام خانوداگي مسئول مدرسه</div></th>
+                    	<th><div align="right">آدرس</div></th>
+						<th><div align="right"></div></th>
+						
+                	</tr>
+            	</thead>
+				<tbody>
+					<div id='wrapper'>
+        				<div id='content'>
+							<form  method="POST" action="point.php">
+							<?php
+								foreach($schools as $row)
+								{
+									?>
+									<tr id='io'>
+										<td>
+											<div class='search_item1'>
+            									<h4 align="right" class='search_text'>
+													<?php echo $row['schoolName'];?>
+												</h4>
+											</div>	
+										</td>
+										<td>
+											<div class='search_item2'>
+            									<h4 align="right" class='search_text'>
+													<?php echo $row['teacherFamily'];?>
+												</h4>
+											</div>
+										</td>
+                    					<td>
+											<div class='search_item3'>
+            									<h4 align="right" class='search_text'>
+													<?php echo $row['schoolAddress'];?>
+												</h4>
+											</div>
+										</td>
+										<td>
+											<div class='search_child3'>
+            									<h4 class='Child3'>
+													<a <?php echo CHtml::link('صفحه مدرسه',array('site/schoolPage','schoolId'=>$row['schoolId']));?></a>
+												</h4>
+											</div>
+										</td>
+									</tr>
+									<?php
+								}
+							?>
+							</form>
+						</div>
+					</div>
+				</tbody>
+			</table>
+		</div>
 	</div>
+</div>
+</div>
+</div>
+
+
+
+				
+
+		
+		
+		
+		
+		
 
 		<h3 class="header">برندگان دوره قبل
         	<span class="header-line"></span> 
