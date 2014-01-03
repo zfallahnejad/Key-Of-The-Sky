@@ -291,7 +291,7 @@
         <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/1.jpg" width="260" height="180" alt="Me" class="nicepic"/>
+            <a href="<?php echo $baseUrl;?>/img/1.jpg" data-lightbox="roadtrip"><img src="<?php echo $baseUrl;?>/img/1.jpg" width="260" height="180" alt="Me" class="nicepic" /></a>
             <h3>حسین</h3>
             <p>فوتبال دستی</p>
             
@@ -302,7 +302,7 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/2.jpg" width="260" height="180" class="nicepic"/>
+            <a href="<?php echo $baseUrl;?>/img/2.jpg" data-lightbox="roadtrip"><img src="<?php echo $baseUrl;?>/img/2.jpg" width="260" height="180" alt="Me" class="nicepic" /></a>
             <h3>
             حسن
             </h3>
@@ -314,7 +314,7 @@
           <div class="span3">
               
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/3.jpg" width="260" height="180" class="nicepic"/>
+            <a href="<?php echo $baseUrl;?>/img/3.jpg" data-lightbox="roadtrip"><img src="<?php echo $baseUrl;?>/img/3.jpg" width="260" height="180" alt="Me" class="nicepic" /></a>
             <h3>
             علی
             </h3>
@@ -327,7 +327,7 @@
           <div class="span3">
            
             <div class="colored_banner thumb-content-dark">
-            <img src="<?php echo $baseUrl;?>/img/4.jpg" width="260" height="180" class="nicepic"/>
+            <a href="<?php echo $baseUrl;?>/img/4.jpg" data-lightbox="roadtrip"><img src="<?php echo $baseUrl;?>/img/4.jpg" width="260" height="180" alt="Me" class="nicepic" /></a>
             <h3>
             محسن
             </h3>
@@ -338,4 +338,3 @@
           </div>
         
       </div>
-   

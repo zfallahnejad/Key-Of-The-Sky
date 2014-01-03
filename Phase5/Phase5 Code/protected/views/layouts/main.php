@@ -23,6 +23,10 @@
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style4" href="<?php echo $baseUrl;?>/css/style4.css" />
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style5" href="<?php echo $baseUrl;?>/css/style5.css" />
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style6" href="<?php echo $baseUrl;?>/css/style6.css" />
+	
+	<link type="text/css" href="<?php echo $baseUrl;?>/css/lightbox.css" rel="stylesheet" />
+    
+	<script src="<?php echo $baseUrl;?>/js/lightbox-2.6.min.js"></script>
     
     <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
