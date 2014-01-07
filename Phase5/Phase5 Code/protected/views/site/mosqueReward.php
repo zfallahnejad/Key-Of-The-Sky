@@ -1,8 +1,13 @@
 <?php
 
+	
 ?><?php
 	$this->pageTitle=Yii::app()->name . ' - mosque reward';
 	$mosqueId = (int) $_GET['Id'];
+	if (!($mosqueId>0)){
+			$this->redirect(array('/site'));
+
+		}
 	$this->breadcrumbs=array(
 		'Point', );
 	$mosqueName = Yii::app()->db->createCommand()

@@ -575,6 +575,8 @@ class SiteController extends Controller
 					$address=($model->address);
 					$picture=($model->picture);
 					$birthdate=($model->birthdate);
+					$regda=(Yii::app()->jdate->date("Y/m/d",time()));
+
 							
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
@@ -589,7 +591,7 @@ class SiteController extends Controller
 						$sql1="SELECT Id FROM `mosqueculturalliablee` WHERE `email` ='$temp'";
 						$Id=$connection->createCommand($sql1)->queryScalar();
 						
-						$sql="INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id , :school, :schoolId, :stCode, :address, :picture,:birthdate)";
+						$sql="INSERT INTO student (stName, stFamily, fatherName, parentCode, Id, school, schoolId, stCode, address, picture, birthdate, regda) VALUES(:stName, :stFamily, :fatherName, :parentCode, :Id , :school, :schoolId, :stCode, :address, :picture,:birthdate, :regda)";
 						$command=$connection->createCommand($sql);
 					
 						$command->bindParam(":stName",$stname,PDO::PARAM_STR);
@@ -603,6 +605,7 @@ class SiteController extends Controller
 						$command->bindParam(":address",$address,PDO::PARAM_STR);
 						$command->bindParam(":picture",$picture,PDO::PARAM_STR);
 						$command->bindParam(":birthdate",$birthdate,PDO::PARAM_STR);
+						$command->bindParam(":regda",$regda,PDO::PARAM_STR);
 					
 						$command->execute();
 					
@@ -621,6 +624,7 @@ class SiteController extends Controller
 					$address = ":address";
 					$picture = ":picture";
 					$birthdate = ":birthdate";
+					$regda = ":regda";
 					
 					$this->refresh();
 				}
@@ -880,6 +884,9 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/index'));
 		}
+		elseif(! isset($_GET['stCode'])){
+			$this->redirect(array('/site/MosqueHome'));
+		}
 		else
 		{
 			$stCode = (int) $_GET['stCode'];
@@ -927,7 +934,11 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		elseif (isset($_GET['stCode']))
+		
+		elseif(! isset($_GET['stCode'])){
+			$this->redirect(array('/site/MosqueHome'));
+		}
+		else
 		{	
 			$model=new GivePointForm;
 			$stCode = (int) $_GET['stCode'];
@@ -944,9 +955,7 @@ class SiteController extends Controller
 				->where('userId=:userId',array(':userId'=>$userId))
 				->order('actId')
 				->queryAll();
-			$numOfInsert=0;
-			$month=date('m');
-			$year=date('Y'); 
+			$numOfInsert=0; 
 			$connection=Yii::app()->db;
 			$connection->active=TRUE;
 				
@@ -955,6 +964,7 @@ class SiteController extends Controller
 				$model->attributes=$_POST['GivePointForm'];
 				if($model->validate())
 				{
+					$da = $model->da;
 					for ($x=0; $x<$numOfActs; $x++)
   					{
 						if($model->results[$x]==1)
@@ -963,19 +973,18 @@ class SiteController extends Controller
 							$search = Yii::app()->db->createCommand()
 									->select('count(*)')
 									->from('point')
-									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->where('actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da))
 									->queryScalar();
 							if($search ==0)
 							{
 								$pcounter=1;
-								$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
+								$sql="INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)";
 								$command=$connection->createCommand($sql);
 								
 								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
 								$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
-								$command->bindParam(":year",$year,PDO::PARAM_STR);
-								$command->bindParam(":month",$month,PDO::PARAM_STR);
 								$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
+								$command->bindParam(":da",$da,PDO::PARAM_STR);
 						
 								$command->execute();
 								$numOfInsert++;
@@ -984,11 +993,11 @@ class SiteController extends Controller
 								$pcounter = Yii::app()->db->createCommand()
 									->select('pcounter')
 									->from('point')
-									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->where('actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da))
 									->queryScalar();
 								$pcounter=$pcounter+1;
 								$command = Yii::app()->db->createCommand();
-								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
+								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da));
 								$command->execute();
 								$numOfInsert++;
 							}
@@ -1002,9 +1011,6 @@ class SiteController extends Controller
 				}
 			}						
 			$this->render('givePoint',array('model'=>$model));
-		}
-		else{
-			
 		}
 	}
 	public function actionReward()
@@ -1067,14 +1073,16 @@ class SiteController extends Controller
 		}
 	}
 	public function actionmosqueReward()
-	{	
-		if (isset($_GET['Id'])){
+	{	if(! isset($_GET['Id'])){
+			$this->redirect(array('/site'));
+		}
+		
 			$points = Yii::app()->db->createCommand()->select('neededPoint,rewardTopic,Id')->from('reward')->queryRow();
 			$actTopic=$points['neededPoint'];
 			$actPoint=$points['rewardTopic'];
 			$points = Yii::app()->db->createCommand()->select('stName,stFamily')->from('student')->queryRow();
 			$this->render('mosqueReward');	
-		}	
+			
 		
 	}
 	public function actiongooglemap()
@@ -1158,6 +1166,9 @@ class SiteController extends Controller
 		elseif (!(Yii::app()->user->getId() == 1))
 		{
 			$this->redirect(array('/site/index'));
+		}
+		elseif(! isset($_GET['rewardTopic'])){
+			$this->redirect(array('/site/MosqueHome'));
 		}
 		else
 		{
@@ -1514,6 +1525,9 @@ class SiteController extends Controller
 		else
 		{	
 			$model=new CollectiveScoringForm;
+			if(! isset($_GET['actId'])){
+			$this->redirect(array('/site/MosqueHome'));
+			}
 			$actId = (int) $_GET['actId'];
 			$userId = Yii::app()->user->getId();
 			$mail=Yii::app()->user->name;
@@ -1554,8 +1568,7 @@ class SiteController extends Controller
 							->queryScalar();
 			}
 			$numOfInsert=0;
-			$month=date('m');
-			$year=date('Y'); 
+			
 			$connection=Yii::app()->db;
 			$connection->active=TRUE;
 			
@@ -1564,6 +1577,7 @@ class SiteController extends Controller
 				$model->attributes=$_POST['CollectiveScoringForm'];
 				if($model->validate())
 				{
+				$da=$model->da;
 					for ($x=0; $x<$numOfStus; $x++)
   					{
 						if($model->results[$x]==1)
@@ -1572,18 +1586,17 @@ class SiteController extends Controller
 							$search = Yii::app()->db->createCommand()
 									->select('count(*)')
 									->from('point')
-									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->where('actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da))
 									->queryScalar();
 							if($search ==0)
 							{
 								$pcounter=1;
-								$sql="INSERT INTO point (actId,stCode,year, month, pcounter) VALUES(:actId,:stCode, :year, :month, :pcounter)";
+								$sql="INSERT INTO point (actId,stCode,da,pcounter) VALUES(:actId,:stCode, :da, :pcounter)";
 								$command=$connection->createCommand($sql);
 								
 								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
 								$command->bindParam(":stCode",$stCode,PDO::PARAM_STR);
-								$command->bindParam(":year",$year,PDO::PARAM_STR);
-								$command->bindParam(":month",$month,PDO::PARAM_STR);
+								$command->bindParam(":da",$da,PDO::PARAM_STR);
 								$command->bindParam(":pcounter",$pcounter,PDO::PARAM_STR);
 						
 								$command->execute();
@@ -1593,11 +1606,11 @@ class SiteController extends Controller
 								$pcounter = Yii::app()->db->createCommand()
 									->select('pcounter')
 									->from('point')
-									->where('actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year))
+									->where('actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da))
 									->queryScalar();
 								$pcounter=$pcounter+1;
 								$command = Yii::app()->db->createCommand();
-								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and month=:month and year=:year',array(':actId'=>$actId,':stCode'=>$stCode,':month'=>$month,':year'=>$year));
+								$command->update('point', array('pcounter'=>$pcounter), 'actId=:actId and stCode=:stCode and da=:da',array(':actId'=>$actId,':stCode'=>$stCode,':da'=>$da));
 								$command->execute();
 								$numOfInsert++;
 							}
@@ -1609,12 +1622,122 @@ class SiteController extends Controller
 					}
 					$this->refresh();
 				}
+				
 			}					
 			$this->render('CollectiveScoring',array('model'=>$model));
 		}
 	}
-	
-		public function actionInbox()
+	public function actioncollectiveAction()
+	{		
+		if (Yii::app()->user->isGuest == TRUE)
+		{
+			$this->redirect(array('/site/login'));
+		}
+		elseif (!(Yii::app()->user->getId() == 1 || Yii::app()->user->getId() == 2 ))
+		{
+			$this->redirect(array('/site/index'));
+		}
+		else
+		{
+			$model=new CollectiveActionForm;
+			$mail=Yii::app()->user->name;
+			if(! isset($_GET['actId'])){
+			$this->redirect(array('/site/MosqueHome'));
+			}
+			$actId = (int) $_GET['actId'];
+			if(isset($_POST['CollectiveActionForm']))
+			{
+			
+				$model->attributes=$_POST['CollectiveActionForm'];
+				if($model->validate())
+				{
+					$actda=($model->actda);
+				
+					$connection=Yii::app()->db;
+					$connection->active=TRUE;
+				if(Yii::app()->user->getId() == 1){
+							$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
+
+					$dataReader =Yii::app()->db->createCommand()
+						->select ('count(*)')
+						->from('moscolact')
+						->where("mosqueId=:mosqueId and actId=:actId and actda=:actda")
+        				->queryScalar(array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda ));
+					if($dataReader ==0){
+					$actcount=1;
+								$sql="INSERT INTO moscolact (mosqueId,actId,actda,actcount) VALUES(:mosqueId,:actId, :actda, :actcount)";
+								$command=$connection->createCommand($sql);
+								
+								$command->bindParam(":mosqueId",$mosqueId,PDO::PARAM_STR);
+								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+								$command->bindParam(":actda",$actda,PDO::PARAM_STR);
+								$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
+								$command->execute();
+								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+
+						}
+					else{
+						$actcount = Yii::app()->db->createCommand()
+									->select('actcount')
+									->from('moscolact')
+									->where('mosqueId=:mosqueId and actId=:actId and actda=:actda',array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda))
+									->queryScalar();
+								$actcount=$actcount+1;
+								$command = Yii::app()->db->createCommand();
+								$command->update('moscolact', array('actcount'=>$actcount), 'mosqueId=:mosqueId and actId=:actId and actda=:actda',array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda));
+								$command->execute();
+				
+								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+					}
+					}
+				if(Yii::app()->user->getId() == 2){
+				$schoolId =Yii::app()->db->createCommand()
+		 				   ->select ('schoolId')
+						   ->from('school')
+		   				   ->where('email=:mail', array(':mail'=>$mail))
+         				   ->queryScalar();
+					$dataReader =Yii::app()->db->createCommand()
+						->select ('count(*)')
+						->from('schcolact')
+						->where("schoolId=:schoolId and actId=:actId and actda=:actda")
+        				->queryScalar(array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda ));
+					if($dataReader ==0){
+					$actcount=1;
+								$sql="INSERT INTO schcolact (schoolId,actId,actda,actcount) VALUES(:schoolId,:actId, :actda, :actcount)";
+								$command=$connection->createCommand($sql);
+								
+								$command->bindParam(":schoolId",$schoolId,PDO::PARAM_STR);
+								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+								$command->bindParam(":actda",$actda,PDO::PARAM_STR);
+								$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
+								$command->execute();
+								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+
+						}
+					else{
+						$actcount = Yii::app()->db->createCommand()
+									->select('actcount')
+									->from('schcolact')
+									->where('schoolId=:schoolId and actId=:actId and actda=:actda',array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda))
+									->queryScalar();
+								$actcount=$actcount+1;
+								$command = Yii::app()->db->createCommand();
+								$command->update('schcolact', array('actcount'=>$actcount), 'schoolId=:schoolId and actId=:actId and actda=:actda',array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda));
+								$command->execute();
+				
+								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+					}
+					}
+					$this->refresh();
+				}
+				
+
+			}
+			$this->render('CollectiveAction',array('model'=>$model));
+
+		}
+	}	
+	public function actionInbox()
 	{
 		if (Yii::app()->user->isGuest == TRUE)
 		{
@@ -1628,7 +1751,6 @@ class SiteController extends Controller
 			$this->render('inbox');
 		}
 	}
-	
 	public function actionOutbox()
 	{
 		if (Yii::app()->user->isGuest == TRUE)
@@ -1651,7 +1773,11 @@ class SiteController extends Controller
 			$this->redirect(array('/site/login'));
 		}
 		
-		elseif (isset($_GET['commentId']))
+		elseif(! isset($_GET['commentId'])){
+			$this->redirect(array('/site'));
+		}
+		
+		else
 		{
 			$userMail=Yii::app()->user->name;
 			$commentId=(int) $_GET['commentId'];
@@ -1676,17 +1802,18 @@ class SiteController extends Controller
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('showMessage');
 		}
-		else{
-			
-		}
+		
 	}
 	
 	public function actionschoolPage()
 	{
-		if (isset($_GET['schoolId'])){
+		if(! isset($_GET['schoolId'])){
+			$this->redirect(array('/site'));
+		}
+		
 			// renders the view file 'protected/views/site/schoolPage.php'
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('schoolPage');
-		}
+		
 	}
 }	 	 

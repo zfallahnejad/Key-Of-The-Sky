@@ -3,6 +3,10 @@
 	$this->breadcrumbs=array(
 		'Show Message', );
 	$commentId = (int) $_GET['commentId'];
+	if (!($commentId>0)){
+			$this->redirect(array('/site'));
+
+		}
 	$body = Yii::app()->db->createCommand()
 				->select('Body,Subject,SenderName,ReceiverMail,SenderMail,Category')
 				->from('comment')
@@ -62,13 +66,13 @@
 	
 
 	<div class="row buttons" align="left">
-		<?php $baseUrl = Yii::app()->request->baseUrl;	?>
-		<?php if ($userMail == $row['ReceiverMail']): ?>
-			<?php echo CHtml::link('<b>بازگشت به صندوق پیام های دریافتی</b>',Yii::app()->request->urlReferrer); ?>
-		<?php elseif ($userMail == $row['SenderMail']): ?>
-			<?php echo CHtml::link('<b>بازگشت به صندوق پیام های ارسالی</b>',Yii::app()->request->urlReferrer); ?>
-		<?php else: ?>
-		<?php endif; ?>
+		<?php $baseUrl = Yii::app()->request->baseUrl;	
+		if ($userMail == $row['ReceiverMail']): 
+		echo CHtml::link('<b>بازگشت به صندوق پیام های دریافتی</b>',Yii::app()->request->urlReferrer); 
+		elseif ($userMail == $row['SenderMail']): 
+		echo CHtml::link('<b>بازگشت به صندوق پیام های ارسالی</b>',Yii::app()->request->urlReferrer); 
+		else: 
+		endif; ?>
 		
 		<img src="<?php echo $baseUrl;?>/img/icons/smashing/30px-39.png"  >
 	</div>

@@ -3,6 +3,9 @@
 	$this->breadcrumbs=array(
 		'Collective Scoring ', );
 	$actId = (int) $_GET['actId'];
+	if (!($actId>0)){
+			$this->redirect(array('/site/MosqueHome'));
+		}
 	$userId = Yii::app()->user->getId();
 	$mail=Yii::app()->user->name;
 	if ($userId==1){
@@ -125,6 +128,13 @@
 					</div>
 				</tbody>
 			</table>
+		
+	<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+	<div align="right" class="row">
+		<input name="CollectiveScoringForm[da]" id="GivePointForm_da" type="text" />
+
+	</div>
+		
 		</div>
 	</div>
 	<div align="right" class="row buttons">
@@ -132,5 +142,16 @@
 	</div>
 <?php $this->endWidget(); ?>
 </div><!-- form -->
-<?php endif; ?>
 
+<script>		
+Calendar.setup({
+	inputField:'GivePointForm_da',
+    button: 'date_btn',
+    ifFormat: '%Y/%m/%d',
+    dateType: 'jalali',
+    langNumbers: 'true' ,
+    
+});
+
+</script>
+<?php endif; ?>

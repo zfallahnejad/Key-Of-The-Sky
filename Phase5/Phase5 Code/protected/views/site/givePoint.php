@@ -3,11 +3,19 @@
 	$this->breadcrumbs=array(
 		'Point', );
 	$stCode = (int) $_GET['stCode'];
+	if (!($stCode>0)){
+			$this->redirect(array('/site/MosqueHome'));
+
+		}
+		else{
 	$student = Yii::app()->db->createCommand()
 				->select('stName,stFamily')
 				->from('student')
 				->where('stCode=:stCode', array(':stCode'=>$stCode))
 				->queryRow();
+				
+	
+	
 	$userId = Yii::app()->user->getId();
 	$act = Yii::app()->db->createCommand()
 				->select('actTopic,actPoint')
@@ -64,11 +72,31 @@
 		</tbody>
 	</table>
 	
+	<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+	<div align="right" class="row">
+		<input name="GivePointForm[da]" id="GivePointForm_da" type="text" />
+
+	</div>
+	
 	<div align="right" class="row buttons">
 		<?php echo CHtml::submitButton('ثبت'); ?>
 	</div>
 	
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+
+<script>		
+Calendar.setup({
+	inputField:'GivePointForm_da',
+    button: 'date_btn',
+    ifFormat: '%Y/%m/%d',
+    dateType: 'jalali',
+    langNumbers: 'true' ,
+    
+});
+
+</script>
+
 <?php endif; ?>
 
+<?php } ?>

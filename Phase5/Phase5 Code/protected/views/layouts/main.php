@@ -32,7 +32,11 @@
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
 	
 	<script type="text/javascript" src="<?php echo $baseUrl;?>/js/searchmosque.js"></script>
-    
+    <link rel="stylesheet" href="../../../../js/jalaliCalendar/assets/skins/aqua/theme.css">
+	<script src="../../../../js/jalaliCalendar/assets/js/jalali.js"></script>
+	<script src="../../../../js/jalaliCalendar/assets/js/calendar.js"></script>
+	<script src="../../../../js/jalaliCalendar/assets/js/calendar-setup.js"></script>
+	<script src="../../../../js/jalaliCalendar/assets/js/lang/calendar-fa.js"></script>
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/bappify.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/css/main.css" />-->

@@ -59,12 +59,18 @@ return array(
             'tags' => array('yii'), // You may also specify some Mailgun parameters
             'enableTracking' => false,
 			),
+		'jdate' => array(
+			'class' => 'ext.jdate.JDateTime',
+			'convert' => true,
+			'jalali' => true,
+			'timezone' => 'Asia/Tehran',
+			),
 /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 */		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=keyofthesky',
+			'connectionString' => 'mysql:host=localhost;dbname=sky',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

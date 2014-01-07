@@ -3,6 +3,7 @@
 class CollectiveScoringForm extends CFormModel
 {
 	public $results;
+	public $da;
 	/**
 	 * Declares the validation rules.
 	 */
@@ -10,6 +11,7 @@ class CollectiveScoringForm extends CFormModel
 	{
 		return array(
 			array('results', 'safe'),
+			array('da','required'),
 		);
 	}
 }

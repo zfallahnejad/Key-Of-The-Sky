@@ -20,6 +20,12 @@
 				->where('userId=:userId',array('userId'=>$userId))
 				->order('actId')
 				->query();
+	$colact = Yii::app()->db->createCommand()
+				->select('actId,actTopic,actPoint')
+				->from('refrencepoint')
+				->where('userId=:userId && collective !=0',array('userId'=>$userId))
+				->order('actId')
+				->query();
 ?>
 <script type='text/javascript'>
 	$().ready(function(){$('#i').focus()});// focus search area
@@ -31,6 +37,7 @@
            		<ul class="nav nav-tabs pull-right" >
                   <li><a href="#popular" data-toggle="tab">امتیازدهی جمعی</a></li>
                   <li class="active" ><a href="#individual" data-toggle="tab">امتیازدهی فردی</a></li>
+				  <li><a href="#collective" data-toggle="tab">فعالیت های جمعی</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="individual">
@@ -152,4 +159,53 @@
 							</div>
 						</div>
 					</div>
-</div><!--/row-fluid-->
+<div class="tab-pane" id="collective">
+				  	<div id='container' style="direction:rtl" align="right">
+      					<h2 class="header">لیست فعالیت های جمعی<span class="header-line"></span></h2>
+	  					<div id="object-browser">
+							<div id="items" >
+								<table class="table table-striped">
+									<thead>
+            						<tr>
+                						<th><div align="right">عنوان فعالیت</div></th>
+                    					<th><div align="right">امتیاز</div></th>
+                    					<th><div align="right"></div></th>
+										
+                					</tr>
+            						</thead>
+									<tbody>
+										<div id='wrapper'>
+        									<div id='content'>
+												<?php
+													foreach($colact as $row1)
+													{
+													?>
+													<tr>
+														<td>
+															<h4 align="right">
+																<?php echo $row1['actTopic'];?>
+															</h4>
+														</td>
+														<td>
+															<h4 align="right">
+																<?php echo $row1['actPoint'];?>
+															</h4>
+														</td>
+														<td>
+															<h4><a <?php echo CHtml::link('ثبت فعالیت',array('site/CollectiveAction','actId'=>$row1['actId']));?></a></h4>
+														</td>
+													</tr>
+													<?php
+													}
+													?>
+												</div>
+											</div>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				
+					</div><!--/row-fluid-->

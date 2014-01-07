@@ -2,7 +2,11 @@
 /* @var $this SiteController */
 /* @var $model EditliableForm */
 /* @var $form CActiveForm */
+$rewardTopic = $_GET['rewardTopic'];
+	if (!($rewardTopic>'')){
+			$this->redirect(array('/site/MosqueHome'));
 
+		}
 $this->pageTitle=Yii::app()->name . ' - Editprize';
 $this->breadcrumbs=array(
 	'Editprize', );

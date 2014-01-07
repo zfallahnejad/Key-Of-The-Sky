@@ -3,6 +3,10 @@
 ?><?php
 	$this->pageTitle=Yii::app()->name . ' - school page';
 	$schoolId = (int) $_GET['schoolId'];
+	if (!($schoolId>0)){
+			$this->redirect(array('/site'));
+
+		}
 	$this->breadcrumbs=array(
 		'school', );
 	$schoolName = Yii::app()->db->createCommand()

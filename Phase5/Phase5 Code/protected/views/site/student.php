@@ -43,7 +43,11 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->dateField($model,'birthdate'); ?>
+		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+	<div align="right" class="row">
+		<input name="StudentForm[birthdate]" id="GivePointForm_da" type="text" />
+
+	</div>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -95,4 +99,15 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+<script>		
+Calendar.setup({
+	inputField:'GivePointForm_da',
+    button: 'date_btn',
+    ifFormat: '%Y/%m/%d',
+    dateType: 'jalali',
+    langNumbers: 'true' ,
+    
+});
+
+</script>
 <?php endif; ?>

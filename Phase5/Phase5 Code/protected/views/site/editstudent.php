@@ -1,5 +1,9 @@
 <?php 
+$stCode = (int) $_GET['stCode'];
+if (!($stCode>0)){
+			$this->redirect(array('/site/MosqueHome'));
 
+		}
 $this->pageTitle=Yii::app()->name . ' - Edit Student';
 $this->breadcrumbs=array(
 	'Edit Student',);
@@ -25,7 +29,9 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-)); ?>
+)); 
+$birth=$model['birthdate'];
+?>
 
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 
@@ -43,7 +49,11 @@ $this->breadcrumbs=array(
 	
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->dateField($model,'birthdate'); ?>
+		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+		<div align="right" class="row">
+			<input name="EditstudentForm[birthdate]" id="GivePointForm_da" type="text" value="<?php echo $birth ;?>"/>
+
+		</div>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -83,4 +93,15 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+<script>		
+Calendar.setup({
+	inputField:'GivePointForm_da',
+    button: 'date_btn',
+    ifFormat: '%Y/%m/%d',
+    dateType: 'jalali',
+    langNumbers: 'true' ,
+    
+});
+
+</script>
 <?php endif; ?>
