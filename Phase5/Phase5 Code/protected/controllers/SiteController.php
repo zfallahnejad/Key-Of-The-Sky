@@ -1793,7 +1793,7 @@ class SiteController extends Controller
 				->queryAll();
 			
 				
-			if ($userMail == $Receivermail)
+			if ($userMail = $Receivermail)
 			{
 				$command=Yii::app()->db->createCommand()
 				 ->update('comment', array('Status'=>1), 'commentId=:commentId', array(':commentId'=>$commentId));}
