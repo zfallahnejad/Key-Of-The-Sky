@@ -581,7 +581,7 @@ class SiteController extends Controller
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
 					
-					$sql0="SELECT Count(*) FROM `student` WHERE `stCode` ='stcode'";
+					$sql0="SELECT Count(*) FROM `student` WHERE `stCode` ='$stcode'";
 					$dataReader=$connection->createCommand($sql0)->queryScalar();
 					if($dataReader !=0){
 						Yii::app()->user->setFlash('student','کد ملی دانش آموزی وارد شده در پایگاه داده موجود می باشد.');

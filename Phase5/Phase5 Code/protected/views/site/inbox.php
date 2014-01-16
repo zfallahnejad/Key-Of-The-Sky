@@ -50,12 +50,21 @@
            		<h1 class="header">صندوق پیام های دریافتی
                     <span class="header-line"></span> 
                 </h1>
+			
+				<!--search-->
+				<form action='javascript:void(0);'>
+      				<h3>
+        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
+       	  جستجو بر اساس:
+          			همه موارد<input id='s4' name='select' type="radio" value="همه موارد" checked="checked"/>
+            موضوع
+           			 <input id='s1' name='select' type="radio" value="موضوع"  />
+            ارسال کننده<input id='s2' name='select' type="radio" value="ارسال کننده" />
+				   </h3>
+   			   </form>
+			   <!--end of search-->
 				
-				
-				
-				
-				
-           		<ul class="nav nav-tabs pull-right" >
+				<ul class="nav nav-tabs pull-right" >
 				  <li><a href="#advice" data-toggle="tab">پیشنهادات</a></li>
 				  <li><a href="#censure" data-toggle="tab">انتقادات</a></li>
                   <li><a href="#message" data-toggle="tab">پیام ها</a></li>
@@ -65,24 +74,8 @@
 				<div class="tab-content">
 					<div class="tab-pane active" id="all">
 						<div id='container' style="direction:rtl" align="right">
-
-
-							<form action='javascript:void(0);'>
-      				<h3>
-        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
-       	  جستجو بر اساس:
-          			همه موارد<input id='s7' name='select' type="radio" value="همه موارد" checked="checked"/>
-            موضوع
-           			 <input id='s1' name='select' type="radio" value="موضوع"  />
-            ارسال کننده<input id='s2' name='select' type="radio" value="ارسال کننده" />
-			
-					
-     			   </h3>
-   			   </form>
-	  
-	  
-      <div id="object-browser">
-		<div id="items" >
+	  						<div id="object-browser">
+								<div id="items" >
 			<table class="table table-striped">
 				<thead>
             		<tr>
@@ -97,9 +90,7 @@
 				<tbody>
 					<div id='wrapper'>
         				<div id='content'>
-							<form  method="POST" action="point.php">
-							
-								<?php
+							<?php
 									foreach($comments as $row)
 									{
 										if($row['Status']==0):
@@ -204,7 +195,6 @@
 									 endif; 
 									}
 									?>
-							</form>	
 						</div>
 					</div>
 				</tbody>
@@ -216,22 +206,7 @@
 
 <div class="tab-pane" id="message">
 
-<div id='container' style="direction:rtl" align="right">
-
-	<form action='javascript:void(0);'>
-      				<h3>
-        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
-       	  جستجو بر اساس:
-          			همه موارد<input id='s7' name='select' type="radio" value="همه موارد" checked="checked"/>
-            موضوع
-           			 <input id='s1' name='select' type="radio" value="موضوع"  />
-            ارسال کننده<input id='s2' name='select' type="radio" value="ارسال کننده" />
-			
-					
-     			   </h3>
-   			   </form>
-	  
-	  
+<div id='container' style="direction:rtl" align="right">	  
       <div id="object-browser">
 		<div id="items" >
 			<table class="table table-striped">
@@ -369,24 +344,7 @@
 
 <div class="tab-pane" id="censure">
 
-<div id='container' style="direction:rtl" align="right">
-
-
-      <form action='javascript:void(0);'>
-      				<h3>
-        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
-       	  جستجو بر اساس:
-          			همه موارد<input id='s7' name='select' type="radio" value="همه موارد" checked="checked"/>
-            موضوع
-           			 <input id='s1' name='select' type="radio" value="موضوع"  />
-            ارسال کننده<input id='s2' name='select' type="radio" value="ارسال کننده" />
-			
-					
-     			   </h3>
-   			   </form>
-	  
-	
-	  
+<div id='container' style="direction:rtl" align="right">	  
       <div id="object-browser">
 		<div id="items" >
 			<table class="table table-striped">
@@ -525,23 +483,6 @@
 <div class="tab-pane" id="advice">
 
 <div id='container' style="direction:rtl" align="right">
-
-
-      
-	<form action='javascript:void(0);'>
-      				<h3>
-        				<input id='i' name='i' type='text' autocomplete="off" style="font-family:'B Nazanin'"/>
-       	  جستجو بر اساس:
-          			همه موارد<input id='s7' name='select' type="radio" value="همه موارد" checked="checked"/>
-            موضوع
-           			 <input id='s1' name='select' type="radio" value="موضوع"  />
-            ارسال کننده<input id='s2' name='select' type="radio" value="ارسال کننده" />
-			
-					
-     			   </h3>
-   			   </form>
-	  
-	  
       <div id="object-browser">
 		<div id="items" >
 			<table class="table table-striped">
