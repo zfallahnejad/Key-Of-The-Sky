@@ -2,8 +2,28 @@
 		$baseUrl = Yii::app()->request->baseUrl;
 	?>
 
-<!-- start slider -->
-    	<!-- /slider -->
+<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl;?>/slider/engine1/style.css" />
+	<script type="text/javascript" src="<?php echo $baseUrl;?>/slider/engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+	<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+<li><img src="<?php echo $baseUrl;?>/slider/data1/images/chrysanthemum.jpg" alt="Chrysanthemum" title="Chrysanthemum" id="wows1_0"/></li>
+</ul></div>
+<div class="ws_bullets"><div>
+<a href="<?php echo $baseUrl;?>/slider/data1/images/chrysanthemum.jpg" title="Chrysanthemum"><img src="<?php echo $baseUrl;?>/slider/data1/tooltips/chrysanthemum.jpg" alt="Chrysanthemum"/>1</a>
+<a href="<?php echo $baseUrl;?>/slider/data1/images/desert.jpg" title="Desert">2</a>
+<a href="<?php echo $baseUrl;?>/slider/data1/images/hydrangeas.jpg" title="Hydrangeas">3</a>
+<a href="<?php echo $baseUrl;?>/slider/data1/images/lighthouse.jpg" title="Lighthouse">4</a>
+</div></div>
+<span class="wsl"><a href="http://wowslider.com">Slider Java</a> by WOWSlider.com v4.8</span>
+	<div class="ws_shadow"></div>
+	</div>
+	<script type="text/javascript" src="<?php echo $baseUrl;?>/slider/engine1/wowslider.js"></script>
+	<script type="text/javascript" src="<?php echo $baseUrl;?>/slider/engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
     
     
     <div class="shout-box" >
