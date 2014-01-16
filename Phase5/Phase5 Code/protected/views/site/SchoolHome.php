@@ -35,9 +35,9 @@
                     <span class="header-line"></span> 
                 </h1>
            		<ul class="nav nav-tabs pull-right" >
-                  <li><a href="#popular" data-toggle="tab">امتیازدهی جمعی</a></li>
+                  <li><a href="#collective" data-toggle="tab">فعالیت های جمعی</a></li>
+				  <li><a href="#popular" data-toggle="tab">امتیازدهی جمعی</a></li>
                   <li class="active" ><a href="#individual" data-toggle="tab">امتیازدهی فردی</a></li>
-				  <li><a href="#collective" data-toggle="tab">فعالیت های جمعی</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="individual">

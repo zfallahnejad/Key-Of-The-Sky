@@ -81,9 +81,6 @@
 		
 		
 		<hr>
-		<script type='text/javascript'>
-		$().ready(function(){$('#i').focus()});// focus search area
-		</script>
 		
 		<h1 class="header">
                      

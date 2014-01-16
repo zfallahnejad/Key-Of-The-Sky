@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2014 at 01:27 PM
+-- Generation Time: Jan 16, 2014 at 01:55 PM
 -- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -1002,8 +1002,8 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
   `mosqueName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `tel` int(11) NOT NULL,
-  `mobile` int(11) DEFAULT NULL,
+  `tel` bigint(11) NOT NULL,
+  `mobile` bigint(11) DEFAULT NULL,
   `mosqueAddress` text NOT NULL,
   `image` blob,
   `status` tinyint(4) NOT NULL DEFAULT '1',
@@ -1038,11 +1038,11 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `parent` (
-  `parentCode` int(11) NOT NULL,
+  `parentCode` bigint(11) NOT NULL,
   `parentName` varchar(255) NOT NULL,
   `parentFamily` varchar(255) NOT NULL,
-  `homePhone` int(11) NOT NULL,
-  `mobileNum` int(11) DEFAULT NULL,
+  `homePhone` bigint(11) NOT NULL,
+  `mobileNum` bigint(11) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`parentCode`)
@@ -1086,7 +1086,7 @@ INSERT INTO `participantcounter` (`Id`, `counter`, `weekstart`) VALUES
 
 CREATE TABLE IF NOT EXISTS `point` (
   `actId` int(11) NOT NULL,
-  `stCode` int(10) NOT NULL,
+  `stCode` bigint(10) NOT NULL,
   `pcounter` int(11) NOT NULL,
   `da` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`actId`,`stCode`,`da`),
@@ -1298,11 +1298,11 @@ INSERT INTO `schmonth` (`schoolId`, `actId`, `counter`, `monthstart`) VALUES
 CREATE TABLE IF NOT EXISTS `school` (
   `schoolId` int(11) NOT NULL,
   `schoolName` varchar(255) NOT NULL,
-  `schoolPhone` int(11) NOT NULL,
+  `schoolPhone` bigint(11) NOT NULL,
   `schoolAddress` text NOT NULL,
   `teacherName` varchar(255) NOT NULL,
   `teacherFamily` varchar(255) NOT NULL,
-  `teacherPhone` int(11) NOT NULL,
+  `teacherPhone` bigint(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`schoolId`)
@@ -1326,12 +1326,12 @@ CREATE TABLE IF NOT EXISTS `student` (
   `stName` varchar(255) NOT NULL,
   `stFamily` varchar(255) NOT NULL,
   `fatherName` varchar(255) NOT NULL,
-  `stCode` int(11) NOT NULL,
+  `stCode` bigint(11) NOT NULL,
   `school` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `birthdate` varchar(20) DEFAULT NULL,
   `picture` blob,
-  `parentCode` int(10) NOT NULL,
+  `parentCode` bigint(10) NOT NULL,
   `Id` int(11) NOT NULL,
   `schoolId` int(11) DEFAULT NULL,
   `regda` varchar(20) NOT NULL,
@@ -1366,7 +1366,7 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `studentweek` (
-  `stCode` int(10) NOT NULL,
+  `stCode` bigint(10) NOT NULL,
   `actId` int(11) NOT NULL,
   `counter` int(11) NOT NULL,
   `weekstart` varchar(10) CHARACTER SET utf8 NOT NULL,
@@ -1408,8 +1408,8 @@ ALTER TABLE `participantcounter`
 -- Constraints for table `point`
 --
 ALTER TABLE `point`
-  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`actId`) REFERENCES `refrencepoint` (`actId`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`stCode`) REFERENCES `student` (`stCode`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`stCode`) REFERENCES `student` (`stCode`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`actId`) REFERENCES `refrencepoint` (`actId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `reward`
