@@ -29,7 +29,21 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$results =Yii::app()->db->createCommand()
+				->select ('regda, COUNT(regda) AS CNT')
+		    	->from('student')
+				->group('regda')
+		    	->query();
+		$counter = 0;
+		$date = array();
+		$counts = array();
+		foreach ($results as $result)
+        {
+            $date[$counter] = $result['regda'];
+            $counts[] = (int)$result['CNT'];
+            $counter++;
+        }
+		$this->render('index', array('date'=>$date, 'counts'=>$counts));
 	}
 	public function actionMosqueHome()
 	{
@@ -1622,7 +1636,6 @@ class SiteController extends Controller
 					}
 					$this->refresh();
 				}
-				
 			}					
 			$this->render('CollectiveScoring',array('model'=>$model));
 		}
@@ -1647,94 +1660,96 @@ class SiteController extends Controller
 			$actId = (int) $_GET['actId'];
 			if(isset($_POST['CollectiveActionForm']))
 			{
-			
 				$model->attributes=$_POST['CollectiveActionForm'];
 				if($model->validate())
 				{
 					$actda=($model->actda);
-				
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
-				if(Yii::app()->user->getId() == 1){
-							$mosqueId = Yii::app()->db->createCommand()->select('Id')->from('mosqueculturalliablee')->where('email=:mail', array(':mail'=>$mail))->queryScalar();
-
-					$dataReader =Yii::app()->db->createCommand()
-						->select ('count(*)')
-						->from('moscolact')
-						->where("mosqueId=:mosqueId and actId=:actId and actda=:actda")
-        				->queryScalar(array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda ));
-					if($dataReader ==0){
-					$actcount=1;
-								$sql="INSERT INTO moscolact (mosqueId,actId,actda,actcount) VALUES(:mosqueId,:actId, :actda, :actcount)";
-								$command=$connection->createCommand($sql);
+					if(Yii::app()->user->getId() == 1)
+					{
+						$mosqueId = Yii::app()->db->createCommand()
+									->select('Id')
+									->from('mosqueculturalliablee')
+									->where('email=:mail', array(':mail'=>$mail))
+									->queryScalar();
+						$dataReader =Yii::app()->db->createCommand()
+									->select ('count(*)')
+									->from('moscolact')
+									->where("mosqueId=:mosqueId and actId=:actId and actda=:actda")
+        							->queryScalar(array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda ));
+						if($dataReader ==0)
+						{
+							$actcount=1;
+							$sql="INSERT INTO moscolact (mosqueId,actId,actda,actcount) VALUES(:mosqueId,:actId, :actda, :actcount)";
+							$command=$connection->createCommand($sql);
 								
-								$command->bindParam(":mosqueId",$mosqueId,PDO::PARAM_STR);
-								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
-								$command->bindParam(":actda",$actda,PDO::PARAM_STR);
-								$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
-								$command->execute();
-								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
-
+							$command->bindParam(":mosqueId",$mosqueId,PDO::PARAM_STR);
+							$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+							$command->bindParam(":actda",$actda,PDO::PARAM_STR);
+							$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
+							$command->execute();
+							Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
 						}
-					else{
-						$actcount = Yii::app()->db->createCommand()
+						else
+						{
+							$actcount = Yii::app()->db->createCommand()
 									->select('actcount')
 									->from('moscolact')
 									->where('mosqueId=:mosqueId and actId=:actId and actda=:actda',array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda))
 									->queryScalar();
-								$actcount=$actcount+1;
-								$command = Yii::app()->db->createCommand();
-								$command->update('moscolact', array('actcount'=>$actcount), 'mosqueId=:mosqueId and actId=:actId and actda=:actda',array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda));
-								$command->execute();
+							$actcount=$actcount+1;
+							$command = Yii::app()->db->createCommand();
+							$command->update('moscolact', array('actcount'=>$actcount), 'mosqueId=:mosqueId and actId=:actId and actda=:actda',array(':mosqueId'=>$mosqueId , ':actId'=>$actId , ':actda'=>$actda));
+							$command->execute();
 				
-								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+							Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+						}
 					}
-					}
-				if(Yii::app()->user->getId() == 2){
-				$schoolId =Yii::app()->db->createCommand()
+					if(Yii::app()->user->getId() == 2)
+					{
+						$schoolId =Yii::app()->db->createCommand()
 		 				   ->select ('schoolId')
 						   ->from('school')
 		   				   ->where('email=:mail', array(':mail'=>$mail))
          				   ->queryScalar();
-					$dataReader =Yii::app()->db->createCommand()
-						->select ('count(*)')
-						->from('schcolact')
-						->where("schoolId=:schoolId and actId=:actId and actda=:actda")
-        				->queryScalar(array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda ));
-					if($dataReader ==0){
-					$actcount=1;
-								$sql="INSERT INTO schcolact (schoolId,actId,actda,actcount) VALUES(:schoolId,:actId, :actda, :actcount)";
-								$command=$connection->createCommand($sql);
-								
-								$command->bindParam(":schoolId",$schoolId,PDO::PARAM_STR);
-								$command->bindParam(":actId",$actId,PDO::PARAM_STR);
-								$command->bindParam(":actda",$actda,PDO::PARAM_STR);
-								$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
-								$command->execute();
-								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
-
+						$dataReader =Yii::app()->db->createCommand()
+							->select ('count(*)')
+							->from('schcolact')
+							->where("schoolId=:schoolId and actId=:actId and actda=:actda")
+        					->queryScalar(array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda ));
+						if($dataReader ==0)
+						{
+							$actcount=1;
+							$sql="INSERT INTO schcolact (schoolId,actId,actda,actcount) VALUES(:schoolId,:actId, :actda, :actcount)";
+							$command=$connection->createCommand($sql);
+							
+							$command->bindParam(":schoolId",$schoolId,PDO::PARAM_STR);
+							$command->bindParam(":actId",$actId,PDO::PARAM_STR);
+							$command->bindParam(":actda",$actda,PDO::PARAM_STR);
+							$command->bindParam(":actcount",$actcount,PDO::PARAM_STR);
+							$command->execute();
+							Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
 						}
-					else{
-						$actcount = Yii::app()->db->createCommand()
+						else
+						{
+							$actcount = Yii::app()->db->createCommand()
 									->select('actcount')
 									->from('schcolact')
 									->where('schoolId=:schoolId and actId=:actId and actda=:actda',array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda))
 									->queryScalar();
-								$actcount=$actcount+1;
-								$command = Yii::app()->db->createCommand();
-								$command->update('schcolact', array('actcount'=>$actcount), 'schoolId=:schoolId and actId=:actId and actda=:actda',array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda));
-								$command->execute();
-				
-								Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
-					}
+							$actcount=$actcount+1;
+							$command = Yii::app()->db->createCommand();
+							$command->update('schcolact', array('actcount'=>$actcount), 'schoolId=:schoolId and actId=:actId and actda=:actda',array(':schoolId'=>$schoolId , ':actId'=>$actId , ':actda'=>$actda));
+							$command->execute();
+			
+							Yii::app()->user->setFlash('CollectiveAction','فعالیت جدید با موفقیت ثبت گردید');
+						}
 					}
 					$this->refresh();
 				}
-				
-
 			}
 			$this->render('CollectiveAction',array('model'=>$model));
-
 		}
 	}	
 	public function actionInbox()
@@ -1743,7 +1758,6 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		
 		else
 		{
 			// renders the view file 'protected/views/site/inbox.php'
@@ -1757,7 +1771,6 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		
 		else
 		{
 			// renders the view file 'protected/views/site/outbox.php'
@@ -1772,11 +1785,9 @@ class SiteController extends Controller
 		{
 			$this->redirect(array('/site/login'));
 		}
-		
 		elseif(! isset($_GET['commentId'])){
 			$this->redirect(array('/site'));
 		}
-		
 		else
 		{
 			$userMail=Yii::app()->user->name;
@@ -1791,20 +1802,16 @@ class SiteController extends Controller
 				->from('comment')
 				->where('commentId=:commentId', array(':commentId'=>$commentId))
 				->queryAll();
-			
-				
 			if ($userMail = $Receivermail)
 			{
 				$command=Yii::app()->db->createCommand()
-				 ->update('comment', array('Status'=>1), 'commentId=:commentId', array(':commentId'=>$commentId));}
+				 ->update('comment', array('Status'=>1), 'commentId=:commentId', array(':commentId'=>$commentId));				}
 			else{}
 			// renders the view file 'protected/views/site/showMessage.php'
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('showMessage');
-		}
-		
+		}	
 	}
-	
 	public function actionschoolPage()
 	{
 		if(! isset($_GET['schoolId'])){
@@ -1813,7 +1820,6 @@ class SiteController extends Controller
 		
 			// renders the view file 'protected/views/site/schoolPage.php'
 			// using the default layout 'protected/views/layouts/main.php'
-			$this->render('schoolPage');
-		
+			$this->render('schoolPage');	
 	}
 }	 	 

@@ -24,34 +24,31 @@ if (Yii::app()->user->getId()==3)
 ?>
 <div id='container'>
       <h2 class="header">ویرایش مشخصات فرزندان شما<span class="header-line"></span></h2>
-      
-      
       <div id="object-browser">
 		<div id="items">
 			<table class="table table-striped">
 				<thead>
             		<tr>
-                		<th>نام</th>
-                    	<th>نام خانوادگی</th>
-                    	<th>کد ملی</th>
+                		<th><div align="right">نام</div></th>
+                    	<th><div align="right">نام خانوادگی</div></th>
+                    	<th><div align="right">کد ملی</div></th>
 						<th></th>
                 	</tr>
             	</thead>
-				<tbody>
+				<tbody align="right">
 					<?php
 						foreach($children as $row)
 						{
 						?>
 						<tr>
-							<td><?php echo $row['stName'];?></td>
-							<td><?php echo $row['stFamily'];?></td>
-							<td><?php echo $row['stCode']; ?></td>
+							<td><div align="right"><?php echo $row['stName'];?></div></td>
+							<td><div align="right"><?php echo $row['stFamily'];?></div></td>
+							<td><div align="right"><?php echo $row['stCode']; ?></div></td>
                     		<td><a <?php echo CHtml::link('ویرایش مشخصات',array('site/editstudent','stCode'=>$row['stCode']));		?></a></td>
 				        </tr>
 						<?php
-						$r=$r+1;
-							}
-							?>
+						}
+					?>
 				</tbody>
 			</table>
 		</div>
@@ -87,16 +84,14 @@ if (Yii::app()->user->getId()==1)
 ?>
 <div id='container'>
       <h2 class="header">ویرایش مشخصات دانش آموزان<span class="header-line"></span></h2>
-      
-      
       <div id="object-browser">
 		<div id="items">
 			<table class="table table-striped">
 				<thead>
             		<tr>
-                		<th>نام</th>
-                    	<th>نام خانوادگی</th>
-                    	<th>کد ملی</th>
+                		<th><div align="right">نام</div></th>
+                    	<th><div align="right">نام خانوادگی</div></th>
+                    	<th><div align="right">کد ملی</div></th>
 						<th></th>
                 	</tr>
             	</thead>
@@ -106,15 +101,15 @@ if (Yii::app()->user->getId()==1)
 						{
 						?>
 						<tr>
-							<td><?php echo $row['stName'];?></td>
-							<td><?php echo $row['stFamily'];?></td>
-							<td><?php echo $row['stCode']; ?></td>
+							<td><div align="right"><?php echo $row['stName'];?></div></td>
+							<td><div align="right"><?php echo $row['stFamily'];?></div></td>
+							<td><div align="right"><?php echo $row['stCode']; ?></div></td>
                     		<td><a <?php echo CHtml::link('ویرایش مشخصات',array('site/editstudent','stCode'=>$row['stCode']));		?></a></td>
 				        </tr>
 						<?php
 						$r=$r+1;
 							}
-							?>
+						?>
 				</tbody>
 			</table>
 		</div>

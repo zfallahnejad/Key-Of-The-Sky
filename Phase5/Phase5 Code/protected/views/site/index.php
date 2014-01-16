@@ -82,16 +82,13 @@
 		
 		<hr>
 		
-		<h1 class="header">
-                     
-                </h1>
+		<h1 class="header"></h1>
 				
 		<div class="row-fluid" style="direction:rtl" align="right">
            		
            		<ul class="nav nav-tabs pull-right" >
 				  <li><a href="#school" data-toggle="tab">لیست مدارس شرکت کننده</a></li>
 				  <li class="active" ><a href="#mosque" data-toggle="tab">لیست مساجد شرکت کننده</a></li>
-                  
                 </ul>
 				
 				<div class="tab-content">
@@ -214,20 +211,13 @@
      			   </h3>
    			   </form>
 
-
-							
-	  
 	  <?php
 		$schools = Yii::app()->db->createCommand()
 				->select('schoolId,schoolName,teacherFamily,schoolAddress')
 				->from('school')
 				->query();
 		?>
-	  
-	  
-	  
-	  
-      <div id="object-browser">
+	  <div id="object-browser">
 		<div id="items" >
 			<table class="table table-striped">
 				<thead>
@@ -291,20 +281,32 @@
 </div>
 </div>
 
-
-
-				
-
+<hr>
+<h3 class="header">نمودار تعداد شرکت کنندگان در طرح از همه مساجد
+	<span class="header-line"></span> 
+</h3>				
+<div style="direction:ltr;">
+<?php
+	$this->Widget('ext.highcharts.HighchartsWidget', array(
+        'options'=>array(
+            'chart'=> array('type'=>'line', 'height'=>'500', 'spacingBottom'=>40),
+            'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از همه مساجد'),
+            'legend'=> array('enabled'=>false),
+            'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true))),
+            'xAxis' => array('categories'=>$date),
+            'yAxis' => array('title'=>array('text'=>'تعداد شرکت کنندگان')),
+            'series' => array(array('name' => 'Counts', 'data' => $counts),
+        ),
+		'credits' => array('enabled' => false))
+     ));
+?>
+</div>
 		
-		
-		
-		
-		
-
-		<h3 class="header">برندگان دوره قبل
-        	<span class="header-line"></span> 
-        </h3>       
-     <div class="row-fluid">        
+<h3 class="header">برندگان دوره قبل
+	<span class="header-line"></span> 
+</h3>       
+     
+	 <div class="row-fluid">        
         <div class="span3">
               
             <div class="colored_banner thumb-content-dark">

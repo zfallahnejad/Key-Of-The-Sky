@@ -708,3 +708,301 @@ Stack trace:
 REQUEST_URI=/skykey/index.php/site/CollectiveScoring/
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1528)
 in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 12:37:59 [error] [php] Undefined variable: dataReader (C:\xampp\htdocs\skykey\protected\views\site\chart.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1836): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (14)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1836)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 14:03:59 [error] [php] Undefined variable: series (C:\xampp\htdocs\skykey\protected\views\site\chart.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (34)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 14:04:38 [error] [php] Undefined variable: data (C:\xampp\htdocs\skykey\protected\views\site\chart.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (18)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 14:08:06 [error] [php] strtotime() expects parameter 1 to be string, array given (C:\xampp\htdocs\skykey\protected\views\site\chart.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#3 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (23)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 14:08:43 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\skykey\protected\views\site\chart.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (27)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:15:11 [warning] [application] Failed to set unsafe attribute "image" of "RegisterForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (310)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:19:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:19:49 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:21:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:21:33 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:23:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:23:09 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:23:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:23:19 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:25:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:25:07 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:25:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:25:21 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:25:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:25:50 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:28:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (989)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:28:00 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(989): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147481647
+---
+2014/01/16 19:42:26 [error] [php] Undefined index: id (C:\xampp\htdocs\skykey\protected\views\site\chart.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (28)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 19:53:55 [warning] [application] Failed to set unsafe attribute "picture" of "StudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (565)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 20:03:53 [error] [php] Undefined index: count (C:\xampp\htdocs\skykey\protected\views\site\chart.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (30)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 20:12:36 [error] [php] Undefined variable: counts (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/16 20:13:07 [error] [php] Undefined variable: date (C:\xampp\htdocs\skykey\protected\views\site\index.php:303)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (303)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)

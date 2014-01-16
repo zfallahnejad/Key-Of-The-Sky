@@ -44,10 +44,9 @@ $this->breadcrumbs=array(
 	<div align="right" class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
 		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
-	<div align="right" class="row">
-		<input name="StudentForm[birthdate]" id="GivePointForm_da" type="text" />
-
-	</div>
+		<div align="right" class="row">
+			<input name="StudentForm[birthdate]" id="GivePointForm_da" type="text" />
+		</div>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
