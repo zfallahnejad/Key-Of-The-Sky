@@ -984,6 +984,7 @@ class SiteController extends Controller
 						if($model->results[$x]==1)
 						{
 							$actId=$act[$x]['actId'];
+							$actPoint=$act[$x]['actPoint'];
 							$search = Yii::app()->db->createCommand()
 									->select('count(*)')
 									->from('point')
@@ -1003,7 +1004,8 @@ class SiteController extends Controller
 								$command->execute();
 								$numOfInsert++;
 							}
-							else{
+							else
+							{
 								$pcounter = Yii::app()->db->createCommand()
 									->select('pcounter')
 									->from('point')
@@ -1015,6 +1017,17 @@ class SiteController extends Controller
 								$command->execute();
 								$numOfInsert++;
 							}
+							$studentPoint = Yii::app()->db->createCommand()
+									->select('total,current')
+									->from('student')
+									->where('stCode=:stCode',array(':stCode'=>$stCode))
+									->queryRow();
+							$totalPoint=$studentPoint['total']+$actPoint;
+							$currentPoint=$studentPoint['current']+$actPoint;
+							
+							$command = Yii::app()->db->createCommand();
+							$command->update('student', array('total'=>$totalPoint,'current'=>$currentPoint), 'stCode=:stCode',array(':stCode'=>$stCode));
+							$command->execute();							
   						}
 					}
 					if ($numOfInsert!=0)

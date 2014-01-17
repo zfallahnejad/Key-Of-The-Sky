@@ -295,7 +295,7 @@
             'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true))),
             'xAxis' => array('categories'=>$date),
             'yAxis' => array('title'=>array('text'=>'تعداد شرکت کنندگان')),
-            'series' => array(array('name' => 'Counts', 'data' => $counts),
+            'series' => array(array('name' => 'تعداد شرکت کنندگان', 'data' => $counts),
         ),
 		'credits' => array('enabled' => false))
      ));

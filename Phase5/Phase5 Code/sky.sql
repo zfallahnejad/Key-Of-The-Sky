@@ -1121,8 +1121,6 @@ DELIMITER //
 CREATE TRIGGER `point_week_insert` AFTER INSERT ON `point`
  FOR EACH ROW BEGIN
 insert studentweek(stCode,actId,counter,weekstart) values ( new.stCode,new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+new.pcounter;
-update student set total=total+(new.pcounter) where (student.stCode=new.stCode);
-update student set current=current+(new.pcounter) where (student.stCode=new.stCode);
 insert schactivities(schoolId,actId,counter,weekstart) values ((select distinct schoolId from student where(student.stCode=new.stCode)),new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+new.pcounter;
 insert mosactivities(mosqueId,actId,counter,weekstart) values ((select distinct Id from student where(student.stCode=new.stCode)),new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+new.pcounter;
 
@@ -1134,8 +1132,6 @@ DELIMITER //
 CREATE TRIGGER `point_week_update` BEFORE UPDATE ON `point`
  FOR EACH ROW begin
 insert studentweek(stCode,actId,counter,weekstart) values ( new.stCode,new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+(new.pcounter-old.pcounter);
-update student set total=total+(new.pcounter-old.pcounter) where (student.stCode=new.stCode);
-update student set total=total+(new.pcounter-old.pcounter) where (student.stCode=new.stCode);
 insert schactivities(schoolId,actId,counter,weekstart) values ((select distinct schoolId from student where(student.stCode=new.stCode)),new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+(new.pcounter-old.pcounter);
 insert mosactivities(mosqueId,actId,counter,weekstart) values ((select distinct Id from student where(student.stCode=new.stCode)),new.actId,new.pcounter,fardate(pdate(date_sub(gdatestr(engdate(new.da)) , INTERVAL (weekday(gdatestr(engdate(new.da)))+2)%7 DAY)))) ON DUPLICATE KEY UPDATE counter=counter+(new.pcounter-old.pcounter);
 

@@ -1,13 +1,10 @@
 <?php
-
-	
-?><?php
 	$this->pageTitle=Yii::app()->name . ' - mosque reward';
 	$mosqueId = (int) $_GET['Id'];
 	if (!($mosqueId>0)){
 			$this->redirect(array('/site'));
 
-		}
+	}
 	$this->breadcrumbs=array(
 		'Point', );
 	$mosqueName = Yii::app()->db->createCommand()
@@ -24,7 +21,22 @@
 				->select('stName,stFamily,stCode')
 				->from('student')
 				->where('Id=:Id',array('Id'=>$mosqueId))
-				->queryAll();               
+				->queryAll();
+	$results =Yii::app()->db->createCommand()
+				->select ('regda, COUNT(regda) AS CNT')
+		    	->from('student')
+				->where('Id=:Id',array('Id'=>$mosqueId))
+				->group('regda')
+		    	->query();  
+	$counter = 0;
+	$date = array();
+	$counts = array();
+	foreach ($results as $result)
+    {
+		$date[$counter] = $result['regda'];
+        $counts[] = (int)$result['CNT'];
+        $counter++;
+    }             
 ?>
 <div id='container' style="direction:rtl" align="right">
 	<h2 class="header">مسجد <?php echo $mosqueName ;?><span class="header-line"></span></h2>
@@ -55,6 +67,7 @@
 			</table>
 		</div>
 	</div>
+	<hr>
  	<br>
 	<h3 class="note">امتیازات کسب شده<span class="header-line"></span></h3>	
 	<div id="object-browser">
@@ -103,4 +116,25 @@
 			</table>
 		</div>
 	</div>
+</div>
+<hr>
+<br>
+<h3 class="header">نمودار تعداد شرکت کنندگان در طرح از مسجد <?php echo $mosqueName;?>
+	<span class="header-line"></span> 
+</h3>
+<div style="direction:ltr;">
+<?php
+	$this->Widget('ext.highcharts.HighchartsWidget', array(
+        'options'=>array(
+            'chart'=> array('type'=>'line', 'height'=>'500', 'spacingBottom'=>40),
+            'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از مسجد '.$mosqueName),
+            'legend'=> array('enabled'=>false),
+            'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true))),
+            'xAxis' => array('categories'=>$date),
+            'yAxis' => array('title'=>array('text'=>'تعداد شرکت کنندگان')),
+            'series' => array(array('name' => 'تعداد شرکت کنندگان', 'data' => $counts),
+        ),
+		'credits' => array('enabled' => false))
+     ));
+?>
 </div>
