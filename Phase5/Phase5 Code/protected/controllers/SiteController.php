@@ -29,21 +29,7 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$results =Yii::app()->db->createCommand()
-				->select ('regda, COUNT(regda) AS CNT')
-		    	->from('student')
-				->group('regda')
-		    	->query();
-		$counter = 0;
-		$date = array();
-		$counts = array();
-		foreach ($results as $result)
-        {
-            $date[$counter] = $result['regda'];
-            $counts[] = (int)$result['CNT'];
-            $counter++;
-        }
-		$this->render('index', array('date'=>$date, 'counts'=>$counts));
+		$this->render('index');
 	}
 	public function actionMosqueHome()
 	{
@@ -1834,5 +1820,15 @@ class SiteController extends Controller
 			// renders the view file 'protected/views/site/schoolPage.php'
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('schoolPage');	
+	}
+	public function actionstudentPage()
+	{
+		if(! isset($_GET['stCode'])){
+			$this->redirect(array('/site'));
+		}
+		
+			// renders the view file 'protected/views/site/schoolPage.php'
+			// using the default layout 'protected/views/layouts/main.php'
+			$this->render('studentPage');	
 	}
 }	 	 

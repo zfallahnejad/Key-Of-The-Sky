@@ -280,28 +280,61 @@
 </div>
 </div>
 </div>
-
 <hr>
 <h3 class="header">نمودار تعداد شرکت کنندگان در طرح از همه مساجد
 	<span class="header-line"></span> 
-</h3>				
+</h3>
 <div style="direction:ltr;">
 <?php
-	$this->Widget('ext.highcharts.HighchartsWidget', array(
+$results =Yii::app()->db->createCommand()
+				->select ('weekstart, SUM(counter) AS CNT')
+		    	->from('participantcounter')
+				->group('weekstart')
+		    	->query();
+$participantCount=array();
+$drillDownArray=array();
+foreach($results as $result){
+	$participantCount[]=array('name'=>$result['weekstart'] ,'y'=>(int)$result['CNT'],'drilldown'=>$result['weekstart']);
+	$participants = Yii::app()->db->createCommand()
+				->select('mosqueculturalliablee.mosqueName as mosqueName, SUM(participantcounter.counter) AS CNT')
+		    	->from('participantcounter,mosqueculturalliablee')
+				->where('participantcounter.weekstart=:weekstart AND  mosqueculturalliablee.Id=participantcounter.Id',array(':weekstart'=>$result['weekstart']))
+				->group('mosqueculturalliablee.mosqueName')
+		    	->query();
+	$dataArray=array();
+	foreach($participants as $row){
+		$dataArray[]=array($row['mosqueName'],(int)$row['CNT']);
+	}
+	$drillDownArray[]=array('id'=>$result['weekstart'],'data'=>$dataArray);
+}
+$this->Widget('ext.highcharts.HighchartsWidget', array(
         'options'=>array(
-            'chart'=> array('type'=>'line', 'height'=>'500', 'spacingBottom'=>40),
-            'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از همه مساجد'),
-            'legend'=> array('enabled'=>false),
-            'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true))),
-            'xAxis' => array('categories'=>$date),
-            'yAxis' => array('title'=>array('text'=>'تعداد شرکت کنندگان')),
-            'series' => array(array('name' => 'تعداد شرکت کنندگان', 'data' => $counts),
-        ),
-		'credits' => array('enabled' => false))
-     ));
+            'chart'=> array('type'=>'column','height'=>'500', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)'),
+			'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از همه مساجد'),
+            'subtitle' => array('text'=>'رشد ثبت نام در طرح به صورت هفتگی'),
+			'xAxis' => array('type'=>'category','reversed'=>true),
+			'legend'=> array('enabled'=>false),
+            'yAxis' => array('title'=>array('text'=>'دفعات انجام کار'),'opposite'=>true),
+        	'credits' => array('enabled' => false),
+			'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true)),'series'=>array('borderWidth'=>0,'dataLabels'=>array('enabled'=>true))),
+			'tooltip'=> array(
+					'headerFormat'=>'<span style="font-size:10px">{point.key}</span><br/>',
+					'pointFormat'=>'{series.name}:{point.y}<br/>',
+					'footerFormat'=>'',
+					'shared'=> true,
+					'useHTML'=> true,
+					//'crosshairs'=> true
+			),
+			'series'=>array(array('name'=>'فعالیت ها','colorByPoint'=>true,'data'=>$participantCount)),
+			'drilldown'=>array('series'=>$drillDownArray)),
+		'scripts' => array(
+   			'drilldown',   // enables supplementary chart types (gauge, arearange, columnrange, etc.)
+   			'modules/exporting', // adds Exporting button/menu to chart
+   		),
+     )
+);
 ?>
-</div>
-		
+</div>		
 <h3 class="header">برندگان دوره قبل
 	<span class="header-line"></span> 
 </h3>       

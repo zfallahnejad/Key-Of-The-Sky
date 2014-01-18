@@ -13,9 +13,6 @@
 				->from('student')
 				->where('stCode=:stCode', array(':stCode'=>$stCode))
 				->queryRow();
-				
-	
-	
 	$userId = Yii::app()->user->getId();
 	$act = Yii::app()->db->createCommand()
 				->select('actTopic,actPoint')

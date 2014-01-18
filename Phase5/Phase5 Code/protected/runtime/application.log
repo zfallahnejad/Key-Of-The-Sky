@@ -1006,3 +1006,326 @@ REQUEST_URI=/skykey/index.php/site/index
 in C:\xampp\htdocs\skykey\protected\views\site\index.php (303)
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
 in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 10:57:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1003)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 10:57:38 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1003): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/17 11:14:01 [error] [php] Undefined variable: month (C:\xampp\htdocs\skykey\protected\views\site\chart.php:54)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (54)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1864)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 17:30:29 [error] [php] Use of undefined constant xy - assumed 'xy' (C:\xampp\htdocs\skykey\protected\views\site\index.php:292)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (292)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 22:13:20 [error] [php] Undefined index: stName (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:214)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1111): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (214)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1111)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 22:13:40 [error] [php] Use of undefined constant temp - assumed 'temp' (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:215)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1111): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (215)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1111)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/17 23:49:09 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "HighchartsWidget.plotOptions" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('plotOptions', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\xampp\htdocs\skykey\protected\views\site\chart.php(167): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('chart', Array, true)
+#8 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1877): CController->render('chart', Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('chart')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/chart')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/skykey/index.php/site/chart
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReward/Id/3
+---
+2014/01/18 16:04:10 [error] [php] Undefined variable: rewards (C:\xampp\htdocs\skykey\protected\views\site\chart.php:265)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1892): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (265)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1892)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 16:04:58 [error] [php] Undefined variable: mosqueId (C:\xampp\htdocs\skykey\protected\views\site\chart.php:264)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1892): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionchart()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/chart
+in C:\xampp\htdocs\skykey\protected\views\site\chart.php (264)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1892)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 17:23:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'weekstart' in 'group statement'. The SQL statement executed was: SELECT actId, SUM(counter) AS CNT
+FROM `mosmonth`
+WHERE mosqueId=:mosqueId
+GROUP BY `weekstart`.
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (231)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1111)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 17:23:13 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'weekstart' in 'group statement'. The SQL statement executed was: SELECT actId, SUM(counter) AS CNT
+FROM `mosmonth`
+WHERE mosqueId=:mosqueId
+GROUP BY `weekstart`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php(231): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('mosqueReward', NULL, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1111): CController->render('mosqueReward')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReward')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRewa...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+HTTP_REFERER=http://localhost/skykey/
+---
+2014/01/18 18:24:27 [error] [php] Undefined variable: mosqueId (C:\xampp\htdocs\skykey\protected\views\site\index.php:364)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (364)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:25:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mosqueId' in 'where clause'. The SQL statement executed was: SELECT weekstart, SUM(counter) AS CNT
+FROM `participantcounter`
+WHERE mosqueId=:mosqueId
+GROUP BY `weekstart`.
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (345)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:25:13 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mosqueId' in 'where clause'. The SQL statement executed was: SELECT weekstart, SUM(counter) AS CNT
+FROM `participantcounter`
+WHERE mosqueId=:mosqueId
+GROUP BY `weekstart`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\index.php(345): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): CController->render('index', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/index
+HTTP_REFERER=http://localhost/skykey/index.php/site/chart
+---
+2014/01/18 18:50:45 [error] [php] Undefined variable: ColactAct (C:\xampp\htdocs\skykey\protected\views\site\index.php:351)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (351)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:53:12 [error] [php] Undefined variable: ColactAct (C:\xampp\htdocs\skykey\protected\views\site\index.php:351)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (351)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:54:01 [error] [php] Undefined variable: ColactAct (C:\xampp\htdocs\skykey\protected\views\site\index.php:351)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/index
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (351)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:55:54 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `participantcounter`, `mosqueculturalliablee`
+WHERE participantcounter.week' at line 2. The SQL statement executed was: SELECT mosqueculturalliablee.mosqueName, SUM(participantcounter.counter) AS CNT,
+FROM `participantcounter`, `mosqueculturalliablee`
+WHERE participantcounter.weekstart=:weekstart and  mosqueculturalliablee.Id=participantcounter.Id
+GROUP BY `weekstart`.
+in C:\xampp\htdocs\skykey\protected\views\site\index.php (353)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (46)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 18:55:54 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `participantcounter`, `mosqueculturalliablee`
+WHERE participantcounter.week' at line 2. The SQL statement executed was: SELECT mosqueculturalliablee.mosqueName, SUM(participantcounter.counter) AS CNT,
+FROM `participantcounter`, `mosqueculturalliablee`
+WHERE participantcounter.weekstart=:weekstart and  mosqueculturalliablee.Id=participantcounter.Id
+GROUP BY `weekstart`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\index.php(353): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(46): CController->render('index', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/index
+HTTP_REFERER=http://localhost/skykey/index.php/site/chart
+---
+2014/01/18 20:07:13 [error] [php] Undefined index: schoolId (C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php:113)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1097): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReward()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (113)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1097)
+in C:\xampp\htdocs\skykey\index.php (13)

@@ -36,7 +36,8 @@
 						<th><div align="right">نام</div></th>
                     	<th><div align="right">نام خانوادگی</div></th>
 						<th><div align="right">نام مسجد</div></th>
-						<th><div align="right">امتیاز کسب شده</div></th>               			
+						<th><div align="right">امتیاز کسب شده</div></th>
+						<th></th>           			
                 	</tr>
             	</thead>
 				<tbody>
@@ -75,6 +76,7 @@
 							<td><div align="right"><?php echo $row['stFamily'];?></div></td>
 							<td><div align="right"><?php echo $mosqueName;?></div></td>
 							<td><div align="right"><?php echo $points;?></div></td>
+							<td><a <?php echo CHtml::link('صفحه دانش آموز',array('site/studentPage','stCode'=>$stCode));?></a></td>
 						</tr>
 					<?php
 					}
