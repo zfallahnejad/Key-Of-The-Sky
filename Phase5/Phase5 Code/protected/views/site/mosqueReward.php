@@ -22,6 +22,7 @@
 				->select('stName,stFamily,stCode,total')
 				->from('student')
 				->where('Id=:Id',array(':Id'=>$mosqueId))
+				->order('total')
 				->queryAll();
 	$results =Yii::app()->db->createCommand()
 				->select ('regda, COUNT(regda) AS CNT')
@@ -149,7 +150,7 @@ foreach($rewards as $row){
 								
 $this->Widget('ext.highcharts.HighchartsWidget', array(
         'options'=>array(
-            'chart'=> array('height'=>'500', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
+            'chart'=> array('height'=>'450', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
             'title' => array('text'=>'نمودار امتیازات'),
             'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true)),'series'=>array('borderWidth'=>0,'dataLabels'=>array('enabled'=>true))),
 			'tooltip'=> array(
@@ -195,11 +196,11 @@ foreach ($results as $result)
 }
 $this->Widget('ext.highcharts.HighchartsWidget', array(
         'options'=>array(
-            'chart'=> array('type'=>'spline', 'height'=>'500', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
+            'chart'=> array('type'=>'areaspline', 'height'=>'450', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
             'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از مسجد '.$mosqueName),
             'subtitle' => array('text'=>'رشد ثبت نام در طرح'),
 			//'legend'=> array('enabled'=>false),
-            'tooltip'=> array(
+			'tooltip'=> array(
 					'headerFormat'=>'<span style="font-size:10px">{point.key}</span><br/>',
 					'pointFormat'=>'{series.name}:{point.y}<br/>',
 					'footerFormat'=>'',
@@ -255,8 +256,9 @@ foreach($ColactActs as $ColactAct){
 }
 $this->Widget('ext.highcharts.HighchartsWidget', array(
         'options'=>array(
-            'chart'=> array('type'=>'column','height'=>'500', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)'),
+            'chart'=> array('type'=>'column','height'=>'450', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
 			'title' => array('text'=>'نمودار میزان مشارکت در فعالیت ها'),
+			'subtitle' => array('text'=>'قابل تفکیک به زمان اجرا فعالیت'),
 			'xAxis' => array('type'=>'category','reversed'=>true),
 			'legend'=> array('enabled'=>false),
             'yAxis' => array('title'=>array('text'=>'دفعات انجام کار'),'opposite'=>true),

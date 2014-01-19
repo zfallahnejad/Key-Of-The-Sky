@@ -309,9 +309,9 @@ foreach($results as $result){
 }
 $this->Widget('ext.highcharts.HighchartsWidget', array(
         'options'=>array(
-            'chart'=> array('type'=>'column','height'=>'500', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)'),
-			'title' => array('text'=>'نمودار تعداد شرکت کنندگان در طرح از همه مساجد'),
-            'subtitle' => array('text'=>'رشد ثبت نام در طرح به صورت هفتگی'),
+            'chart'=> array('type'=>'column','height'=>'450', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
+			'title' => array('text'=>'رشد ثبت نام در طرح به صورت هفتگی'),
+            'subtitle' => array('text'=>'قابل تفکیک به مساجد مرتبط'),
 			'xAxis' => array('type'=>'category','reversed'=>true),
 			'legend'=> array('enabled'=>false),
             'yAxis' => array('title'=>array('text'=>'دفعات انجام کار'),'opposite'=>true),

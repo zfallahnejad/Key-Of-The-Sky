@@ -83,7 +83,7 @@ $birth=$model['birthdate'];
 		<div class="hint">لطفا عبارت مشاهده شده در بالا را وارد نمایید
 		<br/>
 		عبارت به حروف بزرگ و کوچک حساس نمیباشد</div>
-		<?php echo $form->error($model,'verifyCode'); ?>
+		<?php //echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 	

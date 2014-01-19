@@ -10,8 +10,13 @@
 	$mail=Yii::app()->user->name;
 	$rowCounter=0;
 	$rowNum=1;
+	$actTopic = Yii::app()->db->createCommand()
+				->select('actTopic')
+				->from('refrencepoint')
+				->where('actId=:actId',array(':actId'=>$actId))
+				->queryScalar();
 ?>
-<h2 align="right" class="header">ثبت فعالیت های جمعی<span class="header-line"></span></h2>
+<h2 align="right" class="header">ثبت فعالیت جمعی <?php echo $actTopic;?><span class="header-line"></span></h2>
 
 <?php if(Yii::app()->user->hasFlash('CollectiveAction')): ?>
 
@@ -29,11 +34,14 @@
 		'validateOnSubmit'=>true,
 	),
 ));?>
-	<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
-	<div align="right" class="row">
-		<input name="CollectiveActionForm[actda]" id="GivePointForm_da" type="text" />
-
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'actdate'); ?>
+		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+		<?php echo $form->textField($model,'actdate',array('id'=>'CollectiveActionForm_date')); ?>
+		<?php echo $form->error($model,'actdate'); ?>
 	</div>
+	
 	<div align="right" class="row buttons">
 		<?php echo CHtml::submitButton('ثبت'); ?>
 	</div>
@@ -42,7 +50,7 @@
 
 <script>		
 Calendar.setup({
-	inputField:'GivePointForm_da',
+	inputField:'CollectiveActionForm_date',
     button: 'date_btn',
     ifFormat: '%Y/%m/%d',
     dateType: 'jalali',

@@ -25,8 +25,8 @@
     <link rel="alternate stylesheet" type="text/css" media="screen" title="style6" href="<?php echo $baseUrl;?>/css/style6.css" />
 	
 	<link type="text/css" href="<?php echo $baseUrl;?>/css/lightbox.css" rel="stylesheet" />
-    
-	<script src="<?php echo $baseUrl;?>/js/lightbox-2.6.min.js"></script>
+
+    <script src="<?php echo $baseUrl;?>/js/lightbox-2.6.min.js"></script>
     
     <!-- style switcher -->
     <script type="text/javascript" src="<?php echo $baseUrl;?>/js/styleswitcher.js"></script>
@@ -107,6 +107,12 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
+						array('label'=>'<b>گزارش گیری</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>گزارش فعالیت های مساجد</b>', 'url'=>array('/site/mosqueReport'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>گزارش فعالیت های دانش آموزان</b>', 'url'=>array('/site/studentReport'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>برترین ها</b>', 'url'=>array('/site/topStudents'),'linkOptions'=>array("data-description"=>""),),
+						)),
 						array('label'=>'<b>نقشه گوگل</b>', 'url'=>array('/site/googlemap'), 'visible','linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(

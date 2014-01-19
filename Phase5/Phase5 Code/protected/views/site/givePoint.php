@@ -4,10 +4,9 @@
 		'Point', );
 	$stCode = (int) $_GET['stCode'];
 	if (!($stCode>0)){
-			$this->redirect(array('/site/MosqueHome'));
-
-		}
-		else{
+		$this->redirect(array('/site/MosqueHome'));
+	}
+	else{
 	$student = Yii::app()->db->createCommand()
 				->select('stName,stFamily')
 				->from('student')

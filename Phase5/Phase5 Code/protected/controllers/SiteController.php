@@ -1662,7 +1662,7 @@ class SiteController extends Controller
 				$model->attributes=$_POST['CollectiveActionForm'];
 				if($model->validate())
 				{
-					$actda=($model->actda);
+					$actda=($model->actdate);
 					$connection=Yii::app()->db;
 					$connection->active=TRUE;
 					if(Yii::app()->user->getId() == 1)
@@ -1826,9 +1826,119 @@ class SiteController extends Controller
 		if(! isset($_GET['stCode'])){
 			$this->redirect(array('/site'));
 		}
+		else{
+			$stCode=(int)$_GET['stCode'];
+			
 		
-			// renders the view file 'protected/views/site/schoolPage.php'
+			// renders the view file 'protected/views/site/studentPage.php'
 			// using the default layout 'protected/views/layouts/main.php'
-			$this->render('studentPage');	
+			$this->render('studentPage');
+		}	
+	}
+	public function actionmosqueReport()
+	{
+		$model=new mosqueReportForm;
+		$refreshCaptcha = true;
+		/*if (array_key_exists('ajax', $_POST) && $_POST['ajax'] === 'mosqueReport-form') {
+        	echo CActiveForm::validate($model);
+        	Yii::app()->end();
+		}*/
+		$mosquesName = Yii::app()->db->createCommand()
+				->select('id,mosqueName')
+				->from('mosqueculturalliablee')
+				->order('mosqueName')
+				->query();
+		$data=CHtml::listData($mosquesName,'id','mosqueName');
+				
+		if(isset($_POST['mosqueReportForm']))
+		{
+			$refreshCaptcha = false;
+			$model->attributes=$_POST['mosqueReportForm'];
+			if($model->validate())
+			{
+				$ReportType=($model->ReportType);
+				$MosqueId=($model->MosqueName);
+				$startDate=($model->startDate);
+				$FinishDate=($model->FinishDate);
+				if($ReportType==1){
+					Yii::app()->session['StartDate'] = $startDate;
+					Yii::app()->session['FinishDate'] = $FinishDate;
+					$this->redirect(array('/site/registerationProgress','MosqueId'=>$MosqueId));
+				}
+				elseif($ReportType==2){
+					Yii::app()->session['StartDate'] = $startDate;
+					Yii::app()->session['FinishDate'] = $FinishDate;
+					$this->redirect(array('/site/CollectiveActionsReport','MosqueId'=>$MosqueId));
+				}
+				elseif($ReportType==3){
+					Yii::app()->session['StartDate'] = $startDate;
+					Yii::app()->session['FinishDate'] = $FinishDate;
+					$this->redirect(array('/site/ActivitiesReport','MosqueId'=>$MosqueId));
+				}
+				//Yii::app()->user->setFlash('mosqueReport','');
+				$this->refresh();		
+			}
+		}			
+		// renders the view file 'protected/views/site/mosqueReport.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('mosqueReport',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha,'mosquesName'=>$data));	
+	}
+	public function actionregisterationProgress()
+	{
+		if(!isset($_GET['MosqueId'])){
+			$this->redirect(array('/site'));
+		}
+		else{
+			$mosqueId=$_GET['MosqueId'];
+			$this->render('registerationProgress',array('MosqueId'=>$mosqueId));
+		}	
+		
+	}
+	public function actionCollectiveActionsReport()
+	{
+		if(!isset($_GET['MosqueId'])){
+			$this->redirect(array('/site'));
+		}
+		else{
+			$mosqueId=$_GET['MosqueId'];
+			$this->render('CollectiveActionsReport',array('MosqueId'=>$mosqueId));
+		}	
+		
+	}
+	public function actionActivitiesReport()
+	{
+		if(!isset($_GET['MosqueId'])){
+			$this->redirect(array('/site'));
+		}
+		else{
+			$mosqueId=$_GET['MosqueId'];
+			$this->render('ActivitiesReport',array('MosqueId'=>$mosqueId));
+		}	
+		
+	}
+	public function actiontopStudents()
+	{
+		$model=new topStudentsForm;
+		$refreshCaptcha = true;
+		$mosquesName = Yii::app()->db->createCommand()
+				->select('id,mosqueName')
+				->from('mosqueculturalliablee')
+				->order('mosqueName')
+				->query();
+		$data=CHtml::listData($mosquesName,'id','mosqueName');
+				
+		if(isset($_POST['topStudentsForm']))
+		{
+			$refreshCaptcha = false;
+			$model->attributes=$_POST['topStudentsForm'];
+			if($model->validate())
+			{
+				$MosqueId=($model->MosqueName);
+				$TopNumber=($model->TopNumber);
+				//$this->redirect(array('/site/ActivitiesReport','MosqueId'=>$MosqueId,'TopNumber'=>$TopNumber));
+				//$this->refresh();		
+			}
+		}			
+		$this->render('topStudents',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha,'mosquesName'=>$data));	
 	}
 }	 	 

@@ -27,7 +27,8 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-)); ?>
+)); 
+?>
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 	
 	<div class="row">
@@ -62,7 +63,7 @@ $this->breadcrumbs=array(
 		<div class="hint">لطفا عبارت مشاهده شده در بالا را وارد نمایید
 		<br/>
 		عبارت به حروف بزرگ و کوچک حساس نمیباشد</div>
-		<?php echo $form->error($model,'verifyCode'); ?>
+		<?php //echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 	

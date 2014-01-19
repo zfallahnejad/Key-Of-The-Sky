@@ -1329,3 +1329,801 @@ REQUEST_URI=/skykey/index.php/site/mosqueReward/Id/3
 in C:\xampp\htdocs\skykey\protected\views\site\mosqueReward.php (113)
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1097)
 in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 22:04:31 [error] [php] Undefined variable: mosqueName (C:\xampp\htdocs\skykey\protected\views\site\studentPage.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudentPage()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/studentPage/stCode/1002002000
+in C:\xampp\htdocs\skykey\protected\views\site\studentPage.php (17)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 23:34:09 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'monthstart' in 'order clause'. The SQL statement executed was: SELECT `refrencepoint`.`actTopic` AS `actTopic`, `studentweek`.`counter` AS `CNT`
+FROM `refrencepoint`, `studentweek`
+WHERE studentweek.weekstart=:weekstart AND studentweek.stCode=:stCode AND refrencepoint.actId=studentweek.actId
+ORDER BY `monthstart`.
+in C:\xampp\htdocs\skykey\protected\views\site\studentPage.php (31)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/18 23:34:09 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'monthstart' in 'order clause'. The SQL statement executed was: SELECT `refrencepoint`.`actTopic` AS `actTopic`, `studentweek`.`counter` AS `CNT`
+FROM `refrencepoint`, `studentweek`
+WHERE studentweek.weekstart=:weekstart AND studentweek.stCode=:stCode AND refrencepoint.actId=studentweek.actId
+ORDER BY `monthstart`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\studentPage.php(31): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('studentPage', NULL, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): CController->render('studentPage')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudentPage()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('studentPage')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/studentPag...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/studentPage/stCode/2147481647
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReward/Id/3
+---
+2014/01/19 10:01:35 [error] [exception.CException] exception 'CException' with message 'SiteController شامل تگهای نادرست ویجت در قسمت نمایش آن "C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php" می باشد' in C:\xampp\htdocs\yii\framework\web\CBaseController.php:101
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('mosqueReport', Array, true)
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1856): CController->render('mosqueReport', Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/index
+---
+2014/01/19 12:57:11 [error] [php] Undefined variable: refreshCaptcha (C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php:53)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1863): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php (53)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1863)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 13:00:34 [error] [php] Undefined variable: refreshCaptcha (C:\xampp\htdocs\skykey\protected\views\site\editpassword.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(856): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionEditpassword()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/editpassword
+in C:\xampp\htdocs\skykey\protected\views\site\editpassword.php (30)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (856)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 13:30:44 [error] [exception.CException] exception 'CException' with message 'Alias "web.system.widgets.CCaptcha" نامعتبر است .اطمینان حاصل کنید به یک فابل یا دایرکتوری موجو اشاره می کند.' in C:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\xampp\htdocs\skykey\Captcha.php(3): YiiBase::import('web.system.widg...')
+#1 C:\xampp\htdocs\yii\framework\YiiBase.php(427): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\YiiBase.php(302): YiiBase::autoload('Captcha')
+#3 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('Captcha', true)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'Captcha', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('Captcha', Array)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): CBaseController->widget('Captcha', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/editpassword
+---
+2014/01/19 13:31:22 [error] [php] Object of class CCaptcha could not be converted to string (C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php (50)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1864)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 13:32:24 [error] [exception.CException] exception 'CException' with message 'CCaptcha and its behaviors do not have a method or closure named "show".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CComponent->__call('show', Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CCaptcha->show()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('mosqueReport', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): CController->render('mosqueReport', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/editpassword
+---
+2014/01/19 13:34:11 [error] [exception.CException] exception 'CException' with message 'Alias "web.system.widgets.CCaptcha" نامعتبر است .اطمینان حاصل کنید به یک فابل یا دایرکتوری موجو اشاره می کند.' in C:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\xampp\htdocs\skykey\Captcha.php(3): YiiBase::import('web.system.widg...')
+#1 C:\xampp\htdocs\yii\framework\YiiBase.php(427): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\YiiBase.php(302): YiiBase::autoload('Captcha')
+#3 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('Captcha', true)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'Captcha', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('Captcha', Array)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): CBaseController->widget('Captcha', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:09:43 [error] [exception.CException] exception 'CException' with message 'CCaptcha and its behaviors do not have a method or closure named "show".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CComponent->__call('show', Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CCaptcha->show()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('mosqueReport', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1867): CController->render('mosqueReport', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:10:04 [error] [exception.CException] exception 'CException' with message 'Alias "web.system.widgets.CCaptcha" نامعتبر است .اطمینان حاصل کنید به یک فابل یا دایرکتوری موجو اشاره می کند.' in C:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\xampp\htdocs\skykey\Captcha.php(3): YiiBase::import('web.system.widg...')
+#1 C:\xampp\htdocs\yii\framework\YiiBase.php(427): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\YiiBase.php(302): YiiBase::autoload('Captcha')
+#3 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('Captcha', true)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'Captcha', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('Captcha', Array)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1864): CBaseController->widget('Captcha', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:13:46 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "CCaptcha.refresh" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1868): CComponent->__get('refresh')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:14:20 [error] [exception.CException] exception 'CException' with message 'CCaptcha and its behaviors do not have a method or closure named "show".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CComponent->__call('show', Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(50): CCaptcha->show('/skykey/index.p...', '')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('mosqueReport', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1884): CController->render('mosqueReport', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:17:48 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "SiteController.imageOptions" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1872): CComponent->__get('imageOptions')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 14:58:05 [error] [php] Undefined variable: counter (C:\xampp\htdocs\skykey\protected\views\site\studentPage.php:82)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1835): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionstudentPage()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/studentPage/stCode/1002002000
+in C:\xampp\htdocs\skykey\protected\views\site\studentPage.php (82)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1835)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 16:49:00 [error] [php] Missing argument 2 for CHtml::label(), called in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php on line 46 and defined (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:562)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#3 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1863): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php (46)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1863)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 16:51:36 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(580): tag()
+#2 C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php(46): label()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1863): SiteController->render()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php (46)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1863)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 16:51:51 [error] [php] Use of undefined constant div - assumed 'div' (C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1863): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\views\site\mosqueReport.php (46)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1863)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 18:54:10 [error] [php] iconv(): Detected an illegal character in input string (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:1855)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1855)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 19:00:07 [error] [php] iconv(): Detected an illegal character in input string (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:1855)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1855)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 19:01:14 [error] [php] iconv(): Detected an incomplete multibyte character in input string (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:1857)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1857)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 19:43:44 [error] [exception.CException] exception 'CException' with message 'mosqueReportForm and its behaviors do not have a method or closure named "redirect".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\models\mosqueReportForm.php(44): CComponent->__call('redirect', Array)
+#1 C:\xampp\htdocs\skykey\protected\models\mosqueReportForm.php(44): mosqueReportForm->redirect(Array)
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): mosqueReportForm->DValidation('startDate', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(mosqueReportForm), 'startDate')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(mosqueReportForm), NULL)
+#5 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1855): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('mosqueReport')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mosqueRepo...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 21:57:19 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yii\framework\web\CController.php:793) (C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(1043): SiteController->redirect()
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1869): SiteController->refresh()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1869)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 22:01:34 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yii\framework\web\CController.php:793) (C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(1043): SiteController->redirect()
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1869): SiteController->refresh()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1869)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 22:02:39 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yii\framework\web\CController.php:793) (C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(1043): SiteController->redirect()
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1869): SiteController->refresh()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1869)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 22:04:34 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\yii\framework\web\CController.php:793) (C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(1043): SiteController->redirect()
+#1 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1870): SiteController->refresh()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionmosqueReport()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1870)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 22:05:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "abouttest" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('abouttest')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('abouttest')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/abouttest')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/abouttest
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 22:06:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('registerationPr...')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/registerat...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/skykey/index.php/site/registerationProgress
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 22:10:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('registerationPr...')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/registerat...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/skykey/index.php/site/registerationProgress
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 22:14:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'درخواست شما معتبر است.' in C:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('registerationPr...')
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/registerat...')
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/skykey/index.php/site/registerationProgress
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 22:22:26 [error] [php] Undefined variable: MosqueId (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:1866)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/mosqueReport
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1866)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 22:28:55 [error] [php] Undefined variable: MosqueId (C:\xampp\htdocs\skykey\protected\controllers\SiteController.php:1885)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/registerationProgress/MosqueId/3
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1885)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 23:03:47 [error] [php] Undefined variable: week (C:\xampp\htdocs\skykey\protected\views\site\registerationProgress.php:56)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1885): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionregisterationProgress()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/registerationProgress/MosqueId/3
+in C:\xampp\htdocs\skykey\protected\views\site\registerationProgress.php (56)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1885)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 23:38:28 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'counter' in 'field list'. The SQL statement executed was: SELECT actId, SUM(counter) AS CNT
+FROM `moscolact`
+WHERE mosqueId=:mosqueId
+GROUP BY `actId`.
+in C:\xampp\htdocs\skykey\protected\views\site\CollectiveActionsReport.php (30)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1901)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/19 23:38:28 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'counter' in 'field list'. The SQL statement executed was: SELECT actId, SUM(counter) AS CNT
+FROM `moscolact`
+WHERE mosqueId=:mosqueId
+GROUP BY `actId`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\CollectiveActionsReport.php(30): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('CollectiveActio...', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1901): CController->render('CollectiveActio...', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionCollectiveActionsReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('CollectiveActio...')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Collective...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/CollectiveActionsReport/MosqueId/3
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/19 23:51:53 [error] [php] Undefined index: CNT (C:\xampp\htdocs\skykey\protected\views\site\CollectiveActionsReport.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1901): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionCollectiveActionsReport()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/CollectiveActionsReport/MosqueId/3
+in C:\xampp\htdocs\skykey\protected\views\site\CollectiveActionsReport.php (42)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1901)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:21:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "ActivitiesReport" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('ActivitiesRepor...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ActivitiesRepor...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Activities...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/ActivitiesReport/MosqueId/3
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/20 00:22:23 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'actda' in 'order clause'. The SQL statement executed was: SELECT `counter`, `weekstart`
+FROM `mosactivities`
+WHERE mosqueId=:mosqueId and actId=:actId and :startDate<=weekstart and weekstart<=:FinishDate
+ORDER BY `actda`.
+in C:\xampp\htdocs\skykey\protected\views\site\ActivitiesReport.php (45)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1917)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:22:23 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'actda' in 'order clause'. The SQL statement executed was: SELECT `counter`, `weekstart`
+FROM `mosactivities`
+WHERE mosqueId=:mosqueId and actId=:actId and :startDate<=weekstart and weekstart<=:FinishDate
+ORDER BY `actda`' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\skykey\protected\views\site\ActivitiesReport.php(45): CDbCommand->query()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('ActivitiesRepor...', Array, true)
+#6 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1917): CController->render('ActivitiesRepor...', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionActivitiesReport()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('ActivitiesRepor...')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/Activities...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/skykey/index.php/site/ActivitiesReport/MosqueId/3
+HTTP_REFERER=http://localhost/skykey/index.php/site/mosqueReport
+---
+2014/01/20 00:25:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "studentReport" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('studentReport')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('studentReport')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/studentRep...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/studentReport
+HTTP_REFERER=http://localhost/skykey/index.php/site/ActivitiesReport/MosqueId/3
+---
+2014/01/20 00:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "topStudent" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('topStudent')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('topStudent')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/topStudent')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/topStudent
+HTTP_REFERER=http://localhost/skykey/index.php/site/studentReport
+---
+2014/01/20 00:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'سیستم توانایی یافتن عمل "topStudent" را ندارد.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('topStudent')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('topStudent')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/topStudent')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/skykey/index.php/site/topStudent
+HTTP_REFERER=http://localhost/skykey/index.php/site/studentReport
+---
+2014/01/20 00:46:06 [error] [php] include(max.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(186): import()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(287): createValidator()
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): topStudentsForm->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(304): topStudentsForm->getValidators()
+#4 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): topStudentsForm->isAttributeRequired()
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): activeLabelEx()
+#6 C:\xampp\htdocs\skykey\protected\views\site\topStudents.php(34): CActiveForm->labelEx()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1942): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiontopStudents()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/topStudents
+in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (34)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:46:56 [error] [php] include(max.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(186): import()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(287): createValidator()
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): topStudentsForm->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(304): topStudentsForm->getValidators()
+#4 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): topStudentsForm->isAttributeRequired()
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): activeLabelEx()
+#6 C:\xampp\htdocs\skykey\protected\views\site\topStudents.php(34): CActiveForm->labelEx()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1942): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiontopStudents()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/topStudents
+in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (34)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:47:00 [error] [php] include(max.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(186): import()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(287): createValidator()
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): topStudentsForm->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(304): topStudentsForm->getValidators()
+#4 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): topStudentsForm->isAttributeRequired()
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): activeLabelEx()
+#6 C:\xampp\htdocs\skykey\protected\views\site\topStudents.php(34): CActiveForm->labelEx()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1942): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiontopStudents()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/topStudents
+in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (34)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:49:51 [error] [php] Cannot use a scalar value as an array (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:2458)
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\views\site\topStudents.php(41): CActiveForm->numberField()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1942): SiteController->render()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiontopStudents()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/topStudents
+in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (41)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 00:50:24 [error] [php] include(min.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(186): import()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(287): createValidator()
+#2 C:\xampp\htdocs\yii\framework\base\CModel.php(260): topStudentsForm->createValidators()
+#3 C:\xampp\htdocs\yii\framework\base\CModel.php(304): topStudentsForm->getValidators()
+#4 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1414): topStudentsForm->isAttributeRequired()
+#5 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(597): activeLabelEx()
+#6 C:\xampp\htdocs\skykey\protected\views\site\topStudents.php(34): CActiveForm->labelEx()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1942): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiontopStudents()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\skykey\index.php(13): CWebApplication->run()
+REQUEST_URI=/skykey/index.php/site/topStudents
+in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (34)
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
+in C:\xampp\htdocs\skykey\index.php (13)
