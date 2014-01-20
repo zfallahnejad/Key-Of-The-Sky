@@ -964,7 +964,7 @@ class SiteController extends Controller
 				$model->attributes=$_POST['GivePointForm'];
 				if($model->validate())
 				{
-					$da = $model->da;
+					$da = $model->date;
 					for ($x=0; $x<$numOfActs; $x++)
   					{
 						if($model->results[$x]==1)
@@ -1590,7 +1590,7 @@ class SiteController extends Controller
 				$model->attributes=$_POST['CollectiveScoringForm'];
 				if($model->validate())
 				{
-				$da=$model->da;
+				$da=$model->actDate;
 					for ($x=0; $x<$numOfStus; $x++)
   					{
 						if($model->results[$x]==1)
@@ -1913,8 +1913,7 @@ class SiteController extends Controller
 		else{
 			$mosqueId=$_GET['MosqueId'];
 			$this->render('ActivitiesReport',array('MosqueId'=>$mosqueId));
-		}	
-		
+		}		
 	}
 	public function actiontopStudents()
 	{
@@ -1935,10 +1934,21 @@ class SiteController extends Controller
 			{
 				$MosqueId=($model->MosqueName);
 				$TopNumber=($model->TopNumber);
-				//$this->redirect(array('/site/ActivitiesReport','MosqueId'=>$MosqueId,'TopNumber'=>$TopNumber));
+				$this->redirect(array('/site/topResult','MosqueId'=>$MosqueId,'TopNumber'=>$TopNumber));
 				//$this->refresh();		
 			}
 		}			
 		$this->render('topStudents',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha,'mosquesName'=>$data));	
+	}
+	public function actiontopResult()
+	{
+		if(!(isset($_GET['MosqueId']) and isset($_GET['TopNumber']))){
+			$this->redirect(array('/site'));
+		}
+		else{
+			$mosqueId=$_GET['MosqueId'];
+			$TopNumber=$_GET['TopNumber'];
+			$this->render('topResult',array('MosqueId'=>$mosqueId,'TopNumber'=>$TopNumber));
+		}	
 	}
 }	 	 

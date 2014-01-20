@@ -20,10 +20,7 @@ $this->breadcrumbs=array(
 	<?php echo Yii::app()->user->getFlash('editprize'); ?>
 </div>
 
-
-
 <?php else: ?>
-
 
 <!--editprize-->
 
@@ -36,7 +33,6 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
-	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'rewardTopic'); ?>
@@ -50,13 +46,8 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'neededPoint'); ?>
 	</div>
 
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
 	
-	
-	
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
-
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

@@ -41,12 +41,10 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'stfamily'); ?>
 	</div>
 	
-	<div align="right" class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
 		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
-		<div align="right" class="row">
-			<input name="StudentForm[birthdate]" id="GivePointForm_da" type="text" />
-		</div>
+		<?php echo $form->textField($model,'birthdate',array('id'=>'StudentForm_date')); ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -92,15 +90,13 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'picture'); ?>
 	</div>
 
-	<div align="right" class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
-
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
+	
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 <script>		
 Calendar.setup({
-	inputField:'GivePointForm_da',
+	inputField:'StudentForm_date',
     button: 'date_btn',
     ifFormat: '%Y/%m/%d',
     dateType: 'jalali',

@@ -128,24 +128,24 @@
 					</div>
 				</tbody>
 			</table>
-		
-	<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
-	<div align="right" class="row">
-		<input name="CollectiveScoringForm[da]" id="GivePointForm_da" type="text" />
-
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'actDate'); ?>
+		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
+		<?php echo $form->textField($model,'actDate',array('id'=>'CollectiveScoringForm_date')); ?>
+		<?php echo $form->error($model,'actDate'); ?>
 	</div>
 		
 		</div>
 	</div>
-	<div align="right" class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
+	
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 
 <script>		
 Calendar.setup({
-	inputField:'GivePointForm_da',
+	inputField:'CollectiveScoringForm_date',
     button: 'date_btn',
     ifFormat: '%Y/%m/%d',
     dateType: 'jalali',

@@ -2127,3 +2127,180 @@ REQUEST_URI=/skykey/index.php/site/topStudents
 in C:\xampp\htdocs\skykey\protected\views\site\topStudents.php (34)
 in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (1942)
 in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 09:59:37 [error] [exception.CException] exception 'CException' with message 'ویژگیهای "GivePointForm.birthdate" تعریف نشده است.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CComponent->__get('birthdate')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(GivePointForm), 'birthdate')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(GivePointForm), 'birthdate', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(GivePointForm), 'birthdate', Array)
+#4 C:\xampp\htdocs\skykey\protected\views\site\givePoint.php(74): CActiveForm->textField(Object(GivePointForm), 'birthdate', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('givePoint', Array, true)
+#9 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(1026): CController->render('givePoint', Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#16 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/MosqueHome
+---
+2014/01/20 10:11:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:11:19 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147483647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147483647
+---
+2014/01/20 10:13:49 [warning] [application] Failed to set unsafe attribute "date" of "GivePointForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (964)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:14:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:14:06 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147483647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147483647
+---
+2014/01/20 10:15:12 [warning] [application] Failed to set unsafe attribute "da" of "GivePointForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (964)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:17:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:17:44 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/20 10:21:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:21:11 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/20 10:27:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:27:25 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/20 10:27:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:27:39 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/20 10:33:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:33:25 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/1002002000
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/1002002000
+---
+2014/01/20 10:34:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da).
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (990)
+in C:\xampp\htdocs\skykey\index.php (13)
+2014/01/20 10:34:36 [error] [exception.CDbException] exception 'CDbException' with message 'خطای CDbCommand در اجرای SQL statement: SQLSTATE[20000]: <<Unknown error>>: 1339 Case not found for CASE statement. The SQL statement executed was: INSERT INTO point (actId,stCode, pcounter,da) VALUES(:actId,:stCode, :pcounter, :da)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\skykey\protected\controllers\SiteController.php(990): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actiongivePoint()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('givePoint')
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/givePoint/...')
+#7 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\skykey\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/skykey/index.php/site/givePoint/stCode/2147483647
+HTTP_REFERER=http://localhost/skykey/index.php/site/givePoint/stCode/2147483647
+---
+2014/01/20 11:10:00 [warning] [application] Failed to set unsafe attribute "picture" of "EditstudentForm".
+in C:\xampp\htdocs\skykey\protected\controllers\SiteController.php (905)
+in C:\xampp\htdocs\skykey\index.php (13)

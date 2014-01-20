@@ -47,13 +47,10 @@ $birth=$model['birthdate'];
 		<?php echo $form->error($model,'stfamily'); ?>
 	</div>
 	
-	<div align="right" class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
 		<input id="date_btn" type="button" title="انتخاب تاریخ " value="انتخاب تاریخ" >
-		<div align="right" class="row">
-			<input name="EditstudentForm[birthdate]" id="GivePointForm_da" type="text" value="<?php echo $birth ;?>"/>
-
-		</div>
+		<?php echo $form->textField($model,'birthdate',array('id'=>'EditstudentForm_date')); ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 	
@@ -87,15 +84,13 @@ $birth=$model['birthdate'];
 	</div>
 	<?php endif; ?>
 	
-	<div align="right" class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 <script>		
 Calendar.setup({
-	inputField:'GivePointForm_da',
+	inputField:'EditstudentForm_date',
     button: 'date_btn',
     ifFormat: '%Y/%m/%d',
     dateType: 'jalali',

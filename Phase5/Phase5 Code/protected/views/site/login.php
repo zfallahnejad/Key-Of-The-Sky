@@ -40,9 +40,8 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
 
-	<div align="right" class="row buttons">
-		<?php echo CHtml::submitButton('ورود'); ?>
-	</div>
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ورود','type'=>'info','size'=>'large')); ?>
+
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->

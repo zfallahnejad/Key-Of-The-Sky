@@ -12,8 +12,9 @@ class topStudentsForm extends CFormModel
 		return array(
 			// ReportType, MosqueName,... are required
 			array('MosqueName,TopNumber,verifyCode','required'),
-			//array('TopNumber','max','is'=>5),
-			//array('TopNumber','min','is'=>1),
+			array('TopNumber','numerical','integerOnly'=>true,'min'=>1,
+				    'max'=>5,'tooSmall'=>'حداقل تعداد باید 1 باشد',
+					'tooBig'=>'حداکثر تعداد باید 5 باشد'),
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);

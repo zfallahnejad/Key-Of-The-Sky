@@ -67,10 +67,8 @@ $this->breadcrumbs=array(
 	</div>
 	<?php endif; ?>
 	
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
-
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
+	
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

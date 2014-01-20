@@ -1,8 +1,4 @@
 <?php
-/* @var $this SiteController */
-/* @var $model EditliableForm */
-/* @var $form CActiveForm */
-
 $this->pageTitle=Yii::app()->name . ' - Reward';
 $this->breadcrumbs=array(
 	'Reward', );
@@ -15,11 +11,7 @@ $this->breadcrumbs=array(
 <div class="flash-success">
 	<?php echo Yii::app()->user->getFlash('reward'); ?>
 </div>
-
-
-
 <?php else: ?>
-
 
 <!--reward1-->
 
@@ -33,7 +25,6 @@ $this->breadcrumbs=array(
 )); ?>
 	<p align="right" class="note">فیلدهای دارای<span class="required">*</span> لازم هستند.</p>
 	
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'rewardTopic'); ?>
 		<?php echo $form->textField($model,'rewardTopic'); ?>
@@ -46,13 +37,8 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'neededPoint'); ?>
 	</div>
 
+	<?php $this->widget('ext.bootstrap.widgets.TbButton', array('buttonType'=>'submit','label'=>'ثبت',/*'type'=>'info',*/'size'=>'large')); ?>
 	
-	
-	
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('ثبت'); ?>
-	</div>
-
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

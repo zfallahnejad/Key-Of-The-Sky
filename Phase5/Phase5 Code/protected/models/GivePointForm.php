@@ -1,9 +1,8 @@
 <?php
-
 class GivePointForm extends CFormModel
 {
 	public $results; 
-	public $da;
+	public $date;
 	/**
 	 * Declares the validation rules.
 	 */
@@ -11,14 +10,11 @@ class GivePointForm extends CFormModel
 	{
 		return array(
 			array('results', 'safe'),
-			array('da','required'),	
-			
+			array('date','required'),		
 		);
 	}
 	public function attributeLabels()
 	{
-		return array(
-				'da'=>'تاریخ',
-				);
+		return array('date'=>'تاریخ انجام فعالیت');
 	}
 }

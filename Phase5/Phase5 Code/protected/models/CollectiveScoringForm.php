@@ -3,7 +3,7 @@
 class CollectiveScoringForm extends CFormModel
 {
 	public $results;
-	public $da;
+	public $actDate;
 	/**
 	 * Declares the validation rules.
 	 */
@@ -11,7 +11,13 @@ class CollectiveScoringForm extends CFormModel
 	{
 		return array(
 			array('results', 'safe'),
-			array('da','required'),
+			array('actDate','required'),
+		);
+	}
+	 public function attributeLabels()
+	 {
+		return array(
+			'actDate'=>'تاریخ انجام فعالیت',
 		);
 	}
 }

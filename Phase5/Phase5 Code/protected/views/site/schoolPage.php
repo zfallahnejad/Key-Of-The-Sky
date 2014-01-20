@@ -1,12 +1,9 @@
 <?php
-
-?><?php
 	$this->pageTitle=Yii::app()->name . ' - school page';
 	$schoolId = (int) $_GET['schoolId'];
 	if (!($schoolId>0)){
 			$this->redirect(array('/site'));
-
-		}
+	}
 	$this->breadcrumbs=array(
 		'school', );
 	$schoolName = Yii::app()->db->createCommand()
@@ -23,10 +20,7 @@
 ?>
 <div id='container' style="direction:rtl" align="right">
 	<h2 class="header">مدرسه <?php echo $schoolName ;?><span class="header-line"></span></h2>
-	
-	
-    
- 	<br>
+	<br>
 	<h3 class="note">مشخصات دانش آموزان<span class="header-line"></span></h3>	
 	<div id="object-browser">
 		<div id="items">
@@ -85,4 +79,52 @@
 			</table>
 		</div>
 	</div>
+</div>
+<hr>
+<br>
+<h3 class="header">نمودار رشد تعداد دانش آموزان ثبت نام کننده در طرح از مدرسه <?php echo $schoolName;?>
+	<span class="header-line"></span> 
+</h3>
+<div style="direction:ltr;">
+<?php
+$results =Yii::app()->db->createCommand()
+				->select('regda,count(regda) as CNT')
+		    	->from('student')
+				->where('schoolId=:schoolId',array(':schoolId'=>$schoolId))
+		    	->group('regda')
+				->query();	
+$counter = 0;
+$registrationDate = array();
+$participantCount = array();
+foreach ($results as $result)
+{
+	$registrationDate[$counter] = $result['regda'];
+    $participantCount[] = (int)$result['CNT'];
+    $counter++;
+}
+$this->Widget('ext.highcharts.HighchartsWidget', array(
+        'options'=>array(
+            'chart'=> array('type'=>'areaspline', 'height'=>'450', 'spacingBottom'=>40,'borderWidth'=> 2,'plotShadow'=> true,'plotBorderWidth' => 1, 'plotBackgroundColor' => 'rgba(255, 255, 255, .9)','zoomType'=>'xy'),
+            'title' => array('text'=>'نمودار رشد تعداد دانش آموزان ثبت نام کننده در طرح از مدرسه '.$schoolName),
+            'subtitle' => array('text'=>'رشد ثبت نام در طرح'),
+			//'legend'=> array('enabled'=>false),
+			'tooltip'=> array(
+					'headerFormat'=>'<span style="font-size:10px">{point.key}</span><br/>',
+					'pointFormat'=>'{series.name}:{point.y}<br/>',
+					'footerFormat'=>'',
+					'shared'=> true,
+					'useHTML'=> true,
+					'crosshairs'=> true
+			),
+			'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true))),
+            'xAxis' => array('categories'=>$registrationDate,'reversed'=>true),
+            'yAxis' => array('title'=>array('text'=>'تعداد شرکت کنندگان'),'opposite'=>true),
+            'series' => array(array('name' => 'تعداد ثبت نام کنندگان', 'data' => $participantCount),
+        ),
+		'credits' => array('enabled' => false)),
+		'scripts' => array(
+   			'modules/exporting', // adds Exporting button/menu to chart
+   		)
+     ));	
+?>
 </div>
