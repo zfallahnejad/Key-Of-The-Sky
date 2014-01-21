@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2014 at 08:15 PM
+-- Generation Time: Jan 21, 2014 at 12:14 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -490,7 +490,18 @@ BEGIN
 
 	SET jm = i + 1;
 	SET jd = j_day_no + 1;
-	SET resout = CONCAT_WS ('/', jy, jm, jd);
+	if(jm<10) then
+       set jm1=concat('0',jm);
+       else
+       set jm1=jm;
+    end if;
+    if(jd<10) then
+       set jd1=concat('0',jd);
+       else
+       set jd1=jd;
+    end if;
+       
+	SET resout = CONCAT_WS ('/', jy, jm1, jd1);
 
 	IF (ttime <> '00:00:00') then
 		SET resout = CONCAT_WS(' ', resout, ttime);
