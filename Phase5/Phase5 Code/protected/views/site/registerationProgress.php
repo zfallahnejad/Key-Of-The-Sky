@@ -48,8 +48,8 @@ $this->Widget('ext.highcharts.HighchartsWidget', array(
             'subtitle' => array('text'=>'رشد ثبت نام در طرح'),
 			//'legend'=> array('enabled'=>false),
 			'tooltip'=> array(
-					'headerFormat'=>'<span style="font-size:10px">{point.key}</span><br/>',
-					'pointFormat'=>'{series.name}:{point.y}<br/>',
+					'headerFormat'=>'<span style="font-size:14px">{point.key}</span><br/>',
+					'pointFormat'=>'<span style="font-size:14px">{series.name}:{point.y}</span><br/>',
 					'footerFormat'=>'',
 					'shared'=> true,
 					'useHTML'=> true,

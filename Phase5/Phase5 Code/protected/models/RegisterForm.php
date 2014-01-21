@@ -26,12 +26,12 @@ class RegisterForm extends CFormModel
 			// email has to be a valid email address
 			array('email', 'email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
-			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
+			array('confirmPassword', 'compare', 'compareAttribute'=>'password'),
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			// not required fields should define as safe attribute
 			array('mobile,image', 'safe'), 
-			array('tel,mobile','numerical','integerOnly'=>true),
+			array('tel,mobile','numerical','integerOnly'=>true,'message'=>'{attribute} باید عدد باشد.'),
 			array('image','file','types'=>array('jpg','png'),'allowEmpty'=>TRUE,'message'=>'فرمت تصویر باید jpg یا png باشد),'),
 
 		);

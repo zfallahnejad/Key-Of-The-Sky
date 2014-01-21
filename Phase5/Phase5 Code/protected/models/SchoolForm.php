@@ -20,8 +20,8 @@ class SchoolForm extends CFormModel
 			// email has to be a valid email address
 			array('email','email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
 			// when in register scenario, password must match confirmPassword
-			array('password', 'compare', 'compareAttribute'=>'confirmPassword'),
-			array('schoolid,schoolphone,teacherphone','numerical','integerOnly'=>true),
+			array('confirmPassword', 'compare', 'compareAttribute'=>'password'),
+			array('schoolid,schoolphone,teacherphone','numerical','integerOnly'=>true,'message'=>'{attribute} باید عدد باشد.'),
 		);
 	}
 	

@@ -52,8 +52,8 @@ $this->Widget('ext.highcharts.HighchartsWidget', array(
         	'credits' => array('enabled' => false),
 			'plotOptions'=>array('column'=>array('dataLabels'=>array('enabled'=>true)),'series'=>array('borderWidth'=>0,'dataLabels'=>array('enabled'=>true))),
 			'tooltip'=> array(
-					'headerFormat'=>'<span style="font-size:10px">{point.key}</span><br/>',
-					'pointFormat'=>'{series.name}:{point.y}<br/>',
+					'headerFormat'=>'<span style="font-size:14px">{point.key}</span><br/>',
+					'pointFormat'=>'<span style="font-size:14px">{series.name}:{point.y}</span><br/>',
 					'footerFormat'=>'',
 					'shared'=> true,
 					'useHTML'=> true,
