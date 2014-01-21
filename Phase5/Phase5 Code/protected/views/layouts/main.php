@@ -123,6 +123,7 @@
                         array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'visible'=>!(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
+						 array('label'=>'<b>راهنمای کاربر</b>', 'url'=>array('/site/guide'), 'visible','linkOptions'=>array("data-description"=>"")),
                         array('label'=>'<b>سبک ها</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
                             array('label'=>'<span class="style" style="background-color:#0088CC;"></span> سبک 1', 'url'=>"javascript:chooseStyle('none', 60)"),

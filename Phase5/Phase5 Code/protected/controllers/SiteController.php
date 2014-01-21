@@ -1940,6 +1940,10 @@ class SiteController extends Controller
 		}			
 		$this->render('topStudents',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha,'mosquesName'=>$data));	
 	}
+	public function actionguide()
+	{		
+		$this->render('guide');
+	}
 	public function actiontopResult()
 	{
 		if(!(isset($_GET['MosqueId']) and isset($_GET['TopNumber']))){
