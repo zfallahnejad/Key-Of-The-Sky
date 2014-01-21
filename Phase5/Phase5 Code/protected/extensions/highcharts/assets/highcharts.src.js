@@ -1534,8 +1534,8 @@ defaultOptions = {
 		spacingBottom: 15,
 		spacingLeft: 10,
 		style: {
-			fontFamily: '"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif', // default font
-			fontSize: '12px'
+			fontFamily: 'B Nazanin', // default font
+			fontSize: '16px'
 		},
 		backgroundColor: '#FFFFFF',
 		//plotBackgroundColor: null,
