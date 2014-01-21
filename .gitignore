@@ -1,0 +1,6 @@
+Phase5/Phase5 Code/assets/*
+Phase5/Phase5 Code/!assets/.gitignore
+Phase5/Phase5 Code/protected/runtime/*
+Phase5/Phase5 Code/!protected/runtime/.gitignore
+Phase5/Phase5 Code/protected/data/*.db
+Phase5/Phase5 Code/themes/classic/views/
