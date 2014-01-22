@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2014 at 12:38 AM
+-- Generation Time: Jan 22, 2014 at 10:26 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -1017,7 +1017,7 @@ CREATE TABLE IF NOT EXISTS `mosqueculturalliablee` (
 --
 
 INSERT INTO `mosqueculturalliablee` (`Id`, `name`, `family`, `mosqueName`, `email`, `password`, `tel`, `mobile`, `mosqueAddress`, `image`, `status`, `regdate`) VALUES
-(1, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', 'dd5fef9c1c1da1394d6d34b248c51be2ad740840', 987, 987, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f3f3d, 1, '۱۳۹۲/۰۹/۰۱'),
+(1, 'احمد', 'احمدی', 'حقانی', 'ahmadi@yahoo.com', 'dd5fef9c1c1da1394d6d34b248c51be2ad740840', 956, 987, 'چهار راه فرهنگ', 0x3d3f5554462d383f423f50543956564559744f443943507a38393f3d, 1, '۱۳۹۲/۰۹/۰۱'),
 (2, 'جعفر', 'مجیدی', 'شفا', 'majidi@yahoo.com', 'dd5fef9c1c1da1394d6d34b248c51be2ad740840', 956, 63542, 'ولیعصر', 0x3d3f5554462d383f423f3f3d, 1, '۱۳۹۲/۰۹/۰۱'),
 (3, 'حسین', 'حسینی', 'قائم آل محمد', 'hoseini@yahoo.com', 'dd5fef9c1c1da1394d6d34b248c51be2ad740840', 756, 2587, 'میدان شهداء', 0x3d3f5554462d383f423f3f3d, 1, '۱۳۹۲/۰۹/۰۱'),
 (4, 'علی', 'علوی', 'امام علی', 'ali@yahoo.com', 'dd5fef9c1c1da1394d6d34b248c51be2ad740840', 222, 222, 'بزرگراه امام علی', 0x3d3f5554462d383f423f3f3d, 1, '۱۳۹۲/۰۹/۰۱');
@@ -1292,6 +1292,22 @@ CREATE TABLE IF NOT EXISTS `schcolact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `schcolact`
+--
+
+INSERT INTO `schcolact` (`schoolId`, `actId`, `actda`, `actcount`) VALUES
+(45678, 11, '۱۳۹۲/۰۹/۲۵', 1),
+(45678, 11, '۱۳۹۲/۱۰/۰۳', 1),
+(45678, 11, '۱۳۹۲/۱۰/۱۰', 1),
+(45678, 11, '۱۳۹۲/۱۰/۱۷', 1),
+(45678, 11, '۱۳۹۲/۱۰/۳۰', 1),
+(56789, 11, '۱۳۹۲/۰۹/۲۵', 1),
+(56789, 11, '۱۳۹۲/۱۰/۰۲', 1),
+(56789, 11, '۱۳۹۲/۱۰/۱۰', 1),
+(56789, 11, '۱۳۹۲/۱۰/۱۷', 1),
+(56789, 11, '۱۳۹۲/۱۰/۲۴', 1);
+
+--
 -- Triggers `schcolact`
 --
 DROP TRIGGER IF EXISTS `schcol_month_insert`;
@@ -1320,6 +1336,16 @@ CREATE TABLE IF NOT EXISTS `schmonth` (
   `monthstart` varchar(7) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`schoolId`,`actId`,`monthstart`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `schmonth`
+--
+
+INSERT INTO `schmonth` (`schoolId`, `actId`, `counter`, `monthstart`) VALUES
+(45678, 11, 1, '۱۳۹۲/۰۹'),
+(45678, 11, 4, '۱۳۹۲/۱۰'),
+(56789, 11, 1, '۱۳۹۲/۰۹'),
+(56789, 11, 4, '۱۳۹۲/۱۰');
 
 -- --------------------------------------------------------
 
@@ -1473,8 +1499,8 @@ ALTER TABLE `participantcounter`
 -- Constraints for table `point`
 --
 ALTER TABLE `point`
-  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`stCode`) REFERENCES `student` (`stCode`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`actId`) REFERENCES `refrencepoint` (`actId`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `point_ibfk_1` FOREIGN KEY (`actId`) REFERENCES `refrencepoint` (`actId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `point_ibfk_2` FOREIGN KEY (`stCode`) REFERENCES `student` (`stCode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `reward`

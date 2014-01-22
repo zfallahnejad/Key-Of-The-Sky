@@ -1,17 +1,16 @@
 <?php
-
 /**
- * LoginForm class.
+ * LoginForm class.\n
  * LoginForm is the data structure for keeping
  * user login form data. It is used by the 'login' action of 'SiteController'.
  */
 class LoginForm extends CFormModel
 {
 	public $username;
-	public $password;
-	public $rememberMe;
+	public $password;/** User password Field */
+	public $rememberMe;/** Remember me Field */
 	private $_identity;
-	public $email;
+	public $email;/** User email Field */
 	
 	/**
 	 * Declares the validation rules.
@@ -21,6 +20,11 @@ class LoginForm extends CFormModel
 	public function rules()
 	{
 		return array(
+			/** 
+			* email and password are required \n 
+			* rememberMe needs to be a boolean\n
+			* password needs to be authenticated
+			*/
 			// email and password are required
 			array('email, password', 'required'),
 			array('email', 'email','message'=>'فرمت {attribute} معتبر نمی باشد.'),
@@ -32,7 +36,7 @@ class LoginForm extends CFormModel
 	}
 
 	/**
-	 * Declares attribute labels.
+	 * Declares attribute labels for Login Form.
 	 */
 	public function attributeLabels()
 	{

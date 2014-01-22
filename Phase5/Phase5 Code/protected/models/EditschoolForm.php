@@ -1,21 +1,29 @@
 <?php
-
+/**
+* EditschoolForm class definition
+*/
 class EditschoolForm extends CFormModel
 {
-	public $schoolName;
-	public $schoolPhone;
-	public $schoolAddress;
-	public $teacherName;
-	public $teacherFamily;
-	public $teacherPhone;
-	public $verifyCode;
+	public $schoolName;/** School name Field */
+	public $schoolPhone;/** School phone Field */
+	public $schoolAddress;/** School address Field */
+	public $teacherName;/** Teacher name Field */
+	public $teacherFamily;/** Teacher family Field */
+	public $teacherPhone;/** Teacher phone Field */
+	public $verifyCode;/** Verification Code */
 
 	/**
-	 * Declares the validation rules.
+	 * Declares the validation rules for Editschool Form.
 	 */
 	public function rules()
 	{
 		return array(
+			/** 
+			* verifyCode is required \n 
+			* schoolPhone and teacherPhone must be integer\n
+			* not required fields should define as safe attribute\n
+			* verifyCode needs to be entered correctly\n
+			*/
 			// verifyCode are required
 			array('verifyCode', 'required'),
 			// verifyCode needs to be entered correctly

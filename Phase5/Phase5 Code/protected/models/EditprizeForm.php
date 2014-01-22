@@ -1,17 +1,24 @@
 <?php
-
+/**
+* EditprizeForm class definition
+*/
 class EditprizeForm extends CFormModel
 {
-	public $rewardTopic;
-	public $neededPoint;
+	public $rewardTopic;/** Reward Topic Field */
+	public $neededPoint;/** Reward Point Field */
 	
 
 	/**
-	 * Declares the validation rules.
+	 * Declares the validation rules for Editprize Form.
 	 */
 	public function rules()
 	{
 		return array(
+			/** 
+			* verifyCode is required \n 
+			* neededPoint must be integer\n
+			* verifyCode needs to be entered correctly
+			*/
 			// verifyCode are required
 			//array('verifyCode', 'required'),
 			// verifyCode needs to be entered correctly

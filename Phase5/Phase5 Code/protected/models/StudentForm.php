@@ -1,22 +1,34 @@
 <?php
-
+/**
+* StudentForm class definition
+*/
 class StudentForm extends CFormModel
 {
 	public $id;
-	public $stname;
-	public $stfamily;
-	public $fathername;
-	public $parentcode;
-	public $school;
-	public $schoolid;
-	public $stcode;
-	public $address;
-	public $picture;
-	public $birthdate;
-	
+	public $stname;/** Student name Field */
+	public $stfamily;/** Student family Field */
+	public $fathername;/** Student father name Field */
+	public $parentcode;/** Student address Field */
+	public $school;/** School name Field */
+	public $schoolid;/** School id Field */
+	public $stcode;/** Student code Field */
+	public $address;/** Student address Field */
+	public $picture;/** Student picture Field */
+	public $birthdate;/** Student birthdate Field */
+	/**
+	 * Declares the validation rules for Student Form.
+	 */
 	public function rules()
 	{
 		return array(
+			/** 
+			* stname are stfamily are fathername are parentcode are school are schoolid are stcode are address are required \n 
+			* length of parentcode must be 10\n
+			* length of stcode must be 10\n
+			* picture type must be jpg ir png\n
+			* not required fields should define as safe attribute\n
+			* stcode and parentcodea and schoolid must be integer\n
+			*/
 			array('stname, stfamily, fathername, parentcode, school, schoolid, stcode, address', 'required'),
 			// parentcode must be 10 characters
 			array('parentcode', 'length', 'is'=>10,'message'=>'طول کد ملی بایستی 10 باشد.'),

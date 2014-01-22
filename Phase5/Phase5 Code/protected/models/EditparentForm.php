@@ -1,19 +1,27 @@
 <?php
-
+/**
+* EditparentForm class definition
+*/
 class EditparentForm extends CFormModel
 {
-	public $parentname;
-	public $parentfamily;
-	public $homephone;
-	public $mobilenum;
-	public $verifyCode;
+	public $parentname;/** Parent name Field */
+	public $parentfamily;/** Parent family Field */
+	public $homephone;/** Parent homephone Field */
+	public $mobilenum;/** Parent mobile Field */
+	public $verifyCode;/** Verification Code */
 
 	/**
-	 * Declares the validation rules.
+	 * Declares the validation rules for Editparent Form
 	 */
 	public function rules()
 	{
 		return array(
+			/** 
+			* verifyCode is required \n 
+			* homephone and mobilenum must be integer\n
+			* not required fields should define as safe attribute\n
+			* verifyCode needs to be entered correctly
+			*/
 			// verifyCode are required
 			array('verifyCode', 'required'),
 			// verifyCode needs to be entered correctly
@@ -24,7 +32,7 @@ class EditparentForm extends CFormModel
 	}
 
 	/**
-	 * Declares customized attribute labels.
+	 * Declares customized attribute labels.\n
 	 * If not declared here, an attribute would have a label that is
 	 * the same as its name with the first letter in upper case.
 	 */

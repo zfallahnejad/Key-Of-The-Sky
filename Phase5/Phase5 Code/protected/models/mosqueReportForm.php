@@ -1,18 +1,26 @@
 <?php
+/**
+* mosqueReportForm class definition
+*/
 class mosqueReportForm extends CFormModel
 {
-	public $ReportType;
-	public $MosqueName;
-	public $startDate;
-	public $FinishDate;
-	public $verifyCode;
+	public $ReportType;/** List of Report type */
+	public $MosqueName;/** List of MosqueNames */
+	public $startDate;/** StartDate Field */
+	public $FinishDate;/** FinishDate Field */
+	public $verifyCode;/** Verification Code */
 	/**
-	 * Declares the validation rules.
+	 * Declares the validation rules for mosqueReport Form.
 	 */
 	public function rules()
 	{
 		return array(
-			// ReportType, MosqueName,... are required
+			/** 
+			* ReportType and MosqueName and startDate and FinishDate are required\n 
+			* Not required fields should define as safe attribute
+			* verifyCode needs to be entered correctly
+			*/
+			// ReportType and MosqueName and startDate and FinishDate are required
 			array('ReportType,MosqueName,startDate,FinishDate,verifyCode','required'),
 			// not required fields should define as safe attribute
 			array('startDate', 'DateValidation','FinishDate'=>'FinishDate'), 

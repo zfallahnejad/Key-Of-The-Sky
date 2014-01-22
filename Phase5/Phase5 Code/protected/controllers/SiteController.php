@@ -1147,7 +1147,6 @@ class SiteController extends Controller
 					$Id = ":id";
 					$lat= ":lat";
 					$lng = ":lng";
-
 					$this->refresh();
 				}
 			}

@@ -1,32 +1,33 @@
 <?php
-
 /**
- * ContactForm class.
- * ContactForm is the data structure for keeping
- * contact form data. It is used by the 'contact' action of 'SiteController'.
- */
+* SendmessageForm class definition
+*/
 class SendmessageForm extends CFormModel
 {
-	public $receiver;
-	public $receiverType;
-	public $subject;
-	public $category;
-	public $body;
-	public $verifyCode;
+	public $receiver;/** Receiver name Field */
+	public $receiverType;/** Receiver type Field(mosqueliabel or parent or school teacher) */
+	public $subject;/** Message subject Field */
+	public $category;/** Message category Field */
+	public $body;/** Message text Field */
+	public $verifyCode;/** Verification Code */
 	/**
-	 * Declares the validation rules.
+	 * Declares the validation rules for Sendmessage Form.
 	 */
 	public function rules()
 	{
 		return array(
-			// name, email, subject and body are required
+			/** 
+			* receiverType and receiver and subject and category and body verifyCode are required \n 
+			* verifyCode needs to be entered correctly
+			*/
+			// receiverType,receiver, subject, category, body, verifyCode are required
 			array('receiverType,receiver, subject, category, body, verifyCode', 'required'),
 			// verifyCode needs to be entered correctly
 			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 	/**
-	 * Declares customized attribute labels.
+	 * Declares customized attribute labels.\n
 	 * If not declared here, an attribute would have a label that is
 	 * the same as its name with the first letter in upper case.
 	 */
