@@ -889,7 +889,7 @@ class SiteController extends Controller
 		}
 		else
 		{
-			$stCode = (int) $_GET['stCode'];
+			$stCode = $_GET['stCode'];
 			$refreshCaptcha = true;
 			$model=new EditstudentForm;
 			$student = Yii::app()->db->createCommand()->select('stname, stfamily, address, picture,birthdate')->from('student')->where('stCode=:stCode', array(':stCode'=>$stCode))->queryRow();
@@ -941,7 +941,7 @@ class SiteController extends Controller
 		else
 		{	
 			$model=new GivePointForm;
-			$stCode = (int) $_GET['stCode'];
+			$stCode = $_GET['stCode'];
 			$userId = Yii::app()->user->getId();
 			$numOfActs = Yii::app()->db->createCommand()
 				->select('count(*)')
@@ -1542,6 +1542,11 @@ class SiteController extends Controller
 			$this->redirect(array('/site/MosqueHome'));
 			}
 			$actId = (int) $_GET['actId'];
+			$actPoint = Yii::app()->db->createCommand()
+					->select('actPoint')
+					->from('refrencepoint')
+					->where('actId=:actId',array(':actId'=>$actId))
+					->queryScalar();
 			$userId = Yii::app()->user->getId();
 			$mail=Yii::app()->user->name;
 			if ($userId==1){
@@ -1584,7 +1589,6 @@ class SiteController extends Controller
 			
 			$connection=Yii::app()->db;
 			$connection->active=TRUE;
-			
 			if(isset($_POST['CollectiveScoringForm']))
 			{
 				$model->attributes=$_POST['CollectiveScoringForm'];
@@ -1627,6 +1631,17 @@ class SiteController extends Controller
 								$command->execute();
 								$numOfInsert++;
 							}
+							$studentPoint = Yii::app()->db->createCommand()
+									->select('total,current')
+									->from('student')
+									->where('stCode=:stCode',array(':stCode'=>$stCode))
+									->queryRow();
+							$totalPoint=$studentPoint['total']+(int)$actPoint;
+							$currentPoint=$studentPoint['current']+$actPoint;
+							
+							$command = Yii::app()->db->createCommand();
+							$command->update('student', array('total'=>$totalPoint,'current'=>$currentPoint), 'stCode=:stCode',array(':stCode'=>$stCode));
+							$command->execute();
   						}
 					}
 					if ($numOfInsert!=0)
@@ -1827,9 +1842,6 @@ class SiteController extends Controller
 			$this->redirect(array('/site'));
 		}
 		else{
-			$stCode=(int)$_GET['stCode'];
-			
-		
 			// renders the view file 'protected/views/site/studentPage.php'
 			// using the default layout 'protected/views/layouts/main.php'
 			$this->render('studentPage');
@@ -1953,6 +1965,53 @@ class SiteController extends Controller
 			$mosqueId=$_GET['MosqueId'];
 			$TopNumber=$_GET['TopNumber'];
 			$this->render('topResult',array('MosqueId'=>$mosqueId,'TopNumber'=>$TopNumber));
+		}	
+	}
+	public function actionActivities()
+	{
+		$model=new ActivitiesForm;
+		$refreshCaptcha = true;
+		$actTopic=Yii::app()->db->createCommand()
+				->select('actId,actTopic')
+				->from('refrencepoint')
+				->order('actId')
+				->query();
+		$mosquesName = Yii::app()->db->createCommand()
+				->select('id,mosqueName')
+				->from('mosqueculturalliablee')
+				->order('mosqueName')
+				->query();
+		$acts=CHtml::listData($actTopic,'actId','actTopic');
+		$data=CHtml::listData($mosquesName,'id','mosqueName');
+				
+		if(isset($_POST['ActivitiesForm']))
+		{
+			$refreshCaptcha = false;
+			$model->attributes=$_POST['ActivitiesForm'];
+			if($model->validate())
+			{
+				$MosqueId=($model->MosqueName);
+				$Activities=($model->Activities);
+				$startDate=($model->startDate);
+				$FinishDate=($model->FinishDate);
+				Yii::app()->session['StartDate'] = $startDate;
+				Yii::app()->session['FinishDate'] = $FinishDate;
+				$this->redirect(array('/site/ActivitiesResult','MosqueId'=>$MosqueId,'actId'=>$Activities));
+				//Yii::app()->user->setFlash('Activities',$Activities.'->'.$MosqueId.'['.$startDate.'->'.$FinishDate.']');
+				//$this->refresh();		
+			}
+		}			
+		$this->render('Activities',array('model'=>$model,'refreshCaptcha' => $refreshCaptcha,'mosquesName'=>$data,'acts'=>$acts));	
+	}
+	public function actionActivitiesResult()
+	{
+		if(!(isset($_GET['MosqueId']) and isset($_GET['actId']))){
+			$this->redirect(array('/site'));
+		}
+		else{
+			$mosqueId=$_GET['MosqueId'];
+			$actId=$_GET['actId'];
+			$this->render('ActivitiesResult',array('MosqueId'=>$mosqueId,'actId'=>$actId));
 		}	
 	}
 }	 	 

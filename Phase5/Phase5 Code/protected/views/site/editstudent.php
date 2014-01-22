@@ -1,5 +1,5 @@
 <?php 
-$stCode = (int) $_GET['stCode'];
+$stCode = $_GET['stCode'];
 if (!($stCode>0)){
 			$this->redirect(array('/site/MosqueHome'));
 

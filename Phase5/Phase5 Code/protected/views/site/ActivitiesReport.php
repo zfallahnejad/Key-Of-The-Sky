@@ -25,7 +25,7 @@
 	$Activities =Yii::app()->db->createCommand()
 					->select ('actId, SUM(counter) AS CNT')
 		    		->from('mosactivities')
-					->where('mosqueId=:mosqueId and :startDate<=weekstart and weekstart<=:FinishDate',array(':mosqueId'=>$mosqueId,'startDate'=>$startDate,'FinishDate'=>$FinishDate))
+					->where('mosqueId=:mosqueId and :startDate<=weekstart and weekstart<=:FinishDate',array(':mosqueId'=>$mosqueId,':startDate'=>$startDate,':FinishDate'=>$FinishDate))
 					->group('actId')
 		    		->query();
 	$data=array();

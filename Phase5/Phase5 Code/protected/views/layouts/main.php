@@ -107,12 +107,6 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
 					'items'=>array(
-						array('label'=>'<b>گزارش گیری</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
-                        'items'=>array(
-                            array('label'=>'<b>گزارش فعالیت های مساجد</b>', 'url'=>array('/site/mosqueReport'),'linkOptions'=>array("data-description"=>""),),
-							array('label'=>'<b>گزارش فعالیت های دانش آموزان</b>', 'url'=>array('/site/studentReport'),'linkOptions'=>array("data-description"=>""),),
-							array('label'=>'<b>برترین ها</b>', 'url'=>array('/site/topStudents'),'linkOptions'=>array("data-description"=>""),),
-						)),
 						array('label'=>'<b>نقشه گوگل</b>', 'url'=>array('/site/googlemap'), 'visible','linkOptions'=>array("data-description"=>"")),
                     	array('label'=>'<b>پیام ها</b> <span class="caret"></span>'.'<p class="text-error" >'.$count.'</p>', 'url'=>'#','visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9),'itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
                         'items'=>array(
@@ -120,7 +114,13 @@
 							array('label'=>'<b>صندوق پیام های ارسالی</b>', 'url'=>array('/site/outbox'),'linkOptions'=>array("data-description"=>""),),
 						)),
 						array('label'=>'<b>ارسال پیام</b>', 'url'=>array('/site/sendMessage'), 'visible'=>!(Yii::app()->user->isGuest || Yii::app()->user->getId()==9) ,'linkOptions'=>array("data-description"=>"")),
-                        array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
+                        array('label'=>'<b>گزارش گیری</b> <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown","data-description"=>""), 
+                        'items'=>array(
+                            array('label'=>'<b>گزارش فعالیت های مساجد</b>', 'url'=>array('/site/mosqueReport'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>گزارش گیری پیشرفته فعالیت ها</b>', 'url'=>array('/site/Activities'),'linkOptions'=>array("data-description"=>""),),
+							array('label'=>'<b>برترین ها</b>', 'url'=>array('/site/topStudents'),'linkOptions'=>array("data-description"=>""),),
+						)),
+						array('label'=>'<b>امتیازات</b>', 'url'=>array('/site/refrencePoint'), 'visible','linkOptions'=>array("data-description"=>"")),
 						array('label'=>'<b>ارتباط با ما</b>', 'url'=>array('/site/contact'),'visible'=>!(Yii::app()->user->getId()==9),'linkOptions'=>array("data-description"=>""),),
 						array('label'=>'<b>درباره ما</b>', 'url'=>array('/site/page', 'view'=>'about'),'linkOptions'=>array("data-description"=>"درباره ما بدانيد"),),
 						 array('label'=>'<b>راهنمای کاربر</b>', 'url'=>array('/site/guide'), 'visible','linkOptions'=>array("data-description"=>"")),

@@ -2,7 +2,7 @@
 	$this->pageTitle=Yii::app()->name . ' - Give Point';
 	$this->breadcrumbs=array(
 		'Point', );
-	$stCode = (int) $_GET['stCode'];
+	$stCode =  $_GET['stCode'];
 	if (!($stCode>0)){
 		$this->redirect(array('/site/MosqueHome'));
 	}
